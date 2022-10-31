@@ -142,6 +142,19 @@ h2{
 }
 
 
+.main-content p {
+    font-size: 1em;
+    font-weight: 300;
+    margin: 0;
+    padding: 0 1em;
+}
+.main-content a{
+    font-size: 1em;
+    font-weight: 300;
+    margin: 0;
+}
+
+
 /* @media(min-width: 768px) {
     .container {
         width:750px
@@ -177,7 +190,10 @@ h2{
 }
 .home a:hover {
     color: #231A99;
-    background-color:#ccc9e8
+    
+}
+.home .nav-bar a:hover{
+    background-color:#ccc9e8;
 }
 .home a:active {
     color: #0C0660;
@@ -203,11 +219,13 @@ background-color:#544DB3 !important;
 .projects body {
     background-color: #e2ccde;
 }
-.projects a {
+.projects .nav-bar a {
     color: #9F5691;
 }
 .projects a:hover {
-    color: #761964;
+    color: #761964;   
+}
+.projects .nav-bar a:hover{
     background-color: #e2ccde;
 }
 .projects a:active {
@@ -240,7 +258,9 @@ background-color:#9F5691 !important;
 }
 .blog a:hover {
     color: #0A3A12;
-    background-color:#becac0;
+}
+.blog .nav-bar a:hover{
+    background-color: #becac0;
 }
 .blog a:active {
     color: #001E05;
@@ -273,6 +293,8 @@ background-color:#28502F !important;
 }
 .resume a:hover {
     color: #9B0923;
+}
+.resume .nav-bar a:hover{
     background-color: #eec5cc;
 }
 .resume a:active {
@@ -303,6 +325,8 @@ background-color:#C73E56 !important;
 }
 .aboutMe a:hover {
     color: #FFA051;
+}
+.aboutMe .nav-bar a:hover{
     background-color: #ffe9d7;
 }
 .aboutMe a:active {
@@ -333,6 +357,8 @@ background-color:#FFB77C !important;
 }
 .contact a:hover {
     color: #72AA85;
+}
+.contact .nav-bar a:hover{
     background-color: #EEF4F0;
 }
 .contact a:active {
