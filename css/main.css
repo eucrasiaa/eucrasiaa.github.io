@@ -1,0 +1,362 @@
+@charset "UTF-8";
+.unusedColorList{color: #8B80F9;color: #CFB1B7;color: #FCAF58;color: #AEE5D8;color: #E85D75;color: #CCDDB7;/* cyan, blue, lime, orange, green */}
+.homeTemplate{
+    background-color: #ccc9e8;
+    border-color: #766FCA;
+    color: #544DB3; /*link*/
+    color: #231A99; /*link hover*/
+    color: #0C0660; /*link active*/
+}
+.blogTemplate{
+    background-color: #becac0;
+    border-color: #43704B;
+    color: #28502F; /*link*/
+    color: #0A3A12; /*link hover*/
+    color: #001E05; /*link active*/
+}
+.projectsTemplate{
+    background-color: #e2ccde;
+    border-color: #BC82B1;
+    color: #9F5691; /*link*/
+    color: #761964; /*link hover*/
+    color: #520042; /*link active*/
+}
+.resumeTemplate{
+    background-color: #eec5cc;
+    border-color: #E4657C;
+    color: #C73E56; /*link*/
+    color: #9B0923; /*link hover*/
+    color: #5C0010; /*link active*/
+}
+.aboutMeTemplate{
+    background-color: #ffe9d7;
+    border-color: #FFD2AD;
+    color: #FFB77C; /*link*/
+    color: #FFA051; /*link hover*/
+    color: #FF8724; /*link active*/
+
+}
+.contactTemplate{
+    background-color: #EEF4F0;
+    border-color: #CADFD1;
+    color: #9EC5AB; /*link*/
+    color: #72AA85; /*link hover*/
+    color: #488D5F; /*link active*/
+}
+
+
+a{
+    text-decoration: none;
+}
+
+/*Start of css for the template of the pages*/
+html{
+    height:100%;
+    margin:0;
+    padding:0;
+    overflow-y: scroll;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    display:block;
+    margin:0;
+    padding:2em 0 2em 0; 
+}
+
+h1{
+    font-size: 2em;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+}
+h2{
+    font-size: 1em;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.container {
+    /* div that contains the content of the page. static width and height. filled with FFFAFA */
+    width: 74%;
+    min-height: 96%;
+    background-color: #FFFAFA;
+    padding:0;
+    margin: 0 auto;
+    
+     /*1px solid #766FCA; */
+
+
+    
+    /* box-shadow: 0 2px 8px 1px #333; */
+    
+}
+
+.nav-bar{
+    /* width:100%;
+    padding:0; */
+    display: table; 
+    margin: 0 auto;
+
+}
+.nav-bar ul{
+    /* width:100%;
+    list-style-type: none;
+    margin:0 auto;
+    overflow: hidden; */
+    margin:0;
+    padding:2% 0;
+    
+}
+.currPage a{
+    /* bold */
+    font-weight: 700 !important;
+    color:#FFFAFA !important;
+}
+.nav-bar li{
+    display:inline;
+    width:20%;
+     /*center li elements*/
+    
+    
+}
+.nav-bar li a{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: normal;
+    width:20%;
+    padding: 10px 1.5em ;
+    
+}
+
+.header{
+
+}
+.main-content{
+
+}
+.footer{
+
+}
+
+
+/* @media(min-width: 768px) {
+    .container {
+        width:750px
+    }
+}
+
+@media(min-width: 992px) {
+    .container {
+        width:970px
+    }
+}
+
+@media(min-width: 1200px) {
+    .container {
+        width:1170px
+    }
+} */
+
+
+
+
+
+
+
+
+
+/* Home Colors */
+.home body {
+    background-color: #ccc9e8;
+}
+.home a {
+    color: #544DB3;
+}
+.home a:hover {
+    color: #231A99;
+    background-color:#ccc9e8
+}
+.home a:active {
+    color: #0C0660;
+}
+.home .currPage a{
+background-color:#544DB3 !important;
+}
+.home .currPage a:hover{
+    background-color:#ccc9e8 !important;
+    color: #231A99 !important;
+}
+.home .container{
+    border-top: 2vh solid #766FCA;
+    border-bottom: 2vh solid #766FCA;
+}
+.home h1{
+    color: #766FCA;
+}
+
+
+
+/* Projects Colors */
+.projects body {
+    background-color: #e2ccde;
+}
+.projects a {
+    color: #9F5691;
+}
+.projects a:hover {
+    color: #761964;
+    background-color: #e2ccde;
+}
+.projects a:active {
+    color: #520042;
+}
+.projects .currPage a{
+background-color:#9F5691 !important;
+}
+.projects .currPage a:hover{
+    background-color:#e2ccde !important;
+    color: #761964 !important;
+}
+.projects .container{
+    border-top: 2vh solid #BC82B1;
+    border-bottom: 2vh solid #BC82B1;
+}
+.projects h1{
+    color: #BC82B1;
+}
+
+
+
+
+/* Blog Colors */
+.blog body {
+    background-color: #becac0;
+}
+.blog a {
+    color: #28502F;
+}
+.blog a:hover {
+    color: #0A3A12;
+    background-color:#becac0;
+}
+.blog a:active {
+    color: #001E05;
+}
+.blog .currPage a{
+background-color:#28502F !important;
+}
+.blog .currPage a:hover{
+    background-color:#becac0 !important;
+    color: #0A3A12 !important;
+}
+.blog .container{
+    border-top: 2vh solid #43704B;
+    border-bottom: 2vh solid #43704B;
+}
+.blog h1{
+    color: #43704B;
+}
+
+
+
+
+
+/* Resume Colors */
+.resume body {
+    background-color: #eec5cc;
+}
+.resume a {
+    color: #C73E56;
+}
+.resume a:hover {
+    color: #9B0923;
+    background-color: #eec5cc;
+}
+.resume a:active {
+    color: #5C0010;
+}
+.resume .currPage a{
+background-color:#C73E56 !important;
+}
+.resume .currPage a:hover{
+    background-color:#eec5cc !important;
+    color: #9B0923 !important;
+}
+.resume .container{
+    border-top: 2vh solid #E4657C;
+    border-bottom: 2vh solid #E4657C;
+}
+.resume h1{
+    color: #E4657C;
+}
+
+
+
+.aboutMe body {
+    background-color: #ffe9d7;
+}
+.aboutMe a {
+    color: #FFB77C;
+}
+.aboutMe a:hover {
+    color: #FFA051;
+    background-color: #ffe9d7;
+}
+.aboutMe a:active {
+    color: #FF8724;
+}
+.aboutMe .currPage a{
+background-color:#FFB77C !important;
+}
+.aboutMe .currPage a:hover{
+    background-color:#ffe9d7 !important;
+    color: #FFA051 !important;
+}
+.aboutMe .container{
+    border-top: 2vh solid #FFD2AD;
+    border-bottom: 2vh solid #FFD2AD;
+}
+.aboutMe h1{
+    color: #FFD2AD;
+}
+
+
+/* Contact Colors */
+.contact body {
+    background-color: #EEF4F0;
+}
+.contact a {
+    color: #9EC5AB;
+}
+.contact a:hover {
+    color: #72AA85;
+    background-color: #EEF4F0;
+}
+.contact a:active {
+    color: #488D5F;
+}
+.contact .currPage a{
+background-color:#9EC5AB !important;
+}
+.contact .currPage a:hover{
+    background-color:#EEF4F0 !important;
+    color: #72AA85 !important;
+}
+.contact .container{
+    border-top: 2vh solid #C4D9C1;
+    border-bottom: 2vh solid #C4D9C1;
+}
+.contact h1{
+    color: #C4D9C1;
+}
+    
+
+
+
+
+
+
+ /*@media only screen and (max-width: 640px){ } if screen smaller than 640px, inside here applies */
