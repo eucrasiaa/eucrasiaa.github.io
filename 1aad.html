@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!-- IGNORE BELOW -->
+    <!--create a 5x? table, where rows could continue being added as needed-->
+    <!-- each table cell should have the following sections:
+        1. an area for a small date, in day-month format. 
+        2. an area for a photo, square sized
+        3. an area for a title
+        4. an area for a subtitle
+        5. a small text box for genre
+        6. a small text box for rating
+        7. a larger box for notes/comments
+        8. a small text box for a favorite track
+    -->
+<!-- IGNORE ABOVE -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Album A Day</title>
+
+    <style>
+        .outer_div {
+            border: 2px solid black;
+            background-color: #f0f0f0;
+            width: 100%;
+            
+            height: 100%;
+        }
+        .inner_album_element {
+            border: 1px solid black;
+            width: 100%;
+            height: 100%;
+            background-color: #f0f0f0;
+        }
+        .table_cell {
+            padding:0.5%;
+            height: 100%;
+            max-width: 30;
+            width: 30%;
+
+        }
+        .date {
+            height: 10%;
+            padding:0;
+            
+        }
+        
+    </style>
+</head>
+<body>
+
+    <!-- make a div, with the following features
+    1. a small text box, that will hold a date in day-month format 
+    2. a square photo area below
+    3. a title area below
+    4. a subtitle area below
+    5. genre area
+    6. rating area
+    7. notes/comments area
+    8. favorite track area
+    9. make an outside container, that will hold the divs, with a border of 2px, and a background color of #f0f0f0
+    10. each inner section has a thinner border of 1px
+    11. there should be a table, with 3 colums. there should be three of these divs, equally spaced, in each row
+    12. the table should be centered on the page
+
+
+
+        
+-->
+    <table style="width:100%">
+        <tr class = "table_row">
+            <td class="table_cell">
+                <div class="outer_div">
+                    <div class="inner_album_element date" >
+                        <!-- <input type="text" id="date" name="date" placeholder="date"> -->
+                        <h3 style="text-align: center" >Date</h3>
+                    </div>
+                    <div class="inner_album_element">
+                        <input type="text" id="photo" name="photo" placeholder="photo">
+                    </div>
+                    <div class="inner_album_element">
+                        <input type="text" id="title" name="title" placeholder="title">
+                    </div>
+                    <div class="inner_album_element">
+                        <input type="text" id="subtitle" name="subtitle" placeholder="subtitle">
+                    </div>
+                    <div class="inner_album_element">
+                        <input type="text" id="genre" name="genre" placeholder="genre">
+                    </div>
+                    <div class="inner_album_element">
+                        <input type="text" id="rating" name="rating" placeholder="rating">
+                    </div>
+                    <div class="inner_album_element">
+                        <input type="text" id="notes" name="notes" placeholder="notes">
+                    </div>
+                    <div class="inner_album_element">
+                        <input type="text" id="favorite" name="favorite" placeholder="favorite">
+                    </div>
+                </div>
+            </td>
+            <td class="table_cell">
+                <div class="outer_div">
+                    <div class="inner_album_element">
+                        <input type="text" id="date" name="date" placeholder="date">
+                    </div>
+                    <div class="inner_album_element">
+                        <input type="text" id="photo" name="photo" placeholder="photo">
+                    </div>
+                    <div class="inner_album_element">
+                        <input type="text" id="title" name="title" placeholder="title">
+                    </div>
+                    <div class="inner_album_element">
+                        <input type="text" id="subtitle" name="subtitle" placeholder="subtitle">
+                    </div>
+                    <div class="inner_album_element">
+                        <input type="text" id="genre" name="genre" placeholder="genre">
+                    </div>
+                    <div class="inner_album_element">
+                        <input type="text" id="rating" name="rating" placeholder="rating">
+                    </div>
+                    <div class="inner_album_element">
+                        <input type="text" id="notes" name="notes" placeholder="notes">
+                    </div>
+                    <div class="inner_album_element">
+                        <input type="text" id="favorite" name="favorite" placeholder="favorite">
+                    </div>
+                </div>
+            </td>
+            <td class="table_cell">
+                <div class="outer_div">
+                    <div class="inner_album_element">
+                        <input type="text" id="date" name="date" placeholder="date">
+                    </div>
+                    <div class="inner_album_element">
+                        <input type="text" id="photo" name="photo" placeholder="photo">
+                    </div>
+                    <div class="inner_album_element">
+                        <input type="text" id="title" name="title" placeholder="title">
+                    </div>
+                    <div class="inner_album_element">
+                        <input type="text" id="subtitle" name="subtitle" placeholder="subtitle">
+                    </div>
+                    <div class="inner_album_element">
+                        <input type="text" id="genre" name="genre" placeholder="genre">
+                    </div>
+                    <div class="inner_album_element">
+                        <input type="text" id="rating" name="rating" placeholder="rating">
+                    </div>
+                    <div class="inner_album_element">
+                        <input type="text" id="notes" name="notes" placeholder="notes">
+                    </div>
+                    <div class="inner_album_element">
+                        <input type="text" id="favorite" name="favorite" placeholder="favorite">
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
