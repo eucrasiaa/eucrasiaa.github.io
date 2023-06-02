@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+      let division;
+      let classDogs;
+      let classBitches;
+      let championDogs;
+      let championBitches;
+
+      let WD;
+      let WB;
+      let WD_BoW;
+      let WB_BoW;
+      let WD_BoW_WB_BoS;
+      let WB_BoW_WD_BoS;
+      let WD_BoS;
+      let WB_BoS;
+      let BoB_TD;
+      let WD_BoB_WB_BoS;
+      let WB_BoB_WD_BoS;
+      let SD_TD;
+      let SB_TD;
+
+
+      // Calculate Winners Dog, Winners Bitch, WD is BoW, WB is BoW, BOS = Winners is BOS = Winners is BOS & BoW
+      function calculateStart(){
+          division = document.getElementById('divisionInput').value.split(" ")[1];
+          classDogs = document.getElementById('classDogsInput').value || 0;
+          classBitches = document.getElementById('classBitchesInput').value || 0;
+          championDogs = document.getElementById('championDogsInput').value || 0;
+          championBitches = document.getElementById('championBitchesInput').value || 0;
+
+
+      }
+
+      function generate(){
+        calculateStart();
+        //calculate Winners Dog and Winners Bitch, Simple Math
+        winnersDogAndBitch();
+
+        //
+
+        
+        
+      }
+
+      function winnersDogAndBitch(){
+        document.getElementById('WD_TD').textContent = runAgainstSchedule(division,classDogs,1);
+        document.getElementById('WB_TD').textContent = runAgainstSchedule(division,classBitches,2);
+        console.log(runAgainstSchedule(division,classDogs,1))
+        console.log(runAgainstSchedule(division,classBitches,2));
+      }
+
+      function runAgainstSchedule(division, numberOfDogs, sex){
+        //region, number, 1=boys/2=girls
+        //2, 3, 4, 5, 7
+        //2, 6, 10, 12, 15
+        if(division == 3){
+          if(sex == 1){
+            if(numberOfDogs<2){
+              return 0;
+            }
+            else if (numberOfDogs<3){
+              return 1;
+            }
+            else if (numberOfDogs<4){
+              return 2;
+            }
+            else if (numberOfDogs<5){
+              return 3;
+            }
+            else if (numberOfDogs<7){
+              return 4;
+            }
+            else{
+              return 5;
+            }
+          }
+          else if(sex == 2){
+            if(numberOfDogs<2){
+              return 0;
+            }
+            else if (numberOfDogs<6){
+              return 1;
+            }
+            else if (numberOfDogs<10){
+              return 2;
+            }
+            else if (numberOfDogs<12){
+              return 3;
+            }
+            else if (numberOfDogs<15){
+              return 4;
+            }
+            else{
+              return 5;
+            }
+          }
+          else{
+            return "-1";
+          }
+
+        }
+        
+      }
+
+      document.addEventListener('DOMContentLoaded', function() {
+        // Get the input elements
+        var classDogsInput = document.getElementById('classDogsInput');
+        var classBitchesInput = document.getElementById('classBitchesInput');
+        var championDogsInput = document.getElementById('championDogsInput');
+        var championBitchesInput = document.getElementById('championBitchesInput');
+
+        // Add event listeners to the input elements
+        classDogsInput.addEventListener('input', validatePositiveNumber);
+        classBitchesInput.addEventListener('input', validatePositiveNumber);
+        championDogsInput.addEventListener('input', validatePositiveNumber);
+        championBitchesInput.addEventListener('input', validatePositiveNumber);
+
+        // Validation function to allow only positive numbers
+        function validatePositiveNumber(event) {
+          var input = event.target;
+          var value = input.value;
+
+          if (value < 0) {
+            input.value = ''; // Clear the input value
+          }
+        }
+      });
+
+    </script>
+    <!--  <link rel="stylesheet" type="text/css" href="style.css"> -->
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /* Set width for the input and select elements */
+        input[type="number"],
+        select {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .table-cell {
+          padding: 8px;
+          width:100%;
+          background-color: #f2f2f2;
+          border: 1px solid;
+          text-align: left;
+          border-bottom: 1px solid #ddd;
+        }
+        .table-cell td {
+          border: 1px solid;
+
+        }
+        /* target the second td for each tr in the table with the class "table-class"*/
+        .table-cell tr td ~ td{
+          width: 10%;
+          padding: 8px;
+          background-color:red;
+        }
+    </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <th>Division</th>
+      <td>
+        <select id="divisionInput" style="text-align: left;">
+            <option value="Division 3" selected>Division 3</option>
+            <option value="Division 4">Division 4</option>
+            <option value="Division 5">Division 5</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <th>Class Dogs</th>
+      <td><input type="number" placeholder=0 id="classDogsInput"></td>
+    </tr>
+    <tr>
+      <th>Class Bitches</th>
+      <td><input type="number" placeholder=0 id="classBitchesInput"></td>
+    </tr>
+    <tr>
+      <th>Champion Dogs</th>
+      <td><input type="number" placeholder=0 id="championDogsInput"></td>
+    </tr>
+    <tr>
+      <th>Champion Bitches</th>
+      <td><input type="number" placeholder=0 id="championBitchesInput"></td>
+    </tr>
+  </table>
+  <button onclick="generate()">Calculate</button>
+
+  <!-- -->
+
+
+  <table class="table-cell">
+    <tbody>
+      <tr>
+        <td>Winners Dog</td>
+        <td id="WD_TD"></td>
+      </tr>
+      <tr>
+        <td>Winners Bitch</td>
+        <td id="WB_TD"></td>
+      </tr>
+      <tr>
+        <td>WD is Best of Winners</td>
+        <td id="WD_BoW_TD"></td>
+      </tr>
+      <tr>
+        <td>WB is Best of Winner</td>
+        <td id="WB_BoW_TD"></td>
+      </tr>
+      <tr>
+        <td>WD is Best of Winners (WB is BoS)</td>
+        <td id="WD_BoW_WB_BoS_TD"></td>
+      </tr>
+      <tr>
+        <td>WB is Best of Winners (WD is BoS)</td>
+        <td id="WB_BoW_WD_BoS_TD"></td>
+      </tr>
+      <tr>
+        <td>WD is Best of Opposite</td>
+        <td id="WD_BoS_TD"></td>
+      </tr>
+      <tr>
+        <td>WB is Best of Opposite</td>
+        <td id="WB_BoS_TD"></td>
+      </tr>
+      <tr>
+        <td>Best of Breed</td>
+        <td id="BoB_TD"></td>
+      </tr>
+      <tr>
+        <td>WD is BoB and WB is BOS</td>
+        <td id="WD_BoB_WB_BoS_TD"></td>
+      </tr>
+      <tr>
+        <td>WB is BoB and WD is BOS</td>
+        <td id="WB_BoB_WD_BoS_TD"></td>
+      </tr>
+      <tr>
+        <td>Select Dog</td>
+        <td id="SD_TD"></td>
+      </tr>
+      <tr>
+      <td>Select Bitch</td>
+        <td id="SB_TD"></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
