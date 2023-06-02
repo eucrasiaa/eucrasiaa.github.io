@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
       let division;
       let classDogs;
@@ -35,7 +36,14 @@
       }
 
       function generate(){
+
+
         calculateStart();
+
+        document.getElementById('points-table').hidden=false;
+        //document.getElementById('inputtedNumbersResult').textContent= "("+classDogs+", " + classBitches + ", " + championDogs + ", " + championBitches+")";
+        //document.getElementById('input-nums').hidden=false;
+
         //calculate Winners Dog and Winners Bitch, Simple Math
         winnersDogAndBitch();
 
@@ -52,7 +60,55 @@
         console.log(runAgainstSchedule(division,classBitches,2));
       }
 
-      function runAgainstSchedule(division, numberOfDogs, sex){
+      const points = [0, 1, 2, 3, 4, 5]; // Categories for sex = 1
+        
+      const samoyed_schedule = [
+      //male
+      [
+        [0, 0, 0, 0, 0, 0],  // division 1 N/A
+        [0, 0, 0, 0, 0, 0],  // division 2 N/A
+        [0, 2, 3, 4, 5, 7],  // division 3 male
+        [0, 2, 4, 5, 7, 10], // division 4 male
+        [0, 2, 4, 5, 6, 8]   // division 5 male
+      ],
+      // const samoyed_schedule_female=
+      // female
+      [
+        [0, 0, 0, 0, 0, 0],    // division 1 N/A
+        [0, 0, 0, 0, 0, 0],    // division 2 N/A
+        [0, 2, 6, 10, 12, 15], //divison 3 female
+        [0, 2, 4, 6, 7, 9],    //division 4 female
+        [0, 2, 5, 8, 10, 13]   //division 5 female
+      ]
+    ];
+
+
+
+      function runAgainstSchedule(division, numberOfDogs, sex) {
+        
+        const divisionIndex = division - 1; //arrays start at 0, divisons start at 1. syncing 
+        const sexIndex = sex - 1; // array is 0 for male, 1 for female. could chance sent numbers but this is more fun
+        
+
+        // if (division > 0 && sex >0) { //validate input
+        //   console.log("valid sex and division: "+  sex +  ", "+division);
+        // }
+        console.log(divisionIndex + " " + sexIndex + " " + numberOfDogs);
+        for (let i = 0; i < samoyed_schedule[sexIndex][divisionIndex].length; i++) {
+          if (numberOfDogs < samoyed_schedule[sexIndex][divisionIndex][i]) {
+            console.log(points[i-1] + " " + i)
+            return points[i-1];
+
+          }
+        }
+
+
+
+        return "-1";
+      }
+
+      // oly moly this sucks what was i thinking
+      function runAgainstScheduleBAD(division, numberOfDogs, sex){
         //region, number, 1=boys/2=girls
         //2, 3, 4, 5, 7
         //2, 6, 10, 12, 15
@@ -106,6 +162,8 @@
       }
 
       document.addEventListener('DOMContentLoaded', function() {
+        const divisionInput = document.getElementById('divisionInput');
+        const divisionDetailsTD = document.getElementById('divisionDetailsTD');
         // Get the input elements
         var classDogsInput = document.getElementById('classDogsInput');
         var classBitchesInput = document.getElementById('classBitchesInput');
@@ -127,12 +185,136 @@
             input.value = ''; // Clear the input value
           }
         }
+        updateDivisionDetails(getDivisionDetails(divisionInput.value));
+        divisionInput.addEventListener('change', function() {
+          const selectedDivision = divisionInput.value;
+          const divisionDetails = getDivisionDetails(selectedDivision);
+          updateDivisionDetails(divisionDetails);
+        });
+
+        function getDivisionDetails(division) {
+          if (division === 'Division 3') {
+            return 'Division 3: District of Columbia, Maryland, North Carolina, Virginia, West Virgin';
+          } else if (division === 'Division 4') {
+            return 'Division 4: Florida, Georgia, South Carolina';
+          } else if (division === 'Division 5') {
+            return 'Division 5: Indiana, Kentucky, Michigan, Ohio';
+          }
+        }
+        function updateDivisionDetails(divisionDetails) {
+          divisionDetailsTD.textContent = divisionDetails;
+        }
       });
 
     </script>
     <!--  <link rel="stylesheet" type="text/css" href="style.css"> -->
     <style>
-        table {
+      body {
+      font-family: Arial, sans-serif;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+      
+    }
+    
+    th {
+      font-weight: bold;
+    }
+    
+    input[type="number"], select {
+      width: 100%;
+      padding: 6px 10px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    
+    button {
+      display: block;
+      margin: 0 auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    .table-cell {
+      border: 1px solid;
+      width: 100%;
+      
+    }
+    .table-cell tr td ~ td{
+      /*make text bold and slighly larger*/
+      font-weight: bold;
+      font-size: 16 px;
+      padding-left:10px;
+      text-align:center;
+    }
+    .result-container {
+      margin-top: 20px;
+      text-align: center;
+    }
+    
+    .result-container h3 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    
+    .result {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    .division-table {
+      margin-top: 20px;
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    .division-table th, .division-table td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    .division-table th {
+      font-weight: bold;
+    }
+    .header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      font-size: 24px;
+    }
+
+    /* Subheader */
+    .subheader {
+      background-color: #777;
+      color: #fff;
+      padding: 8px;
+      text-align: center;
+      font-size: 18px;
+    }
+
+
+
+
+    /*        table {
             border-collapse: collapse;
         }
 
@@ -146,7 +328,6 @@
             background-color: #f2f2f2;
         }
 
-        /* Set width for the input and select elements */
         input[type="number"],
         select {
             width: 100%;
@@ -165,15 +346,17 @@
           border: 1px solid;
 
         }
-        /* target the second td for each tr in the table with the class "table-class"*/
         .table-cell tr td ~ td{
           width: 10%;
           padding: 8px;
           background-color:red;
         }
+        */
     </style>
 </head>
 <body>
+  <div class="header">Will's Nifty Points Calculator</div>
+  <div class="subheader">Only Supports Samoyeds for now</div>
   <table>
     <tr>
       <th>Division</th>
@@ -184,6 +367,9 @@
             <option value="Division 5">Division 5</option>
         </select>
       </td>
+    </tr>
+    <tr>
+      <td colspan="2" id="divisionDetailsTD" style="text-align:center"> </td>
     </tr>
     <tr>
       <th>Class Dogs</th>
@@ -203,11 +389,16 @@
     </tr>
   </table>
   <button onclick="generate()">Calculate</button>
+  <!--
+  <div class="result-container" id="input-nums" hidden="true">
+    <h3>Input:</h3>
+    <div class="result" id="inputtedNumbersResult"></div>
+  </div>
+  -->
 
-  <!-- -->
+  <br>
 
-
-  <table class="table-cell">
+  <table class="table-cell" id="points-table" hidden="true">
     <tbody>
       <tr>
         <td>Winners Dog</td>
