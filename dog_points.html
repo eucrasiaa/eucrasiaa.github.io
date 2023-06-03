@@ -3,6 +3,31 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
+      //TODO Make only text color, it currently affects borders
+      //TODO Make only text color, it currently affects borders
+      //TODO Make only text color, it currently affects borders
+
+      const points = [0, 1, 2, 3, 4, 5]; // Categories for sex = 1
+        
+      const samoyed_schedule = [
+        //male
+        [
+          [0, 0, 0, 0, 0, 0],  // division 1 N/A
+          [0, 0, 0, 0, 0, 0],  // division 2 N/A
+          [0, 2, 3, 4, 5, 7],  // division 3 male
+          [0, 2, 4, 5, 7, 10], // division 4 male
+          [0, 2, 4, 5, 6, 8]   // division 5 male
+        ],
+        // const samoyed_schedule_female=
+        // female
+        [
+          [0, 0, 0, 0, 0, 0],    // division 1 N/A
+          [0, 0, 0, 0, 0, 0],    // division 2 N/A
+          [0, 2, 6, 10, 12, 15], //divison 3 female
+          [0, 2, 4, 6, 7, 9],    //division 4 female
+          [0, 2, 5, 8, 10, 13]   //division 5 female
+        ]
+      ];
       let division;
       let classDogs;
       let classBitches;
@@ -17,13 +42,18 @@
       let WB_BoW_WD_BoS;
       let WD_BoS;
       let WB_BoS;
-      let BoB_TD;
+      let WD_BoS_BoW;
+      let WB_BoS_BoW;
+      let WD_BoB;
+      let WB_BoB;
       let WD_BoB_WB_BoS;
       let WB_BoB_WD_BoS;
-      let SD_TD;
-      let SB_TD;
+      let SD;
+      let SB;
 
 
+      const MALE_DOGS = 1;
+      const FEMALE_DOGS = 2;
       // Calculate Winners Dog, Winners Bitch, WD is BoW, WB is BoW, BOS = Winners is BOS = Winners is BOS & BoW
       function calculateStart(){
           division = document.getElementById('divisionInput').value.split(" ")[1];
@@ -47,40 +77,200 @@
         //calculate Winners Dog and Winners Bitch, Simple Math
         winnersDogAndBitch();
 
-        //
+        //calculate Best of Winners
+        bestOfWinners();
 
         
+
+        //calculate best of Opposite Sex
+        bestOfOpposite();
+
+        //calculate best of winners when other winners is BoS
+        winnersAndOtherIsBoS();
+
+        //calculate best of winners and best of opposite sex
+        winnersAndBoS();
+
+
+        //calculate best of breed main
+        bestOfBreed();
+
+        //calculate winners BoB if opposite sex winners is BoS
+        bestOfBreedIfOtherIsBoS(); 
+
+        //calculate select 
+        selectPoints();
+
+        //colorMajors
+        //colorMajorRed();
+        
+      }
+
+      function colorMajorsRed(el, points){
+        el.textContent = points;
+        if(points>=3){
+
+          //TODO Make only text color, it currently affects borders
+          el.style.color='red';
+        }
         
       }
 
       function winnersDogAndBitch(){
-        document.getElementById('WD_TD').textContent = runAgainstSchedule(division,classDogs,1);
-        document.getElementById('WB_TD').textContent = runAgainstSchedule(division,classBitches,2);
-        console.log(runAgainstSchedule(division,classDogs,1))
-        console.log(runAgainstSchedule(division,classBitches,2));
+        WD = runAgainstSchedule(division,classDogs,MALE_DOGS);
+        
+        WB = runAgainstSchedule(division,classBitches,FEMALE_DOGS);
+
+        //colorMajorsRed(document.getElementById('WD_TD'),WD);
+        //colorMajorsRed(document.getElementById('WB_TD'),WB);
+
+        document.getElementById('WD_TD').textContent = WD;
+        document.getElementById('WB_TD').textContent = WB;
+        // console.log(runAgainstSchedule(division,classDogs,1))
+        // console.log(runAgainstSchedule(division,classBitches,2));
       }
 
-      const points = [0, 1, 2, 3, 4, 5]; // Categories for sex = 1
+      function selectPoints(){
+          //SD
+          //SB
+          //sum of sex - 1 against schedule
+          console.log("select: sum of sex -1: total dogs = " + (parseInt(classDogs)+parseInt(championDogs)) + "  is " + (parseInt(classDogs)+parseInt(championDogs)-1));
+
+          let selectSumDogs = ((parseInt(classDogs)+parseInt(championDogs))-1);
+          let selectSumBitches = ((parseInt(classBitches)+parseInt(championBitches))-1);
+          //must be zero or above, so if negative, set to zero
+          console.log("using ternary, might not be right?? but it looks cool so heres the debug: ")
+          console.log("selectSumDogs before: " + selectSumDogs);
+          console.log("selectSumBitches before: " + selectSumBitches);
+
+          selectSumDogs = (selectSumDogs>0 ? selectSumDogs : 0);
+          selectSumBitches = (selectSumBitches>0 ? selectSumBitches : 0);
+
+          console.log("selectSumDogs after: " + selectSumDogs);
+          console.log("selectSumBitches after: " + selectSumBitches);
+          
+
+          SD = runAgainstSchedule(division,selectSumDogs,MALE_DOGS);
+          SB = runAgainstSchedule(division,selectSumBitches,FEMALE_DOGS);
+          document.getElementById('SD_TD').textContent = SD;
+          document.getElementById('SB_TD').textContent = SB;
+
+      }
+
+
+      function bestOfBreedIfOtherIsBoS(){
+        //this only exists because when a winners dog wins best of breed, it is also best of winners, so there is a possibility of crossover occuring if BoS points are more??
+        //WD_BoB_WB_BoS
+        //WB_BoB_WD_BoS
+
+        WD_BoB_WB_BoS = (Math.max(WD_BoB,WB_BoS)); //compare between dog BoB and bitch BoS
+        WB_BoB_WD_BoS = (Math.max(WB_BoB,WD_BoS)); //compare between bitch BoB and dog BoS
         
-      const samoyed_schedule = [
-      //male
-      [
-        [0, 0, 0, 0, 0, 0],  // division 1 N/A
-        [0, 0, 0, 0, 0, 0],  // division 2 N/A
-        [0, 2, 3, 4, 5, 7],  // division 3 male
-        [0, 2, 4, 5, 7, 10], // division 4 male
-        [0, 2, 4, 5, 6, 8]   // division 5 male
-      ],
-      // const samoyed_schedule_female=
-      // female
-      [
-        [0, 0, 0, 0, 0, 0],    // division 1 N/A
-        [0, 0, 0, 0, 0, 0],    // division 2 N/A
-        [0, 2, 6, 10, 12, 15], //divison 3 female
-        [0, 2, 4, 6, 7, 9],    //division 4 female
-        [0, 2, 5, 8, 10, 13]   //division 5 female
-      ]
-    ];
+        document.getElementById('WD_BoB_WB_BoS_TD').textContent = WD_BoB_WB_BoS;
+        document.getElementById('WB_BoB_WD_BoS_TD').textContent = WB_BoB_WD_BoS;
+
+      }
+
+      function bestOfBreed(){
+        let totalDogs = (parseInt(classDogs)+parseInt(championDogs)+parseInt(classBitches)+parseInt(championBitches));
+        WD_BoB = runAgainstSchedule(division,totalDogs,MALE_DOGS);
+        WB_BoB = runAgainstSchedule(division,totalDogs,FEMALE_DOGS);
+
+        document.getElementById('WD_BoB_TD').textContent = WD_BoB;
+        document.getElementById('WB_BoB_TD').textContent = WB_BoB;
+
+      }
+
+
+      function winnersAndOtherIsBoS(){
+        //WD_BoW_WB_BoS
+        //WB_BoW_WD_BoS
+
+        //just max I think??
+        
+        WD_BoW_WB_BoS = (Math.max(WB_BoS,WD_BoW)); //compare between BoW dog and Bitch BoS
+        WB_BoW_WD_BoS = (Math.max(WD_BoS,WB_BoW)); //compare between BoW bitch and dog BoS
+
+
+        document.getElementById('WD_BoW_WB_BoS_TD').textContent = WD_BoW_WB_BoS;
+        document.getElementById('WB_BoW_WD_BoS_TD').textContent = WB_BoW_WD_BoS;
+
+
+        if(WD_BoS != WD_BoW){
+          console.log("possible crossover in WD_BoW_WB_BoS");
+        }
+        if(WB_BoS != WB_BoW){
+          console.log("possible crossover in WB_BoW_WD_BoS");
+        }
+
+        // if(WD_BoS > WD_BoW){
+        //   console.log("wd_bow_wb_bos crossover");
+        //   WD_BoW_WB_BoS=W
+        // }
+
+      }
+
+      function winnersAndBoS(){
+        //WD_BoS_BoW
+        //WB_BoS_BoW
+
+        WD_BoS_BoW = (Math.max(WD_BoS,WB)); //compare between dog BoS and winners bitch points
+        WB_BoS_BoW = (Math.max(WB_BoS,WD)); //compare between bitch BoS and winners dog points
+        
+        document.getElementById('WD_BoS_BoW_TD').textContent = WD_BoS_BoW;
+        document.getElementById('WB_BoS_BoW_TD').textContent = WB_BoS_BoW;
+        
+      }
+
+
+      function bestOfWinners(){
+        
+
+        if( WD != WB ){ //crossover
+          console.log("crossover with " + WD + " and " + WB)
+          WD_BoW=(Math.max(WD,WB));
+          WB_BoW=(Math.max(WD,WB));
+        }
+        else{ 
+          if((WD == WB) && WD == 0){ //possible 1 point
+            //for males
+            console.log("sum dogs = " + (classBitches+classDogs) + ", " + samoyed_schedule[MALE_DOGS-1][division-1][1] + ", " + samoyed_schedule[FEMALE_DOGS-1][division-1][1]); 
+            if((classBitches+classDogs) >= samoyed_schedule[MALE_DOGS-1][division-1][1] ){ //division-1, males-1, and then the requirement for 1 point 
+              console.log("males get 1 point")
+              WD_BoW=1;
+            }
+            if((classBitches+classDogs) >= samoyed_schedule[FEMALE_DOGS-1][division-1][1] ){ //division-1, males-1, and then the requirement for 1 point 
+              console.log("females get 1 point")
+              WB_BoW=1;
+            }
+            if (WB_BoW!=1){
+              WB_BoW=0;
+            }
+            if (WD_BoW!=1){
+              WD_BoW=0;
+            }
+
+          }
+          else{ //no crossover, no 1 point, so no points change vs WD and WB
+            WD_BoW=WD;
+            WB_BoW=WB;
+            
+          }
+        }
+
+        document.getElementById('WD_BoW_TD').textContent = WD_BoW;
+        document.getElementById('WB_BoW_TD').textContent = WB_BoW;
+      }
+
+      function bestOfOpposite(){
+
+        WD_BoS = runAgainstSchedule(division,(parseInt(classDogs)+parseInt(championDogs)),MALE_DOGS);
+        WB_BoS = runAgainstSchedule(division,(parseInt(classBitches)+parseInt(championBitches)),FEMALE_DOGS);
+
+        document.getElementById('WD_BoS_TD').textContent = WD_BoS;
+        document.getElementById('WB_BoS_TD').textContent = WB_BoS;
+      }
+
 
 
 
@@ -100,6 +290,9 @@
             return points[i-1];
 
           }
+        }
+        if(numberOfDogs >=  samoyed_schedule[sexIndex][divisionIndex][samoyed_schedule[sexIndex][divisionIndex].length-1]){
+          return points[points.length-1];
         }
 
 
@@ -194,7 +387,7 @@
 
         function getDivisionDetails(division) {
           if (division === 'Division 3') {
-            return 'Division 3: District of Columbia, Maryland, North Carolina, Virginia, West Virgin';
+            return 'Division 3: District of Columbia, Maryland, North Carolina, Virginia, West Virginia';
           } else if (division === 'Division 4') {
             return 'Division 4: Florida, Georgia, South Carolina';
           } else if (division === 'Division 5') {
@@ -253,6 +446,7 @@
     
     .table-cell {
       border: 1px solid;
+      
       width: 100%;
       
     }
@@ -262,7 +456,17 @@
       font-size: 16 px;
       padding-left:10px;
       text-align:center;
+
     }
+
+    .table-cell tr:last-child td {
+      border-bottom: 1px solid;
+    }
+
+    .table-cell tr:nth-of-type(2n):not(:last-child) td {
+      border-bottom: 2px solid;
+    }
+
     .result-container {
       margin-top: 20px;
       text-align: center;
@@ -404,7 +608,7 @@
         <td>Winners Dog</td>
         <td id="WD_TD"></td>
       </tr>
-      <tr>
+      <tr style="background-color:#e5f1fb">
         <td>Winners Bitch</td>
         <td id="WB_TD"></td>
       </tr>
@@ -412,15 +616,15 @@
         <td>WD is Best of Winners</td>
         <td id="WD_BoW_TD"></td>
       </tr>
-      <tr>
-        <td>WB is Best of Winner</td>
+      <tr style="background-color:#e5f1fb">
+        <td>WB is Best of Winners</td>
         <td id="WB_BoW_TD"></td>
       </tr>
       <tr>
         <td>WD is Best of Winners (WB is BoS)</td>
         <td id="WD_BoW_WB_BoS_TD"></td>
       </tr>
-      <tr>
+      <tr style="background-color:#e5f1fb">
         <td>WB is Best of Winners (WD is BoS)</td>
         <td id="WB_BoW_WD_BoS_TD"></td>
       </tr>
@@ -428,28 +632,40 @@
         <td>WD is Best of Opposite</td>
         <td id="WD_BoS_TD"></td>
       </tr>
-      <tr>
+      <tr style="background-color:#e5f1fb">
         <td>WB is Best of Opposite</td>
         <td id="WB_BoS_TD"></td>
       </tr>
       <tr>
-        <td>Best of Breed</td>
-        <td id="BoB_TD"></td>
+        <td>WD is Best of Opposite and BoW</td>
+        <td id="WD_BoS_BoW_TD"></td>
+      </tr>
+      <tr style="background-color:#e5f1fb">
+        <td>WB is Best of Opposite  and BoW</td>
+        <td id="WB_BoS_BoW_TD"></td>
       </tr>
       <tr>
-        <td>WD is BoB and WB is BOS</td>
+        <td>WD is Best of Breed</td>
+        <td id="WD_BoB_TD"></td>
+      </tr>
+      <tr style="background-color:#e5f1fb">
+        <td>WB is Best of Breed</td>
+        <td id="WB_BoB_TD"></td>
+      </tr>
+      <tr>
+        <td>WD is BoB and WB is BoS</td>
         <td id="WD_BoB_WB_BoS_TD"></td>
       </tr>
-      <tr>
-        <td>WB is BoB and WD is BOS</td>
+      <tr  style="background-color:#e5f1fb">
+        <td>WB is BoB and WD is BoS</td>
         <td id="WB_BoB_WD_BoS_TD"></td>
       </tr>
       <tr>
         <td>Select Dog</td>
         <td id="SD_TD"></td>
       </tr>
-      <tr>
-      <td>Select Bitch</td>
+      <tr style="background-color:#e5f1fb">
+        <td>Select Bitch</td>
         <td id="SB_TD"></td>
       </tr>
     </tbody>
