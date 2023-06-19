@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <script>
       //TODO Make only text color, it currently affects borders
       //TODO Make only text color, it currently affects borders
@@ -515,6 +515,9 @@
       font-size: 18px;
     }
 
+    /* .dogNumberInput{
+
+    } */
 
 
 
@@ -577,19 +580,19 @@
     </tr>
     <tr>
       <th>Class Dogs</th>
-      <td><input type="number" placeholder=0 id="classDogsInput"></td>
+      <td><input class="dogNumberInput" type="number" placeholder=0 id="classDogsInput"></td>
     </tr>
     <tr>
       <th>Class Bitches</th>
-      <td><input type="number" placeholder=0 id="classBitchesInput"></td>
+      <td><input class="dogNumberInput" type="number" placeholder=0 id="classBitchesInput"></td>
     </tr>
     <tr>
       <th>Champion Dogs</th>
-      <td><input type="number" placeholder=0 id="championDogsInput"></td>
+      <td><input class="dogNumberInput" type="number" placeholder=0 id="championDogsInput"></td>
     </tr>
     <tr>
       <th>Champion Bitches</th>
-      <td><input type="number" placeholder=0 id="championBitchesInput"></td>
+      <td><input class="dogNumberInput" type="number" placeholder=0 id="championBitchesInput"></td>
     </tr>
   </table>
   <button onclick="generate()">Calculate</button>
