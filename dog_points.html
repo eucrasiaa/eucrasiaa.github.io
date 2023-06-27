@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<!-- DONE TODO add clear button -->
+<!-- DONE TODO color majors distinctly -->
+<!-- TODO explanation for how the calcuation is done-->
+<!-- TODO display the input in 1 line above the results (for screenshots)-->
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -61,9 +65,32 @@
           classBitches = document.getElementById('classBitchesInput').value || 0;
           championDogs = document.getElementById('championDogsInput').value || 0;
           championBitches = document.getElementById('championBitchesInput').value || 0;
-
-
       }
+
+
+      
+
+      function clearEnteredNumbers(){
+        document.getElementById('classDogsInput').value = '';
+        document.getElementById('classBitchesInput').value = '';
+        document.getElementById('championDogsInput').value = '';
+        document.getElementById('championBitchesInput').value = '';
+      }
+
+
+      function randomIntFromInterval(min, max) { // min and max included 
+        return Math.floor(Math.random() * (max - min + 1) + min)
+      }
+
+
+      function debug_InsertRandomNumbers(){
+          document.getElementById('classDogsInput').value = randomIntFromInterval(0, 20);
+          document.getElementById('classBitchesInput').value = randomIntFromInterval(0, 20);
+          document.getElementById('championDogsInput').value = randomIntFromInterval(0, 20);
+          document.getElementById('championBitchesInput').value = randomIntFromInterval(0, 20);
+      }
+
+
 
       function generate(){
 
@@ -71,6 +98,9 @@
         calculateStart();
 
         document.getElementById('points-table').hidden=false;
+        document.getElementById('small-input-display-div').hidden=false;
+        document.getElementById('small-input-display-p').innerText="["+classDogs+", " + classBitches + ", " + championDogs + ", " + championBitches+"]";
+        
         //document.getElementById('inputtedNumbersResult').textContent= "("+classDogs+", " + classBitches + ", " + championDogs + ", " + championBitches+")";
         //document.getElementById('input-nums').hidden=false;
 
@@ -103,6 +133,8 @@
 
         //colorMajors
         //colorMajorRed();
+
+        
         
       }
 
@@ -112,6 +144,9 @@
 
           //TODO Make only text color, it currently affects borders
           el.style.color='red';
+        }
+        else{
+          el.style.color="#000";
         }
         
       }
@@ -152,8 +187,10 @@
 
           SD = runAgainstSchedule(division,selectSumDogs,MALE_DOGS);
           SB = runAgainstSchedule(division,selectSumBitches,FEMALE_DOGS);
-          document.getElementById('SD_TD').textContent = SD;
-          document.getElementById('SB_TD').textContent = SB;
+          // document.getElementById('SD_TD').textContent = SD;
+          // document.getElementById('SB_TD').textContent = SB;
+          colorMajorsRed(document.getElementById('SD_TD'),SD);
+          colorMajorsRed(document.getElementById('SB_TD'),SB);
 
       }
 
@@ -166,8 +203,11 @@
         WD_BoB_WB_BoS = (Math.max(WD_BoB,WB_BoS)); //compare between dog BoB and bitch BoS
         WB_BoB_WD_BoS = (Math.max(WB_BoB,WD_BoS)); //compare between bitch BoB and dog BoS
         
-        document.getElementById('WD_BoB_WB_BoS_TD').textContent = WD_BoB_WB_BoS;
-        document.getElementById('WB_BoB_WD_BoS_TD').textContent = WB_BoB_WD_BoS;
+        // document.getElementById('WD_BoB_WB_BoS_TD').textContent = WD_BoB_WB_BoS;
+        // document.getElementById('WB_BoB_WD_BoS_TD').textContent = WB_BoB_WD_BoS;
+        colorMajorsRed(document.getElementById('WD_BoB_WB_BoS_TD'), WD_BoB_WB_BoS);
+        colorMajorsRed(document.getElementById('WB_BoB_WD_BoS_TD'), WB_BoB_WD_BoS);
+        
 
       }
 
@@ -176,9 +216,11 @@
         WD_BoB = runAgainstSchedule(division,totalDogs,MALE_DOGS);
         WB_BoB = runAgainstSchedule(division,totalDogs,FEMALE_DOGS);
 
-        document.getElementById('WD_BoB_TD').textContent = WD_BoB;
-        document.getElementById('WB_BoB_TD').textContent = WB_BoB;
-
+        // document.getElementById('WD_BoB_TD').textContent = WD_BoB;
+        // document.getElementById('WB_BoB_TD').textContent = WB_BoB;
+        colorMajorsRed(document.getElementById('WD_BoB_TD'), WD_BoB);
+        colorMajorsRed(document.getElementById('WB_BoB_TD'), WB_BoB);
+        
       }
 
 
@@ -192,8 +234,10 @@
         WB_BoW_WD_BoS = (Math.max(WD_BoS,WB_BoW)); //compare between BoW bitch and dog BoS
 
 
-        document.getElementById('WD_BoW_WB_BoS_TD').textContent = WD_BoW_WB_BoS;
-        document.getElementById('WB_BoW_WD_BoS_TD').textContent = WB_BoW_WD_BoS;
+        // document.getElementById('WD_BoW_WB_BoS_TD').textContent = WD_BoW_WB_BoS;
+        // document.getElementById('WB_BoW_WD_BoS_TD').textContent = WB_BoW_WD_BoS;
+        colorMajorsRed(document.getElementById('WD_BoW_WB_BoS_TD'), WD_BoW_WB_BoS);
+        colorMajorsRed(document.getElementById('WB_BoW_WD_BoS_TD'), WB_BoW_WD_BoS)
 
 
         if(WD_BoS != WD_BoW){
@@ -217,8 +261,10 @@
         WD_BoS_BoW = (Math.max(WD_BoS,WB)); //compare between dog BoS and winners bitch points
         WB_BoS_BoW = (Math.max(WB_BoS,WD)); //compare between bitch BoS and winners dog points
         
-        document.getElementById('WD_BoS_BoW_TD').textContent = WD_BoS_BoW;
-        document.getElementById('WB_BoS_BoW_TD').textContent = WB_BoS_BoW;
+        // document.getElementById('WD_BoS_BoW_TD').textContent = WD_BoS_BoW;
+        // document.getElementById('WB_BoS_BoW_TD').textContent = WB_BoS_BoW;
+        colorMajorsRed(document.getElementById('WD_BoS_BoW_TD'), WD_BoS_BoW);
+        colorMajorsRed(document.getElementById('WB_BoS_BoW_TD'), WB_BoS_BoW);
         
       }
 
@@ -258,8 +304,10 @@
           }
         }
 
-        document.getElementById('WD_BoW_TD').textContent = WD_BoW;
-        document.getElementById('WB_BoW_TD').textContent = WB_BoW;
+        // document.getElementById('WD_BoW_TD').textContent = WD_BoW;
+        // document.getElementById('WB_BoW_TD').textContent = WB_BoW;
+        colorMajorsRed(document.getElementById('WD_BoW_TD'), WD_BoW);
+        colorMajorsRed(document.getElementById('WB_BoW_TD'), WB_BoW);
       }
 
       function bestOfOpposite(){
@@ -267,8 +315,11 @@
         WD_BoS = runAgainstSchedule(division,(parseInt(classDogs)+parseInt(championDogs)),MALE_DOGS);
         WB_BoS = runAgainstSchedule(division,(parseInt(classBitches)+parseInt(championBitches)),FEMALE_DOGS);
 
-        document.getElementById('WD_BoS_TD').textContent = WD_BoS;
-        document.getElementById('WB_BoS_TD').textContent = WB_BoS;
+        // document.getElementById('WD_BoS_TD').textContent = WD_BoS;
+        // document.getElementById('WB_BoS_TD').textContent = WB_BoS;
+        colorMajorsRed(document.getElementById('WD_BoS_TD'), WD_BoS);
+        colorMajorsRed(document.getElementById('WB_BoS_TD'), WB_BoS);
+
       }
 
 
@@ -460,11 +511,11 @@
     }
 
     .table-cell tr:last-child td {
-      border-bottom: 1px solid;
+      border-bottom: 1px solid #000;
     }
 
     .table-cell tr:nth-of-type(2n):not(:last-child) td {
-      border-bottom: 2px solid;
+      border-bottom: 2px solid #000;
     }
 
     .result-container {
@@ -515,6 +566,36 @@
       font-size: 18px;
     }
 
+    .button-container {
+      text-align: center;
+    }
+    .button-container button {
+      display: inline-block;
+      margin: 0 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    #small-input-display-div{
+      display: block;
+
+      text-align: center;
+      margin: 5px 5px;
+    }
+    #small-input-display-p{
+      display:inline-block;
+      font-size: 16px;
+      font-weight: bold;
+      margin: 0;
+    }
+    #clear-button{
+      background-color: #f44336;
+    }
     /* .dogNumberInput{
 
     } */
@@ -561,9 +642,10 @@
         */
     </style>
 </head>
-<body>
-  <div class="header">Will's Nifty Points Calculator</div>
-  <div class="subheader">Only Supports Samoyeds for now</div>
+<!-- <body> -->
+<body onload="debug_InsertRandomNumbers()"> <!-- for debug -->
+  <div class="header">AKC Point Schedule Calculator</div>
+  <div class="subheader">Only $5 to add your breed!</div>
   <table>
     <tr>
       <th>Division</th>
@@ -595,7 +677,17 @@
       <td><input class="dogNumberInput" type="number" placeholder=0 id="championBitchesInput"></td>
     </tr>
   </table>
-  <button onclick="generate()">Calculate</button>
+  <div class="button-container">
+    <!--  <button onclick="generate()">Calculate</button>  -->
+    <button id="clear-button" onclick="clearEnteredNumbers()">Clear</button>
+    <button id="generate-button" onclick="generate()">Calculate</button>
+  </div>
+  
+  <br>
+  <div id="small-input-display-div" hidden="true">
+    <p id="small-input-display-p"></p>
+  </div>
+  
   <!--
   <div class="result-container" id="input-nums" hidden="true">
     <h3>Input:</h3>
@@ -603,7 +695,6 @@
   </div>
   -->
 
-  <br>
 
   <table class="table-cell" id="points-table" hidden="true">
     <tbody>
