@@ -451,6 +451,15 @@
         }
       });
 
+
+      function menuAnimation(x){
+        x.classList.toggle("change");
+        // document.getElementsByClassName("x-bar-1")[0].classList.toggle("change");
+        document.getElementsByClassName("info-popup")[0].classList.toggle("change-info-popup");
+        document.getElementsByClassName("info-popup")[0].hidden = !document.getElementsByClassName("info-popup")[0].hidden;
+      }
+
+
     </script>
     <!--  <link rel="stylesheet" type="text/css" href="style.css"> -->
     <style>
@@ -458,7 +467,7 @@
       font-family: Arial, sans-serif;
     }
     
-    table {
+    table  {
       width: 100%;
       border-collapse: collapse;
       margin-bottom: 20px;
@@ -471,13 +480,13 @@
       
     }
     
-    th {
+    #points-table th, #input-table th {
       font-weight: bold;
     }
     
     input[type="number"], select {
       width: 100%;
-      padding: 6px 10px;
+      padding: 6px 10px;  
       box-sizing: border-box;
       border: 1px solid #ccc;
       border-radius: 4px;
@@ -495,7 +504,13 @@
       border-radius: 4px;
       cursor: pointer;
     }
-    
+    .info-cell{
+      border: 1px solid #000000;
+      width: 100%;
+    }
+    .info-cell td{
+      text-align:center;
+    }
     .table-cell {
       border: 1px solid;
       
@@ -516,7 +531,33 @@
     }
 
     .table-cell tr:nth-of-type(2n):not(:last-child) td {
+ 
       border-bottom: 2px solid #000;
+    }
+
+    .info-cell tr:nth-of-type(2n):not(:last-child) td {
+ 
+       border-bottom: 1px solid #000;
+    }
+/*     
+    .info-cell tr:nth-of-type(2n):not(:last-child) td {
+      position:relative;
+      
+    }
+    .info-cell tr:nth-of-type(2n):not(:last-child) td::after {
+        content: '';
+        position: absolute;
+        margin: auto;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 50%;
+        height: 1px;
+        background-color: #000;
+    } */
+    .info-cell tr:nth-of-type(2n-1):not(:last-child) td {
+      font-weight:bold;
+      
     }
 
     .result-container {
@@ -553,19 +594,59 @@
     .header {
       background-color: #333;
       color: #fff;
-      padding: 10px;
+      padding: 14px;
       text-align: center;
       font-size: 24px;
+      position:relative;
     }
-
-    /* Subheader */
-    .subheader {
+        /* Subheader */
+        .subheader {
       background-color: #777;
       color: #fff;
       padding: 8px;
       text-align: center;
       font-size: 18px;
     }
+    .info-popup{
+      position:absolute;
+      background-color:#ffff99;
+      border:2px solid black;
+      width:95vw;
+      left:50%;
+
+
+
+
+      margin-top:0.5%;
+
+      transform: translateX(-50%);
+      
+      opacity: 0;
+      transition: 0.4s ease-in-out;
+      z-index: 99;
+    }
+    .info-popup td{
+      border-bottom:0px;
+    }
+    .change-info-popup{
+      opacity: 100;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .header {
+        font-size: 20px;
+        padding: 22.4px;
+      }
+      .subheader{
+        font-size:18px;
+      }
+      .info-popup{
+        width:90vw;
+        margin-top:1%;
+      }
+    }
+
+
 
     .button-container {
       text-align: center;
@@ -603,7 +684,63 @@
       background-color: #f44336;
     }
 
-    .st4{fill:none;stroke:#000000;stroke-miterlimit:10;}
+    .dog-head-stroke{
+      fill:none;
+      stroke:#ffffff;
+      stroke-miterlimit:10;
+      transition: 0.4s;
+	  }
+
+    .change .dog-head-stroke {
+      opacity: 0;
+    }
+
+
+    .x-bar-1, .x-bar-2{
+      height:2px;
+      width:30px;
+      top: 50%;
+      transition: 0.4s;
+      background-color:#000000;
+      /* transition: border .4s cubic-bezier(.5,.15,.5,.85),box-shadow .2s cubic bezier(.5,.15,.5,.85) .2s; */
+      opacity:0;
+    }
+
+    .change .x-bar-1{
+      opacity:100;
+      transform: translateX(15px) translateY(19px) rotate(-45deg);
+
+    }
+    .change .x-bar-2{
+      opacity:100;
+      transform: translateX(15px) translateY(17px) rotate(45deg);
+    }
+
+
+    .x-bar-1{
+      /*transform: translateX(15px) translateY(19px) rotate(-45deg);*/
+      transform: translate(40px, -10px) rotate(-45deg);
+
+    }
+    .x-bar-2{
+      transform: translate(-10px, -8px) rotate(45deg);
+    }
+    .menu-icon-click{
+      z-index: 100;
+      position:absolute; 
+      top:50%;
+      width:60px;
+      height:42px; 
+      padding:2px; 
+
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+
+    #info-table{
+      text-align:center;
+    }
+    
     /* .dogNumberInput{
 
     } */
@@ -666,32 +803,102 @@
 </svg>
 </div>
 
-<div hidden="true" style="width:60px;height:42px;" onclick="myFunction(this)">
-  <svg class="thatSVG"  x="0px" y="0px" viewBox="0 0 60 42"  xml:space="preserve">
-  
-  <g id="Layer_1">
-    <line class="st4" x1="17.4" y1="10.49" x2="23.31" y2="0.25"/>
-    <line class="st4" x1="23.16" y1="0.25" x2="29.07" y2="10.49"/>
-    <line class="st4" x1="30.66" y1="10.45" x2="36.26" y2="0.75"/>
-    <line class="st4" x1="36.1" y1="0.75" x2="41.65" y2="10.35"/>
-  </g>
-  <g id="Layer_2">
-    <line class="st4" x1="0.43" y1="39.88" x2="17.75" y2="9.88"/>
-    <line class="st4" x1="29.07" y1="10.49" x2="44.61" y2="10.06"/>
-    <line class="st4" x1="44.29" y1="9.88" x2="47.82" y2="16"/>
-    <line class="st4" x1="47.36" y1="15.89" x2="59.45" y2="15.89"/>
-    <line class="st4" x1="52.85" y1="27.33" x2="59.45" y2="15.89"/>
-    <line class="st4" x1="27.42" y1="26.9" x2="52.85" y2="27.33"/>
-    <line class="st4" x1="24.29" y1="42.09" x2="33.07" y2="26.88"/>
-  </g>
-  </svg>
+
+
+
+
+<div style="position:relative">
+  <div class="info-popup" hidden="true">
+
+    <table class="info-cell" id="info-table">
+      <br><br><br>
+      <tbody>
+        <tr>
+          <td>Winners Dog & Winners Bitch</td>
+        </tr>
+        <tr>
+          <td>Count the number of dogs of the gender in question. Use this number and refer to the Points Schedule</td>
+          
+        </tr>
+        <tr>
+          <td>Best of Winners</td>
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+        <tr>
+          <td>WD/WB is Best of Winners (WB/WD is BoS)</td>
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+        <tr>
+          <td>WD/WB is Best of Opposite</td>
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+        <tr>
+          <td>WD/WB is Best of Opposite and BoW</td>
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+        <tr>
+          <td>WD/WB is Best of Breed</td>
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+        <tr>
+          <td>WD/WB is BoB and WB/WD is BoS</td>
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Select Dog/Bitch</td>
+
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+
   </div>
-
-
+</div>
 <!-- <body onload="debug_InsertRandomNumbers()"> --> <!-- for debug -->
-  <div class="header">AKC Point Schedule Calculator</div>
+  <div class="header">
+    <div  class="menu-icon-click" onclick="menuAnimation(this)">
+
+
+      <div class="x-bar-1"></div>
+      <div class="x-bar-2"></div>
+    
+      <svg class="thatSVG" style="transform:translate(0,-4px)"  x="0px" y="0px" viewBox="0 0 60 42"  xml:space="preserve">
+      <g id="Layer_1">
+        <line class="dog-head-stroke" x1="17.4" y1="10.49" x2="23.31" y2="0.25"/>
+        <line class="dog-head-stroke" x1="23.16" y1="0.25" x2="29.07" y2="10.49"/>
+        <line class="dog-head-stroke" x1="30.66" y1="10.45" x2="36.26" y2="0.75"/>
+        <line class="dog-head-stroke" x1="36.1" y1="0.75" x2="41.65" y2="10.35"/>
+      </g>
+      <g id="Layer_2">
+        <line class="dog-head-stroke" x1="0.43" y1="39.88" x2="17.75" y2="9.88"/>
+        <line class="dog-head-stroke" x1="29.07" y1="10.49" x2="44.61" y2="10.06"/>
+        <line class="dog-head-stroke" x1="44.29" y1="9.88" x2="47.82" y2="16"/>
+        <line class="dog-head-stroke" x1="47.36" y1="15.89" x2="59.45" y2="15.89"/>
+        <line class="dog-head-stroke" x1="52.85" y1="27.33" x2="59.45" y2="15.89"/>
+        <line class="dog-head-stroke" x1="27.42" y1="26.9" x2="52.85" y2="27.33"/>
+        <line class="dog-head-stroke" x1="24.29" y1="42.09" x2="33.07" y2="26.88"/>
+      </g>
+    </svg>  
+    </div>
+    <div>AKC Point Calculator</div>
+  </div>
   <div class="subheader">Only $5 to add your breed!</div>
-  <table>
+  <table id="input-table">
     <tr>
       <th>Division</th>
       <td>
