@@ -4,6 +4,17 @@
 <!-- TODO explanation for how the calcuation is done-->
 <!-- DONE TODO display the input in 1 line above the results (for screenshots)-->
 <!-- if BoB you instantly become BoW clarify in popup-->
+
+
+
+<!-- PREVIOUSLY INCORRECT BoB Calculation!!! -->
+<!-- How to calculate:
+  if a winners/non-champ (class) goes BoB:
+    Sum class dogs of gender of BoB + all champions
+  if champion goes BoB:
+    all competing class dogs + all competing champions, so no change 
+
+-->
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -51,6 +62,9 @@
       let WB_BoS_BoW;
       let WD_BoB;
       let WB_BoB;
+      let Boy_BoB;
+      let Girl_BoB;
+
       let WD_BoB_WB_BoS;
       let WB_BoB_WD_BoS;
       let SD;
@@ -216,13 +230,22 @@
 
       function bestOfBreed(){
         let totalDogs = (parseInt(classDogs)+parseInt(championDogs)+parseInt(classBitches)+parseInt(championBitches));
-        WD_BoB = runAgainstSchedule(division,totalDogs,MALE_DOGS);
-        WB_BoB = runAgainstSchedule(division,totalDogs,FEMALE_DOGS);
+        
+        Boy_BoB = runAgainstSchedule(division,totalDogs,MALE_DOGS);
+        Girl_BoB = runAgainstSchedule(division,totalDogs,FEMALE_DOGS);
+
+
+        WD_BoB = runAgainstSchedule(division,(parseInt(classDogs)+parseInt(championDogs)+parseInt(championBitches)),MALE_DOGS);
+        WB_BoB = runAgainstSchedule(division,(parseInt(championDogs)+parseInt(classBitches)+parseInt(championBitches)),FEMALE_DOGS);
 
         // document.getElementById('WD_BoB_TD').textContent = WD_BoB;
         // document.getElementById('WB_BoB_TD').textContent = WB_BoB;
         colorMajorsRed(document.getElementById('WD_BoB_TD'), WD_BoB);
         colorMajorsRed(document.getElementById('WB_BoB_TD'), WB_BoB);
+
+
+        colorMajorsRed(document.getElementById('Boy_BoB_TD'), Boy_BoB);
+        colorMajorsRed(document.getElementById('Girl_BoB_TD'), Girl_BoB);
         
       }
 
@@ -853,6 +876,12 @@
           <td></td>
         </tr>
         <tr>
+          <td>Champion is Best of Breed</td>
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+        <tr>
           <td>WD/WB is BoB and WB/WD is BoS</td>
         </tr>
         <tr>
@@ -998,6 +1027,14 @@
       <tr style="background-color:#e5f1fb">
         <td>WB is Best of Breed</td>
         <td id="WB_BoB_TD"></td>
+      </tr>
+      <tr>
+        <td>Champion Dog is Best of Breed</td>
+        <td id="Boy_BoB_TD"></td>
+      </tr>
+      <tr style="background-color:#e5f1fb">
+        <td>Champion Bitch is Best of Breed</td>
+        <td id="Girl_BoB_TD"></td>
       </tr>
       <tr>
         <td>WD is BoB and WB is BoS</td>
