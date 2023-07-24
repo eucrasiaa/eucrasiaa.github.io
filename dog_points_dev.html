@@ -105,6 +105,12 @@
         keys.sort();
         keys.forEach(element => makeBreedOption(element));
 
+        let prevBreed = localStorage.getItem("chosenBreed");
+        if(prevBreed){
+          document.getElementById("breedInput").value = prevBreed;
+          console.log("loaded prev breed")
+        }
+
 
       })();
 
@@ -483,11 +489,23 @@
         var championDogsInput = document.getElementById('championDogsInput');
         var championBitchesInput = document.getElementById('championBitchesInput');
 
+
+        var breedInputListener = document.getElementById('breedInput');
+
         // Add event listeners to the input elements
         classDogsInput.addEventListener('input', validatePositiveNumber);
         classBitchesInput.addEventListener('input', validatePositiveNumber);
         championDogsInput.addEventListener('input', validatePositiveNumber);
         championBitchesInput.addEventListener('input', validatePositiveNumber);
+
+        breedInputListener.addEventListener('input',saveBreed);
+
+
+        //save last selected breed
+        function saveBreed(event){
+          console.log("saving breed: " + event.target.value);
+          localStorage.setItem("chosenBreed", event.target.value);
+        }
 
         // Validation function to allow only positive numbers
         function validatePositiveNumber(event) {
