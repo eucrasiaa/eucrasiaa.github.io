@@ -323,12 +323,12 @@
         else{ 
           if((WD == WB) && WD == 0){ //possible 1 point
             //for males
-            console.log("sum dogs = " + (classBitches+classDogs) + ", " + samoyed_schedule[MALE_DOGS-1][division-1][1] + ", " + samoyed_schedule[FEMALE_DOGS-1][division-1][1]); 
-            if((classBitches+classDogs) >= samoyed_schedule[MALE_DOGS-1][division-1][1] ){ //division-1, males-1, and then the requirement for 1 point 
+            console.log("sum dogs = " + (parseInt(classBitches)+parseInt(classDogs)) + ", " + samoyed_schedule[MALE_DOGS-1][division-1][1] + ", " + samoyed_schedule[FEMALE_DOGS-1][division-1][1]); 
+            if((parseInt(classBitches)+parseInt(classDogs)) >= samoyed_schedule[MALE_DOGS-1][division-1][1] ){ //division-1, males-1, and then the requirement for 1 point 
               console.log("males get 1 point")
               WD_BoW=1;
             }
-            if((classBitches+classDogs) >= samoyed_schedule[FEMALE_DOGS-1][division-1][1] ){ //division-1, males-1, and then the requirement for 1 point 
+            if((parseInt(classBitches)+parseInt(classDogs)) >= samoyed_schedule[FEMALE_DOGS-1][division-1][1] ){ //division-1, males-1, and then the requirement for 1 point 
               console.log("females get 1 point")
               WB_BoW=1;
             }
