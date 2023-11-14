@@ -30,19 +30,21 @@
         //male
         [
           [0, 0, 0, 0, 0, 0],  // division 1 N/A
-          [0, 0, 0, 0, 0, 0],  // division 2 N/A
+          [0, 2, 3, 4, 6, 11],  // division 2 male
           [0, 2, 3, 4, 5, 7],  // division 3 male
           [0, 2, 4, 5, 7, 10], // division 4 male
-          [0, 2, 4, 5, 6, 8]   // division 5 male
+          [0, 2, 4, 5, 6, 8],   // division 5 male
+          [0, 2, 4, 5, 6, 7]   //division 6 male
         ],
         // const samoyed_schedule_female=
         // female
         [
           [0, 0, 0, 0, 0, 0],    // division 1 N/A
-          [0, 0, 0, 0, 0, 0],    // division 2 N/A
+          [0, 2, 6, 9, 11, 16],    // division 2 female
           [0, 2, 6, 10, 12, 15], //divison 3 female
           [0, 2, 4, 6, 7, 9],    //division 4 female
-          [0, 2, 5, 8, 10, 13]   //division 5 female
+          [0, 2, 5, 8, 10, 13],   //division 5 female
+          [0, 2, 8, 13, 15, 19]  //Division 6 female
         ]
       ];
       let division;
@@ -203,7 +205,7 @@
           //SD
           //SB
           //sum of sex - 1 against schedule
-          console.log("select: sum of sex -1: total dogs = " + (parseInt(classDogs)+parseInt(championDogs)) + "  is " + (parseInt(classDogs)+parseInt(championDogs)-1));
+          console.log("select: sum of sex -1: total ` = " + (parseInt(classDogs)+parseInt(championDogs)) + "  is " + (parseInt(classDogs)+parseInt(championDogs)-1));
 
           let selectSumDogs = ((parseInt(classDogs)+parseInt(championDogs))-1);
           let selectSumBitches = ((parseInt(classBitches)+parseInt(championBitches))-1);
@@ -480,13 +482,20 @@
         });
 
         function getDivisionDetails(division) {
-          if (division === 'Division 3') {
+          if (division === "Division 2"){
+            return 'Division 2: Delaware, New Jersey, New York, Pennsylvania'
+          } else if (division === 'Division 3') {
             return 'Division 3: District of Columbia, Maryland, North Carolina, Virginia, West Virginia';
           } else if (division === 'Division 4') {
             return 'Division 4: Florida, Georgia, South Carolina';
           } else if (division === 'Division 5') {
             return 'Division 5: Indiana, Kentucky, Michigan, Ohio';
+          } else if (division === 'Division 6') {
+            return 'Division 6: Arizona, Colorado';
+          } else{
+            return "Uh Oh! Something must have gone wrong!"
           }
+          
         }
         function updateDivisionDetails(divisionDetails) {
           divisionDetailsTD.textContent = divisionDetails;
@@ -1101,9 +1110,11 @@
       <th>Division</th>
       <td>
         <select id="divisionInput" style="text-align: left;">
+            <option value="Division 2">Division 2</option>
             <option value="Division 3" selected>Division 3</option>
             <option value="Division 4">Division 4</option>
             <option value="Division 5">Division 5</option>
+            <option value="Division 6">Division 6</option>
         </select>
       </td>
     </tr>
