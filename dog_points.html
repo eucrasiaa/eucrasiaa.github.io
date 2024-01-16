@@ -364,6 +364,8 @@
         // document.getElementById('WB_BoS_TD').textContent = WB_BoS;
         colorMajorsRed(document.getElementById('WD_BoS_TD'), WD_BoS);
         colorMajorsRed(document.getElementById('WB_BoS_TD'), WB_BoS);
+        colorMajorsRed(document.getElementById('WD_BoS_TD_2'), WD_BoS);
+        colorMajorsRed(document.getElementById('WB_BoS_TD_2'), WB_BoS);
 
       }
 
@@ -982,7 +984,7 @@
 
       </tbody>
       </table> 
-      <p style="font-size:11px; text-align:center">v. 11.14</p>
+      <p style="font-size:11px; text-align:center">v. 11.15</p>
     </div>
   </div>
 
@@ -1029,16 +1031,22 @@
           <td>Count the number of Class dogs of your sex, and all Champion dogs. Use this number and refer to the Points Schedule.</td>
         </tr>
         <tr>
+          <td>WD/WB is BoB and WB/WD is BoS</td>
+        </tr>
+        <tr>
+          <td>If BoS would recieve more points than BoB, BoB would also be awarded that number of points. This is because when a Class dog is BoB, it is automatically BoW. Otherwise, no change.</td>
+        </tr>
+        <tr>
           <td>Champion is Best of Breed</td>
         </tr>
         <tr>
           <td>Count the number of all Class dogs and all Champion dogs. Use this number and refer to the Points Schedule.</td>
         </tr>
         <tr>
-          <td>WD/WB is BoB and WB/WD is BoS</td>
+          <td>Champion is Best of Opposite</td>
         </tr>
         <tr>
-          <td>If BoS would recieve more points than BoB, BoB would also be awarded that number of points. This is because when a Class dog is BoB, it is automatically BoW. Otherwise, no change.</td>
+          <td>Count the number of Class and Champions of the dogs sex. Use this number and refer to the Points Schedule.</td>
         </tr>
         <tr>
           <td>Select Dog/Bitch</td>
@@ -1209,6 +1217,22 @@
         <td id="WB_BoB_TD"></td>
       </tr>
       <tr>
+        <td>WD is BoB and WB is BoS</td>
+        <td id="WD_BoB_WB_BoS_TD"></td>
+      </tr>
+      <tr  style="background-color:#e5f1fb">
+        <td>WB is BoB and WD is BoS</td>
+        <td id="WB_BoB_WD_BoS_TD"></td>
+      </tr>
+      <tr style="border-style: solid; border-color:#ffffff; border-width: 0px 1px" >  
+        <td style="border-bottom: 0; padding:9px"></td>
+        <td style="border-bottom: 0; padding:9px"></td>
+      </tr>
+      <tr style="border-style: solid; border-color:#ffffff; border-width: 0px 1px">
+        <td style="padding:9px"></td>
+        <td style="padding:9px"></td>
+      </tr>
+      <tr>
         <td>Champion Dog is Best of Breed</td>
         <td id="Boy_BoB_TD"></td>
       </tr>
@@ -1217,12 +1241,12 @@
         <td id="Girl_BoB_TD"></td>
       </tr>
       <tr>
-        <td>WD is BoB and WB is BoS</td>
-        <td id="WD_BoB_WB_BoS_TD"></td>
+        <td>Champion Dog is Best of Opposite</td>
+        <td id="WD_BoS_TD_2"></td>
       </tr>
-      <tr  style="background-color:#e5f1fb">
-        <td>WB is BoB and WD is BoS</td>
-        <td id="WB_BoB_WD_BoS_TD"></td>
+      <tr style="background-color:#e5f1fb">
+        <td>Champion Bitch is Best of Opposite</td>
+        <td id="WB_BoS_TD_2"></td>
       </tr>
       <tr>
         <td>Select Dog</td>
