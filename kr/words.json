@@ -1,0 +1,20 @@
+[
+    {
+      "Word": "사과",
+      "Definition": "apple",
+      "Notes": "Common fruit",
+      "Tag": "Noun"
+    },
+    {
+      "Word": "먹다",
+      "Definition": "to eat",
+      "Notes": "Has unique honorific form 잡수시다. <a class='link' data-word='사과'>사과</a>",
+      "Tag": "Verb"
+    },
+    {
+      "Word": "빨갛다",
+      "Definition": "to be red",
+      "Notes": "Adjective, 빨간: as a descriptor, 빨간색: as \"the color red\"",
+      "Tag": "Adjective"
+    }
+]

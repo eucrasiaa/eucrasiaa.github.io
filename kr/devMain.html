@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+        <meta charset="UTF-8">
+        <title>Korean Dictionary</title>
+        <script>
+
+        let jsonData;
+        
+        const getData = async () => {
+            const response = await fetch("https://zeroday-dilemma.github.io/dogData/dogData.json");
+            const data = await response.json();
+            jsonData = data;
+            return data;
+        };
+        (async () => {
+            await getData();
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // const jsonData = [
+            //     {
+            //     "Word": "사과",
+            //     "Definition": "apple",
+            //     "Notes": "Common fruit",
+            //     "Tag": "Noun"
+            //     },
+            //     {
+            //     "Word": "먹다",
+            //     "Definition": "to eat",
+            //     "Notes": "Has unique honorific form 잡수시다. <a class='link' data-word='사과'>사과</a>",
+            //     "Tag": "Verb"
+            //     },
+            //     {
+            //     "Word": "빨갛다",
+            //     "Definition": "to be red",
+            //     "Notes": "Adjective, 빨간: as a descriptor, 빨간색: as \"the color red\"",
+            //     "Tag": "Adjective"
+            //     }
+            // ];
+
+            const searchBox = document.getElementById('searchBox');
+            const tagFilter = document.getElementById('tagFilter');
+            const dictionaryEntries = document.getElementById('dictionaryEntries');
+
+            function renderEntries(entries) {
+                dictionaryEntries.innerHTML = '';
+                entries.forEach(entry => {
+                const entryDiv = document.createElement('div');
+                entryDiv.className = 'entry';
+                entryDiv.innerHTML = `
+                    <h2>${entry.Word}</h2>
+                    <p><strong>Definition:</strong> ${entry.Definition}</p>
+                    <p><strong>Notes:</strong> ${entry.Notes}</p>
+                    <p> ${entry.Tag}</p>
+                `;
+                dictionaryEntries.appendChild(entryDiv);
+                });
+            
+            const links = document.querySelectorAll('.link');
+                links.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    const word = event.target.getAttribute('data-word');
+                    searchBox.value = word;
+                    filterEntries();
+                });
+                });
+            }
+            function filterEntries() {
+                const searchTerm = searchBox.value.toLowerCase();
+                const selectedTag = tagFilter.value;
+                const filteredEntries = jsonData.filter(entry => {
+                const matchesSearchTerm = entry.Word.toLowerCase().includes(searchTerm) ||
+                                            entry.Definition.toLowerCase().includes(searchTerm);
+                const matchesTag = !selectedTag || entry.Tag === selectedTag;
+                return matchesSearchTerm && matchesTag;
+                });
+                renderEntries(filteredEntries);
+            }
+
+            searchBox.addEventListener('input', filterEntries);
+            tagFilter.addEventListener('change', filterEntries);
+
+            // Initial render
+            renderEntries(jsonData);
+            });
+        })();
+        </script>
+        <!--  <link rel="stylesheet" type="text/css" href="style.css"> -->
+        <style>
+            body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            }
+            .container {
+            display: flex;
+            flex-wrap: wrap;
+            }
+            .entry {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            flex: 1 1 calc(50% - 40px);
+            box-sizing: border-box;
+            }
+            .entry h2 {
+            font-size: 1.5em;
+            margin: 0;
+            margin-bottom: 10px;
+            }
+            .entry p {
+            margin: 5px 0;
+            }
+            @media (max-width: 768px) {
+            .entry {
+                flex: 1 1 100%;
+            }
+            }
+            .link {
+            color: blue;
+            cursor: pointer;
+            text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>My Korean Dictionary</h1>
+        <input type="text" id="searchBox" placeholder="Search...">
+        <select id="tagFilter">
+          <option value="">All</option>
+          <option value="Noun">Noun</option>
+          <option value="Adjective">Adjective</option>
+          <option value="Verb">Verb</option>
+          <option value="Adverb">Adverb</option>
+          <option value="Particle">Particle</option>
+          <option value="Counter">Counter</option>
+          <option value="Grammar Structure">Grammar Structure</option>
+          <option value="Misc">Misc</option>
+        </select>
+        <div id="dictionaryEntries" class="container"></div>
+
+    </body>
+
+</html>
+
+
+<!--
+NAVER SCRAPE
+(function() {
+    localStorage.removeItem("popupData");
+    // Get default values from the webpage
+    let word = document.getElementsByClassName("word  ")[0].innerText;
+    let tag = document.getElementsByClassName("part_speech")[0].innerText;
+    let meaning = "";
+    let a = document.getElementsByClassName("mean");
+
+    for (let b of a) {
+        meaning += b.innerText + ", ";
+    }
+    meaning = meaning.substr(0, meaning.length - 2);
+    let notes = "";
+
+    // Create the popup container
+    const popupContainer = document.createElement('div');
+    popupContainer.style.position = 'fixed';
+    popupContainer.style.top = '50%';
+    popupContainer.style.left = '50%';
+    popupContainer.style.transform = 'translate(-50%, -50%)';
+    popupContainer.style.backgroundColor = 'white';
+    popupContainer.style.padding = '20px';
+    popupContainer.style.border = '1px solid black';
+    popupContainer.style.zIndex = '1000';
+    popupContainer.style.boxShadow = '0 0 10px rgba(0,0,0,0.5)';
+    popupContainer.style.width = '300px'; // Optional: set a width for better appearance
+
+    // Create input fields
+    const fields = ['word', 'meaning', 'notes', 'tag: Noun Adjective Verb Adverb Particle Counter Misc'];
+    fields.forEach(field => {
+        const inputContainer = document.createElement('div');
+        inputContainer.style.marginBottom = '10px';
+
+        const label = document.createElement('label');
+        label.textContent = field.charAt(0).toUpperCase() + field.slice(1) + ':';
+        label.style.display = 'block';
+
+        let input;
+        if (field === 'meaning' || field === 'notes') {
+            input = document.createElement('textarea');
+            input.rows = 3;
+            input.style.resize = 'vertical';
+        } else {
+            input = document.createElement('input');
+            input.type = 'text';
+        }
+        input.id = field;
+        input.style.width = '100%';
+
+        // Set default values
+        switch(field) {
+            case 'word':
+                input.value = word;
+                break;
+            case 'meaning':
+                input.value = meaning;
+                break;
+            case 'notes':
+                input.value = notes;
+                break;
+            case 'tag: Noun Adjective Verb Adverb Particle Counter Misc':
+                input.value = tag;
+                break;
+        }
+
+        inputContainer.appendChild(label);
+        inputContainer.appendChild(input);
+        popupContainer.appendChild(inputContainer);
+    });
+
+    // Create Save button
+    const saveButton = document.createElement('button');
+    saveButton.textContent = 'Save';
+    saveButton.style.marginRight = '10px';
+    saveButton.onclick = () => {
+        const data = {
+            word: document.getElementById('word').value,
+            meaning: document.getElementById('meaning').value,
+            notes: document.getElementById('notes').value,
+            tag: document.getElementById('tag: Noun Adjective Verb Adverb Particle Counter Misc').value
+        };
+        localStorage.setItem('popupData', JSON.stringify(data));
+        alert('Data saved!');
+	prompt("", localStorage.popupData);
+        document.body.removeChild(popupContainer);
+    };
+    popupContainer.appendChild(saveButton);
+
+    // Create Close button
+    const closeButton = document.createElement('button');
+    closeButton.textContent = 'Close';
+    closeButton.onclick = () => {
+        document.body.removeChild(popupContainer);
+    };
+    popupContainer.appendChild(closeButton);
+
+    // Add the popup to the body
+    document.body.appendChild(popupContainer);
+
+    // Load saved data
+    const savedData = JSON.parse(localStorage.getItem('popupData'));
+    if (savedData) {
+        document.getElementById('Word').value = savedData.word;
+        document.getElementById('Definition').value = savedData.meaning;
+        document.getElementById('Notes').value = savedData.notes;
+        document.getElementById('Tag').value = savedData.tag;
+    }
+})();
+-->
