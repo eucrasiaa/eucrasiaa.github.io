@@ -10,15 +10,15 @@
         let jsonData;
         
         const getData = async () => {
-            const response = await fetch("https://zeroday-dilemma.github.io/dogData/dogData.json");
+            const response = await fetch("https://zeroday-dilemma.github.io/kr/words.json");
             const data = await response.json();
             jsonData = data;
             return data;
         };
         (async () => {
             await getData();
-        
-        document.addEventListener('DOMContentLoaded', function() {
+        //})();
+        // document.addEventListener('DOMContentLoaded', function() {
             // const jsonData = [
             //     {
             //     "Word": "사과",
@@ -84,7 +84,7 @@
 
             // Initial render
             renderEntries(jsonData);
-            });
+            //});
         })();
         </script>
         <!--  <link rel="stylesheet" type="text/css" href="style.css"> -->
