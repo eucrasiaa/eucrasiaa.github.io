@@ -1,0 +1,1802 @@
+[
+		{
+		"Word": "가게",
+		"Definition": "shop; store",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "가격",
+		"Definition": "price",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "가구",
+		"Definition": "furniture",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "가깝다",
+		"Definition": "near; close; adjacent, close, close to",
+		"Notes": "",
+		"Tag": "Adjective"
+	},
+	{
+		"Word": "가끔",
+		"Definition": "sometimes",
+		"Notes": "",
+		"Tag": "Adverb"
+	},
+	{
+		"Word": "가늘다",
+		"Definition": "thin, weak; small, fine",
+		"Notes": "",
+		"Tag": "Adjective"
+	},
+	{
+		"Word": "가다",
+		"Definition": "go; travel, go; head for; be bound for, go",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "가득",
+		"Definition": "full, full, full",
+		"Notes": "",
+		"Tag": "Adverb"
+	},
+	{
+		"Word": "가르치다",
+		"Definition": "teach; instruct, teach; discipline, educate; school; train",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "가리키다",
+		"Definition": "point; gesture; indicate, point; indicate; show, mean; imply",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "가방",
+		"Definition": "bag",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "가볍다",
+		"Definition": "light, light; insignificant, minor; light",
+		"Notes": "",
+		"Tag": "Adjective"
+	},
+	{
+		"Word": "가수",
+		"Definition": "singer",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "가슴",
+		"Definition": "chest, front, heart; feeling",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "가요",
+		"Definition": "Korean popular song",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "가운데",
+		"Definition": "center; middle, middle, being between; being among",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "가위",
+		"Definition": "scissors, scissors",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "가을",
+		"Definition": "fall",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "가장",
+		"Definition": "best",
+		"Notes": "",
+		"Tag": "Adverb"
+	},
+	{
+		"Word": "가져가다",
+		"Definition": "bring, bring, steal",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "가져오다",
+		"Definition": "bring, bring, cause",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "가족",
+		"Definition": "family",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "가지",
+		"Definition": "kind; sort",
+		"Notes": "",
+		"Tag": "Dependent Noun"
+	},
+	{
+		"Word": "가지다",
+		"Definition": "have; hold, own; possess; keep, have; hold",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "각각",
+		"Definition": "each; every single, each; every",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "간단하다",
+		"Definition": "simple, simple, simple",
+		"Notes": "",
+		"Tag": "Adjective"
+	},
+	{
+		"Word": "간단히",
+		"Definition": "briefly, lighlty; little, easily; effortlessly",
+		"Notes": "",
+		"Tag": "Adverb"
+	},
+	{
+		"Word": "간식",
+		"Definition": "snack",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "간장",
+		"Definition": "soy sauce",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "간호사",
+		"Definition": "nurse",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "갈비",
+		"Definition": "ribs, rib, living skeleton; skeleton",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "갈비탕",
+		"Definition": "galbitang",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "갈색",
+		"Definition": "brown",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "갈아입다",
+		"Definition": "change one's clothes",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "갈아타다",
+		"Definition": "transfer; transship",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "감",
+		"Definition": "persimmon",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "감기",
+		"Definition": "cold",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "감기약",
+		"Definition": "cold medicine",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "감다",
+		"Definition": "close; shut eyes",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "감다",
+		"Definition": "wash; bathe",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "감사",
+		"Definition": "gratitude; appreciation; thanks",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "감자",
+		"Definition": "potato",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "갑자기",
+		"Definition": "suddenly; all of a sudden",
+		"Notes": "",
+		"Tag": "Adverb"
+	},
+	{
+		"Word": "값",
+		"Definition": "price, payment, wage",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "강",
+		"Definition": "river",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "강아지",
+		"Definition": "puppy, baby; sweetheart",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "강하다",
+		"Definition": "strong; powerful, intense; strong, strong",
+		"Notes": "",
+		"Tag": "Adjective"
+	},
+	{
+		"Word": "갖다",
+		"Definition": "have; hold, own; possess; keep, have; hold",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "같다",
+		"Definition": "same; identical; equal, similar; like, such as; like",
+		"Notes": "",
+		"Tag": "Adjective"
+	},
+	{
+		"Word": "같이",
+		"Definition": "together, with, alike; similarly",
+		"Notes": "",
+		"Tag": "Adverb"
+	},
+	{
+		"Word": "갚다",
+		"Definition": "pay back; replay, pay back; repay; return, revenge; avenge",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "개",
+		"Definition": "dog, son of a bitch",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "개",
+		"Definition": "gae",
+		"Notes": "",
+		"Tag": "Dependent Noun"
+	},
+	{
+		"Word": "개월",
+		"Definition": "month",
+		"Notes": "",
+		"Tag": "Dependent Noun"
+	},
+	{
+		"Word": "거",
+		"Definition": "thing, 의존명사, 의존명사",
+		"Notes": "",
+		"Tag": "Dependent Noun"
+	},
+	{
+		"Word": "거기",
+		"Definition": "there, there, it",
+		"Notes": "",
+		"Tag": "Pronoun"
+	},
+	{
+		"Word": "거리",
+		"Definition": "street; road; avenue",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "거리",
+		"Definition": "distance; length, space; distance, distance",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "거실",
+		"Definition": "living room",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "거울",
+		"Definition": "mirror, mirror, example",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "거의",
+		"Definition": "most; almost",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "거의",
+		"Definition": "all but, nearly; almost",
+		"Notes": "",
+		"Tag": "Adverb"
+	},
+	{
+		"Word": "거절",
+		"Definition": "refusal; rejection; denial",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "거짓말",
+		"Definition": "lie; falsehood",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "걱정",
+		"Definition": "worry; concern; care, scolding; blaming",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "건강",
+		"Definition": "health; wellbeing",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "건너가다",
+		"Definition": "cross; go across, go over",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "건너다",
+		"Definition": "cross; go across, be passed on; be transmitted, skip",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "건너편",
+		"Definition": "opposite side",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "건물",
+		"Definition": "building; structure; edifice",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "걷다",
+		"Definition": "walk, move toward; go toward, hold; work",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "걸다",
+		"Definition": "hang, lock; fasten, arrange; prepare",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "걸리다",
+		"Definition": "hang, be locked; be fastened, be arranged; be prepared",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "걸어가다",
+		"Definition": "walk; tread; stride, walk down; walk along, walk; tread; follow",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "걸어오다",
+		"Definition": "walk; come on foot, walk down; walk along, walk; tread; follow",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "걸음",
+		"Definition": "step; walk, visit, action; initiative",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "검사",
+		"Definition": "examination; inspection",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "검은색",
+		"Definition": "black",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "검정",
+		"Definition": "black",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "것",
+		"Definition": "something, 의존명사, 의존명사",
+		"Notes": "",
+		"Tag": "Dependent Noun"
+	},
+	{
+		"Word": "겉",
+		"Definition": "outside; surface; exterior, surface",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "게으르다",
+		"Definition": "lazy",
+		"Notes": "",
+		"Tag": "Adjective"
+	},
+	{
+		"Word": "게임",
+		"Definition": "game, game, game",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "겨울",
+		"Definition": "winter",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "결과",
+		"Definition": "result; outcome",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "결석",
+		"Definition": "absence",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "결심",
+		"Definition": "decision; resolution; determination",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "결정",
+		"Definition": "decision",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "결혼",
+		"Definition": "marriage; wedding; union; matrimony",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "결혼식",
+		"Definition": "wedding",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "경기",
+		"Definition": "game; match",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "경찰",
+		"Definition": "police; policing, police officer; cop",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "경찰서",
+		"Definition": "police station",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "경치",
+		"Definition": "scenery; scene; view",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "경험",
+		"Definition": "experience",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "계단",
+		"Definition": "stairs; staircase, step, step; stair",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "계란",
+		"Definition": "egg",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "계산",
+		"Definition": "calculation, estimation; reckoning, paying; picking up the tab",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "계속",
+		"Definition": "continuously; successively, in the manner of resuming",
+		"Notes": "",
+		"Tag": "Adverb"
+	},
+	{
+		"Word": "계속",
+		"Definition": "continuance; succession, continuation; resume",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "계시다",
+		"Definition": "live, be, be",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "계절",
+		"Definition": "season, high season; peak",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "계획",
+		"Definition": "plan; program; scheme; design",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "고개",
+		"Definition": "head",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "고기",
+		"Definition": "meat, fish",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "고등학교",
+		"Definition": "high school",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "고등학생",
+		"Definition": "high school student; high schooler",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "고르다",
+		"Definition": "choose; select",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "고맙다",
+		"Definition": "thankful; grateful",
+		"Notes": "",
+		"Tag": "Adjective"
+	},
+	{
+		"Word": "고모",
+		"Definition": "paternal aunt",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "고민",
+		"Definition": "worry; anguish",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "고속버스",
+		"Definition": "express bus",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "고양이",
+		"Definition": "cat",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "고장",
+		"Definition": "defect; something wrong, medical problem; disorder",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "고추장",
+		"Definition": "gochujang",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "고치다",
+		"Definition": "repair; mend, heal, correct; reform",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "고프다",
+		"Definition": "hungry",
+		"Notes": "",
+		"Tag": "Adjective"
+	},
+	{
+		"Word": "고향",
+		"Definition": "home; hometown, home, birthplace",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "곧",
+		"Definition": "immediately, soon; shortly, in other words; namely",
+		"Notes": "",
+		"Tag": "Adverb"
+	},
+	{
+		"Word": "곳",
+		"Definition": "place; spot; location, place; spot, place",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "공",
+		"Definition": "ball",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "공무원",
+		"Definition": "civil servant",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "공부",
+		"Definition": "study",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "공원",
+		"Definition": "park",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "공장",
+		"Definition": "factory; plant",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "공짜",
+		"Definition": "something gained free of charge; freebies",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "공책",
+		"Definition": "notebook",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "공항",
+		"Definition": "airport",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "공휴일",
+		"Definition": "public holiday",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "과거",
+		"Definition": "past, history, past tense",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "과일",
+		"Definition": "fruit",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "과자",
+		"Definition": "snack",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "관계",
+		"Definition": "relationship, being related; being concerned; being relevant, being interested; being interfering",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "관광",
+		"Definition": "tourism",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "관광객",
+		"Definition": "tourist",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "관광지",
+		"Definition": "tourist attraction",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "관심",
+		"Definition": "interest; attention",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "광고",
+		"Definition": "advertisement; publicity, advertisement; publicity",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "광주",
+		"Definition": "Gwangju",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "괜찮다",
+		"Definition": "nice; fine, all right; fine, okay",
+		"Notes": "",
+		"Tag": "Adjective"
+	},
+	{
+		"Word": "괴로워하다",
+		"Definition": "be tormented; be distressed",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "교과서",
+		"Definition": "textbook, exemplar",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "교사",
+		"Definition": "teacher",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "교수",
+		"Definition": "teaching; instruction, professor",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "교실",
+		"Definition": "classroom, class",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "교육",
+		"Definition": "education",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "교통",
+		"Definition": "transportation; traffic, communication; interaction, trade; international exchange",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "교통비",
+		"Definition": "fare; transportation expense",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "교통사고",
+		"Definition": "traffic accident; car crash",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "교환",
+		"Definition": "exchange, exchange",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "교회",
+		"Definition": "church",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "구 6",
+		"Definition": "nine, ninth",
+		"Notes": "",
+		"Tag": "Determiner"
+	},
+	{
+		"Word": "구 5",
+		"Definition": "nine",
+		"Notes": "",
+		"Tag": "Number"
+	},
+	{
+		"Word": "구경",
+		"Definition": "sightseeing, attraction; spectacle, watching; experiencing",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "구두",
+		"Definition": "shoes",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "구름",
+		"Definition": "cloud",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "구십",
+		"Definition": "ninety",
+		"Notes": "",
+		"Tag": "Number"
+	},
+	{
+		"Word": "구십",
+		"Definition": "ninety, ninetieth",
+		"Notes": "",
+		"Tag": "Determiner"
+	},
+	{
+		"Word": "구월",
+		"Definition": "September",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "국",
+		"Definition": "guk, soup",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "국내",
+		"Definition": "interior of a country; domestic territory",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "국수",
+		"Definition": "noodle",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "국적",
+		"Definition": "nationality; citizenship, nationality, nationality; identity",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "국제",
+		"Definition": "being international; being global",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "군인",
+		"Definition": "soldier",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "굳다",
+		"Definition": "harden; become solid, stiffen, stiffen; freeze",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "굳다",
+		"Definition": "hard; solid, firm; strong, stiff",
+		"Notes": "",
+		"Tag": "Adjective"
+	},
+	{
+		"Word": "굵다",
+		"Definition": "thick, big, big; large",
+		"Notes": "",
+		"Tag": "Adjective"
+	},
+	{
+		"Word": "굽다",
+		"Definition": "bake; roast; grill, burn; make, bake; fire",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "궁금하다",
+		"Definition": "curious, anxious; concerned",
+		"Notes": "",
+		"Tag": "Adjective"
+	},
+	{
+		"Word": "권",
+		"Definition": "volume; book, volume; book, volume; book",
+		"Notes": "",
+		"Tag": "Dependent Noun"
+	},
+	{
+		"Word": "귀",
+		"Definition": "ear, earflap, corner",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "귀걸이",
+		"Definition": "earrings",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "귀여워하다",
+		"Definition": "love; make a pet of; be affectionate to",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "귀엽다",
+		"Definition": "cute; adorable; sweet",
+		"Notes": "",
+		"Tag": "Adjective"
+	},
+	{
+		"Word": "귀찮다",
+		"Definition": "feel annoyed",
+		"Notes": "",
+		"Tag": "Adjective"
+	},
+	{
+		"Word": "규칙",
+		"Definition": "rule, rule",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "귤",
+		"Definition": "tangerine; mandarin orange",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "그",
+		"Definition": "대명사, 대명사",
+		"Notes": "",
+		"Tag": "Pronoun"
+	},
+	{
+		"Word": "그",
+		"Definition": "that, that; the, around; or such",
+		"Notes": "",
+		"Tag": "Determiner"
+	},
+	{
+		"Word": "그거",
+		"Definition": "this; that, it, 대명사",
+		"Notes": "",
+		"Tag": "Pronoun"
+	},
+	{
+		"Word": "그것",
+		"Definition": "this; that, it, 대명사",
+		"Notes": "",
+		"Tag": "Pronoun"
+	},
+	{
+		"Word": "그곳",
+		"Definition": "there, there",
+		"Notes": "",
+		"Tag": "Pronoun"
+	},
+	{
+		"Word": "그날",
+		"Definition": "that day; the day",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "그냥",
+		"Definition": "as it is; as it stands, all the time, without any conditions",
+		"Notes": "",
+		"Tag": "Adverb"
+	},
+	{
+		"Word": "그대로",
+		"Definition": "as it is; as it stands, like that",
+		"Notes": "",
+		"Tag": "Adverb"
+	},
+	{
+		"Word": "그동안",
+		"Definition": "meantime; meanwhile",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "그때",
+		"Definition": "that time; that moment; then",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "그래",
+		"Definition": "okay; sure, really, eh",
+		"Notes": "",
+		"Tag": "Interjection"
+	},
+	{
+		"Word": "그래서",
+		"Definition": "geuraeseo, geuraeseo",
+		"Notes": "",
+		"Tag": "Adverb"
+	},
+	{
+		"Word": "그러나",
+		"Definition": "but; however",
+		"Notes": "",
+		"Tag": "Adverb"
+	},
+	{
+		"Word": "그러니까",
+		"Definition": "so, that is to say, so",
+		"Notes": "",
+		"Tag": "Adverb"
+	},
+	{
+		"Word": "그러면",
+		"Definition": "if so, then",
+		"Notes": "",
+		"Tag": "Adverb"
+	},
+	{
+		"Word": "그러므로",
+		"Definition": "therefore; so; hence",
+		"Notes": "",
+		"Tag": "Adverb"
+	},
+	{
+		"Word": "그런",
+		"Definition": "like that",
+		"Notes": "",
+		"Tag": "Determiner"
+	},
+	{
+		"Word": "그런데",
+		"Definition": "geureonde",
+		"Notes": "",
+		"Tag": "Adverb"
+	},
+	{
+		"Word": "그럼",
+		"Definition": "if so, then",
+		"Notes": "",
+		"Tag": "Adverb"
+	},
+	{
+		"Word": "그럼",
+		"Definition": "of course",
+		"Notes": "",
+		"Tag": "Interjection"
+	},
+	{
+		"Word": "그렇다",
+		"Definition": "so; as such; like that, same, so-so",
+		"Notes": "",
+		"Tag": "Adjective"
+	},
+	{
+		"Word": "그렇지만",
+		"Definition": "but; however; nevertheless",
+		"Notes": "",
+		"Tag": "Adverb"
+	},
+	{
+		"Word": "그릇",
+		"Definition": "bowl; dish; container, being capable; being qualified, dish",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "그리고",
+		"Definition": "and",
+		"Notes": "",
+		"Tag": "Adverb"
+	},
+	{
+		"Word": "그리다",
+		"Definition": "draw; paint, describe, draw",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "그림",
+		"Definition": "drawing; painting; sketch, beautiful scenery",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "그립다",
+		"Definition": "miss, miss",
+		"Notes": "",
+		"Tag": "Adjective"
+	},
+	{
+		"Word": "그만",
+		"Definition": "no more, right, giving up",
+		"Notes": "",
+		"Tag": "Adverb"
+	},
+	{
+		"Word": "그만두다",
+		"Definition": "stop, stop",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "그분",
+		"Definition": "geubun",
+		"Notes": "",
+		"Tag": "Pronoun"
+	},
+	{
+		"Word": "그저께",
+		"Definition": "the day before yesterday",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "그저께",
+		"Definition": "the day before yesterday",
+		"Notes": "",
+		"Tag": "Adverb"
+	},
+	{
+		"Word": "그쪽",
+		"Definition": "there, there, they; he; she",
+		"Notes": "",
+		"Tag": "Pronoun"
+	},
+	{
+		"Word": "그치다",
+		"Definition": "stop, stop, end up",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "극장",
+		"Definition": "theater; cinema",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "근처",
+		"Definition": "vicinity; neighborhood",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "글",
+		"Definition": "writing; text, learning; study, letter; character",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "글쎄",
+		"Definition": "well; hm, you see; see",
+		"Notes": "",
+		"Tag": "Interjection"
+	},
+	{
+		"Word": "글쎄요",
+		"Definition": "well; hm",
+		"Notes": "",
+		"Tag": "Interjection"
+	},
+	{
+		"Word": "글씨",
+		"Definition": "form of letters, letter; character, way of writing; writing",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "글자",
+		"Definition": "letter; character",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "금방",
+		"Definition": "moment ago, at any moment, immediately; soon",
+		"Notes": "",
+		"Tag": "Adverb"
+	},
+	{
+		"Word": "금요일",
+		"Definition": "Friday",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "금지",
+		"Definition": "ban",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "급하다",
+		"Definition": "urgent, hurried, impatient",
+		"Notes": "",
+		"Tag": "Adjective"
+	},
+	{
+		"Word": "기간",
+		"Definition": "period; term",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "기다리다",
+		"Definition": "wait",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "기르다",
+		"Definition": "breed; grow; cultivate, raise; bring up, teach; instruct",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "기름",
+		"Definition": "oil; fat, gas; gasoline, grease; oil",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "기말시험",
+		"Definition": "final exam",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "기분",
+		"Definition": "mood; feelings, atmosphere",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "기뻐하다",
+		"Definition": "be glad; be happy",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "기쁘다",
+		"Definition": "happy; glad",
+		"Notes": "",
+		"Tag": "Adjective"
+	},
+	{
+		"Word": "기쁨",
+		"Definition": "joy",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "기숙사",
+		"Definition": "dormitory",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "기억",
+		"Definition": "memory",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "기억나다",
+		"Definition": "remember; recall",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "기온",
+		"Definition": "air temperature",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "기자",
+		"Definition": "reporter; journalist",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "기차",
+		"Definition": "train",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "기차역",
+		"Definition": "train station",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "기차표",
+		"Definition": "train ticket",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "기침",
+		"Definition": "cough, cough",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "기타",
+		"Definition": "guitar",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "기회",
+		"Definition": "chance; opportunity, time; chance",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "긴장",
+		"Definition": "nervousness; tension, tension; strain, tension",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "길",
+		"Definition": "road; street; way, route; way, stopover",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "길다",
+		"Definition": "long; lengthy; extensive, long; prolonged; lengthy, wordy; lengthy",
+		"Notes": "",
+		"Tag": "Adjective"
+	},
+	{
+		"Word": "길이",
+		"Definition": "length; distance, length; duration, pages",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "김",
+		"Definition": "gim",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "김밥",
+		"Definition": "gimbap",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "김치",
+		"Definition": "gimchi; kimchi",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "김치찌개",
+		"Definition": "gimchijjigae; kimchijjigae",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "깊다",
+		"Definition": "deep, profound; deep, strong; serious",
+		"Notes": "",
+		"Tag": "Adjective"
+	},
+	{
+		"Word": "깊이",
+		"Definition": "deeply; deep, prudently; cautiously, deeply; seriously",
+		"Notes": "",
+		"Tag": "Adverb"
+	},
+	{
+		"Word": "까만색",
+		"Definition": "black",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "까맣다",
+		"Definition": "pitch-dark, distant; far, no idea",
+		"Notes": "",
+		"Tag": "Adjective"
+	},
+	{
+		"Word": "깎다",
+		"Definition": "peel, cut, carve",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "깜짝",
+		"Definition": "with a blink",
+		"Notes": "",
+		"Tag": "Adverb"
+	},
+	{
+		"Word": "깨끗이",
+		"Definition": "clean, clearly, neatly; tidily",
+		"Notes": "",
+		"Tag": "Adverb"
+	},
+	{
+		"Word": "깨끗하다",
+		"Definition": "clean, clear; clean, tidy; orderly",
+		"Notes": "",
+		"Tag": "Adjective"
+	},
+	{
+		"Word": "깨다",
+		"Definition": "sober up, be awakened; be enlightened, wake up",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "꺼내다",
+		"Definition": "take out; carry out, begin to speak; start talking",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "껌",
+		"Definition": "chewing gum",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "꼭",
+		"Definition": "by all means, precisely, perfectly",
+		"Notes": "",
+		"Tag": "Adverb"
+	},
+	{
+		"Word": "꽃",
+		"Definition": "flower, pretty woman, peak",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "꽃다발",
+		"Definition": "bouquet; bunch of flowers",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "꽃병",
+		"Definition": "vase",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "꽃집",
+		"Definition": "flower shop",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "꾸다",
+		"Definition": "dream",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "꿈",
+		"Definition": "dream, goal; wish, vain hope",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "끄다",
+		"Definition": "put out; extinguish, turn off; turn out, settle; solve",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "끊다",
+		"Definition": "cut, break off; cut off, stop; quit",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "끓다",
+		"Definition": "boil, grow hot, rumble; growl",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "끓이다",
+		"Definition": "boil, heat, worry about; fret over",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "끝",
+		"Definition": "end; final, end, end",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "끝나다",
+		"Definition": "end; finish, expire; run out, end",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "끝내다",
+		"Definition": "complete; finish, 동사, cut off",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "끼다",
+		"Definition": "be stuck in; be fastened, be stuck in; be laced, be caught in; be jammed in",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "나",
+		"Definition": "I",
+		"Notes": "",
+		"Tag": "Pronoun"
+	},
+	{
+		"Word": "나가다",
+		"Definition": "go out; leave, go forward, be spread",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "나누다",
+		"Definition": "divide; split, classify; sort, divide",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "나다",
+		"Definition": "grow; sprout, build; open, form",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "나라",
+		"Definition": "country; nation; state, world",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "나머지",
+		"Definition": "the rest; remainder, remainder, outcome; result",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "나무",
+		"Definition": "tree, wood, timber; log",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "나쁘다",
+		"Definition": "bad, unpleasant, immoral; bad",
+		"Notes": "",
+		"Tag": "Adjective"
+	},
+	{
+		"Word": "나오다",
+		"Definition": "come out; get out, emerge; show up; come forth, come out to; come to",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "나이",
+		"Definition": "age",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "나중",
+		"Definition": "next time; later, next; last, the last; the end",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "나타나다",
+		"Definition": "appear; come into sight, show up; become manifest, be expressed; be displayed; be exhibited",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "나흘",
+		"Definition": "four days, fourth day",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "낚시",
+		"Definition": "fishing hook, fishing gear, fishing; angling",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "날",
+		"Definition": "nal",
+		"Notes": "",
+		"Tag": "Dependent Noun"
+	},
+	{
+		"Word": "날",
+		"Definition": "day, day time, weather",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "날다",
+		"Definition": "fly, move fast, run away",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "날씨",
+		"Definition": "weather",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "날씬하다",
+		"Definition": "slender; svelte, slender; delicate",
+		"Notes": "",
+		"Tag": "Adjective"
+	},
+	{
+		"Word": "날아다니다",
+		"Definition": "fly about",
+		"Notes": "",
+		"Tag": "Verb"
+	},
+	{
+		"Word": "날짜",
+		"Definition": "number of days, date; day, date",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "남",
+		"Definition": "others; another person, stranger",
+		"Notes": "",
+		"Tag": "Noun"
+	},
+	{
+		"Word": "남기다",
+		"Definition": "leave, make profit, leave; cause to stay",
+		"Notes": "",
+		"Tag": "Verb"
+	}
+]
