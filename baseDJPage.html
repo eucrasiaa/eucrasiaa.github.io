@@ -332,13 +332,14 @@
       //only append if standardShow = true
       const showNames = DJ_JSON.filter(show => show.standardShow === true).map(show => show.showName);
       //const showNames = DJ_JSON.map(show => show.showName);
-
-
+   
+console.log(showName + " is the show name 1");
       //Find the show in the JSON
       const show = DJ_JSON.find(show => show.showName === showName);
 
-
+      console.log(show.showName + " is the show name 2");
       //populate it!!! RAAAHHH
+      console.log(show.showName + " is the show name");
       if (show.showName === "Ebbs %26 Flows"){
         show.showName = "Ebbs & Flows";
       }
