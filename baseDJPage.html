@@ -343,6 +343,9 @@ console.log(showName + " is the show name 1");
       if (show.showName === "Ebbs %26 Flows"){
         show.showName = "Ebbs & Flows";
       }
+      else if (show.showName === "Ranting %26 Raving"){
+        show.showName = "Ranting & Raving";
+      }
       document.getElementById("showName").innerText = show.showName;
       
       // let showBlurbWithBreaks = show.showBlurb;
@@ -382,6 +385,10 @@ console.log(showName + " is the show name 1");
         if (option.textContent === "Ebbs %26 Flows") {
           console.log("jenny handler");
           option.textContent = "Ebb & Flow";
+        }
+        else if (option.textContent === "Ranting %26 Raving") {
+          console.log("jenny handler");
+          option.textContent = "Ranting & Raving";
         }
 
 
