@@ -418,5 +418,247 @@
     "standardShow": true,
     "image": "data:image/jpeg;base64,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",
     "previousPlaylists": []
+  },
+  {
+    "name": "Maddox",
+    "showName": "RR Special!",
+    "hostNames": [
+      "Maddox"
+    ],
+    "broadcastTime": {
+      "dayOfWeek": "Monday",
+      "startTime": "12:00",
+      "durationMinutes": 60
+    },
+    "socials": {
+      "instagram": "",
+      "spotify": [],
+      "twitter": "",
+      "otherSocials": []
+    },
+    "showBlurb": "",
+    "standardShow": false,
+    "image": "",
+    "previousPlaylists": []
+  },
+  {
+    "name": "Miani",
+    "showName": "Mangetsu Radio",
+    "hostNames": [
+      "Miani"
+    ],
+    "broadcastTime": {
+      "dayOfWeek": "Monday",
+      "startTime": "13:00",
+      "durationMinutes": 60
+    },
+    "socials": {
+      "instagram": "",
+      "spotify": [],
+      "twitter": "",
+      "otherSocials": []
+    },
+    "showBlurb": "",
+    "standardShow": false,
+    "image": "",
+    "previousPlaylists": []
+  },
+  {
+    "name": "Rayyan",
+    "showName": "RR Special!",
+    "hostNames": [
+      "Rayyan"
+    ],
+    "broadcastTime": {
+      "dayOfWeek": "Monday",
+      "startTime": "14:00",
+      "durationMinutes": 60
+    },
+    "socials": {
+      "instagram": "",
+      "spotify": [],
+      "twitter": "",
+      "otherSocials": []
+    },
+    "showBlurb": "",
+    "standardShow": false,
+    "image": "",
+    "previousPlaylists": []
+  },
+  {
+    "name": "Daniela",
+    "showName": "Luna Roja",
+    "hostNames": [
+      "Daniela"
+    ],
+    "broadcastTime": {
+      "dayOfWeek": "Monday",
+      "startTime": "15:00",
+      "durationMinutes": 60
+    },
+    "socials": {
+      "instagram": "",
+      "spotify": [],
+      "twitter": "",
+      "otherSocials": []
+    },
+    "showBlurb": "",
+    "standardShow": false,
+    "image": "",
+    "previousPlaylists": []
+  },
+  {
+    "name": "Maddox",
+    "showName": "MP3 Radio",
+    "hostNames": [
+      "Maddox"
+    ],
+    "broadcastTime": {
+      "dayOfWeek": "Monday",
+      "startTime": "16:00",
+      "durationMinutes": 60
+    },
+    "socials": {
+      "instagram": "",
+      "spotify": [],
+      "twitter": "",
+      "otherSocials": []
+    },
+    "showBlurb": "",
+    "standardShow": false,
+    "image": "",
+    "previousPlaylists": []
+  },
+  {
+    "name": "Michelle",
+    "showName": "Reverie",
+    "hostNames": [
+      "DJ Meowchelle"
+    ],
+    "broadcastTime": {
+      "dayOfWeek": "Monday",
+      "startTime": "17:00",
+      "durationMinutes": 60
+    },
+    "socials": {
+      "instagram": "",
+      "spotify": [],
+      "twitter": "",
+      "otherSocials": []
+    },
+    "showBlurb": "",
+    "standardShow": false,
+    "image": "",
+    "previousPlaylists": []
+  },
+  {
+    "name": "Dean",
+    "showName": "Dean Me up",
+    "hostNames": [
+      "Dean"
+    ],
+    "broadcastTime": {
+      "dayOfWeek": "Monday",
+      "startTime": "18:00",
+      "durationMinutes": 60
+    },
+    "socials": {
+      "instagram": "",
+      "spotify": [],
+      "twitter": "",
+      "otherSocials": []
+    },
+    "showBlurb": "",
+    "standardShow": false,
+    "image": "",
+    "previousPlaylists": []
+  },
+  {
+    "name": "Aria",
+    "showName": "Sounds of Silence",
+    "hostNames": [
+      "Aria"
+    ],
+    "broadcastTime": {
+      "dayOfWeek": "Monday",
+      "startTime": "19:00",
+      "durationMinutes": 60
+    },
+    "socials": {
+      "instagram": "",
+      "spotify": [],
+      "twitter": "",
+      "otherSocials": []
+    },
+    "showBlurb": "",
+    "standardShow": false,
+    "image": "",
+    "previousPlaylists": []
+  },
+  {
+    "name": "Raiyaan & Donovan",
+    "showName": "Monday Night Metal",
+    "hostNames": [
+      "Raiyaan & Donovan"
+    ],
+    "broadcastTime": {
+      "dayOfWeek": "Monday",
+      "startTime": "20:00",
+      "durationMinutes": 60
+    },
+    "socials": {
+      "instagram": "",
+      "spotify": [],
+      "twitter": "",
+      "otherSocials": []
+    },
+    "showBlurb": "",
+    "standardShow": false,
+    "image": "",
+    "previousPlaylists": []
+  },
+  {
+    "name": "Will",
+    "showName": "Perfect Sound Forever",
+    "hostNames": [
+      "Will"
+    ],
+    "broadcastTime": {
+      "dayOfWeek": "Monday",
+      "startTime": "21:00",
+      "durationMinutes": 60
+    },
+    "socials": {
+      "instagram": "",
+      "spotify": [],
+      "twitter": "",
+      "otherSocials": []
+    },
+    "showBlurb": "",
+    "standardShow": false,
+    "image": "",
+    "previousPlaylists": []
+  },
+  {
+    "name": "Edward",
+    "showName": "Make Up Your Mind",
+    "hostNames": [
+      "Edward"
+    ],
+    "broadcastTime": {
+      "dayOfWeek": "Monday",
+      "startTime": "22:00",
+      "durationMinutes": 60
+    },
+    "socials": {
+      "instagram": "",
+      "spotify": [],
+      "twitter": "",
+      "otherSocials": []
+    },
+    "showBlurb": "",
+    "standardShow": false,
+    "image": "",
+    "previousPlaylists": []
   }
 ]

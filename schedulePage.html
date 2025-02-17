@@ -77,6 +77,21 @@
     background-color: var(--AOK-Teal);
 }
 
+      .special-event {
+        text-align: center;
+        font-size: 1.5em;
+        color: white;
+        background-color: var(--AOK-Teal);
+        padding: 10px;
+        border-radius: 10px;
+        animation: festive 10s infinite alternate;
+      }
+
+      @keyframes festive {
+        0% { background-color: var(--AOK-Teal); }
+        100% { background-color: var(--Gold); }
+      }
+
 .showElemDiv{
     display: flex;
     flex-direction: column;
@@ -111,6 +126,10 @@
     font-size: 0.8em;
     color: white;
 }
+.specialEvent {
+    background-color: var(--Dark-Gray);
+    color: white;
+}
 .calendar th:not(:first-child),
 .calendar td:not(:first-child) {
   width: calc((100% - 80px) / 7); 
@@ -132,6 +151,8 @@
     </ul>
   </nav>
   <div class="container" style="margin-bottom:20px">
+    <h3 class="special-event">Radio Revival! Monday 12-11pm!</h3>
+
     <table class="calendar">
       <thead>
         <tr>
@@ -422,17 +443,38 @@
         }
         const encryptedHostNames = show.hostNames;
         console.log(encryptedHostNames);
-        const hostNames = loadHostNames(encryptedHostNames, DECODE_KEY);
+        const standardShow = show.standardShow;
+        //if special show, do not decrypt
+        var hostNames = "";
+        if(standardShow){
+            hostNames = loadHostNames(encryptedHostNames, DECODE_KEY);
+        }
+        else{
+            hostNames = encryptedHostNames;
+        }
+        
         console.log(hostNames);
         const showBlurb = show.showBlurb;
         console.log(showBlurb);
         const image = show.image;
-        const standardShow = show.standardShow;
+        
         console.log(standardShow);
         //const previousPlaylists = show.previousPlaylists;
         const row = rows[startTime - 11];
         const cell = row.children[dayIndex + 1];
         const showElement = document.createElement("div");
+        //check if already has a show
+        //if so, check if new show is special
+        //if so, overwrite
+        
+        if (cell.children.length > 0) {
+            if (standardShow) {
+                continue;
+            } else {
+                cell.innerHTML = "";
+            }
+        }
+
         showElement.classList.add("show");
         //make each element clickable and bring you to
         //the show's page, which will be
@@ -446,8 +488,16 @@
         </div>
         </a>
         `;
-        cell.appendChild(showElement);
+        //if special, set class to special
         cell.classList.add("show-cell");
+        
+        if (!standardShow) {
+            cell.classList="specialEvent";
+            //remove href if special
+            showElement.children[0].removeAttribute("href");
+        }
+        cell.appendChild(showElement);
+        
       }
 
     }
