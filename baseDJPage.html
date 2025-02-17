@@ -329,7 +329,9 @@
       console.log(showName);
 
       //make a const array of all showNames
-      const showNames = DJ_JSON.map(show => show.showName);
+      //only append if standardShow = true
+      const showNames = DJ_JSON.filter(show => show.standardShow === true).map(show => show.showName);
+      //const showNames = DJ_JSON.map(show => show.showName);
 
 
       //Find the show in the JSON
@@ -371,6 +373,7 @@
       //load show selecter thingy
       const showSelecter = document.getElementById('showSelecter');
       showNames.forEach(namer => {
+        console.log(namer, "namer elem");
         const option = document.createElement('option');
         option.value = namer;
         option.textContent = namer;
@@ -379,12 +382,23 @@
           console.log("jenny handler");
           option.textContent = "Ebb & Flow";
         }
+
+
         if (namer === showName) {
           console.log(namer, "   ", show);
           option.selected = true; // Set the default selected show
         }
-        showSelecter.appendChild(option);
+        if (show.standardShow === true) {
+          console.log(show.standardShow);
+          showSelecter.appendChild(option);
+        }
+        else {
+          console.log("Not appending option because standardShow is false");
+        }
       });
+      //if specialty show, skip adding to the selecter
+     
+      
       showSelecter.addEventListener('change', (event) => {
         const selectedShowName = event.target.value;
         //get url and split after "baseDJPage.html"
@@ -394,7 +408,7 @@
         
         window.location.href = newUrl; // Redirect to the new URL
       });
-
+    
       //if past broadcasts exist, load them!
       //<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5v1N0su1k3tzZRTsthTdKM?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       if(show.previousPlaylists.length > 0){
