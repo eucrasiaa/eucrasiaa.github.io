@@ -95,7 +95,7 @@
 
     .showTitleImg {
       width: 80px;
-      height: 80px;
+      height: 100%;
       border-radius: 50%;
       overflow: hidden;
       background-color: var(--Light-Gray);
@@ -481,11 +481,12 @@ console.log(showName + " is the show name 1");
   </div>
   <div class="container" style="margin-bottom:20px">
     <div class="showTitleBox">
-      <div class="innerTitleElem">
-        <h1 id="showName">Example Show Name</h1>
+      <div class="innerTitleElem" style="margin-right:0px; padding-right:0px;">
+        <h1 id="showName" style="margin-right:0px; padding-right:0px;">Example Show Name</h1>
       </div>
-      <div class="showTitleImg innerTitleElem">
-        <img id="showImgSlot" src="" alt="Radio Show Logo">
+      
+      <div class="showTitleImg innerTitleElem" style="margin-left:0px; padding-left:0px;">
+        <img id="showImgSlot" style="margin-left:0px;  padding-left:0px;" src="" alt="Radio Show Logo">
       </div>
     </div>
     <h2 id="timeSlot" style="padding-bottom:4px; margin-bottom: 0px; text-align: center;">Mondays @ 11:00am</h2>
