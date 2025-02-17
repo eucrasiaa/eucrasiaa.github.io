@@ -150,6 +150,10 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
+  margin-top:0px;
+  margin-bottom:0px;
+  padding-top:0px;
+  padding-bottom: 0px;
 }
 
 .footer p {
@@ -157,4 +161,8 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 5px;
+  margin-top:0px;
+  margin-bottom:0px;
+  padding-top:2px;
+  padding-bottom: 2px;
 }
