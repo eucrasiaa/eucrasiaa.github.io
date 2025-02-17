@@ -473,6 +473,7 @@
 
     // JavaScript to highlight the current hour
     const highlightCurrentHour = () => {
+      console.log("highlighting current hour");
       const now = new Date();
       const currentHour = now.getHours();
       const currentMinutes = now.getMinutes();
@@ -501,12 +502,14 @@
 
       //add a check to see if the current hour cell also has the class "show-cell"
       //if so, overwrite the <p> tag to read "Now Playing!"
+      //wait until 
       const currentHourCell = document.querySelector(".current-hour");
       if (currentHourCell) {
+        console.log("current cell found");
         var classList = currentHourCell.classList
         if (classList.contains("show-cell")) {
           const showElemDiv = currentHourCell.querySelector(".showElemDiv");
-          showElemDiv.children[1].innerText = "Now Playing!"
+          showElemDiv.children[1].innerHTML += `<br> <span style="font-weight:bold; font-size:1em">Now Playing!</span>`;
         }
       }
     };
@@ -661,18 +664,17 @@
         cell.classList.add("show-cell");
 
         if (!standardShow) {
-          cell.classList = "specialEvent";
+          cell.classList += " specialEvent";
           //remove href if special
           showElement.children[0].removeAttribute("href");
         }
         cell.appendChild(showElement);
 
       }
-
+      highlightCurrentHour();
     }
 
     // Call the function to highlight the current hour
-    highlightCurrentHour();
   </script>
 </body>
 
