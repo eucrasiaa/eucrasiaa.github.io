@@ -42,7 +42,7 @@
     },
     "showBlurb": "dreamy & weird & whimsical! Covering genres from ambient to shoegaze to IDM to dream pop to electronica!",
     "standardShow": true,
-    "image": "data:image/jpeg;base64,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",
+    "image": "",
     "previousPlaylists": [
       [
         "12/18",
@@ -470,8 +470,8 @@
       "DiknMzsxO2kIYg=="
     ],
     "broadcastTime": {
-      "dayOfWeek": "Friday",
-      "startTime": "19:00",
+      "dayOfWeek": "Wednesday",
+      "startTime": "20:00",
       "durationMinutes": 60
     },
     "socials": {
@@ -619,7 +619,7 @@
   },
   {
     "name": "AikpJDB0EGc=",
-    "showName": "BBL Nation",
+    "showName": "BBLNation",
     "hostNames": [
       "DQJlAxAY"
     ],
@@ -646,8 +646,8 @@
       "CDEqLDswMmkNYg=="
     ],
     "broadcastTime": {
-      "dayOfWeek": "Tuesday",
-      "startTime": "16:00",
+      "dayOfWeek": "Wednesday",
+      "startTime": "15:00",
       "durationMinutes": 60
     },
     "socials": {
@@ -815,6 +815,28 @@
       "otherSocials": []
     },
     "showBlurb": "new rotation of the latest and throwback music and mixes",
+    "standardShow": true,
+    "image": "",
+    "previousPlaylists": []
+  },
+  {
+    "name": "Cy0rYR96",
+    "showName": "BCG\u2019s New Music Friday",
+    "hostNames": [
+      "Cy0rYR96"
+    ],
+    "broadcastTime": {
+      "dayOfWeek": "Friday",
+      "startTime": "12:00",
+      "durationMinutes": 60
+    },
+    "socials": {
+      "instagram": "",
+      "spotify": [],
+      "twitter": "",
+      "otherSocials": []
+    },
+    "showBlurb": "new music friday show where I gave commentary on popular music releases",
     "standardShow": true,
     "image": "",
     "previousPlaylists": []

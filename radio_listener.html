@@ -401,8 +401,19 @@
           const tracks = data.tracks;
           const trackList = document.querySelector(".track-list ul");
           trackList.innerHTML = "";
+          
+          var addedSongs = []; //prevent duplicates for 
 
           tracks.forEach((track) => {
+            if (addedSongs.includes(track.title)) {
+              //SKIP to next iteration if song is already added
+              return;
+            }
+            //SKIP IF CURRENTLY PLAYING
+            // if (track.title === document.querySelector(".radioco-nowPlaying").textContent) {
+            //   return;
+            // }
+            addedSongs.push(track.title);
             const li = document.createElement("li");
             li.innerHTML = `
           <img src="${track.artwork_url}" alt="${track.title}" width="50" height="50">
@@ -555,6 +566,9 @@
         data-showplayer="true" data-volume="50">
       </div>
     </div>
+    <div class="current-DJ">
+    </div>
+      
     <div class="track-list">
       <h2 style="text-align: center">Previously Played Tracks</h2>
       <ul>
