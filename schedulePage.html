@@ -281,7 +281,7 @@
     </table>
   </div>
   <footer class="footer">
-    <p>&copy; this is unofficial. In no way affiliated with UMBC nor WMBC</p>
+    <p>&copy; this is unofficial. In no way affiliated with UMBC nor WMBC. made by will :3</p>
   </footer>
 
   <script>
@@ -349,6 +349,11 @@
       const currentHour = now.getHours();
       const currentMinutes = now.getMinutes();
 
+      //if time is outside of 11am-11pm, return
+        if (currentHour < 11 || currentHour > 23) {
+            console.log("outside of 11am-11pm");
+            return;
+        }
       // Convert current time to 12-hour format
       let displayHour = currentHour % 12 || 12;
       const ampm = currentHour >= 12 ? "PM" : "AM";
@@ -409,8 +414,12 @@
         console.log(isHour);
         const endTime = (parseInt(startTime) + (isHour ? 1 : 0)) % 24;
         console.log(endTime);
-        const showName = show.showName;
+        let showName = show.showName;
         console.log(showName);
+        if (showName === "Ebbs %26 Flows"){
+            showName = "Ebbs & Flows";
+            console.log("jenny handled");
+        }
         const encryptedHostNames = show.hostNames;
         console.log(encryptedHostNames);
         const hostNames = loadHostNames(encryptedHostNames, DECODE_KEY);

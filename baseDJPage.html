@@ -337,7 +337,11 @@
 
 
       //populate it!!! RAAAHHH
+      if (show.showName === "Ebbs %26 Flows"){
+        show.showName = "Ebbs & Flows";
+      }
       document.getElementById("showName").innerText = show.showName;
+      
       // let showBlurbWithBreaks = show.showBlurb;
       // showBlurbWithBreaks = showBlurbWithBreaks.replace(/\n/g, "<br>"); // Assign the result back to the variable
       // console.log(showBlurbWithBreaks);
@@ -370,6 +374,11 @@
         const option = document.createElement('option');
         option.value = namer;
         option.textContent = namer;
+        console.log(option.textContent, "   ", showName);
+        if (option.textContent === "Ebbs %26 Flows") {
+          console.log("jenny handler");
+          option.textContent = "Ebb & Flow";
+        }
         if (namer === showName) {
           console.log(namer, "   ", show);
           option.selected = true; // Set the default selected show
@@ -503,7 +512,7 @@
   <footer class="footer">
     <p style>&copy; this is unoffical. In no
       way
-      affilated with UMBC nor WMBC</p>
+      affilated with UMBC nor WMBC. made by will :3</p>
   </footer>
 </body>
 
