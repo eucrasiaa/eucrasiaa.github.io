@@ -1,0 +1,160 @@
+
+:root {
+  --Black: #000000;
+  /* CMYK: 0, 0, 0, 100 | RGB: 0, 0, 0 */
+  --Gold: #fdb515;
+  /* CMYK: 0, 32, 100, 0 | RGB: 253, 181, 21 */
+  --Red: #da2128;
+  /* CMYK: 10, 100, 100, 0 | RGB: 218, 33, 40 */
+  --Light-Gray: #c7c8ca;
+  /* CMYK: 0, 0, 0, 25 | RGB: 199, 200, 202 */
+  --AOK-Teal: #007176;
+  /* CMYK: 100, 35, 50, 20 | RGB: 0, 113, 118 */
+  --Retriever-Brown: #a67a05;
+  /* CMYK: 0, 30, 100, 40 | RGB: 166, 122, 5 */
+  --Dark-Gray: #636466;
+  /* CMYK: 0, 0, 0, 75 | RGB: 99, 100, 102 */
+}
+
+.tabs {
+  background-color: var(--AOK-Teal);
+  padding: 10px 0;
+  text-align: center;
+}
+
+.tabs ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.tabs li {
+  display: inline;
+}
+
+.tabs a {
+  color: var(--Gold);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.tabs a:hover {
+  background-color: var(--Retriever-Brown);
+  color: white;
+}
+
+.tabs a:active {
+  background-color: var(--Gold);
+  color: var(--Black);
+}
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+  }
+  .container {
+    margin: 10px;
+    padding: 15px;
+  }
+
+
+  .logo-circle {
+    width: 60px;
+    height: 60px;
+  }
+
+  header h1 {
+    font-size: 20px;
+  }
+
+  footer {
+    position: static;
+    padding: 10px;
+  }
+
+}
+
+.container {
+  max-width: 800px;
+  background-color: #ffffff;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+body {
+  background-color: var(--Light-Gray);
+  color: var(--Black);
+}
+
+header {
+  background-color: var(--AOK-Teal);
+  color: var(--Gold);
+}
+
+footer {
+  background-color: var(--AOK-Teal);
+  color: var(--Gold);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--Black);
+  color: var(--Gold);
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.logo-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: var(--Light-Gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--Gold);
+}
+
+.logo-circle img {
+  width: 100%;
+  height: auto;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+  color: var(--Gold);
+}
+
+footer {
+  text-align: center;
+  padding: 5px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}

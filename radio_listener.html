@@ -1,209 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="src/somecss.css">
+
   <title>Temp Unofficial WMBC</title>
   <style>
-	@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+    @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 
-[class*="fontawesome-"]:before {
-  font-family: 'FontAwesome', sans-serif;
-}
+    [class*="fontawesome-"]:before {
+      font-family: 'FontAwesome', sans-serif;
+    }
 
     :root {
-        --Black: #000000; /* CMYK: 0, 0, 0, 100 | RGB: 0, 0, 0 */
-        --Gold: #fdb515; /* CMYK: 0, 32, 100, 0 | RGB: 253, 181, 21 */
-        --Red: #da2128; /* CMYK: 10, 100, 100, 0 | RGB: 218, 33, 40 */
-        --Light-Gray: #c7c8ca; /* CMYK: 0, 0, 0, 25 | RGB: 199, 200, 202 */
-        --AOK-Teal: #007176; /* CMYK: 100, 35, 50, 20 | RGB: 0, 113, 118 */
-        --Retriever-Brown: #a67a05; /* CMYK: 0, 30, 100, 40 | RGB: 166, 122, 5 */
-        --Dark-Gray: #636466; /* CMYK: 0, 0, 0, 75 | RGB: 99, 100, 102 */
+      --Black: #000000;
+      /* CMYK: 0, 0, 0, 100 | RGB: 0, 0, 0 */
+      --Gold: #fdb515;
+      /* CMYK: 0, 32, 100, 0 | RGB: 253, 181, 21 */
+      --Red: #da2128;
+      /* CMYK: 10, 100, 100, 0 | RGB: 218, 33, 40 */
+      --Light-Gray: #c7c8ca;
+      /* CMYK: 0, 0, 0, 25 | RGB: 199, 200, 202 */
+      --AOK-Teal: #007176;
+      /* CMYK: 100, 35, 50, 20 | RGB: 0, 113, 118 */
+      --Retriever-Brown: #a67a05;
+      /* CMYK: 0, 30, 100, 40 | RGB: 166, 122, 5 */
+      --Dark-Gray: #636466;
+      /* CMYK: 0, 0, 0, 75 | RGB: 99, 100, 102 */
     }
 
     @media (max-width: 768px) {
-        header {
-    flex-direction: column;
-    gap: 10px;
-    padding: 15px;
-  }
+      header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+      }
 
-  .logo-circle {
-    width: 60px;
-    height: 60px;
-  }
+      .logo-circle {
+        width: 60px;
+        height: 60px;
+      }
 
-  header h1 {
-    font-size: 20px;
-  }
-
-
-  .container {
-    margin: 10px;
-    padding: 15px;
-  }
+      header h1 {
+        font-size: 20px;
+      }
 
 
-  .radioplayer {
-    width: 60%;
-    height: auto;
-    padding: 15px;
-    margin: 10px auto;
-    position: relative;
-  }
-
-  .player iframe {
-    height: 120px;
-  }
-
- 
-  .track-list {
-    padding: 10px;
-  }
-
-  .track-list h2 {
-    font-size: 18px;
-  }
-
-  .track-list li {
-    padding: 6px 0;
-    font-size: 14px;
-  }
+      .container {
+        margin: 10px;
+        padding: 15px;
+      }
 
 
-.radioplayer {
-    width: 80%;
-    height: auto;
-    padding: 15px;
-    margin: 10px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
+      .radioplayer {
+        width: 60%;
+        height: auto;
+        padding: 15px;
+        margin: 10px auto;
+        position: relative;
+      }
 
-  .player iframe {
-    height: 120px;
-  }
-
-  .track-list {
-    padding: 10px;
-  }
-
-  .track-list h2 {
-    font-size: 18px;
-  }
-
-  .track-list li {
-    padding: 6px 0;
-    font-size: 14px;
-  }
+      .player iframe {
+        height: 120px;
+      }
 
 
-  .radioco-playButton {
-    font-size: 40px;
-    margin-bottom: 10px; 
-  }
+      .track-list {
+        padding: 10px;
+      }
 
-  .radioco-information {
-    width: 100%;
-    text-align: center;
-  }
+      .track-list h2 {
+        font-size: 18px;
+      }
 
-  .radioco-information span.radioco-nowPlaying {
-    display: block;
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
+      .track-list li {
+        padding: 6px 0;
+        font-size: 14px;
+      }
 
-  .radioco-information input[type="range"] {
-    width: 80%;
-    margin: 10px auto;
-  }
 
-  .radioco-image {
-    display: none; 
-  }
+      .radioplayer {
+        width: 80%;
+        height: auto;
+        padding: 15px;
+        margin: 10px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
 
-  .radioco-bg {
-    display: none; 
-  }
+      .player iframe {
+        height: 120px;
+      }
 
-  .radioco-elapsedTime {
-    display: block;
-    font-size: 12px;
-    opacity: 0.7;
-    margin-top: 10px;
-  }
-  footer {
-    position: static;
-    padding: 10px;
-  }
+      .track-list {
+        padding: 10px;
+      }
 
-}
+      .track-list h2 {
+        font-size: 18px;
+      }
+
+      .track-list li {
+        padding: 6px 0;
+        font-size: 14px;
+      }
+
+
+      .radioco-playButton {
+        font-size: 40px;
+        margin-bottom: 10px;
+      }
+
+      .radioco-information {
+        width: 100%;
+        text-align: center;
+      }
+
+      .radioco-information span.radioco-nowPlaying {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+
+      .radioco-information input[type="range"] {
+        width: 80%;
+        margin: 10px auto;
+      }
+
+      .radioco-image {
+        display: none;
+      }
+
+      .radioco-bg {
+        display: none;
+      }
+
+      .radioco-elapsedTime {
+        display: block;
+        font-size: 12px;
+        opacity: 0.7;
+        margin-top: 10px;
+      }
+
+      footer {
+        position: static;
+        padding: 10px;
+      }
+
+    }
 
     body {
-    background-color: var(--Light-Gray);
-    color: var(--Black);
+      background-color: var(--Light-Gray);
+      color: var(--Black);
     }
 
     header {
-    background-color: var(--AOK-Teal);
-    color: var(--Gold);
+      background-color: var(--AOK-Teal);
+      color: var(--Gold);
     }
 
     .track-list {
-    background-color: var(--Dark-Gray);
-    color: white;
+      background-color: var(--Dark-Gray);
+      color: white;
     }
 
     .track-list h2 {
-    color: var(--Gold);
+      color: var(--Gold);
     }
 
     footer {
-    background-color: var(--AOK-Teal);
-    color: var(--Gold);
+      background-color: var(--AOK-Teal);
+      color: var(--Gold);
     }
+
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
     }
+
     header {
-        background-color: var(--Black); 
-        color: var(--Gold);
-        padding: 20px;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
+      background-color: var(--Black);
+      color: var(--Gold);
+      padding: 20px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
     }
 
     .logo-circle {
-        width: 80px; 
-        height: 80px;
-        border-radius: 50%; 
-        overflow: hidden;
-        background-color: var(--Light-Gray);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 3px solid var(--Gold); 
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      overflow: hidden;
+      background-color: var(--Light-Gray);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid var(--Gold);
     }
 
     .logo-circle img {
-        width: 100%; 
-        height: auto;
+      width: 100%;
+      height: auto;
     }
 
     header h1 {
-        margin: 0;
-        font-size: 24px; 
-        color: var(--Gold); 
+      margin: 0;
+      font-size: 24px;
+      color: var(--Gold);
     }
+
     .container {
       max-width: 800px;
       background-color: #ffffff;
@@ -212,32 +226,40 @@
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
+
     .player {
       margin-bottom: 20px;
     }
+
     .player iframe {
       width: 100%;
       height: 150px;
       border: none;
       border-radius: 8px;
     }
+
     .track-list {
       padding: 15px;
       border-radius: 8px;
     }
+
     .track-list h2 {
       margin-top: 0;
     }
+
     .track-list ul {
       list-style-type: none;
       padding: 0;
     }
+
     .track-list li {
       padding: 8px 0;
     }
+
     .track-list li:last-child {
       border-bottom: none;
     }
+
     footer {
       text-align: center;
       padding: 5px;
@@ -245,6 +267,7 @@
       bottom: 0;
       width: 100%;
     }
+
     .radioplayer {
       background: var(--Dark-Gray);
       padding: 20px;
@@ -253,42 +276,43 @@
       border-radius: 4px;
       margin: 20px auto;
       overflow: hidden;
-      color: white; 
-      background-position:center center !important;
-	  background-repeat:no-repeat !important;
-	  background-size: cover !important;
-	  overflow: hidden;
+      color: white;
+      background-position: center center !important;
+      background-repeat: no-repeat !important;
+      background-size: cover !important;
+      overflow: hidden;
 
-	  -webkit-touch-callout: none;
-	  -webkit-user-select: none;
-	  -khtml-user-select: none;
-	  -moz-user-select: none;
-	  -ms-user-select: none;
-	  user-select: none;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
     }
-    .radioco-image{
-	  vertical-align: middle;
-	  margin-left: -20px;
-	  margin-top: -20px;
-	  position: relative;
-	  z-index: 1;
-	  width:150px;
-	  height: 150px;
-	}
+
+    .radioco-image {
+      vertical-align: middle;
+      margin-left: -20px;
+      margin-top: -20px;
+      position: relative;
+      z-index: 1;
+      width: 150px;
+      height: 150px;
+    }
 
     .radioco-playButton {
       color: var(--Gold);
     }
 
     .radioco-information {
-        display: block;
-        position: relative;
-        width: 340px;
-        color:#fff;
-        z-index: 1;
-        float: right;
-        top:13px;
-        font-family: 'Open Sans', sans-serif;
+      display: block;
+      position: relative;
+      width: 340px;
+      color: #fff;
+      z-index: 1;
+      float: right;
+      top: 13px;
+      font-family: 'Open Sans', sans-serif;
 
 
     }
@@ -301,240 +325,248 @@
       background: var(--Gold);
     }
 
-    .radioco-information input[type="range"]{
-        background: rgba(255,255,255,0.3);
-        width: 100px;
-        display: block;
-        height: 4px;
-        -webkit-appearance: none;
-        -webkit-border-radius: 8px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        cursor: -webkit-grab;
-        outline: 0;
+    .radioco-information input[type="range"] {
+      background: rgba(255, 255, 255, 0.3);
+      width: 100px;
+      display: block;
+      height: 4px;
+      -webkit-appearance: none;
+      -webkit-border-radius: 8px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      cursor: -webkit-grab;
+      outline: 0;
     }
 
-    .radioco-playButton-playing:before{
-		font-family: 'FontAwesome', sans-serif;
-        display: block;
-        float: right;
-        content: "\f04b";
-	}
-
-	.radioco-playButton-paused:before{
-		font-family: 'FontAwesome', sans-serif;
-        display: block;
-        float: right;
-	    content: "\f04c";
-	}
-	.radioco-information input[type=range]::-webkit-slider-thumb {
-	  -webkit-appearance: none;
-	  border: none;
-	  width:15px;
-	  height:15px;
-	  border-radius: 10px;
-	  background: #ffffff;
-	  -webkit-transition: box-shadow 0.2s;
-
-	}
-	.radioco-information input[type=range]::-webkit-slider-thumb:hover {
-	  box-shadow:#fff 1px 1px 20px;
-	}
-
-	.radioco-information input[type=range]:active, .information input[type=range]:focus {
-	  outline: 0;
-	}
-
-	.radioco-elapsedTime{
-	  opacity:0.4;
-	  font-size:14px;
-	}
-
-    .custom-elapsed-time{
-        opacity:0.4;
-        font-size:14px;
+    .radioco-playButton-playing:before {
+      font-family: 'FontAwesome', sans-serif;
+      display: block;
+      float: right;
+      content: "\f04b";
     }
-    
+
+    .radioco-playButton-paused:before {
+      font-family: 'FontAwesome', sans-serif;
+      display: block;
+      float: right;
+      content: "\f04c";
+    }
+
+    .radioco-information input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      border: none;
+      width: 15px;
+      height: 15px;
+      border-radius: 10px;
+      background: #ffffff;
+      -webkit-transition: box-shadow 0.2s;
+
+    }
+
+    .radioco-information input[type=range]::-webkit-slider-thumb:hover {
+      box-shadow: #fff 1px 1px 20px;
+    }
+
+    .radioco-information input[type=range]:active,
+    .information input[type=range]:focus {
+      outline: 0;
+    }
+
+    .radioco-elapsedTime {
+      opacity: 0.4;
+      font-size: 14px;
+    }
+
+    .custom-elapsed-time {
+      opacity: 0.4;
+      font-size: 14px;
+    }
+
     #startTimerButton {
-        all: unset; 
-  cursor: pointer;
-  font: inherit;
-  color: inherit;
-  display: inline; 
-  vertical-align: baseline; 
-  padding: 0;
-  margin: 0;
-}
+      all: unset;
+      cursor: pointer;
+      font: inherit;
+      color: inherit;
+      display: inline;
+      vertical-align: baseline;
+      padding: 0;
+      margin: 0;
+    }
 
-#startTimerButton:hover {
-  text-decoration: underline;
-}
-.footer p{
-display: flex; 
-  justify-content: center; 
-  align-items: center; 
-  gap: 5px; 
-}
+    #startTimerButton:hover {
+      text-decoration: underline;
+    }
+
+    .footer p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+    }
   </style>
   <script> const STATION_ID = "s7a5fb9da6"; </script>
   <script>
-function fetchAndDisplayTracks() {
-  const url = "https://public.radio.co/stations/s7a5fb9da6/history";
-  fetch(url)
-    .then((response) => response.json())
-    .then((data) => {
-      const tracks = data.tracks;
-      const trackList = document.querySelector(".track-list ul");
-      trackList.innerHTML = "";
+    function fetchAndDisplayTracks() {
+      const url = "https://public.radio.co/stations/s7a5fb9da6/history";
+      fetch(url)
+        .then((response) => response.json())
+        .then((data) => {
+          const tracks = data.tracks;
+          const trackList = document.querySelector(".track-list ul");
+          trackList.innerHTML = "";
 
-      tracks.forEach((track) => {
-        const li = document.createElement("li");
-        li.innerHTML = `
+          tracks.forEach((track) => {
+            const li = document.createElement("li");
+            li.innerHTML = `
           <img src="${track.artwork_url}" alt="${track.title}" width="50" height="50">
           <span>${track.title}</span>
           <span class="time">${new Date(track.start_time).toLocaleTimeString()}</span>
         `;
-        trackList.appendChild(li);
-      });
-    })
-    .catch((error) => {
-      console.error("Error fetching track history:", error);
-    });
-}
-
-function checkNowPlayingUpdate() {
-  const nowPlayingElement = document.querySelector(".radioco-nowPlaying");
-  let lastTrack = nowPlayingElement ? nowPlayingElement.textContent : null;
-
-  setInterval(() => {
-    if (nowPlayingElement && nowPlayingElement.textContent !== lastTrack) {
-      lastTrack = nowPlayingElement.textContent;
-      fetchAndDisplayTracks();
+            trackList.appendChild(li);
+          });
+        })
+        .catch((error) => {
+          console.error("Error fetching track history:", error);
+        });
     }
-  }, 50000); // Check every 50 seconds
-}
 
-document.addEventListener("DOMContentLoaded", () => {
-  fetchAndDisplayTracks();
-  checkNowPlayingUpdate();
-});
+    function checkNowPlayingUpdate() {
+      const nowPlayingElement = document.querySelector(".radioco-nowPlaying");
+      let lastTrack = nowPlayingElement ? nowPlayingElement.textContent : null;
 
-class TrackTimer {
-  constructor() {
-    this.currentTrack = null;
-    this.timerInterval = null;
-    this.elapsedTimeElement = null; 
-    this.nowPlayingElement = document.querySelector(".radioco-nowPlaying");
-    this.startButton = document.getElementById("startTimerButton");
-  }
-
-  async fetchTrackStatus() {
-    const url = "https://public.radio.co/stations/s7a5fb9da6/status";
-    try {
-      const response = await fetch(url);
-      const data = await response.json();
-      return data.current_track;
-    } catch (error) {
-      console.error("Error fetching track status:", error);
-      return null;
-    }
-  }
-  //lowkey did not write any of this i cannot stand js formatting shit
-  calculateElapsedTime(startTime) {
-    const start = new Date(startTime).getTime();
-    const now = new Date().getTime();
-    const elapsedSeconds = Math.floor((now - start) / 1000);
-    return this.formatTime(elapsedSeconds);
-  }
-  formatTime(seconds) {
-    const hours = Math.floor(seconds / 3600);
-    const minutes = Math.floor((seconds % 3600) / 60);
-    const secs = seconds % 60;
-    return `${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
-  }
-  updateElapsedTime(startTime) {
-    if (!this.elapsedTimeElement) return;
-    this.stopTimer();
-    this.timerInterval = setInterval(() => {
-      const elapsedTime = this.calculateElapsedTime(startTime);
-      this.elapsedTimeElement.textContent = elapsedTime;
-    }, 1000);
-  }
-
-  stopTimer() {
-    if (this.timerInterval) {
-      clearInterval(this.timerInterval);
-      this.timerInterval = null;
-    }
-  }
-  async init() {
-    const track = await this.fetchTrackStatus();
-    if (!track) return;
-    this.updateElapsedTime(track.start_time);
-  }
-  watchNowPlaying() {
-    if (!this.nowPlayingElement) return;
-    //only update on song name change so i dont get banned from calling the api LMFAOO this shit is so ass :sob:
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        if (mutation.type === "childList" || mutation.type === "characterData") {
-          this.init();
+      setInterval(() => {
+        if (nowPlayingElement && nowPlayingElement.textContent !== lastTrack) {
+          lastTrack = nowPlayingElement.textContent;
+          fetchAndDisplayTracks();
         }
-      });
+      }, 50000); // Check every 50 seconds
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      fetchAndDisplayTracks();
+      checkNowPlayingUpdate();
     });
 
-    observer.observe(this.nowPlayingElement, {
-      childList: true,
-      characterData: true,
-      subtree: true,
-    });
-  }
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  const trackTimer = new TrackTimer();
-  const startButton = trackTimer.startButton;
-  if (startButton) {
-    startButton.style.display = "block";
-    startButton.addEventListener("click", () => {
-      var durationPlayed = document.querySelector(".radioco-elapsedTime");
-        durationPlayed.remove();
-      if (!trackTimer.elapsedTimeElement) {
-        trackTimer.elapsedTimeElement = document.createElement("span");
-        trackTimer.elapsedTimeElement.className = "custom-elapsed-time";
-        trackTimer.elapsedTimeElement.textContent = "00:00:00";
-        document.querySelector(".radioco-information").appendChild(trackTimer.elapsedTimeElement);
+    class TrackTimer {
+      constructor() {
+        this.currentTrack = null;
+        this.timerInterval = null;
+        this.elapsedTimeElement = null;
+        this.nowPlayingElement = document.querySelector(".radioco-nowPlaying");
+        this.startButton = document.getElementById("startTimerButton");
       }
-      trackTimer.init();
-      trackTimer.watchNowPlaying();
-      //startButton.style.display = "none";
+
+      async fetchTrackStatus() {
+        const url = "https://public.radio.co/stations/s7a5fb9da6/status";
+        try {
+          const response = await fetch(url);
+          const data = await response.json();
+          return data.current_track;
+        } catch (error) {
+          console.error("Error fetching track status:", error);
+          return null;
+        }
+      }
+      //lowkey did not write any of this i cannot stand js formatting shit
+      calculateElapsedTime(startTime) {
+        const start = new Date(startTime).getTime();
+        const now = new Date().getTime();
+        const elapsedSeconds = Math.floor((now - start) / 1000);
+        return this.formatTime(elapsedSeconds);
+      }
+      formatTime(seconds) {
+        const hours = Math.floor(seconds / 3600);
+        const minutes = Math.floor((seconds % 3600) / 60);
+        const secs = seconds % 60;
+        return `${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
+      }
+      updateElapsedTime(startTime) {
+        if (!this.elapsedTimeElement) return;
+        this.stopTimer();
+        this.timerInterval = setInterval(() => {
+          const elapsedTime = this.calculateElapsedTime(startTime);
+          this.elapsedTimeElement.textContent = elapsedTime;
+        }, 1000);
+      }
+
+      stopTimer() {
+        if (this.timerInterval) {
+          clearInterval(this.timerInterval);
+          this.timerInterval = null;
+        }
+      }
+      async init() {
+        const track = await this.fetchTrackStatus();
+        if (!track) return;
+        this.updateElapsedTime(track.start_time);
+      }
+      watchNowPlaying() {
+        if (!this.nowPlayingElement) return;
+        //only update on song name change so i dont get banned from calling the api LMFAOO this shit is so ass :sob:
+        const observer = new MutationObserver((mutations) => {
+          mutations.forEach((mutation) => {
+            if (mutation.type === "childList" || mutation.type === "characterData") {
+              this.init();
+            }
+          });
+        });
+
+        observer.observe(this.nowPlayingElement, {
+          childList: true,
+          characterData: true,
+          subtree: true,
+        });
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const trackTimer = new TrackTimer();
+      const startButton = trackTimer.startButton;
+      if (startButton) {
+        startButton.style.display = "block";
+        startButton.addEventListener("click", () => {
+          var durationPlayed = document.querySelector(".radioco-elapsedTime");
+          durationPlayed.remove();
+          if (!trackTimer.elapsedTimeElement) {
+            trackTimer.elapsedTimeElement = document.createElement("span");
+            trackTimer.elapsedTimeElement.className = "custom-elapsed-time";
+            trackTimer.elapsedTimeElement.textContent = "00:00:00";
+            document.querySelector(".radioco-information").appendChild(trackTimer.elapsedTimeElement);
+          }
+          trackTimer.init();
+          trackTimer.watchNowPlaying();
+          //startButton.style.display = "none";
+        });
+      }
     });
-  }
-});
 
 
   </script>
 </head>
+
 <body>
   <header>
     <div class="logo-circle">
-        <img src="data:image/png;base64,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" alt="University Radio Station Logo">
-      </div>
-      <h1>WMBC Temp Web Player</h1>
+      <img
+        src="data:image/png;base64,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"
+        alt="University Radio Station Logo">
+    </div>
+    <h1>WMBC: Web Player</h1>
   </header>
+  <nav class="tabs">
+    <ul>
+      <li><a href="radio_listener.html">Listen!</a></li>
+      <li><a href="schedulePage.html">Schedule</a></li>
+      <li><a href="baseDJPage.html">Explore our shows!</a></li>
+    </ul>
+  </nav>
   <div class="container">
     <div class="player">
       <!-- player here -->
-      <div class="radioplayer"
-        data-src="http://streams.radio.co/s7a5fb9da6/listen"
-        data-autoplay="false"
-        data-playbutton="true"
-        data-volumeslider="true"
-        data-elapsedtime="true"
-        data-nowplaying="true"
-        data-showplayer="true"
-        data-volume="50">
-    </div>
+      <div class="radioplayer" data-src="http://streams.radio.co/s7a5fb9da6/listen" data-autoplay="false"
+        data-playbutton="true" data-volumeslider="true" data-elapsedtime="true" data-nowplaying="true"
+        data-showplayer="true" data-volume="50">
+      </div>
     </div>
     <div class="track-list">
       <h2 style="text-align: center">Previously Played Tracks</h2>
@@ -547,12 +579,14 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
   </div>
   <footer class="footer">
-    <p><input id="startTimerButton" type="button" value="&copy;" style="display: none;"> this is unoffical. In no way affilated with UMBC nor WMBC</p>
+    <p><input id="startTimerButton" type="button" value="&copy;" style="display: none;"> this is unoffical. In no way
+      affilated with UMBC nor WMBC</p>
   </footer>
 </body>
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="https://public.radio.co/playerapi/jquery.radiocoplayer.min.js"></script>
 <script>
-    $('.radioplayer').radiocoPlayer();
+  $('.radioplayer').radiocoPlayer();
 </script>
+
 </html>

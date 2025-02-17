@@ -1,0 +1,221 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>devtools</title>
+  <style>
+    .tool-container {
+      width: 33.33%;
+      float: left;
+      box-sizing: border-box;
+      padding: 10px;
+      border: 1px solid #000;
+    }
+    .temp-container-two {
+      width: 33.33%;
+      float: right;
+      box-sizing: border-box;
+      padding: 10px;
+      border: 1px solid #000;
+    }
+
+    input,
+    textarea,
+    button {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .host-names {
+      margin-bottom: 10px;
+    }
+
+    .host-names input {
+      width: calc(100% - 60px);
+      display: inline-block;
+    }
+
+    .host-names button {
+      width: 50px;
+      display: inline-block;
+    }
+
+    textarea {
+      height: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="tool-container">
+    <h2>Schedule Tool</h2>
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Name">
+
+    <label for="showName">Show Name:</label>
+    <input type="text" id="showName" placeholder="Show Name">
+
+    <div class="host-names">
+      <label>Host Names:</label>
+      <div id="hostNamesContainer">
+        <input type="text" class="hostName" placeholder="Host Name">
+      </div>
+      <button type="button" onclick="addHostName()">Add</button>
+    </div>
+
+    <label for="dayOfWeek">Day of Week (Monday, Tuesday, etc): </label>
+    <input type="text" id="dayOfWeek" placeholder="Day of Week">
+
+    <label for="startTime">Start Time (24 hour):</label>
+    <input type="text" id="startTime" placeholder="Start Time (HH:MM)">
+
+    <label for="durationMinutes">Duration (minutes):</label>
+    <input type="number" id="durationMinutes" placeholder="Duration (minutes)" value="60">
+
+
+
+    <label for="instagram">Instagram:</label>
+    <input type="text" id="instagram" placeholder="Instagram">
+
+    <label for="spotify">Spotify:</label>
+    <input type="text" id="spotify" placeholder="Spotify">
+
+    <label for="twitter">Twitter:</label>
+    <input type="text" id="twitter" placeholder="Twitter">
+
+    <div class="other-socials">
+      <label>Other Socials (platform: handle):</label>
+      <div id="otherSocialsContainer">
+        <input type="text" class="otherSocials" placeholder="other socials">
+      </div>
+      <button type="button" onclick="addOtherSocials()">Add</button>
+    </div>
+
+    <label for="showBlurb">Show Blurb:</label>
+    <textarea id="showBlurb" placeholder="Show Description"></textarea>
+
+    <div class="past-playlists">
+      <label>Other Socials (platform: handle):</label>
+      <div id="otherSocialsContainer">
+        <input type="text" class="otherSocials" placeholder="other socials">
+      </div>
+      <button type="button" onclick="addOtherSocials()">Add</button>
+    </div>
+
+    <div class="previous-playlists">
+      <label>Previous Playlists:</label>
+      <div id="previousPlaylistsContainer">
+        <div class="playlist-pair">
+          <input type="text" class="playlist-date" placeholder="Date (e.g., 12/18)" style="width: 30%;">
+          <input type="text" class="playlist-url" placeholder="URL" style="width: 65%; overflow: hidden;">
+        </div>
+      </div>
+      <button type="button" onclick="addPlaylistPair()">Add Playlist</button>
+    </div>
+
+    <label for="imgBox">Small Image as data: format</label>
+    <input id="imgBox" placeholder="data:img/jpeg...."></input>
+
+
+    <label for="standardShow">Standard Show (just leave checked):</label>
+    <input type="checkbox" id="standardShow" checked>
+
+    <button onclick="generateJSON()">Generate JSON</button>
+
+    <label for="jsonOutput">JSON Output:</label>
+    <textarea id="jsonOutput" readonly></textarea>
+  </div>
+  <!-- <div class="temp-container-two">
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5v1N0su1k3tzZRTsthTdKM?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+
+  </div> -->
+
+  <script>
+    function addHostName() {
+      const container = document.getElementById('hostNamesContainer');
+      const input = document.createElement('input');
+      input.type = 'text';
+      input.className = 'hostName';
+      input.placeholder = 'Host Name';
+      container.appendChild(input);
+    }
+    function addOtherSocials() {
+      const container = document.getElementById('otherSocialsContainer');
+      const input = document.createElement('input');
+      input.type = 'text';
+      input.className = 'otherSocials';
+      input.placeholder = 'other socials';
+      container.appendChild(input);
+    }
+    function addPlaylistPair() {
+      const container = document.getElementById('previousPlaylistsContainer');
+      const pair = document.createElement('div');
+      pair.className = 'playlist-pair';
+      pair.innerHTML = `
+        <input type="text" class="playlist-date" placeholder="Date (e.g., 12/18)" style="width: 30%;">
+        <input type="text" class="playlist-url" placeholder="URL" style="width: 65%; overflow: hidden;">
+      `;
+      container.appendChild(pair);
+    }
+
+    function generateJSON() {
+      const name = document.getElementById('name').value;
+      const showName = document.getElementById('showName').value;
+      const hostNames = Array.from(document.querySelectorAll('.hostName'))
+        .map(input => input.value)
+        .filter(value => value.trim() !== '');
+      const dayOfWeek = document.getElementById('dayOfWeek').value;
+      const startTime = document.getElementById('startTime').value;
+      const durationMinutes = parseInt(document.getElementById('durationMinutes').value, 10);
+      const instagram = document.getElementById('instagram').value;
+      let spotify = []
+      if (document.getElementById('spotify').value !== "") {
+        spotify = ["DISPLAYNAME", document.getElementById('spotify').value];
+      }
+      
+      const twitter = document.getElementById('twitter').value;
+      const otherSocials = Array.from(document.querySelectorAll('.otherSocials'))
+        .map(input => input.value)
+        .filter(value => value.trim() !== '');
+      const showBlurb = document.getElementById('showBlurb').value;
+      const image = document.getElementById('imgBox').value;
+      const standardShow = document.getElementById('standardShow').checked;
+      const previousPlaylists = Array.from(document.querySelectorAll('.playlist-pair'))
+        .map(pair => {
+          const date = pair.querySelector('.playlist-date').value;
+          const url = pair.querySelector('.playlist-url').value;
+          return [date, url];
+        })
+        .filter(([date, url]) => date.trim() !== '' && url.trim() !== '');
+
+      const json = {
+          name,
+          showName,
+          hostNames,
+          broadcastTime: {
+            dayOfWeek,
+            startTime,
+            durationMinutes
+          },
+          socials: {
+            instagram,
+            spotify,
+            twitter,
+            otherSocials
+          },
+          showBlurb,
+          standardShow,
+          image,
+          previousPlaylists
+      };
+
+      const jsonString = JSON.stringify(json, null, 2);
+      document.getElementById('jsonOutput').value = jsonString;
+      console.log(json);
+    }
+  </script>
+</body>
+
+</html>
