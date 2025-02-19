@@ -131,6 +131,11 @@
     <label for="standardShow">Standard Show (just leave checked):</label>
     <input type="checkbox" id="standardShow" checked>
 
+    
+    <label for="customFormat">DJ page customization</label>
+    <input id="customFormat" placeholder='{"css": "", "html": ""}''></input>
+
+
     <button onclick="generateJSON()">Generate JSON</button>
 
     <label for="jsonOutput">JSON Output:</label>
@@ -464,6 +469,16 @@ def encode_name(name, key):
           return [date, url];
         })
         .filter(([date, url]) => date.trim() !== '' && url.trim() !== '');
+        //custom formatting
+        //EX: {"css":"#showBlurb {\ncolor:2C983A;\n\n}","html":""}
+        /*
+    "customFormatting":{
+      "css":"#showBlurb {\ncolor:2C983A;\n\n}",
+      "html":""
+    }
+
+        */
+        const customFormatting = JSON.parse(document.getElementById('customFormat').value);
 
       const json = {
           name,
@@ -483,7 +498,8 @@ def encode_name(name, key):
           showBlurb,
           standardShow,
           image,
-          previousPlaylists
+          previousPlaylists,
+          customFormatting
       };
 
       const jsonString = JSON.stringify(json, null, 2);
