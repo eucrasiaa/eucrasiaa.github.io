@@ -434,6 +434,9 @@ console.log(showName + " is the show name 1");
         if (show.customFormatting.css) {
           applyCustomCss(show.customFormatting.css);
         }
+        if(show.customFormatting.html){
+          loadHTML(show.customFormatting.html);
+        }
       }
       //if past broadcasts exist, load them!
       //<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5v1N0su1k3tzZRTsthTdKM?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -495,6 +498,16 @@ console.log(showName + " is the show name 1");
 
 
   }
+  function loadHTML(savedHtml){
+        console.log("fetching data");
+        if (savedHtml) {
+          document.getElementById("showBlurbDiv").innerHTML = savedHtml;
+        }
+
+      
+
+
+    }
 
   function applyCustomCss(css) {
     let styleElement = document.getElementById("custom-style");
