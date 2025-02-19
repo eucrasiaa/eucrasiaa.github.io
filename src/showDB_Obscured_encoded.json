@@ -792,7 +792,7 @@
     ],
     "broadcastTime": {
       "dayOfWeek": "Wednesday",
-      "startTime": "19:00",
+      "startTime": "16:00",
       "durationMinutes": 60
     },
     "socials": {
@@ -815,7 +815,7 @@
     ],
     "broadcastTime": {
       "dayOfWeek": "Wednesday",
-      "startTime": "16:00",
+      "startTime": "21:00",
       "durationMinutes": 60
     },
     "socials": {
