@@ -116,7 +116,7 @@
     ],
     "broadcastTime": {
       "dayOfWeek": "Monday",
-      "startTime": "13:00",
+      "startTime": "19:00",
       "durationMinutes": 60
     },
     "socials": {
@@ -861,6 +861,28 @@
       "otherSocials": []
     },
     "showBlurb": "new music friday show where I gave commentary on popular music releases",
+    "standardShow": true,
+    "image": "",
+    "previousPlaylists": []
+  },
+  {
+    "name": "ByEmKg==",
+    "showName": "Cherish",
+    "hostNames": [
+      "ByEmKg=="
+    ],
+    "broadcastTime": {
+      "dayOfWeek": "Wednesday",
+      "startTime": "14:00",
+      "durationMinutes": 60
+    },
+    "socials": {
+      "instagram": "",
+      "spotify": [],
+      "twitter": "",
+      "otherSocials": []
+    },
+    "showBlurb": "NONE GIVEN. SEND IN BLURB",
     "standardShow": true,
     "image": "",
     "previousPlaylists": []
