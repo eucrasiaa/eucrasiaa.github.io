@@ -238,6 +238,9 @@
           else if (platform === "letterboxd") {
               socials.letterboxd = handle;
           }
+          else if (platform === "bandcamp") {
+              socials.bandcamp = handle;
+          }
           //spotify will be in form of ["displayName","url"]. push as "spotify: url"
           else {
             socials.other.push(social);
@@ -268,6 +271,12 @@
             console.log("TOOOO")
             console.log(handle)
             li.innerHTML = `${socialIcons[platform]} <a href="${handle[1]}" target="_blank">${handle[0]}</a>`;
+          }
+          else if(platform === "bandcamp") {
+            //just get the bandcamp name
+            //spliy s://(HERE).bandcamp
+            const bandcampName = handle.split("://")[1].split(".bandcamp")[0];
+            li.innerHTML = `<p style="font-size:24px; margin-top:0px; margin-bottom:0px; padding-top:0px">🛁 <a href="${handle}" target="_blank">${bandcampName}</a></p>`;
           }
           else {
             li.innerHTML = `${socialIcons[platform]} <a href="https://${platform}.com/${handle}" target="_blank">${handle}</a>`;
