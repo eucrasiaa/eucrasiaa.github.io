@@ -330,6 +330,10 @@
       outline: 0;
     }
 
+    .radioco-playButton {
+      font-size: 40px;
+    }
+
     .radioco-playButton-playing:before {
       font-family: 'FontAwesome', sans-serif;
       display: block;
@@ -393,6 +397,7 @@
   </style>
   <script> const STATION_ID = "s7a5fb9da6"; </script>
   <script>
+    
     function fetchAndDisplayTracks() {
       const url = "https://public.radio.co/stations/s7a5fb9da6/history";
       fetch(url)
@@ -539,10 +544,67 @@
     });
 
 
+
+    var DJ_JSON;
+    document.addEventListener("DOMContentLoaded", function () {
+      //Fetch data
+      fetch('./src/showDB_Obscured_encoded.json')
+        .then((response) => response.json())
+        .then((json) => {
+          console.log(json);
+          DJ_JSON = json;
+        })
+    });
+
+    function getDJ() {
+      var now = new Date();
+      var day = now.getDay();
+      var hour = now.getHours();
+      var minute = now.getMinutes();
+      var time = hour + ":" + minute;
+      var dayString = "";
+      switch (day) {
+        case 0:
+          dayString = "Sunday";
+          break;
+        case 1:
+          dayString = "Monday";
+          break;
+        case 2:
+          dayString = "Tuesday";
+          break;
+        case 3:
+          dayString = "Wednesday";
+          break;
+        case 4:
+          dayString = "Thursday";
+          break;
+        case 5:
+          dayString = "Friday";
+          break;
+        case 6:
+          dayString = "Saturday";
+          break;
+      }
+      /*
+        "broadcastTime": {
+          "dayOfWeek": "Monday",
+          "startTime": "17:00",
+          "durationMinutes": 60
+        },
+      */
+      
+
+
+    }
+    
+
   </script>
 </head>
 
 <body>
+
+  
   <header>
     <div class="logo-circle">
       <img
@@ -551,6 +613,8 @@
     </div>
     <h1>WMBC: Web Player</h1>
   </header>
+
+  
   <nav class="tabs">
     <ul>
       <li><a href="radio_listener.html">Listen!</a></li>
