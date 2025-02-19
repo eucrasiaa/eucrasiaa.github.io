@@ -147,7 +147,7 @@
     ],
     "customFormatting": {
       "css": "body{\n  /* animation: colorRotate 6s linear 0s infinite !important; */\ncolor:#f67fed;\n background-image: url(\"https://preview.redd.it/9lr4ak9gr9vz.jpg?width=640&crop=smart&auto=webp&s=48355d5a40ad439db9482300de0cf5cb27f8772f\");\nbackground-repeat: repeat;\nbackground-size: 33.33% 100%;\nfont-family: \"Comic Sans MS\", \"Comic Sans\", cursive !important;\n}\n\n#socialsList a{\nanimation: colorRotate 6s linear 0s infinite \n}\n\n@keyframes colorRotate {\n  from {\n    color: #6666ff;\n  }\n  10% {\n    color: #0099ff;\n  }\n  50% {\n    color: #00ff00;\n  }\n  75% {\n    color: #ff3399;\n  }\n  100% {\n    color: #6666ff;\n  }\n}",
-      "html": "<img src=\"/src/fire text.png\"><img>\n\n    <div id=\"showBlurbDiv\">\n      <h2 id=\"showBlurbHeader\"> </h2>\n      <p id=\"showBlurb\"> full moon radio \ud83c\udf15\ud83d\udcfb full moon, full beats. full moon, full beats. japanese-centric music, mostly rock. game ost spotlight during the week of a full moon. persona 3. hatsune miku.\n\n</p>\n    </div>"
+      "html": "<img src=\"/src/fire text.png\"><img>\n\n    <div id=\"showBlurbDiv\">\n      <h2 id=\"showBlurbHeader\"> </h2>\n      <p id=\"showBlurb\"> full moon radio \ud83c\udf15\ud83d\udcfb full moon, full beats. japanese-centric music, mostly rock. game ost spotlight during the week of a full moon. persona 3. hatsune miku.\n\n</p>\n    </div>"
     }
   },
   {
