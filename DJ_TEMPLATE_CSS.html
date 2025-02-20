@@ -344,6 +344,19 @@
 
     });
 
+    function loadHTML(savedHtml){
+        console.log("fetching data");
+        if (savedHtml) {
+          document.getElementById("showBlurbDiv").innerHTML = savedHtml;
+          
+        }
+
+      
+
+
+    }
+ 
+
     function decodeName(encodedName, key) {
       // Decode the Base64 string
       const encodedBytes = Uint8Array.from(atob(encodedName), c => c.charCodeAt(0));
@@ -476,10 +489,24 @@
           rowDiv.appendChild(iframeContainer);
         });
       }
-
       loadHTML();
-      
-    }
+      // if(savedHtml){ 
+        
+      // }
+      // else{
+      // removeCustomCss();
+      // if (show.customFormatting) {
+      //   if (show.customFormatting.css) {
+      //     customCssTextarea.value = show.customFormatting.css;
+      //     applyCustomCss(show.customFormatting.css);
+      //   }
+      //   if(show.customFormatting.html){
+      //     customHTMLTextarea.value = show.customFormatting.html;
+      //     loadHTML(show.customFormatting.html);
+      //   }
+      // }
+      //   }
+        }
   </script>
 </head>
 
@@ -610,8 +637,7 @@
 
     //run loadHTML after the page loads
     console.log('yo');
-      
-
+      //check
   applyCssButton.addEventListener("click", () => {
     const customCss = customCssTextarea.value;
     applyCustomCss(customCss);

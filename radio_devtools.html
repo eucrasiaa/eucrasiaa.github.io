@@ -478,7 +478,11 @@ def encode_name(name, key):
     }
 
         */
-        const customFormatting = JSON.parse(document.getElementById('customFormat').value);
+      const customFormatting = "";
+        if(document.getElementById('customFormat').value !== ""){
+          customFormatting = JSON.parse(document.getElementById('customFormat').value);
+        }
+        
 
       const json = {
           name,
