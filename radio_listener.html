@@ -52,6 +52,13 @@
         font-size: 20px;
       }
 
+      .radioco-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+      }
 
       .container {
         margin: 10px;
@@ -59,12 +66,13 @@
       }
 
 
-      .radioplayer {
-        width: 60%;
-        height: auto;
-        padding: 15px;
-        margin: 10px auto;
-        position: relative;
+      .radioco-elapsedTime{
+        margin-top:0px !important;
+      }
+      .radioco-volume{
+        margin-top: 0px !important; 
+        margin-bottom: 10px !important;
+
       }
 
       .player iframe {
@@ -88,13 +96,14 @@
 
       .radioplayer {
         width: 80%;
-        height: auto;
+        height: 30%;
         padding: 15px;
         margin: 10px auto;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 10px;
+        padding-top:5px !important;
       }
 
       .player iframe {
@@ -117,8 +126,8 @@
 
       .radioco-playButton {
         font-size: 40px;
-        margin-bottom: 10px;
-        margin-top: -10px;
+        /* margin-bottom: 10px; */
+        /* margin-top: -10px; */
       }
 
       .radioco-information {
@@ -138,7 +147,11 @@
       }
 
       .radioco-image {
-        display: none;
+        width: 60px !important;
+        height: 60px !important;
+        margin: 0px !important;
+        margin-left:-10px !important;
+        /* display: none; */
       }
 
       .radioco-bg {
@@ -151,6 +164,16 @@
         opacity: 0.7;
         margin-top: 10px;
       }
+      .radioco-playButton {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px !important;
+    float: right;
+
+  }
 
       footer {
         position: static;
@@ -225,6 +248,8 @@
     .radioco-information{
       float:left;
       padding-right:20%;
+
+      
     }
     .radioco-bg{
       visibility: hidden;
@@ -270,6 +295,9 @@
       padding: 0;
     }
 
+    .track-list img {
+      box-shadow: #000000 2px 4px 2px 0px;
+    }
     .track-list li {
       padding: 8px 0;
     }
@@ -281,7 +309,7 @@
     .radioplayer {
       background: var(--Dark-Gray);
       padding: 20px;
-      height: 109px;
+      height: 130px;
       box-shadow: #ccc 0px 1px 50px;
       border-radius: 4px;
       margin: 20px auto;
@@ -302,9 +330,10 @@
 
     .radioco-image {
       vertical-align: middle;
-      margin-left: -20px;
-      margin-top: -20px;
+      margin-left: -10px;
+      margin-top: -10px;
       position: relative;
+      box-shadow: #000000 2px 4px 4px 0px;
       z-index: 1;
       width: 150px;
       height: 150px;
@@ -355,6 +384,12 @@
     } 
     .radioco-playButton {
       font-size: 40px;
+      /* why does this add a margin to the parent? 
+      /* fix this  */
+      margin-top:45px;
+
+      float: right;
+
     }
 
     .radioco-playButton-playing:before {
@@ -362,6 +397,7 @@
       display: block;
       float: right;
       content: "\f04b";
+
     }
 
     .radioco-playButton-paused:before {
@@ -423,6 +459,34 @@
   <script> const STATION_ID = "s7a5fb9da6"; </script>
   <script>
     
+    
+    document.addEventListener("DOMContentLoaded", function () {
+      if (window.innerWidth < 600) {
+        let player = document.querySelector(".radioplayer");
+        let playButton = document.querySelector(".radioco-playButton");
+        let image = document.querySelector(".radioco-image");
+
+        if (player && playButton && image) {
+            // Create a wrapper div for the image and play button
+            let headerDiv = document.createElement("div");
+            headerDiv.classList.add("radioco-header");
+
+            // Append the image and play button to the new div
+            headerDiv.appendChild(image);
+            headerDiv.appendChild(playButton);
+            let spacer = document.createElement("div");
+            //make an invible spacer that is the exact same size as the image
+            spacer.style.width = "60px";
+            spacer.style.height = "60px";
+            //no padding or margin
+            spacer.style.margin = "0px -10px 0px 0px";
+            spacer.style.padding = "0px";
+            headerDiv.appendChild(spacer);
+            // Insert the header div at the top of the radio player
+            player.prepend(headerDiv);
+        }
+      }
+  });
     function fetchAndDisplayTracks() {
       const url = "https://public.radio.co/stations/s7a5fb9da6/history";
       fetch(url)
