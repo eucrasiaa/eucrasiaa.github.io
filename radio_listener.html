@@ -539,6 +539,39 @@
       checkNowPlayingUpdate();
     });
 
+
+
+    async function updateTrackTitle() {
+//set track to the website title
+      const nowPlayingElement = document.querySelector(".radioco-nowPlaying");
+      if (nowPlayingElement) {
+        document.title = nowPlayingElement.textContent + " | WMBC Radio";
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const nowPlayingElement = document.querySelector(".radioco-nowPlaying");
+
+      if (nowPlayingElement) {
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+        if (mutation.type === "childList" || mutation.type === "characterData") {
+          updateTrackTitle();
+        }
+        });
+      });
+
+      observer.observe(nowPlayingElement, {
+        childList: true,
+        characterData: true,
+        subtree: true,
+      });
+
+      // Initial call to set the title on page load
+      updateTrackTitle();
+      }
+    });
+
     class TrackTimer {
       constructor() {
         this.currentTrack = null;
@@ -591,6 +624,10 @@
         const track = await this.fetchTrackStatus();
         if (!track) return;
         this.updateElapsedTime(track.start_time);
+        console.log(track);
+        console.log("DO IT");
+        //set track to the website title
+        document.title = track.title;
       }
       watchNowPlaying() {
         if (!this.nowPlayingElement) return;
