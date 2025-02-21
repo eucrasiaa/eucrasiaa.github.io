@@ -826,6 +826,10 @@
           document.querySelector(".current-DJ").style.display = "flex";
           // add link to show page. which is baseDJPage?showName=show.showName
           console.log("currShowName: " + currShowName);
+          //check if the link already exists
+          if (document.getElementById("showPageLink")) {
+            document.getElementById("showPageLink").remove();
+          }
           var newLinkElem = document.createElement("a");
           newLinkElem.id = "showPageLink";
           newLinkElem.textContent = "More Info!";
