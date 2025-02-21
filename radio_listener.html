@@ -80,9 +80,6 @@
       }
 
 
-      .track-list {
-        padding: 10px;
-      }
 
       .track-list h2 {
         font-size: 18px;
@@ -195,6 +192,9 @@
     .track-list {
       background-color: var(--Dark-Gray);
       color: white;
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 8px;
     }
 
     .track-list h2 {
@@ -281,10 +281,7 @@
       border-radius: 8px;
     }
 
-    .track-list {
-      padding: 15px;
-      border-radius: 8px;
-    }
+
 
     .track-list h2 {
       margin-top: 0;
@@ -454,11 +451,59 @@
       text-decoration: underline;
     }
 
+    .current-DJ {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background-color: var(--Dark-Gray);
+      padding: 10px;
+      margin: 0px 40px;
+      border-radius: 8px;
+      color: white;
+    }
 
+    /* children of current-DJ */
+    .current-DJ p, .current-DJ a {
+      padding:0px 20px;
+    }
+
+    .current-DJ span {
+      font-size: 20px;
+      font-weight: bold;
+      color: var(--Gold);
+    }
+
+    #showPageLink {
+      color: var(--Gold);
+      background-color: var(--AOK-Teal);
+      padding: 4px 8px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    #showPageLink:hover {
+      background-color: var(--Red);
+    }
   </style>
   <script> const STATION_ID = "s7a5fb9da6"; </script>
   <script>
     
+    function decodeName(encodedName, key) {
+      // Decode the Base64 string
+      const encodedBytes = Uint8Array.from(atob(encodedName), c => c.charCodeAt(0));
+      
+      // Convert key to byte array
+      const keyBytes = new TextEncoder().encode(key);
+      
+      // XOR each byte of the encoded name with the corresponding byte of the key
+      const decodedBytes = encodedBytes.map((byte, i) => byte ^ keyBytes[i % keyBytes.length]);
+      
+      // Convert the byte array back to a string
+      return new TextDecoder().decode(decodedBytes);
+    }
     
     document.addEventListener("DOMContentLoaded", function () {
       if (window.innerWidth < 600) {
@@ -486,6 +531,7 @@
             player.prepend(headerDiv);
         }
       }
+      
   });
     function fetchAndDisplayTracks() {
       const url = "https://public.radio.co/stations/s7a5fb9da6/history";
@@ -520,6 +566,8 @@
         .catch((error) => {
           console.error("Error fetching track history:", error);
         });
+        console.log("maybe??");
+        
     }
 
     function checkNowPlayingUpdate() {
@@ -537,6 +585,7 @@
     document.addEventListener("DOMContentLoaded", () => {
       fetchAndDisplayTracks();
       checkNowPlayingUpdate();
+      
     });
 
 
@@ -571,6 +620,20 @@
       updateTrackTitle();
       }
     });
+
+    const now = new Date();
+    const nextHour = new Date(now.getFullYear(), now.getMonth(), now.getDate(), now.getHours() + 1, 0, 0, 0);
+    const timeUntilNextHour = nextHour - now;
+
+    // Set a timeout to run the function at the start of the next hour
+    setTimeout(() => {
+        console.log("Starting DJ check");
+        getDJ();
+        // Set an interval to run the function every hour after that
+        setInterval(getDJ, 60 * 60 * 1000);
+    }, timeUntilNextHour);
+
+ 
 
     class TrackTimer {
       constructor() {
@@ -679,14 +742,28 @@
         .then((json) => {
           console.log(json);
           DJ_JSON = json;
+          getDJ();
         })
     });
 
-    function getDJ() {
+    function getDJ(demoDate="BAH") {
+
+      const DECODE_KEY = "IHEARTWILLTOLEDO!!!!";
       var now = new Date();
       var day = now.getDay();
       var hour = now.getHours();
       var minute = now.getMinutes();
+      console.log(demoDate);
+      if (demoDate !== "BAH") {
+        console.log("demo date");
+        now = new Date(demoDate);
+        day = now.getDay();
+        hour = now.getHours();
+        minute = now.getMinutes();
+      }
+      //example demodate for 12:30 on a monday
+      //new Date("2025-02-21T12:30:00");
+      //DATE NEW DATE EXMAPLE DATE
       var time = hour + ":" + minute;
       var dayString = "";
       switch (day) {
@@ -712,6 +789,60 @@
           dayString = "Saturday";
           break;
       }
+      //iterate through the json and load all shows with broadcastTime.dayOfWeek == dayString
+      var showsToday = [];
+      for (var i = 0; i < DJ_JSON.length; i++) {
+        if (DJ_JSON[i].broadcastTime.dayOfWeek == dayString) {
+          showsToday.push(DJ_JSON[i]);
+        }
+      }
+      // Iterate through the shows and find the one that is currently playing
+      for (let show of showsToday) {
+        const runHour = parseInt(show.broadcastTime.startTime.split(":")[0]);
+        const runMinutes = parseInt(show.broadcastTime.startTime.split(":")[1]);
+        const runDuration = show.broadcastTime.durationMinutes;
+
+        const endHour = (runHour + Math.floor(runDuration / 60)) % 24;
+        const endMinutes = (runMinutes + runDuration % 60) % 60;
+
+        if (hour >= runHour && hour < endHour) {
+          if (hour === endHour && minute > endMinutes) {
+        continue;
+          }
+          console.log("there is a live DJ!");
+          // merge all hostNames into one string, decode too
+          var hostNames = "";
+          var currShowName = show.showName;
+            for (let i = 0; i < show.hostNames.length; i++) {
+            hostNames += decodeName(show.hostNames[i], DECODE_KEY);
+            if (i === show.hostNames.length - 2) {
+              hostNames += ", and ";
+            } else if (i < show.hostNames.length - 2) {
+              hostNames += ", ";
+            }
+            }
+          document.getElementById("currDJSpan").textContent = hostNames;
+          //set current-DJ display: not none
+          document.querySelector(".current-DJ").style.display = "flex";
+          // add link to show page. which is baseDJPage?showName=show.showName
+          console.log("currShowName: " + currShowName);
+          var newLinkElem = document.createElement("a");
+          newLinkElem.id = "showPageLink";
+          newLinkElem.textContent = "More Info!";
+          //encode the show name
+          currShowName = encodeURI(currShowName);
+          newLinkElem.href = "baseDJPage.html?showName=" + currShowName;
+          document.getElementsByClassName("current-DJ")[0].appendChild(newLinkElem);
+
+            
+          //document.getElementById("currDJSpan").href = "baseDJPage?showName=" + show.showName;
+          return true;
+        }
+
+        // if no show is currently playing, hide the current DJ
+        document.querySelector(".current-DJ").style.display = "none";
+      }
+
       /*
         "broadcastTime": {
           "dayOfWeek": "Monday",
@@ -757,6 +888,8 @@
       </div>
     </div>
     <div class="current-DJ">
+      <!-- get current DJ via the DB schedule if exists, and then link their page  -->
+      <p>Current DJ(s): <span id ="currDJSpan"></span></p>
     </div>
       
     <div class="track-list">
