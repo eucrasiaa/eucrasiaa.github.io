@@ -634,7 +634,10 @@
     }, timeUntilNextHour);
 
  
-
+    //run a getDJ 10 seconds after the page loads just in case the page loads at the start of a show
+    setTimeout(() => {
+      getDJ();
+    }, 10000);
     class TrackTimer {
       constructor() {
         this.currentTrack = null;
@@ -821,6 +824,10 @@
               hostNames += ", ";
             }
             }
+
+            //replace the headerlogo with the live gif
+            // document.querySelector(".logo-circle img").src = "media/1200w/Artboard   .gif"
+            
           document.getElementById("currDJSpan").textContent = hostNames;
           //set current-DJ display: not none
           document.querySelector(".current-DJ").style.display = "flex";
@@ -842,10 +849,15 @@
           //document.getElementById("currDJSpan").href = "baseDJPage?showName=" + show.showName;
           return true;
         }
+        console.log("no live DJ");
 
         // if no show is currently playing, hide the current DJ
         document.querySelector(".current-DJ").style.display = "none";
+        //replace the headerlogo with the live gif
       }
+
+      // if no show is currently playing, hide the current DJ
+      document.querySelector(".current-DJ").style.display = "none";
 
       /*
         "broadcastTime": {
