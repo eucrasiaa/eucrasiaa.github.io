@@ -517,12 +517,11 @@
         //with a clock that updates every minute
         if (urlParts[1] === "?=clock") {
           //replace the header with a clock
-          document.querySelector("header").innerHTML += "<h1 id='clock'></h1>";
+          document.querySelector("header").innerHTML += "<h1 id='clock' style='font-size:30px'></h1>";
           //update the clock every minute
           var now = new Date();
           document.getElementById("clock").textContent = now.toLocaleTimeString();
           setInterval(() => {
-            console.log("updating clock");
             now = new Date();
             document.getElementById("clock").textContent = now.toLocaleTimeString();
             
