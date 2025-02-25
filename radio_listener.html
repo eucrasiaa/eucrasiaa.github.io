@@ -505,6 +505,33 @@
       return new TextDecoder().decode(decodedBytes);
     }
     
+
+    document.addEventListener("DOMContentLoaded", function ()  {
+      console.log("DOM loaded");
+        const selectedShowName = event.target.value;
+        //get url and split after "baseDJPage.html"
+        const url = window.location.href;
+        const urlParts = url.split("radio_listener.html");
+        console.log(urlParts);
+        //if it is ?=clock, use the time class and append header 
+        //with a clock that updates every minute
+        if (urlParts[1] === "?=clock") {
+          //replace the header with a clock
+          document.querySelector("header").innerHTML += "<h1 id='clock'></h1>";
+          //update the clock every minute
+          var now = new Date();
+          document.getElementById("clock").textContent = now.toLocaleTimeString();
+          setInterval(() => {
+            console.log("updating clock");
+            now = new Date();
+            document.getElementById("clock").textContent = now.toLocaleTimeString();
+            
+          }, 1000);
+          return;
+        }
+      });
+
+
     document.addEventListener("DOMContentLoaded", function () {
       if (window.innerWidth < 600) {
         let player = document.querySelector(".radioplayer");
