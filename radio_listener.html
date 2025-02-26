@@ -517,7 +517,7 @@
         //with a clock that updates every minute
         if (urlParts[1] === "?=clock") {
           //replace the header with a clock
-          document.querySelector("header").innerHTML += "<h1 id='clock' style='font-size:30px'></h1>";
+          document.querySelector("header").innerHTML += "<h1 id='clock' style='font-size:3w0px'></h1>";
           //update the clock every minute
           var now = new Date();
           document.getElementById("clock").textContent = now.toLocaleTimeString();
@@ -527,6 +527,55 @@
             
           }, 1000);
           return;
+        }
+        if(urlParts[1] === "?=yass"){
+          //add button and a text area uneditable, 
+          //click button and the number adds 1 to current counter in text area
+          //save to local storage
+          //also load from local storage if exists
+          //if it does not exist, set to 0
+          
+          //button
+          var button = document.createElement("button");
+          button.textContent = "Hit the Yass button!";
+          button.style.fontSize = "20px";
+          button.style.padding = "10px";
+          button.style.margin = "10px";
+          button.style.borderRadius = "10px";
+          button.style.backgroundColor = "var(--Gold)";
+
+          //text area
+          var textArea = document.createElement("textarea");
+          textArea.style.width = "20%";
+          textArea.style.height = "100px";
+          textArea.style.fontSize = "20px";
+          textArea.style.padding = "10px";
+          textArea.style.margin = "10px";
+          textArea.style.borderRadius = "10px";
+          textArea.style.backgroundColor = "var(--Gold)";
+          textArea.readOnly = true;
+
+          //add button and text area to the body
+          document.querySelector("header").appendChild(button);
+          document.querySelector("header").appendChild(textArea);
+
+          //load from local storage
+          var yassCount = localStorage.getItem("yassCount");
+          if (yassCount === null) {
+            yassCount = 0;
+          }
+          textArea.textContent = yassCount;
+          //add event listener to button
+          button.addEventListener("click", function () {
+            yassCount++;
+            textArea.textContent = yassCount;
+            localStorage.setItem("yassCount", yassCount);
+          });
+          return;
+
+
+
+          
         }
       });
 
