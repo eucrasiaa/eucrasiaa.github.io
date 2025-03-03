@@ -26,7 +26,7 @@
       }
 
       .showElemDiv h3 {
-        font-size: 0.8em !important;
+        font-size: 0.9em !important;
       }
 
       .showElemDiv p {
@@ -404,6 +404,7 @@
           //make cells taller
           cell.style.padding = "20px 0";
         });
+        //remove sat/sun from the schedule, so first and last child for each row
 
       }
     });
@@ -474,6 +475,9 @@
           return;
           });
 
+
+          
+
     }
 
 
@@ -517,6 +521,21 @@
           const showElemDiv = currentHourCell.querySelector(".showElemDiv");
           showElemDiv.children[1].innerHTML += `<br> <span style="font-weight:bold; font-size:1em">Now Playing!</span>`;
         }
+      }
+
+// FIXME CLEARER WAY TO DO THIS. PUT AT END OF GENERTION SO IT DOESNT BREAK ANYTHING!
+      if (window.innerWidth < 600) {
+        const rows = document.querySelectorAll(".calendar tbody tr");
+        rows.forEach(row => {
+          row.children[1].remove();
+          row.children[row.children.length - 1].remove();
+          
+        });
+        //remove from calendar header
+        const header = document.querySelector(".calendar thead tr");
+        header.children[1].remove();
+        header.children[header.children.length - 1].remove();
+
       }
     };
     function loadHostNames(hostNames, DECODE_KEY) {
@@ -678,6 +697,9 @@
 
       }
       highlightCurrentHour();
+
+
+
     }
 
     // Call the function to highlight the current hour
