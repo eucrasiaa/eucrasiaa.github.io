@@ -895,5 +895,28 @@
     "standardShow": true,
     "image": "",
     "previousPlaylists": []
+  },
+  {
+    "name": "GTokIjo9dw5i",
+    "showName": "Canticulum (Medieval Mix)",
+    "hostNames": [
+      "GTokIjo9dw5i"
+    ],
+    "broadcastTime": {
+      "dayOfWeek": "Monday",
+      "startTime": "21:00",
+      "durationMinutes": 60
+    },
+    "socials": {
+      "instagram": "@canticulum.wmbc",
+      "spotify": [],
+      "twitter": "",
+      "otherSocials": []
+    },
+    "showBlurb": "a jaunty mix of medieval inspired tunes paired with historical fun facts",
+    "standardShow": true,
+    "image": "/src/Canticulum.png",
+    "previousPlaylists": [],
+    "customFormatting": ""
   }
 ]
