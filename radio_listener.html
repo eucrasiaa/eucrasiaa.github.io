@@ -453,6 +453,20 @@
       text-decoration: underline;
     }
 
+    #addClock {
+      all: unset;
+      cursor: pointer;
+      font: inherit;
+      color: inherit;
+      display: inline;
+      vertical-align: baseline;
+      padding: 0;
+      margin: 0;
+    }
+
+    #addClock:hover {
+      text-decoration: underline;
+    }
     .current-DJ {
       display: flex;
       align-items: center;
@@ -647,6 +661,7 @@
         
     }
 
+
     function checkNowPlayingUpdate() {
       const nowPlayingElement = document.querySelector(".radioco-nowPlaying");
       let lastTrack = nowPlayingElement ? nowPlayingElement.textContent : null;
@@ -662,6 +677,8 @@
     document.addEventListener("DOMContentLoaded", () => {
       fetchAndDisplayTracks();
       checkNowPlayingUpdate();
+      //addlistener to  input #addClock that runs addClock() 
+      document.getElementById("addClock").addEventListener("click", addClock);
       
     });
 
@@ -812,6 +829,10 @@
       }
     });
 
+
+    function addClock() {
+      window.location.href = "radio_listener.html?=clock";
+    }
 
 
     var DJ_JSON;
@@ -996,7 +1017,7 @@
     </div>
   </div>
   <footer class="footer">
-    <p><input id="startTimerButton" type="button" value="WMBC's Web Player," style="display: none;"> made by will :3</p>
+    <p><input id="startTimerButton" type="button" value="WMBC's Web Player," style="display: none;"> <input id="addClock" type="button" value=" made by will :3" >  </p>
   </footer>
 </body>
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
