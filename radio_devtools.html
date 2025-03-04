@@ -139,6 +139,7 @@
 
 
     <button onclick="generateJSON()">Generate JSON</button>
+    <button onclick="generateDecoded()">Generate Decodeded</button>
 
     <label for="jsonOutput">JSON Output:</label>
     <textarea id="jsonOutput" readonly></textarea>
@@ -448,6 +449,84 @@ def encode_name(name, key):
         .filter(value => value.trim() !== '');
       //encode hosts
       hostNames = hostNames.map(host => encodeName(host, DECODE_KEY));
+      const dayOfWeek = document.getElementById('dayOfWeek').value;
+      const startTime = document.getElementById('startTime').value;
+      const durationMinutes = parseInt(document.getElementById('durationMinutes').value, 10);
+      const instagram = document.getElementById('instagram').value;
+      let spotify = []
+      if (document.getElementById('spotify').value !== "") {
+        spotify = ["DISPLAYNAME", document.getElementById('spotify').value];
+      }
+      
+      const twitter = document.getElementById('twitter').value;
+      const otherSocials = Array.from(document.querySelectorAll('.otherSocials'))
+        .map(input => input.value)
+        .filter(value => value.trim() !== '');
+      const showBlurb = document.getElementById('showBlurb').value;
+      const image = document.getElementById('imgBox').value;
+      const standardShow = document.getElementById('standardShow').checked;
+      const previousPlaylists = Array.from(document.querySelectorAll('.playlist-pair'))
+        .map(pair => {
+          const date = pair.querySelector('.playlist-date').value;
+          const url = pair.querySelector('.playlist-url').value;
+          return [date, url];
+        })
+        .filter(([date, url]) => date.trim() !== '' && url.trim() !== '');
+        //custom formatting
+        //EX: {"css":"#showBlurb {\ncolor:2C983A;\n\n}","html":""}
+        /*
+    "customFormatting":{
+      "css":"#showBlurb {\ncolor:2C983A;\n\n}",
+      "html":""
+    }
+
+        */
+      const customFormatting = "";
+        if(document.getElementById('customFormat').value !== ""){
+          customFormatting = JSON.parse(document.getElementById('customFormat').value);
+        }
+        
+
+      const json = {
+          name,
+          showName,
+          hostNames,
+          broadcastTime: {
+            dayOfWeek,
+            startTime,
+            durationMinutes
+          },
+          socials: {
+            instagram,
+            spotify,
+            twitter,
+            otherSocials
+          },
+          showBlurb,
+          standardShow,
+          image,
+          previousPlaylists,
+          customFormatting
+      };
+
+      const jsonString = JSON.stringify(json, null, 2);
+      if (output) document.getElementById('jsonOutput').value = jsonString;
+      console.log(json);
+      return json;
+    }
+
+
+    function generateDecoded(output = true) {
+      const DECODE_KEY = "IHEARTWILLTOLEDO!!!!";
+      var name = document.getElementById('name').value;
+      //encode name
+      // name = encodeName(name, DECODE_KEY);
+      const showName = document.getElementById('showName').value;
+      var hostNames = Array.from(document.querySelectorAll('.hostName'))
+        .map(input => input.value)
+        .filter(value => value.trim() !== '');
+      //encode hosts
+      // hostNames = hostNames.map(host => encodeName(host, DECODE_KEY));
       const dayOfWeek = document.getElementById('dayOfWeek').value;
       const startTime = document.getElementById('startTime').value;
       const durationMinutes = parseInt(document.getElementById('durationMinutes').value, 10);
