@@ -580,28 +580,6 @@
     "previousPlaylists": []
   },
   {
-    "name": "HSEoYQB6",
-    "showName": "Talking Head",
-    "hostNames": [
-      "HSEoYQB6"
-    ],
-    "broadcastTime": {
-      "dayOfWeek": "Tuesday",
-      "startTime": "15:00",
-      "durationMinutes": 60
-    },
-    "socials": {
-      "instagram": "",
-      "spotify": [],
-      "twitter": "",
-      "otherSocials": []
-    },
-    "showBlurb": "folk, funk, new wave, and classic rock",
-    "standardShow": true,
-    "image": "",
-    "previousPlaylists": []
-  },
-  {
     "name": "CzosNTwxLmkCYg==",
     "showName": "The Britney Show",
     "hostNames": [
@@ -763,7 +741,7 @@
   },
   {
     "name": "BCEmKTc4OyxsBXpvamUXLk9AAW9n",
-    "showName": "The Michelle and Sana Show",
+    "showName": "Mama's Orchard",
     "hostNames": [
       "BCEmKTc4OyxsBXo=",
       "GikrIHIaeQ=="
@@ -779,9 +757,9 @@
       "twitter": "",
       "otherSocials": []
     },
-    "showBlurb": "talking about interesting things we find online/interesting cultural phenomena and making commentary",
+    "showBlurb": "Welcome to Mama's Orchard, where we pick the juiciest weirdest fruits of the internet and our minds to talk about each episode. come walk through our orchard with us!",
     "standardShow": true,
-    "image": "",
+    "image": "/src/Mama-s Orchard.jpg",
     "previousPlaylists": []
   },
   {
@@ -916,6 +894,52 @@
     "showBlurb": "a jaunty mix of medieval inspired tunes paired with historical fun facts",
     "standardShow": true,
     "image": "/src/Canticulum.png",
+    "previousPlaylists": [],
+    "customFormatting": ""
+  },
+  {
+    "name": "DD4kYRR6",
+    "showName": "Monkey Business \ud83c\udf4c",
+    "hostNames": [
+      "DQJlMTw/Mj8p"
+    ],
+    "broadcastTime": {
+      "dayOfWeek": "Tuesday",
+      "startTime": "16:00",
+      "durationMinutes": 60
+    },
+    "socials": {
+      "instagram": "@monkeybiz.wmbc",
+      "spotify": [],
+      "twitter": "",
+      "otherSocials": []
+    },
+    "showBlurb": "we like to have a very silly and deeply unserious time on and off the air. the theme for music is whatever dj pnkeve decides that week, with some anecdotes along the way. i hope you\u2019ll join us weekly on tuesdays at 4pm for some goofs, giggles and tunes!",
+    "standardShow": true,
+    "image": "/src/MonkeyBusiness-logo.jpg",
+    "previousPlaylists": [],
+    "customFormatting": ""
+  },
+  {
+    "name": "Bi4jKDExJWkEIyE9",
+    "showName": "Officer Hour",
+    "hostNames": [
+      "HgUHAnUndwYqKj0sKTc3"
+    ],
+    "broadcastTime": {
+      "dayOfWeek": "Tuesday",
+      "startTime": "20:00",
+      "durationMinutes": 60
+    },
+    "socials": {
+      "instagram": "",
+      "spotify": [],
+      "twitter": "",
+      "otherSocials": []
+    },
+    "showBlurb": "it's a mess. tune in!",
+    "standardShow": true,
+    "image": "",
     "previousPlaylists": [],
     "customFormatting": ""
   }
