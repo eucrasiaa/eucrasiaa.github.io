@@ -1244,6 +1244,8 @@ function generatePage() {
     CURRENT_SHOW_PAGE = selectedShowName;
     console.log(selectedShowName);
     //set current html to blank so it can be reloaded
+      
+  removeCustomCss();
     document.getElementById("showBlurb").innerText = "";
     document.getElementById("timeSlot").innerText = "";
     document.getElementById("showName").innerText = "";
@@ -1255,7 +1257,7 @@ function generatePage() {
     //clear all past broadcasts
     document.getElementById("pastBroadcastsDiv").innerHTML = "";
     //clear all custom css
-    removeCustomCss();
+
     //clear all custom html
 
     generatePage();
@@ -1392,6 +1394,8 @@ function genLite() {
     CURRENT_SHOW_PAGE = selectedShowName;
     console.log(selectedShowName);
     //set current html to blank so it can be reloaded
+      
+  removeCustomCss();
     document.getElementById("showBlurb").innerText = "";
     document.getElementById("timeSlot").innerText = "";
     document.getElementById("showName").innerText = "";
@@ -1403,7 +1407,7 @@ function genLite() {
     //clear all past broadcasts
     document.getElementById("pastBroadcastsDiv").innerHTML = "";
     //clear all custom css
-    removeCustomCss();
+
     //clear all custom html
 
     generatePage();
@@ -1505,6 +1509,7 @@ function changeToShowPage(showName) {
   //decode the show name
   var eShowName = decodeURIComponent(showName);
   document.getElementById("showSelecter").value = eShowName;
+  removeCustomCss();
     //set current html to blank so it can be reloaded
   document.getElementById("showBlurb").innerText = "";
   document.getElementById("timeSlot").innerText = "";
@@ -1518,7 +1523,7 @@ function changeToShowPage(showName) {
   document.getElementById("pastBroadcastsDiv").innerHTML = "";
   //clear all custom css
 
-  removeCustomCss();
+
   
   generatePage();
   loadShowinfoPage();
@@ -1557,6 +1562,8 @@ function loadSchedule() {
   }
   document.getElementById("lowerHalf").style.flexDirection = "";
   //set current html to blank so it can be reloaded
+    
+  removeCustomCss();
   document.getElementById("showBlurb").innerText = "";
   document.getElementById("timeSlot").innerText = "";
   document.getElementById("showName").innerText = "";
@@ -1568,8 +1575,7 @@ function loadSchedule() {
   //clear all past broadcasts
   document.getElementById("pastBroadcastsDiv").innerHTML = "";
   //clear all custom css
-  
-  removeCustomCss();
+
 
 }
 function loadMainPlayer() {
@@ -1579,6 +1585,8 @@ function loadMainPlayer() {
     lowerHalfChildren[i].style.display = "flex";
   }
   //show #theSchedule
+    
+  removeCustomCss();
   document.getElementById("theSchedule").style.display = "none";
   document.getElementById("theShowsInfoPage").style.display = "none";
   document.getElementById("theShowsInfoPageDropdown").style.display = "none";
@@ -1594,8 +1602,7 @@ function loadMainPlayer() {
   //clear all past broadcasts
   document.getElementById("pastBroadcastsDiv").innerHTML = "";
   //clear all custom css
-  
-  removeCustomCss();
+
 }
 
 function loadShowinfoPage() {
