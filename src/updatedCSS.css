@@ -1,0 +1,1254 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+
+:root {
+  --Black: #000000;
+  /* CMYK: 0, 0, 0, 100 | RGB: 0, 0, 0 */
+  --Gold: #fdb515;
+  /* CMYK: 0, 32, 100, 0 | RGB: 253, 181, 21 */
+  --Red: #da2128;
+  /* CMYK: 10, 100, 100, 0 | RGB: 218, 33, 40 */
+  --Light-Gray: #c7c8ca;
+  /* CMYK: 0, 0, 0, 25 | RGB: 199, 200, 202 */
+  --AOK-Teal: #007176;
+  /* CMYK: 100, 35, 50, 20 | RGB: 0, 113, 118 */
+  --Retriever-Brown: #a67a05;
+  /* CMYK: 0, 30, 100, 40 | RGB: 166, 122, 5 */
+  --Dark-Gray: #636466;
+  /* CMYK: 0, 0, 0, 75 | RGB: 99, 100, 102 */
+  --current-translate: 0%;
+
+
+  /* record vars */
+  /* it used to be ~r=80, 30.  */
+  --rec-cx-1: 45%;
+  --rec-cy-1: 115%;
+  --rec-r-1: 14%;
+  --rec-cx-2: 50%;
+  --rec-cy-2: 50%;
+  --rec-r-2: 50%;
+
+}
+
+@media (max-width: 768px) {
+  #lowerHalf {
+    flex-direction: column-reverse;
+  }
+  .container{
+    width:auto;
+  }
+  header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .lowerHalfChild{
+    width: auto  !important;
+  }
+  .radioco-information {
+    padding: 0px !important;
+    float: none;
+  }
+
+  .logo-circle {
+    width: 60px;
+    height: 60px;
+  }
+
+  header h1 {
+    font-size: 20px;
+  }
+
+  .radioco-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+  }
+
+  .container {
+    margin: 10px;
+    padding: 15px;
+  }
+
+
+  .radioco-elapsedTime {
+    margin-top: 0px !important;
+  }
+
+  .radioco-volume {
+    margin-top: 0px !important;
+    margin-bottom: 10px !important;
+
+  }
+
+  .player iframe {
+    height: 120px;
+  }
+
+
+
+  .track-list h2 {
+    font-size: 18px;
+  }
+
+  .track-list li {
+    padding: 6px 0;
+    font-size: 14px;
+  }
+
+
+  .radioplayer {
+    width: 80%;
+    height: 30%;
+    padding: 15px;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-top: 5px !important;
+  }
+
+  .player iframe {
+    height: 120px;
+  }
+
+  .track-list {
+    padding: 10px;
+    
+
+  }
+
+  .track-list h2 {
+    font-size: 18px;
+  }
+
+  .track-list li {
+    padding: 6px 0;
+    font-size: 14px;
+  }
+
+
+  .radioco-playButton {
+    font-size: 40px;
+    /* margin-bottom: 10px; */
+    /* margin-top: -10px; */
+  }
+
+  .radioco-information {
+    width: 100%;
+    text-align: center;
+  }
+
+  .radioco-information span.radioco-nowPlaying {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .radioco-information input[type="range"] {
+    width: 80%;
+    margin: 10px auto;
+  }
+
+  .radioco-image {
+    width: 60px !important;
+    height: 60px !important;
+    margin: 0px !important;
+    margin-left: -10px !important;
+    /* display: none; */
+  }
+
+  .radioco-bg {
+    display: none;
+  }
+
+  .radioco-elapsedTime {
+    display: block;
+    font-size: 12px;
+    opacity: 0.7;
+    margin-top: 10px;
+  }
+
+  .radioco-playButton {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px !important;
+    float: right;
+
+  }
+
+  footer {
+    position: static;
+    padding: 10px;
+  }
+
+}
+
+body {
+  background-color: var(--Light-Gray);
+  color: var(--Black);
+}
+
+header {
+  background-color: var(--AOK-Teal);
+  color: var(--Gold);
+}
+
+.track-list {
+  background-color: var(--Dark-Gray);
+  color: white;
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  
+}
+
+#lowerHalf{
+  width:100%;
+  display: flex; 
+}
+
+.lowerHalfChild{
+  display:inline-block;
+  width:100%;
+  margin-left: 1%;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+.Show-Info-up-next{
+  background-color: var(--Dark-Gray);
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  height:auto;
+}
+.Show-Info-about-WMBC{
+  background-color: var(--Dark-Gray);
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  height:100%;
+}
+.djInfo{
+  
+  color: white;
+
+  /* padding: 15px; */
+  padding-right: 8px;
+  padding-top:0px;
+  padding-bottom: 0px;
+  border-radius: 8px;
+
+}
+
+.djInfo-margin-fix{
+  margin-top: 20px;
+}
+.track-list h2 {
+  color: var(--Gold);
+}
+.socials {
+  display: flex; 
+  justify-content: center; 
+  gap: 5em;
+}
+.socials a{
+  font-size: 1em !important;
+  color: var(--Gold);
+}
+.socials svg {
+  width: 2em;
+  height: 2em;
+  vertical-align: middle;
+  margin-right: 0.1em;
+}
+.socials img{
+  width: 2em;
+  height: 2em;
+  vertical-align: middle;
+  margin-right: 0.1em;
+}
+footer {
+  background-color: var(--AOK-Teal);
+  color: var(--Gold);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--Black);
+  color: var(--Gold);
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.logo-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: var(--Light-Gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--Gold);
+}
+
+.logo-circle img {
+  width: 100%;
+  height: auto;
+}
+
+.radioco-image {
+  float: left;
+}
+
+
+.radioco-information {
+  float: left;
+  padding-right: 20%;
+
+
+}
+
+.radioco-bg {
+  visibility: hidden;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+  color: var(--Gold);
+}
+
+.container {
+  max-width: 800px;
+  background-color: #ffffff;
+  margin: 20px auto;
+  margin-top:5px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.player {
+  margin-bottom: 20px;
+}
+
+.player iframe {
+  width: 100%;
+  height: 150px;
+  border: none;
+  border-radius: 8px;
+}
+
+
+
+.track-list h2 {
+  margin-top: 0;
+}
+
+.track-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.track-list img {
+  box-shadow: #000000 2px 4px 2px 0px;
+}
+
+.track-list li {
+  padding: 8px 0;
+}
+
+.track-list li:last-child {
+  border-bottom: none;
+}
+
+.radioplayer {
+  background: var(--Dark-Gray);
+  padding: 20px;
+  height: 130px;
+  box-shadow: #ccc 0px 1px 50px;
+  border-radius: 4px;
+  margin: 20px auto;
+  overflow: hidden;
+  color: white;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  overflow: hidden;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.radioco-image {
+  vertical-align: middle;
+  margin-left: -10px;
+  margin-top: -10px;
+  position: relative;
+  box-shadow: #000000 2px 4px 4px 0px;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+}
+
+.radioco-playButton {
+  color: var(--Gold);
+}
+
+.radioco-information {
+  display: block;
+  position: relative;
+  width: 340px;
+  color: #fff;
+  z-index: 1;
+  float: right;
+  top: 13px;
+  font-family: 'Open Sans', sans-serif;
+
+
+}
+
+.radioco-information input[type="range"] {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.radioco-information input[type=range]::-webkit-slider-thumb {
+  background: var(--Gold);
+}
+
+.radioco-information input[type="range"] {
+  background: rgba(255, 255, 255, 0.3);
+  width: 100px;
+  display: block;
+  height: 4px;
+  -webkit-appearance: none;
+  -webkit-border-radius: 8px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  cursor: -webkit-grab;
+  outline: 0;
+}
+
+.radioco-information {
+  margin-top: -20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.radioco-playButton {
+  font-size: 40px;
+  /* why does this add a margin to the parent? 
+      /* fix this  */
+  margin-top: 45px;
+
+  float: right;
+
+}
+
+.radioco-playButton-playing:before {
+  font-family: 'FontAwesome', sans-serif;
+  display: block;
+  float: right;
+  content: "\f04b";
+
+}
+
+.radioco-playButton-paused:before {
+  font-family: 'FontAwesome', sans-serif;
+  display: block;
+  float: right;
+  content: "\f04c";
+}
+
+.radioco-information input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+  background: #ffffff;
+  -webkit-transition: box-shadow 0.2s;
+
+}
+
+.radioco-information input[type=range]::-webkit-slider-thumb:hover {
+  box-shadow: #fff 1px 1px 20px;
+}
+
+.radioco-information input[type=range]:active,
+.information input[type=range]:focus {
+  outline: 0;
+}
+
+.radioco-information {
+  max-width: 100%;
+}
+
+.radioco-elapsedTime {
+  opacity: 0.4;
+  font-size: 14px;
+}
+
+.custom-elapsed-time {
+  opacity: 0.4;
+  font-size: 14px;
+}
+
+#startTimerButton {
+  all: unset;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  display: inline;
+  vertical-align: baseline;
+  padding: 0;
+  margin: 0;
+}
+
+#startTimerButton:hover {
+  text-decoration: underline;
+}
+
+.current-DJ {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: var(--Dark-Gray);
+  padding: 10px;
+  margin: 0px 0px;
+/* background-color: var(--Dark-Gray); */
+  /* margin-bottom: 20px; */
+  padding-bottom: 20px;
+
+  border-radius: 8px;
+  color: white;
+}
+
+.Show-Info-about-WMBC{
+  background-color: var(--Dark-Gray);
+  /* margin-top: 20px; */
+  padding: 15px;
+  border-radius: 8px;
+  height:100%;
+}
+#getInvolvedTitle{
+  color: var(--Gold);
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align:center;
+}
+#getInvolvedText{
+  color: white;
+  font-size: 20px;
+  text-align:center;
+}
+
+
+/* children of current-DJ */
+.current-DJ p,
+.current-DJ a {
+  padding: 0px 20px;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.socials img {
+  width: 30px;
+  height: 30px;
+}
+.current-DJ span {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--Gold);
+}
+
+#showPageLink {
+  color: var(--Gold);
+  background-color: var(--AOK-Teal);
+  padding: 4px 8px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#showPageLink:hover {
+  background-color: var(--Red);
+}
+
+
+.recordImgContainer{
+
+  background-color:#ffffff;
+  position: relative;
+  max-width: 100%; 
+  height: 150px;
+  overflow: hidden;
+  z-index: 10;
+
+}
+
+.recordImgContainer img{
+  padding-left: 34%;
+}
+
+@media (max-width: 1008px) {
+  .recordImgContainer img{
+    width: 25% !important;
+    height: 100% !important;
+    padding-left: 5%;
+  }
+  .under{
+    width: 25% !important;
+    height: 100% !important;
+  }
+  
+}
+
+@media (max-width: 700px) {
+  .recordImgContainer img{
+    width: 30% !important;
+    height: 80% !important;
+    padding-left: 0%; 
+  }
+  .under{
+    width: 25% !important;
+    height: 100% !important;
+  }
+  /* change glorpus svg viewbox to 0 200 1000 200*/
+
+}
+
+
+.under {
+  position: absolute;
+  left: 0px;
+  bottom:0px;
+  z-index: -1;
+  width: 9%;
+  height: auto;
+  
+}
+
+.over {
+  position: absolute;
+  left: 0px;
+    bottom:0px;
+  z-index: -1;
+  width: 9%;
+  height: auto;
+  
+
+}
+.prev-info-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+.prev-info-li{
+    display: flex;
+    width:100%;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: var(--Dark-Gray);
+    color: white;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.moveItMoveIt {
+  animation: over 1s infinite;
+}
+
+/* over animation translate left and right  */
+@keyframes over {
+  0% {
+    transform: translateX(-5px);
+  }
+
+  50% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(-5px);
+  }
+}
+
+
+#firstRecord:hover {
+  animation-delay: 0s, 0.2s;
+  /* animation-name: lift, spinCircleSVGs; */
+  animation-name: lift, spinCircleSVGs;
+  animation-duration: 0.2s, 5s;
+  animation-timing-function: ease-in, linear;
+  animation-iteration-count: 1, infinite;
+  animation-fill-mode: forwards;
+
+  /* animation: lift 0.5s ease-in forwards, spinCircleSVGs 5s linear infinite; */
+
+  transform-origin: 45% 115%;
+}
+
+#firstRecord {
+  /* animation: unlift 0.5s ease-out forwards; */
+  animation: unlift 0.2s ease-out forwards;
+}
+
+#secondRecord:hover {
+  animation-delay: 0s, 0.2s;
+  animation-name: lift, spinCircleSVGs;
+  animation-duration: 0.2s, 5s;
+  animation-timing-function: ease-in, linear;
+  animation-iteration-count: 1, infinite;
+  animation-fill-mode: forwards;
+
+  /* animation: lift 0.5s ease-in forwards, spinCircleSVGs 5s linear infinite; */
+
+  transform-origin: 68% 115%;
+}
+
+#secondRecord {
+  animation: unlift 0.2s ease-out forwards;
+}
+
+#thirdRecord:hover {
+  animation-delay: 0s, 0.2s;
+  animation-name: lift, spinCircleSVGs;
+  animation-duration: 0.2s, 5s;
+  animation-timing-function: ease-in, linear;
+  animation-iteration-count: 1, infinite;
+  animation-fill-mode: forwards;
+
+  /* animation: lift 0.5s ease-in forwards, spinCircleSVGs 5s linear infinite; */
+
+  transform-origin: 91% 115%;
+}
+
+
+#thirdRecord {
+  animation: unlift 0.2s ease-out forwards;
+}
+/* var(--current-translate, 0%) */
+@keyframes lift {
+  0% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(-30%);
+  }
+}
+
+@keyframes unlift {
+  0% {
+    transform: translateY(-30%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes liftRec1 {
+  0% {
+    transform: translateY(var(--current-translate, 0%));
+  }
+
+  100% {
+    transform: translateY(-30%);
+  }
+}
+
+@keyframes unliftRec1 {
+  0% {
+    transform: translateY(var(--current-translate, -30%));
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+/* how do i spin it around an origin? */
+@keyframes spinCircleSVGs {
+  0% {
+    transform: translateY(-30%) rotateZ(0deg);
+  }
+
+  100% {
+    transform: translateY(-30%) rotateZ(360deg);
+  }
+}
+
+
+
+.showTitleImg {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: var(--Light-Gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--Gold);
+  /* align vertically and horizantally center */
+  margin: auto;
+  padding:0px;
+}
+
+
+.showTitleImg img {
+  width: 100%;
+  height: auto;
+}
+/* .currentRecord{
+    animation: spinCircleSVGs 10s linear infinite;
+    transform-origin: 50% 50%;
+} */
+/* if we have a dj, replace the info with the live dj info
+  <div id="showInfoBox">
+  <h2 id="titleShowInfoBox"></h2>
+   <p id="descShowInfoBox"></p>
+   */
+#titleShowInfoBox{
+  color: var(--Gold);
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align:center;
+}
+#descShowInfoBox{
+  color: white;
+  font-size: 20px;
+  text-align:center;
+}
+
+
+/* SCHEDULE */
+
+.calendar {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  margin: 20px 0;
+  table-layout: fixed;
+}
+
+
+@media (max-width: 768px) {
+  .calendar {
+    width: 100%;
+  }
+
+  .showElemDiv h3 {
+    font-size: 0.9em !important;
+  }
+
+  .showElemDiv p {
+    font-size: 0.6em !important;
+  }
+}
+
+.calendar th,
+.calendar td {
+  border: 1px solid var(--Light-Gray);
+  padding: 8px;
+  text-align: center;
+}
+
+.calendar th {
+  background-color: var(--AOK-Teal);
+  color: var(--Gold);
+  font-weight: bold;
+}
+
+.calendar td {
+  height: 40px;
+  position: relative;
+}
+
+.calendar td.hour-mark {
+  background-color: var(--Light-Gray);
+  font-weight: bold;
+  color: var(--Black);
+  width: 80px;
+}
+
+.current-hour {
+  background-color: var(--Gold) !important;
+  color: black !important;
+}
+
+.calendar td.current-hour,
+.calendar td.current-hour p,
+.calendar td.current-hour a {
+  color: black !important;
+}
+
+.calendar td.current-hour h3 {
+  color: var(--Red) !important;
+}
+
+
+.calendar .show-block {
+  background-color: var(--Retriever-Brown);
+  color: white;
+
+}
+
+.show-cell {
+  background-color: var(--AOK-Teal);
+}
+
+.special-event h3 {
+  text-align: center;
+  font-size: 1.5em;
+  color: white;
+  background-color: var(--AOK-Teal);
+  padding: 10px;
+  border-radius: 10px;
+  /* animation: festive 10s infinite alternate; */
+}
+
+@keyframes festive {
+  0% {
+    background-color: var(--AOK-Teal);
+  }
+
+  100% {
+    background-color: var(--Gold);
+  }
+}
+
+.showElemDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: absolute;
+  padding: 4px;
+  padding-left:1px;
+  padding-right:1px;
+  border-radius: 4px;
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.showElemDiv h3 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 1em;
+  color: var(--Gold);
+}
+
+.showElemDiv p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 0.8em;
+  color: white;
+}
+
+.specialEvent {
+  background-color: var(--Dark-Gray);
+  color: white;
+}
+
+.special-event-enabled span{
+  /* color: var(--Red); */
+  animation: weAreLive 3s infinite alternate;
+}
+
+
+@keyframes weAreLive {
+  0% {
+    color: white;
+  }
+  30% {
+    color: white;
+  }
+  70% {
+    color: var(--Red);
+  }
+
+  100% {
+    color: var(--Red);
+  }
+}
+
+#specialEventTitlebox {
+  visibility: hidden;
+  /*10 padding all around default
+24 margin top bottom default*/
+  padding: 0px;
+  margin:0px;
+}
+
+.special-event-enabled {
+  visibility: visible !important;
+}
+.special-event-enabled h3{
+  padding: 10px !important;
+  margin: 0 24px !important;
+
+}
+
+#clickableLive {
+  /* make not an obvious link, want whole element to seem clickable */
+  visibility: hidden;
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.calendar th:not(:first-child),
+.calendar td:not(:first-child) {
+  width: calc((100% - 80px) / 7);
+}
+
+
+
+
+
+
+/* fffffffffffffffffffffffffffffffffffffffffffffffffffff  */
+
+@media (max-width: 768px) {
+
+  .showTitleBox {
+    font-size: 0.7em;
+    margin: auto;
+  }
+
+  .innerTitleElem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    
+  }
+
+  .showTitleImg {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: var(--Light-Gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--Gold);
+    /* align vertically and horizantally center */
+    margin: auto;
+  }
+
+  .showTitleImg img {
+    width: 10%;
+    height: auto;
+  }
+
+  #hostNamesList{
+    font-size: 1.4em;
+  }
+  .socials a{
+    font-size: 1em !important;
+  }
+  .hostNames {
+    font-size: 1em;
+  }
+  .iframeContainer {
+    width: 60% !important;
+    height: 100%;
+    flex: 0 0 100% !important;
+
+  }
+  .spotifyIframe{
+    width: 80% !important;
+  }
+}
+.spotifyIframe{
+    width: 100%;
+  }
+
+
+.iframeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.showTitleBox {
+  background-color: var(--Black);
+  color: var(--Gold);
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 8px;
+}
+
+.showTitleBox div {
+  display: inline-block;
+  position: relative;
+
+}
+
+.showTitleImg {
+  width: 80px;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: var(--Light-Gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--Gold);
+}
+
+.showTitleImg img {
+  width: 100%;
+  height: auto;
+}
+.showTime-Hosts h3, .showTime-Hosts svg {
+  font-size: 24px;
+}
+.showTime-Hosts a {
+  font-size: 20px;
+}
+.showTime-Hosts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+  /* padding-left: 1%;
+  padding-right: 4px; */
+  /* text-align: center; */
+
+  position: relative;
+  padding-bottom: 4%;
+  border-bottom: 1px solid var(--Black);
+}
+
+.showTime-Hosts div {
+  display: inline-block;
+  position: relative;
+  /* border: 1px solid var(--Black); */
+}
+
+.hostNames {
+  text-align: right;
+}
+
+.host-names ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.host-names li {
+  text-align: right;
+  padding-right: 10px;
+  font-size: 24px;
+}
+
+.socials ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.socials a {
+  text-align: left;
+  
+  padding-bottom: 4px;
+  text-decoration: none;
+  color: var(--AOK-Teal);
+}
+.socials li {
+  padding-bottom: 10px;
+}
+.socials svg {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  margin-right: 0.1em;
+  
+}
+
+#showBlurb {
+  text-align: center;
+  padding: 20px;
+  line-height: 1.4;
+  font-size: 24px;
+  border-bottom: 1px solid var(--Black);
+}
+
+#showSelecter {
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid var(--Gold);
+  background-color: var(--Black);
+  color: var(--Gold);
+  font-size: 1em;
+}
+
+#theShowsInfoPage{
+  width: 95%;
+}

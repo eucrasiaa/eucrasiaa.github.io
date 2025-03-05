@@ -94,7 +94,7 @@ Z = closepath (close the path) -->
         </g>
       </a>
 
-      <a href="baseDJPage.html">
+      <a onclick="loadShowinfoPage()">
         <g id="thirdRecord">
 
           <circle cx="91%" cy="115%" r="14%" fill="#000000" class="linkRecords outerRec" />
@@ -231,7 +231,7 @@ Z = closepath (close the path) -->
         <a id="clickableLive" class="special-event">
           <h3 class="special-event" id="specialEventTitlebox"></h3>
         </a>
-    
+
         <table class="calendar">
           <thead>
             <tr>
@@ -379,6 +379,66 @@ Z = closepath (close the path) -->
             </tr>
           </tbody>
         </table>
+      </div>
+
+
+
+      <div id="theShowsInfoPageDropdown" style="text-align: center; margin: 20px 0;  display:none;">
+        <select id="showSelecter">
+        </select>
+      </div>
+      <div id="theShowsInfoPage" class="container" style="margin-bottom:20px; display:none;">
+        <div class="showTitleBox">
+          <div class="innerTitleElem" style="margin-right:0px; padding-right:0px;">
+            <h1 id="showName" style="margin-right:0px; padding-right:0px;">Example Show Name</h1>
+          </div>
+
+          <div class="showTitleImg innerTitleElem" style="margin-left:0px; padding-left:0px;">
+            <img id="showImgSlot" style="margin-left:0px;  padding-left:0px;" src="" alt="Radio Show Logo">
+          </div>
+        </div>
+        <h2 id="timeSlot" style="padding-bottom:4px; margin-bottom: 0px; text-align: center;">Mondays @ 11:00am</h2>
+        <div class="showTime-Hosts">
+          <div style="text-align: left">
+
+            <h3 style="padding-top:4px; padding-bottom: 4px; margin: 0px"> Socials:</h3>
+            <div class="socials">
+              <ul id="socialsList" style="padding-top:0px; margin-top: 0px">
+                <!-- <li id="instagram">Insta</li>
+                <li id="twitter">Twitter</li>
+                <li id="'other1">Other</li> -->
+            </div>
+          </div>
+          <div class="host-names" style="text-align: center">
+            <h3 class="hostNames" style="padding-bottom: 0px; margin-bottom: 4px; margin-top:0px;">Your Host(s)</h3>
+            <ul id="hostNamesList">
+              <!-- <li>Host Name</li>
+              <li>This is Long Host Name</li>
+              <li>Host Name</li> -->
+          </div>
+        </div>
+
+        <div id="showBlurbDiv">
+          <h2 id="showBlurbHeader"> About {showName}:</h2>
+          <p id="showBlurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+            dolore eu
+            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit
+            anim id est laborum</p>
+        </div>
+
+        <div id="pastBroadcastsDiv" style="visibility:hidden; padding: 0px; margin: 0px;">
+          <h2>Past Broadcasts:</h2>
+
+
+
+
+        </div>
+
+
+
       </div>
 
 
