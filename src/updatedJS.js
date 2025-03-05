@@ -1396,7 +1396,11 @@ function genLite() {
     //set current html to blank so it can be reloaded
       
   removeCustomCss();
+  //if showBlurb exists, set to ""
+  if (document.getElementById("showBlurb")) {
     document.getElementById("showBlurb").innerText = "";
+  }
+    
     document.getElementById("timeSlot").innerText = "";
     document.getElementById("showName").innerText = "";
     //clear hostNames
