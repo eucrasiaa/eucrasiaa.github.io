@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const selectedShowName = event.target.value;
   //get url and split after "baseDJPage.html"
   const url = window.location.href;
-  const urlParts = url.split("radio_listener.html");
+  const urlParts = url.split("aquarium_layout.html");
   console.log(urlParts);
   //if it is ?=clock, use the time class and append header 
   //with a clock that updates every minute
@@ -247,6 +247,7 @@ function checkNowPlayingUpdate() {
 document.addEventListener("DOMContentLoaded", () => {
   fetchAndDisplayTracks();
   checkNowPlayingUpdate();
+  document.getElementById("addClock").addEventListener("click", addClock);
   var firstRecord = document.getElementById('firstRecord');
 
   // firstRecord.addEventListener('mouseenter', () => {
@@ -1626,3 +1627,11 @@ function loadShowinfoPage() {
 
 
 
+function addClock() {
+  if (window.location.href.includes("?=clock")) {
+    window.location.href = "aquarium_layout.html";
+  }
+  else{
+  window.location.href = "aquarium_layout.html?=clock";
+  }
+}
