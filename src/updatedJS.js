@@ -23,6 +23,148 @@ function decodeName(encodedName, key) {
 }
 
 
+function getDaySchedule() {
+  console.log("attempting schedule!");
+  const DECODE_KEY = "IHEARTWILLTOLEDO!!!!";
+    var now = new Date();
+    var day = now.getDay();
+    var hour = now.getHours();
+    var minute = now.getMinutes();
+
+    //example demodate for 12:30 on a monday
+    //new Date("2025-02-21T12:30:00");
+    //DATE NEW DATE EXMAPLE DATE
+    var time = hour + ":" + minute;
+    var dayString = "";
+    switch (day) {
+      case 0:
+        dayString = "Sunday";
+        break;
+      case 1:
+        dayString = "Monday";
+        break;
+      case 2:
+        dayString = "Tuesday";
+        break;
+      case 3:
+        dayString = "Wednesday";
+        break;
+      case 4:
+        dayString = "Thursday";
+        break;
+      case 5:
+        dayString = "Friday";
+        break;
+      case 6:
+        dayString = "Saturday";
+        break;
+    }
+    //iterate through the json and load all shows with broadcastTime.dayOfWeek == dayString
+    var showsToday = [];
+    for (var i = 0; i < DJ_JSON.length; i++) {
+      if (DJ_JSON[i].broadcastTime.dayOfWeek == dayString) {
+        showsToday.push(DJ_JSON[i]);
+      }
+    }
+
+    //sort shows in showsToday by start time
+    showsToday.sort(function (a, b) {
+      var aTime = a.broadcastTime.startTime.split(":");
+      var bTime = b.broadcastTime.startTime.split(":");
+      var aHour = parseInt(aTime[0]);
+      var bHour = parseInt(bTime[0]);
+      var aMinute = parseInt(aTime[1]);
+      var bMinute = parseInt(bTime[1]);
+
+      if (aHour === bHour) {
+        return aMinute - bMinute;
+      } else {
+        return aHour - bHour;
+      }
+  });
+
+  // convert to a string in the formt of
+  // [Time in 12 hour format] - [show name] ([host name])
+  var scheduleString = "";
+  for (var i = 0; i < showsToday.length; i++) {
+    var show = showsToday[i];
+    var startTime = show.broadcastTime.startTime;
+    var hostNames = show.hostNames;
+    var showName = show.showName;
+    //if showname contains %26 replace with &
+    showName = showName.replace("%26", "&");
+    var hosts = "";
+    for (var j = 0; j < hostNames.length; j++) {
+      let decodedName = decodeName(hostNames[j], DECODE_KEY);
+      if (decodedName.endsWith(".")) {
+      decodedName = decodedName.slice(0, -3); // Remove last initial and period
+      }
+      hosts += decodedName;
+      
+      if (j < hostNames.length - 1) {
+      hosts += ", ";
+      }
+    }
+    //convert to 12 hour time
+    var timeParts = startTime.split(":");
+    var hour = parseInt(timeParts[0]);
+    var minute = timeParts[1];
+    var ampm = "AM";
+    if (hour > 12) {
+      hour -= 12;
+      ampm = "PM";
+    }
+    startTime = hour + ":" + minute;
+
+    scheduleString += startTime + " " + showName + " (" + hosts + ")";
+    if (i < showsToday.length - 1) {
+      scheduleString += "\n";
+    }
+  }
+
+  console.log(scheduleString);  
+
+  // merge all hostNames into one string, decode too
+
+
+  //
+  if (!navigator.clipboard) {
+    fallbackCopyTextToClipboard(scheduleString);
+    return;
+  }
+  navigator.clipboard.writeText(scheduleString).then(function() {
+    console.log('Async: Copying to clipboard was successful!');
+  }, function(err) {
+    console.error('Async: Could not copy text: ', err);
+  });
+}
+function fallbackCopyTextToClipboard(text){
+  
+  var textArea = document.createElement("textarea");
+  textArea.value = text;
+  
+  // Avoid scrolling to bottom
+  textArea.style.top = "0";
+  textArea.style.left = "0";
+  textArea.style.position = "fixed";
+
+  document.body.appendChild(textArea);
+  textArea.focus();
+  textArea.select();
+
+  try {
+    var successful = document.execCommand('copy');
+    var msg = successful ? 'successful' : 'unsuccessful';
+    console.log('Fallback: Copying text command was ' + msg);
+  } catch (err) {
+    console.error('Fallback: Oops, unable to copy', err);
+  }
+
+  document.body.removeChild(textArea);
+
+}
+
+
 //function override css passed by id and translate them up by -40%
 function overrideCSS(id) {
   var element = document.getElementById(id);
