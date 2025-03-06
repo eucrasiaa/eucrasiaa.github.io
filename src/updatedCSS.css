@@ -1248,6 +1248,14 @@ header h1 {
   
 }
 
+.upNextText{
+  color: var(--Gold);
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align:center;
+}
+
 #showBlurb {
   text-align: center;
   padding: 20px;
