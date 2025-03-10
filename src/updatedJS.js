@@ -248,15 +248,20 @@ document.addEventListener("DOMContentLoaded", function () {
   //with a clock that updates every minute
   if (urlParts[1] === "?=clock") {
     //replace the header with a clock
-    document.querySelector("header").innerHTML += "<h1 id='clock' style='font-size:3w0px'></h1>";
+    document.querySelector("header").innerHTML += "<h1 id='clock' style='font-size:30px'></h1>";
     //update the clock every minute
     var now = new Date();
-    document.getElementById("clock").textContent = now.toLocaleTimeString();
+    document.getElementById("clock").textContent = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    setInterval(() => {
+      now.setMinutes(now.getMinutes() + 1);
+      document.getElementById("clock").textContent = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    }, 60000);
+
+    // Check for desync every 30 minutes
     setInterval(() => {
       now = new Date();
-      document.getElementById("clock").textContent = now.toLocaleTimeString();
-
-    }, 1000);
+      document.getElementById("clock").textContent = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    }, 1800000);
     return;
   }
   if (urlParts[1] === "?=yass") {
