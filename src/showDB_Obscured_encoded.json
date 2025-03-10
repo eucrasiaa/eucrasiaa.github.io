@@ -393,33 +393,6 @@
     }
   },
   {
-    "name": "DCwyICAwdwpi",
-    "showName": "Make Up Your Mind",
-    "hostNames": [
-      "DCwyICAwdwpi"
-    ],
-    "broadcastTime": {
-      "dayOfWeek": "Tuesday",
-      "startTime": "21:00",
-      "durationMinutes": 60
-    },
-    "socials": {
-      "instagram": "@makeupyourmind_wmbc",
-      "spotify": [],
-      "twitter": "",
-      "otherSocials": []
-    },
-    "showBlurb": "a weirdcore variety show",
-    "standardShow": true,
-    "image": "./imgs/dj-profile/Make_Up_Your_Mind-logo.jpeg",
-    "previousPlaylists": [
-      [
-        "2/17",
-        "https://open.spotify.com/playlist/6C9c2NB9tm9gfI5jrlvRx9"
-      ]
-    ]
-  },
-  {
     "name": "BCkhJT0sdwhi",
     "showName": "MP3",
     "hostNames": [
