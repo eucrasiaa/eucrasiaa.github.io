@@ -1008,7 +1008,7 @@ footer {
     var DJ_JSON;
     document.addEventListener("DOMContentLoaded", function () {
       //Fetch data
-      fetch('./src/showDB_Obscured_encoded.json')
+      fetch('https://zeroday-dilemma.github.io/src/showDB_Obscured_encoded.json')
         .then((response) => response.json())
         .then((json) => {
           console.log(json);
@@ -1154,26 +1154,7 @@ footer {
         alt="University Radio Station Logo">
 
     </div>
-    <h1>WMBC: Web Player</h1>
-
-    <!-- add a absolute small box that has a handful of text input boxes, that allow the user to set the values of the various colors on the site. -->
-
-    <!--   --Black: #000000;
-  /* CMYK: 0, 0, 0, 100 | RGB: 0, 0, 0 */
-  --Gold: #fdb515;
-  /* CMYK: 0, 32, 100, 0 | RGB: 253, 181, 21 */
-  --Red: #da2128;
-  /* CMYK: 10, 100, 100, 0 | RGB: 218, 33, 40 */
-  --Light-Gray: #c7c8ca;
-  /* CMYK: 0, 0, 0, 25 | RGB: 199, 200, 202 */
-  --AOK-Teal: #007176;
-  /* CMYK: 100, 35, 50, 20 | RGB: 0, 113, 118 */
-  --Retriever-Brown: #a67a05;
-  /* CMYK: 0, 30, 100, 40 | RGB: 166, 122, 5 */
-  --Dark-Gray: #636466;
-  /* CMYK: 0, 0, 0, 75 | RGB: 99, 100, 102 */
-  --WhiteColorWMBC: #ffffff;
-   -->
+    <h1>WMBC: Web Player (color)</h1>
     <div id="colorPicker" style="position: absolute; top: 0; right: 0; display: flex; flex-direction: column; background-color: white; padding: 10px; border: 1px solid black;">
       <h2>Color Picker</h2>
       <label for="headerColor">Header Color Black:</label>
@@ -1193,65 +1174,166 @@ footer {
 
       <!-- add button to export as colour palette -->
        <input type="button" value="Export Palette" onclick="exportPalette()">
+       <input type="button" value="Reset" onclick="resetPalette()">
     </div>
 
     <script>
+
+      function resetPalette(){
+        //promt to ensure user wants to reset
+        if (confirm("Are you sure you want to reset the color palette?")) {
+          localStorage.removeItem('colorPalette');
+          location.reload();
+        }
+      }
       document.getElementById("headerColor").addEventListener("input", function() {
       document.documentElement.style.setProperty('--Black', this.value);
+      savePalette();
       });
       document.getElementById("footerColor").addEventListener("input", function() {
       document.documentElement.style.setProperty('--AOK-Teal', this.value);
+      savePalette();
       });
 
       document.getElementById("bodyColor").addEventListener("input", function() {
       document.documentElement.style.setProperty('--Light-Gray', this.value);
+      savePalette();
       });
       document.getElementById("playerColor").addEventListener("input", function() {
       document.documentElement.style.setProperty('--Dark-Gray', this.value);
+      savePalette();
       });
       document.getElementById("currentDJColor").addEventListener("input", function() {
       document.documentElement.style.setProperty('--WhiteColorWMBC', this.value);
+      savePalette();
       });
       document.getElementById("highlightTextColor").addEventListener("input", function() {
       document.documentElement.style.setProperty('--Gold', this.value);
+      savePalette();
       });
       document.getElementById("generalText").addEventListener("input", function() {
       document.documentElement.style.setProperty('--TextWhite', this.value);
+      savePalette();
       });
       
-      function exportPalette(){
-        let Black = document.getElementById("headerColor").value;
-        let AOK_Teal = document.getElementById("footerColor").value;
-        let Light_Gray = document.getElementById("bodyColor").value;
-        let Dark_Gray = document.getElementById("playerColor").value;
-        let WhiteColorWMBC = document.getElementById("currentDJColor").value;
-        let Gold = document.getElementById("highlightTextColor").value;
-        let TextWhite = document.getElementById("generalText").value;
+      function exportPalette() {
+      let Black = document.getElementById("headerColor").value;
+      let AOK_Teal = document.getElementById("footerColor").value;
+      let Light_Gray = document.getElementById("bodyColor").value;
+      let Dark_Gray = document.getElementById("playerColor").value;
+      let WhiteColorWMBC = document.getElementById("currentDJColor").value;
+      let Gold = document.getElementById("highlightTextColor").value;
+      let TextWhite = document.getElementById("generalText").value;
 
-        let palette = {
-          Black: Black,
-          AOK_Teal: AOK_Teal,
-          Light_Gray: Light_Gray,
-          Dark_Gray: Dark_Gray,
-          WhiteColorWMBC: WhiteColorWMBC,
-          Gold: Gold,
-          TextWhite: TextWhite
-        }
-
-        console.log(palette);
-        //copy
-        navigator.clipboard.writeText(JSON.stringify(palette));
+      let palette = {
+        Black: Black,
+        AOK_Teal: AOK_Teal,
+        Light_Gray: Light_Gray,
+        Dark_Gray: Dark_Gray,
+        WhiteColorWMBC: WhiteColorWMBC,
+        Gold: Gold,
+        TextWhite: TextWhite
       }
-    </script>
+
+      let queryString = new URLSearchParams(palette).toString();
+      console.log(queryString);
+      navigator.clipboard.writeText(queryString);
+      }
+
+      function applyPaletteFromQuery() {
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.has('Black')) {
+        document.documentElement.style.setProperty('--Black', urlParams.get('Black'));
+        document.getElementById("headerColor").value = urlParams.get('Black');
+      }
+      if (urlParams.has('AOK_Teal')) {
+        document.documentElement.style.setProperty('--AOK-Teal', urlParams.get('AOK_Teal'));
+        document.getElementById("footerColor").value = urlParams.get('AOK_Teal');
+      }
+      if (urlParams.has('Light_Gray')) {
+        document.documentElement.style.setProperty('--Light-Gray', urlParams.get('Light_Gray'));
+        document.getElementById("bodyColor").value = urlParams.get('Light_Gray');
+      }
+      if (urlParams.has('Dark_Gray')) {
+        document.documentElement.style.setProperty('--Dark-Gray', urlParams.get('Dark_Gray'));
+        document.getElementById("playerColor").value = urlParams.get('Dark_Gray');
+      }
+      if (urlParams.has('WhiteColorWMBC')) {
+        document.documentElement.style.setProperty('--WhiteColorWMBC', urlParams.get('WhiteColorWMBC'));
+        document.getElementById("currentDJColor").value = urlParams.get('WhiteColorWMBC');
+      }
+      if (urlParams.has('Gold')) {
+        document.documentElement.style.setProperty('--Gold', urlParams.get('Gold'));
+        document.getElementById("highlightTextColor").value = urlParams.get('Gold');
+      }
+      if (urlParams.has('TextWhite')) {
+        document.documentElement.style.setProperty('--TextWhite', urlParams.get('TextWhite'));
+        document.getElementById("generalText").value = urlParams.get('TextWhite');
+      }
+      }
+
+      function savePalette() {
+      let Black = document.getElementById("headerColor").value;
+      let AOK_Teal = document.getElementById("footerColor").value;
+      let Light_Gray = document.getElementById("bodyColor").value;
+      let Dark_Gray = document.getElementById("playerColor").value;
+      let WhiteColorWMBC = document.getElementById("currentDJColor").value;
+      let Gold = document.getElementById("highlightTextColor").value;
+      let TextWhite = document.getElementById("generalText").value;
+
+      let palette = {
+        Black: Black,
+        AOK_Teal: AOK_Teal,
+        Light_Gray: Light_Gray,
+        Dark_Gray: Dark_Gray,
+        WhiteColorWMBC: WhiteColorWMBC,
+        Gold: Gold,
+        TextWhite: TextWhite
+      }
+
+      localStorage.setItem('colorPalette', JSON.stringify(palette));
+      }
+
+      function loadPalette() {
+      let palette = JSON.parse(localStorage.getItem('colorPalette'));
+      if (palette) {
+        document.documentElement.style.setProperty('--Black', palette.Black);
+        document.getElementById("headerColor").value = palette.Black;
+
+        document.documentElement.style.setProperty('--AOK-Teal', palette.AOK_Teal);
+        document.getElementById("footerColor").value = palette.AOK_Teal;
+
+        document.documentElement.style.setProperty('--Light-Gray', palette.Light_Gray);
+        document.getElementById("bodyColor").value = palette.Light_Gray;
+
+        document.documentElement.style.setProperty('--Dark-Gray', palette.Dark_Gray);
+        document.getElementById("playerColor").value = palette.Dark_Gray;
+
+        document.documentElement.style.setProperty('--WhiteColorWMBC', palette.WhiteColorWMBC);
+        document.getElementById("currentDJColor").value = palette.WhiteColorWMBC;
+
+        document.documentElement.style.setProperty('--Gold', palette.Gold);
+        document.getElementById("highlightTextColor").value = palette.Gold;
+
+        document.documentElement.style.setProperty('--TextWhite', palette.TextWhite);
+        document.getElementById("generalText").value = palette.TextWhite;
+      }
+      }
+
+      document.addEventListener("DOMContentLoaded", function() {
+      loadPalette();
+      applyPaletteFromQuery();
+      });
+      </script>
 
   </header>
 
   
   <nav class="tabs">
     <ul>
-      <li><a href="radio_listener.html">Listen!</a></li>
-      <li><a href="schedulePage.html">Schedule</a></li>
-      <li><a href="baseDJPage.html">Explore our shows!</a></li>
+      <li><a href="./color_tools_listen.html">Listen!</a></li>
+      <li><a href="./color_tools_schej.html">Schedule</a></li>
+      <li><a href="./color_tools_dj.html">Explore our shows!</a></li>
     </ul>
   </nav>
   <div class="container">
