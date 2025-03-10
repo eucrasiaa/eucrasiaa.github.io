@@ -7,6 +7,7 @@
 
   <script src="src/someJS.js"></script>
   <script src="src/showDB_Obscured_encoded.json" type="application/json"></script>
+  
   <title>Behind The Show</title>
   <link rel="icon" type="image/x-icon" href="/src/logo_225x255.png">
   <style>
@@ -96,7 +97,7 @@
 
     .showTitleImg {
       width: 80px;
-      height: 100%;
+      height: 80px;
       border-radius: 50%;
       overflow: hidden;
       background-color: var(--Light-Gray);
@@ -194,6 +195,50 @@
       color: var(--Gold);
       font-size: 1em;
     }
+
+    .css-editor {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: var(--Light-Gray);
+  border-radius: 8px;
+}
+
+.css-editor h3 {
+  margin-top: 0;
+  color: var(--AOK-Teal);
+}
+
+.css-editor textarea, .html-editor textarea {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  font-family: monospace;
+  font-size: 14px;
+  border: 1px solid var(--Dark-Gray);
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.css-editor button, .html-editor button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: var(--AOK-Teal);
+  color: var(--Gold);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.css-editor button:hover {
+  background-color: var(--Retriever-Brown);
+  color: white;
+}
+
+.css-editor button:active {
+  background-color: var(--Gold);
+  color: var(--Black);
+}
   </style>
 
   <script>
@@ -239,9 +284,6 @@
           else if (platform === "letterboxd") {
               socials.letterboxd = handle;
           }
-          else if (platform === "bandcamp") {
-              socials.bandcamp = handle;
-          }
           //spotify will be in form of ["displayName","url"]. push as "spotify: url"
           else {
             socials.other.push(social);
@@ -272,12 +314,6 @@
             console.log("TOOOO")
             console.log(handle)
             li.innerHTML = `${socialIcons[platform]} <a href="${handle[1]}" target="_blank">${handle[0]}</a>`;
-          }
-          else if(platform === "bandcamp") {
-            //just get the bandcamp name
-            //spliy s://(HERE).bandcamp
-            const bandcampName = handle.split("://")[1].split(".bandcamp")[0];
-            li.innerHTML = `<p style="font-size:24px; margin-top:0px; margin-bottom:0px; padding-top:0px">🛁 <a href="${handle}" target="_blank">${bandcampName}</a></p>`;
           }
           else {
             li.innerHTML = `${socialIcons[platform]} <a href="https://${platform}.com/${handle}" target="_blank">${handle}</a>`;
@@ -310,6 +346,19 @@
 
     });
 
+    function loadHTML(savedHtml){
+        console.log("fetching data");
+        if (savedHtml) {
+          document.getElementById("showBlurbDiv").innerHTML = savedHtml;
+          
+        }
+
+      
+
+
+    }
+ 
+
     function decodeName(encodedName, key) {
       // Decode the Base64 string
       const encodedBytes = Uint8Array.from(atob(encodedName), c => c.charCodeAt(0));
@@ -325,7 +374,6 @@
     }
 
     function generatePage() {
-     
       const DECODE_KEY = "IHEARTWILLTOLEDO!!!!";
       const urlParams = window.location.href;
       var showName = urlParams.split('showName=')[1];
@@ -340,22 +388,16 @@
       console.log(showName);
 
       //make a const array of all showNames
-      //only append if standardShow = true
-      const showNames = DJ_JSON.filter(show => show.standardShow === true).map(show => show.showName);
-      //const showNames = DJ_JSON.map(show => show.showName);
-   
-console.log(showName + " is the show name 1");
+      const showNames = DJ_JSON.map(show => show.showName);
+
+
       //Find the show in the JSON
       const show = DJ_JSON.find(show => show.showName === showName);
 
-      console.log(show.showName + " is the show name 2");
+
       //populate it!!! RAAAHHH
-      console.log(show.showName + " is the show name");
       if (show.showName === "Ebbs %26 Flows"){
         show.showName = "Ebbs & Flows";
-      }
-      else if (show.showName === "Ranting %26 Raving"){
-        show.showName = "Ranting & Raving";
       }
       document.getElementById("showName").innerText = show.showName;
       
@@ -388,7 +430,6 @@ console.log(showName + " is the show name 1");
       //load show selecter thingy
       const showSelecter = document.getElementById('showSelecter');
       showNames.forEach(namer => {
-        console.log(namer, "namer elem");
         const option = document.createElement('option');
         option.value = namer;
         option.textContent = namer;
@@ -397,60 +438,22 @@ console.log(showName + " is the show name 1");
           console.log("jenny handler");
           option.textContent = "Ebb & Flow";
         }
-        else if (option.textContent === "Ranting %26 Raving") {
-          console.log("jenny handler");
-          option.textContent = "Ranting & Raving";
-        }
- 
-
         if (namer === showName) {
           console.log(namer, "   ", show);
           option.selected = true; // Set the default selected show
         }
-        if (show.standardShow === true) {
-          console.log(show.standardShow);
-          showSelecter.appendChild(option);
-        }
-        else {
-          console.log("Not appending option because standardShow is false");
-        }
+        showSelecter.appendChild(option);
       });
-      //if specialty show, skip adding to the selecter
-     
-      
       showSelecter.addEventListener('change', (event) => {
         const selectedShowName = event.target.value;
         //get url and split after "baseDJPage.html"
         const url = window.location.href;
-        const urlParts = url.split("baseDJPage.html");
-        const newUrl = urlParts[0] + `baseDJPage.html?showName=${encodeURIComponent(selectedShowName)}`;
+        const urlParts = url.split("DJ_TEMPLATE_CSS.html");
+        const newUrl = urlParts[0] + `DJ_TEMPLATE_CSS.html?showName=${encodeURIComponent(selectedShowName)}`;
         
         window.location.href = newUrl; // Redirect to the new URL
       });
-      
-    
 
-      //if passed custom css, pass it to the applyCustomCss function
-      //but first clear any existing custom css
-      removeCustomCss();
-      //debug why this isnt working only for "BBLNation"
-      console.log(show);
-      console.log(show.customFormatting);
-      console.log("attempting");
-      if (show.customFormatting) {
-        
-        if (show.customFormatting.css) {
-          console.log("applying custom css");
-          console.log(show.customFormatting.css);
-
-          applyCustomCss(show.customFormatting.css);
-        }
-        if(show.customFormatting.html){
-          console.log("applying custom html");
-          console.log(show.customFormatting.html);
-          loadHTML(show.customFormatting.html);
-        }
-      }
       //if past broadcasts exist, load them!
       //<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5v1N0su1k3tzZRTsthTdKM?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       if(show.previousPlaylists.length > 0){
@@ -461,8 +464,6 @@ console.log(showName + " is the show name 1");
         rowDiv.style.flexWrap = "wrap";
         rowDiv.style.justifyContent = "space-between";
         pastBroadcastsContainer.appendChild(rowDiv);
-        
-
         show.previousPlaylists.forEach((broadcast, index) => {
           
           const iframeContainer = document.createElement('div');
@@ -490,148 +491,24 @@ console.log(showName + " is the show name 1");
           rowDiv.appendChild(iframeContainer);
         });
       }
-    }
-
-
-    function genLite() {
-      const DECODE_KEY = "IHEARTWILLTOLEDO!!!!";
-      const urlParams = window.location.href;
-      var showName = urlParams.split('showName=')[1];
-      if (!showName) {
-        console.error("No show name provided in URL, defaulting to first show in JSON");
-        showName = DJ_JSON[0].showName;
-
-      }
-      console.log(showName);
-      showName = decodeURI(showName);
-      //Get the show name from the URL);
-      console.log(showName);
-
-      //make a const array of all showNames
-      //only append if standardShow = true
-      const showNames = DJ_JSON.filter(show => show.standardShow === true).map(show => show.showName);
-      //const showNames = DJ_JSON.map(show => show.showName);
-   
-console.log(showName + " is the show name 1");
-      //Find the show in the JSON
-      const show = DJ_JSON.find(show => show.showName === showName);
-
-      console.log(show.showName + " is the show name 2");
-      //populate it!!! RAAAHHH
-      console.log(show.showName + " is the show name");
-      if (show.showName === "Ebbs %26 Flows"){
-        show.showName = "Ebbs & Flows";
-      }
-      else if (show.showName === "Ranting %26 Raving"){
-        show.showName = "Ranting & Raving";
-      }
-      document.getElementById("showName").innerText = show.showName;
-      
-      // let showBlurbWithBreaks = show.showBlurb;
-      // showBlurbWithBreaks = showBlurbWithBreaks.replace(/\n/g, "<br>"); // Assign the result back to the variable
-      // console.log(showBlurbWithBreaks);
-      // document.getElementById("showBlurb").innerHTML = showBlurbWithBreaks;
-      document.getElementById("showBlurb").innerText = show.showBlurb;;
-
-      //    "broadcastTime": {
-      //    "dayOfWeek": "Tuesday",
-      //    "startTime": "14:00",
-      //   "durationMinutes": 60}
-      //    should format to "Tuesday @ 2:00 PM"
-      const broadcastTime = show.broadcastTime;
-      const dayOfWeek = broadcastTime.dayOfWeek;
-      const startTime = broadcastTime.startTime;
-      const durationMinutes = broadcastTime.durationMinutes;
-
-      const [hour, minute] = startTime.split(':');
-      const ampm = hour >= 12 ? 'PM' : 'AM';
-      const formattedHour = hour % 12 || 12;
-      const formattedTime = `${dayOfWeek} @ ${formattedHour}:${minute} ${ampm}`;
-      document.getElementById("timeSlot").innerText = formattedTime;
-      document.getElementById("showImgSlot").src = (show.image === "" ) ? "imgs/wmbc/logo-text-225x255.png" : show.image;
-      document.getElementById("showBlurbHeader").innerText = "About " + show.showName;
-
-      //load show selecter thingy
-      const showSelecter = document.getElementById('showSelecter');
-
-      //if specialty show, skip adding to the selecter
-     
-      
-      showSelecter.addEventListener('change', (event) => {
-        const selectedShowName = event.target.value;
-        //get url and split after "baseDJPage.html"
-        const url = window.location.href;
-        const urlParts = url.split("baseDJPage.html");
-        const newUrl = urlParts[0] + `baseDJPage.html?showName=${encodeURIComponent(selectedShowName)}`;
+      loadHTML();
+      // if(savedHtml){ 
         
-        window.location.href = newUrl; // Redirect to the new URL
-      });
-    
-
-      
-    }
-    function removeCustomCss() {
-    const styleElement = document.getElementById("custom-style");
-    if (styleElement) {
-      styleElement.remove();
-    }
-    //remove links added by user (will be at the end of the head)
-    let head = document.head.innerHTML;
-    let link = "";
-    let i = head.length - 1;
-    while (head[i] !== ">") {
-      link = head[i] + link;
-      i--;
-    }
-    if (link.includes("<link")) {
-      document.head.innerHTML = head.slice(0, i + 1);
-    }
-
-
-  }
-  function loadHTML(savedHtml){
-        console.log("fetching data");
-        if (savedHtml) {
-          document.getElementById("showBlurbDiv").innerHTML = savedHtml;
+      // }
+      // else{
+      // removeCustomCss();
+      // if (show.customFormatting) {
+      //   if (show.customFormatting.css) {
+      //     customCssTextarea.value = show.customFormatting.css;
+      //     applyCustomCss(show.customFormatting.css);
+      //   }
+      //   if(show.customFormatting.html){
+      //     customHTMLTextarea.value = show.customFormatting.html;
+      //     loadHTML(show.customFormatting.html);
+      //   }
+      // }
+      //   }
         }
-
-        genLite();
-
-      
-
-
-    }
-
-  function applyCustomCss(css) {
-    let styleElement = document.getElementById("custom-style");
-    //parse for <link> </link> tags inside the css box,
-    //place them in the head of the document
-
-    for (let i = 0; i < css.length; i++) {
-      if (css[i] === "<" && css[i + 1] === "l" && css[i + 2] === "i" && css[i + 3] === "n" && css[i + 4] === "k") {
-        let link = "";
-        let j = i;
-        while (css[j] !== ">") {
-          link += css[j];
-          j++;
-        }
-        link += ">";
-        console.log(link);
-        //check for duplicate links
-        if (!document.head.innerHTML.includes(link)) {
-          document.head.innerHTML += link;
-        }
-        //remove the link from the css variable 
-        css = css.slice(0, i) + css.slice(j + 1);
-      }
-    }
-    if (!styleElement) {
-      styleElement = document.createElement("style");
-      styleElement.id = "custom-style";
-      document.head.appendChild(styleElement);
-    }
-    styleElement.textContent = css;
-  }
   </script>
 </head>
 
@@ -658,12 +535,11 @@ console.log(showName + " is the show name 1");
   </div>
   <div class="container" style="margin-bottom:20px">
     <div class="showTitleBox">
-      <div class="innerTitleElem" style="margin-right:0px; padding-right:0px;">
-        <h1 id="showName" style="margin-right:0px; padding-right:0px;">Example Show Name</h1>
+      <div class="innerTitleElem">
+        <h1 id="showName">Example Show Name</h1>
       </div>
-      
-      <div class="showTitleImg innerTitleElem" style="margin-left:0px; padding-left:0px;">
-        <img id="showImgSlot" style="margin-left:0px;  padding-left:0px;" src="" alt="Radio Show Logo">
+      <div class="showTitleImg innerTitleElem">
+        <img id="showImgSlot" src="" alt="Radio Show Logo">
       </div>
     </div>
     <h2 id="timeSlot" style="padding-bottom:4px; margin-bottom: 0px; text-align: center;">Mondays @ 11:00am</h2>
@@ -708,11 +584,154 @@ console.log(showName + " is the show name 1");
 
   </div>
 
+  <div class="css-editor">
+    <h3>Customize Your Page</h3>
+    <textarea id="custom-css" placeholder="Enter your custom CSS here..."></textarea>
+    <button id="apply-css">Apply CSS</button>
+    <button id="reset-css">Reset to Default</button>
+  </div>
+  <div class="html-editor">
+    <textarea id="custom-html" placeholder="Enter your custom html here..."></textarea>
+    <button id="apply-html">Apply HTML</button>
+    <button id="reset-html">Reset to Default</button>
+  </div>
 
-  
-  <footer class="footer">
-    <p style>WMBC's Web Player, made by will :3</p>
+  <div class="html-editor">
+    <button id="export-all">Export All</button>
+  </div>
+</div>
+  <footer class="footer" style="visibility: hidden;">
+    <p style>&copy; this is unoffical. In no
+      way
+      affilated with UMBC nor WMBC. made by will :3</p>
   </footer>
 </body>
+<script>
+  const customCssTextarea = document.getElementById("custom-css");
+  const applyCssButton = document.getElementById("apply-css");
+  const resetCssButton = document.getElementById("reset-css");
+
+  const customHTMLTextarea = document.getElementById("custom-html");
+  const applyHtmlBttn = document.getElementById("apply-html");
+  const resetHtmlBttn = document.getElementById("reset-html");
+  const exportBttn = document.getElementById("export-all");
+
+  const savedCss = localStorage.getItem("custom-css");
+  const savedHtml = localStorage.getItem("custom-html");
+  if (savedCss) {
+    customCssTextarea.value = savedCss;
+    applyCustomCss(savedCss);
+
+
+  }
+
+    function loadHTML(){
+        console.log("fetching data");
+        if (savedHtml) {
+          customHTMLTextarea.value = savedHtml;
+          document.getElementById("showBlurbDiv").innerHTML = savedHtml;
+        }
+
+      
+
+
+    }
+
+    //run loadHTML after the page loads
+    console.log('yo');
+      //check
+  applyCssButton.addEventListener("click", () => {
+    const customCss = customCssTextarea.value;
+    applyCustomCss(customCss);
+    localStorage.setItem("custom-css", customCss);
+  });
+
+  exportBttn.addEventListener("click", () => {
+    const customCss = customCssTextarea.value;
+    const customHTML = customHTMLTextarea.value;
+    const exportData = {
+      css: customCss,
+      html: customHTML
+    };
+    const exportJson = JSON.stringify(exportData);
+    const blob = new Blob([exportJson], {
+      type: "application/json"
+    });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    const showTitle = document.getElementById("showName").innerText;
+    a.download = showTitle+".json";
+    a.click();
+  });
+
+  applyHtmlBttn.addEventListener("click", () => {
+    const customHTML = customHTMLTextarea.value;
+    document.getElementById("showBlurbDiv").innerHTML = customHTML;
+    localStorage.setItem("custom-html", customHTML);
+  });
+
+  resetCssButton.addEventListener("click", () => {
+    customCssTextarea.value = ""; 
+    removeCustomCss();
+    localStorage.removeItem("custom-css"); 
+  });
+  resetHtmlBttn.addEventListener("click", () => {
+    customHTMLTextarea.value = ""; 
+
+    localStorage.removeItem("custom-html"); 
+  });
+
+  function applyCustomCss(css) {
+    let styleElement = document.getElementById("custom-style");
+    //parse for <link> </link> tags inside the css box,
+    //place them in the head of the document
+
+    for (let i = 0; i < css.length; i++) {
+      if (css[i] === "<" && css[i + 1] === "l" && css[i + 2] === "i" && css[i + 3] === "n" && css[i + 4] === "k") {
+        let link = "";
+        let j = i;
+        while (css[j] !== ">") {
+          link += css[j];
+          j++;
+        }
+        link += ">";
+        console.log(link);
+        //check for duplicate links
+        if (!document.head.innerHTML.includes(link)) {
+          document.head.innerHTML += link;
+        }
+        //remove the link from the css variable 
+        css = css.slice(0, i) + css.slice(j + 1);
+      }
+    }
+    if (!styleElement) {
+      styleElement = document.createElement("style");
+      styleElement.id = "custom-style";
+      document.head.appendChild(styleElement);
+    }
+    styleElement.textContent = css;
+  }
+
+  function removeCustomCss() {
+    const styleElement = document.getElementById("custom-style");
+    if (styleElement) {
+      styleElement.remove();
+    }
+    //remove links added by user (will be at the end of the head)
+    let head = document.head.innerHTML;
+    let link = "";
+    let i = head.length - 1;
+    while (head[i] !== ">") {
+      link = head[i] + link;
+      i--;
+    }
+    if (link.includes("<link")) {
+      document.head.innerHTML = head.slice(0, i + 1);
+    }
+
+
+  }
+</script>
 
 </html>

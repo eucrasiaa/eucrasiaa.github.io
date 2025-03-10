@@ -1,0 +1,713 @@
+<html lang="en">
+
+<head>
+  <!-- YOOO -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="src/showDB_Obscured_encoded.json" type="application/json"></script>
+  <title>devtools</title>
+  <link rel="icon" type="image/x-icon" href="/src/logo_225x255.png">
+  <style>
+    .tool-container {
+      width: 33.33%;
+      float: left;
+      box-sizing: border-box;
+      padding: 10px;
+      border: 1px solid #000;
+    }
+    .temp-container-two {
+      width: 33.33%;
+      float: right;
+      box-sizing: border-box;
+      padding: 10px;
+      border: 1px solid #000;
+    }
+
+    input,
+    textarea,
+    button {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .host-names {
+      margin-bottom: 10px;
+    }
+
+    .host-names input {
+      width: calc(100% - 60px);
+      display: inline-block;
+    }
+
+    .host-names button {
+      width: 50px;
+      display: inline-block;
+    }
+
+    textarea {
+      height: 100px;
+    }
+    #showSelecter {
+      padding: 10px;
+      border-radius: 8px;
+      border: 2px solid black;
+      color: var(--Gold);
+      font-size: 1em;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="tool-container">
+    <h2>Schedule Tool</h2>
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Name">
+
+    <label for="showName">Show Name:</label>
+    <input type="text" id="showName" placeholder="Show Name">
+
+    <div class="host-names">
+      <label>Host Names:</label>
+      <div id="hostNamesContainer">
+        <input type="text" class="hostName" placeholder="Host Name">
+      </div>
+      <button type="button" onclick="addHostName()">Add</button>
+    </div>
+
+    <label for="dayOfWeek">Day of Week (Monday, Tuesday, etc): </label>
+    <input type="text" id="dayOfWeek" placeholder="Day of Week">
+
+    <label for="startTime">Start Time (24 hour):</label>
+    <input type="text" id="startTime" placeholder="Start Time (HH:MM)">
+
+    <label for="durationMinutes">Duration (minutes):</label>
+    <input type="number" id="durationMinutes" placeholder="Duration (minutes)" value="60">
+
+
+
+    <label for="instagram">Instagram:</label>
+    <input type="text" id="instagram" placeholder="Instagram">
+
+    <label for="spotify">Spotify:</label>
+    <input type="text" id="spotify" placeholder="Spotify">
+
+    <label for="twitter">Twitter:</label>
+    <input type="text" id="twitter" placeholder="Twitter">
+
+    <div class="other-socials">
+      <label>Other Socials (platform: handle):</label>
+      <div id="otherSocialsContainer">
+        <input type="text" class="otherSocials" placeholder="other socials">
+      </div>
+      <button type="button" onclick="addOtherSocials()">Add</button>
+    </div>
+
+    <label for="showBlurb">Show Blurb:</label>
+    <textarea id="showBlurb" placeholder="Show Description"></textarea>
+
+    <div class="past-playlists">
+      <label>Other Socials (platform: handle):</label>
+      <div id="otherSocialsContainer">
+        <input type="text" class="otherSocials" placeholder="other socials">
+      </div>
+      <button type="button" onclick="addOtherSocials()">Add</button>
+    </div>
+
+    <div class="previous-playlists">
+      <label>Previous Playlists:</label>
+      <button type="button" onclick="addPlaylistPair()">Add Playlist</button>
+      <div id="previousPlaylistsContainer">
+        <div class="playlist-pair">
+          <input type="text" class="playlist-date" placeholder="Date (e.g., 12/18)" style="width: 30%;">
+          <input type="text" class="playlist-url" placeholder="URL" style="width: 65%; overflow: hidden;">
+        </div>
+      </div>
+      
+    </div>
+
+    <label for="imgBox">Small Image as data: format</label>
+    <input id="imgBox" placeholder="data:img/jpeg...."></input>
+
+
+    <label for="standardShow">Standard Show (just leave checked):</label>
+    <input type="checkbox" id="standardShow" checked>
+
+    
+    <label for="customFormat">DJ page customization</label>
+    <input id="customFormat" placeholder='{"css": "", "html": ""}''></input>
+
+
+    <button onclick="generateJSON()">Generate JSON</button>
+    <button onclick="generateDecoded()">Generate Decodeded</button>
+
+    <label for="jsonOutput">JSON Output:</label>
+    <textarea id="jsonOutput" readonly></textarea>
+
+    <button onclick="clearInputs()">Clear / Reset</button>
+  </div>
+  
+  <div class="temp-container-two">
+    <!-- <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5v1N0su1k3tzZRTsthTdKM?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> -->
+  
+  <div style="text-align: center; margin: 20px 0;">
+    <select id="showSelecter">
+    </select>
+    <br><br><br>
+    <button onclick="downloadFullExport()">Download Full Export<br> then push to github or dm to will :3</button>
+  </div>
+  </div>
+
+</body> 
+  <script>
+
+    // allInputs
+    const allInputs = document.querySelectorAll('input, textarea');
+
+    function addHostName() {
+      const container = document.getElementById('hostNamesContainer');
+      const input = document.createElement('input');
+      input.type = 'text';
+      input.className = 'hostName';
+      input.placeholder = 'Host Name';
+      container.appendChild(input);
+    }
+    function addOtherSocials() {
+      const container = document.getElementById('otherSocialsContainer');
+      const input = document.createElement('input');
+      input.type = 'text';
+      input.className = 'otherSocials';
+      input.placeholder = 'other socials';
+      container.appendChild(input);
+    }
+    function addPlaylistPair() {
+      //insert at the top of the list of playlists
+      const container = document.getElementById('previousPlaylistsContainer');
+      const pair = document.createElement('div');
+      pair.className = 'playlist-pair';
+      pair.innerHTML = `
+        <input type="text" class="playlist-date" placeholder="Date (e.g., 12/18)" style="width: 30%;">
+        <input type="text" class="playlist-url" placeholder="URL" style="width: 65%; overflow: hidden;">
+      `;
+      container.insertBefore(pair, container.firstChild);
+    }
+
+    function localSaveNewShow() {
+      console.log("localSaveNewShow");
+      //only if newshow is selected
+      const showName = document.getElementById('showSelecter').selectedIndex;
+      if(showName !== 0){
+        console.log("not a new show");
+        return;
+      }
+      console.log("new show");
+      const currShowInfo = generateJSON(false);
+      localStorage.setItem('showDB', JSON.stringify(currShowInfo));
+      console.log('Show saved:', showName);
+    }
+
+    function clearInputs(doPopup = true){
+      //confirmation popup
+      var confirmation = true;
+      if (doPopup) {
+        confirmation = confirm("Are you sure you want to clear all inputs?");
+      } 
+
+      if (confirmation) {
+        
+
+        //use allInputs
+
+        allInputs.forEach(input => {
+          if (input.type === 'checkbox') {
+            input.checked = true;
+          } else {
+            input.value = '';
+          }
+        });
+        //for Host Names, Other Socials, and Previous Playlists
+        document.querySelectorAll('.hostName').forEach(input => input.remove());
+        document.querySelectorAll('.otherSocials').forEach(input => input.remove());
+        document.querySelectorAll('.playlist-pair').forEach(pair => pair.remove());
+        const WIP_NAME = document.getElementById("dynamicOption");
+        // if(WIP_NAME){
+        //   WIP_NAME.textContent = "New Show";
+        // }
+
+        // document.getElementById('name').value = '';
+        // document.getElementById('showName').value = '';
+        // document.querySelectorAll('.hostName').forEach(input => input.remove());
+        // document.getElementById('dayOfWeek').value = '';
+        // document.getElementById('startTime').value = '';
+        // document.getElementById('durationMinutes').value = '';
+        // document.getElementById('instagram').value = '';
+        // document.getElementById('spotify').value = '';
+        // document.getElementById('twitter').value = '';
+        // document.querySelectorAll('.otherSocials').forEach(input => input.remove());
+        // document.getElementById('showBlurb').value = '';
+        // document.getElementById('imgBox').value = '';
+        // document.getElementById('standardShow').checked = true;
+        // document.querySelectorAll('.playlist-pair').forEach(pair => pair.remove());
+        // document.getElementById('jsonOutput').value = '';
+      }
+    }
+
+    function decodeName(encodedName, key) {
+      // Decode the Base64 string
+      const encodedBytes = Uint8Array.from(atob(encodedName), c => c.charCodeAt(0));
+
+      // Convert key to byte array
+      const keyBytes = new TextEncoder().encode(key);
+
+      // XOR each byte of the encoded name with the corresponding byte of the key
+      const decodedBytes = encodedBytes.map((byte, i) => byte ^ keyBytes[i % keyBytes.length]);
+
+      // Convert the byte array back to a string
+      return new TextDecoder().decode(decodedBytes);
+    }
+
+
+    //convert the following python code into a js function
+    /*
+    import json
+import base64
+
+# Encoding function
+def encode_name(name, key):
+    name_bytes = name.encode('utf-8')
+    key_bytes = key.encode('utf-8')
+    encoded_bytes = bytes([name_bytes[i] ^ key_bytes[i % len(key_bytes)] for i in range(len(name_bytes))])
+    return base64.b64encode(encoded_bytes).decode('utf-8')
+    */
+
+    function downloadFullExport(){
+      //if new show is selected, append to the json, and download it called "showDB_Obscured_encoded.json"
+      //if a show is selected, replace the json elem at its index with the new json elem
+      //then download the json
+
+      //ensure that special characters like emojis are converted to utf-8, EG: 🕷️ -> \ud83d\udd77\ufe0f
+      // and also & -> %26
+      if(document.getElementById("showSelecter").selectedIndex === 0){
+        //new show
+        //encode emojis as unicode
+
+        const utf8Encoder = new TextEncoder();
+
+        function encodeEmojis(str) {
+          return str.replace(/[\u{1F600}-\u{1F64F}]/gu, (match) => {
+            return match.split('').map(char => '\\u' + char.charCodeAt(0).toString(16).padStart(4, '0')).join('');
+          });
+        }
+
+
+        const utf8Decoder = new TextDecoder();
+
+        function utf8Encode(str) {
+          return utf8Encoder.encode(str);
+        }
+
+        function utf8Decode(bytes) {
+          return utf8Decoder.decode(bytes);
+        }
+
+        const newShow = generateJSON();
+        var utf8EncodedShow = JSON.stringify(newShow, (key, value) => {
+          if (typeof value === 'string') {
+            return utf8Decode(utf8Encode(value));
+          }
+          return value;
+        });
+        //if show name contains "&", replace with "%26"
+        const showName = newShow.showName;
+        const showNameEncoded = showName.replace("&", "%26");
+        utf8EncodedShow = utf8EncodedShow.replace(showName, showNameEncoded);
+        DJ_JSON.push(JSON.parse(utf8EncodedShow));
+      }
+      else{
+        
+        //existing show
+        const showDB = generateJSON(false);
+        const selectedIndex = document.getElementById("showSelecter").options[document.getElementById("showSelecter").selectedIndex].getAttribute('arrayIndex');
+        DJ_JSON[selectedIndex] = showDB;
+      }
+      const jsonString = JSON.stringify(DJ_JSON, null, 2);
+      const blob = new Blob([jsonString], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'showDB_Obscured_encoded.json';
+      a.click();
+
+    }
+   function encodeName(name, key) {
+    // Convert the name to a byte array
+      const nameBytes = new TextEncoder().encode(name);
+      const keyBytes = new TextEncoder().encode(key);
+      const encodedBytes = nameBytes.map((byte, i) => byte ^ keyBytes[i % keyBytes.length]);
+      const encodedString = btoa(String.fromCharCode(...encodedBytes));
+      return encodedString;
+    }
+
+    function loadAJSON(jsonElem){
+      const DECODE_KEY = "IHEARTWILLTOLEDO!!!!";
+      if(jsonElem){
+        clearInputs(false);
+        showDB=jsonElem 
+        document.getElementById('name').value = decodeName(showDB.name,DECODE_KEY);
+        document.getElementById('showName').value = showDB.showName;
+        showDB.hostNames.forEach(hostName => {
+          addHostName();
+          document.querySelector('.hostName:last-of-type').value = decodeName(hostName, DECODE_KEY);
+        });
+        document.getElementById('dayOfWeek').value = showDB.broadcastTime.dayOfWeek;
+        document.getElementById('startTime').value = showDB.broadcastTime.startTime;
+        document.getElementById('durationMinutes').value = showDB.broadcastTime.durationMinutes;
+        document.getElementById('instagram').value = showDB.socials.instagram;
+        document.getElementById('spotify').value = showDB.socials.spotify;
+        document.getElementById('twitter').value = showDB.socials.twitter;
+        showDB.socials.otherSocials.forEach(otherSocial => {
+          addOtherSocials();
+          document.querySelector('.otherSocials:last-of-type').value = otherSocial;
+        });
+        document.getElementById('showBlurb').value = showDB.showBlurb;
+        document.getElementById('imgBox').value = showDB.image;
+        document.getElementById('standardShow').checked = showDB.standardShow;
+        showDB.previousPlaylists.forEach(([date, url]) => {
+          addPlaylistPair();
+          const pair = document.querySelector('.playlist-pair:last-of-type');
+          pair.querySelector('.playlist-date').value = date;
+          pair.querySelector('.playlist-url').value = url;
+        });
+      }
+      
+    }
+    function loadAnyLocal(){
+      const DECODE_KEY = "IHEARTWILLTOLEDO!!!!";
+      if(localStorage.getItem("showDB")){
+        clearInputs(false);
+        const showDB = JSON.parse(localStorage.getItem("showDB"));
+        document.getElementById('name').value = decodeName(showDB.name,DECODE_KEY);
+        document.getElementById('showName').value = showDB.showName;
+        showDB.hostNames.forEach(hostName => {
+          addHostName();
+          document.querySelector('.hostName:last-of-type').value =  decodeName(hostName, DECODE_KEY);
+        });
+        document.getElementById('dayOfWeek').value = showDB.broadcastTime.dayOfWeek;
+        document.getElementById('startTime').value = showDB.broadcastTime.startTime;
+        document.getElementById('durationMinutes').value = showDB.broadcastTime.durationMinutes;
+        document.getElementById('instagram').value = showDB.socials.instagram;
+        document.getElementById('spotify').value = showDB.socials.spotify;
+        document.getElementById('twitter').value = showDB.socials.twitter;
+        showDB.socials.otherSocials.forEach(otherSocial => {
+          addOtherSocials();
+          document.querySelector('.otherSocials:last-of-type').value = otherSocial;
+        });
+        document.getElementById('showBlurb').value = showDB.showBlurb;
+        document.getElementById('imgBox').value = showDB.image;
+        document.getElementById('standardShow').checked = showDB.standardShow;
+        
+        showDB.previousPlaylists.forEach(([date, url]) => {
+          addPlaylistPair();
+          const pair = document.querySelector('.playlist-pair:last-of-type');
+          pair.querySelector('.playlist-date').value = date;
+          pair.querySelector('.playlist-url').value = url;
+        });
+      }
+      else{
+        console.log("no local storage found");
+      }
+
+    }
+
+
+    function modifyShowInfo(index, showName){
+      console.log("MODIFYING SHOW INFO: ", index, showName);
+      const WIP_NAME = document.getElementById("dynamicOption");
+      if(index === "-1"){
+        console.log("HIIII");
+        loadAnyLocal();
+        WIP_NAME.textContent = showName + " (WIP)";
+        
+        
+        return;
+      }
+      const show = DJ_JSON[index];
+      console.log(show);
+      loadAJSON(show);
+      
+
+    }
+
+    function generateJSON(output = true) {
+      const DECODE_KEY = "IHEARTWILLTOLEDO!!!!";
+      var name = document.getElementById('name').value;
+      //encode name
+      name = encodeName(name, DECODE_KEY);
+      const showName = document.getElementById('showName').value;
+      var hostNames = Array.from(document.querySelectorAll('.hostName'))
+        .map(input => input.value)
+        .filter(value => value.trim() !== '');
+      //encode hosts
+      hostNames = hostNames.map(host => encodeName(host, DECODE_KEY));
+      const dayOfWeek = document.getElementById('dayOfWeek').value;
+      const startTime = document.getElementById('startTime').value;
+      const durationMinutes = parseInt(document.getElementById('durationMinutes').value, 10);
+      const instagram = document.getElementById('instagram').value;
+      let spotify = []
+      if (document.getElementById('spotify').value !== "") {
+        spotify = ["DISPLAYNAME", document.getElementById('spotify').value];
+      }
+      
+      const twitter = document.getElementById('twitter').value;
+      const otherSocials = Array.from(document.querySelectorAll('.otherSocials'))
+        .map(input => input.value)
+        .filter(value => value.trim() !== '');
+      const showBlurb = document.getElementById('showBlurb').value;
+      const image = document.getElementById('imgBox').value;
+      const standardShow = document.getElementById('standardShow').checked;
+      const previousPlaylists = Array.from(document.querySelectorAll('.playlist-pair'))
+        .map(pair => {
+          const date = pair.querySelector('.playlist-date').value;
+          const url = pair.querySelector('.playlist-url').value;
+          return [date, url];
+        })
+        .filter(([date, url]) => date.trim() !== '' && url.trim() !== '');
+        //custom formatting
+        //EX: {"css":"#showBlurb {\ncolor:2C983A;\n\n}","html":""}
+        /*
+    "customFormatting":{
+      "css":"#showBlurb {\ncolor:2C983A;\n\n}",
+      "html":""
+    }
+
+        */
+      const customFormatting = "";
+        if(document.getElementById('customFormat').value !== ""){
+          customFormatting = JSON.parse(document.getElementById('customFormat').value);
+        }
+        
+
+      const json = {
+          name,
+          showName,
+          hostNames,
+          broadcastTime: {
+            dayOfWeek,
+            startTime,
+            durationMinutes
+          },
+          socials: {
+            instagram,
+            spotify,
+            twitter,
+            otherSocials
+          },
+          showBlurb,
+          standardShow,
+          image,
+          previousPlaylists,
+          customFormatting
+      };
+
+      const jsonString = JSON.stringify(json, null, 2);
+      if (output) document.getElementById('jsonOutput').value = jsonString;
+      console.log(json);
+      return json;
+    }
+
+
+    function generateDecoded(output = true) {
+      const DECODE_KEY = "IHEARTWILLTOLEDO!!!!";
+      var name = document.getElementById('name').value;
+      //encode name
+      // name = encodeName(name, DECODE_KEY);
+      const showName = document.getElementById('showName').value;
+      var hostNames = Array.from(document.querySelectorAll('.hostName'))
+        .map(input => input.value)
+        .filter(value => value.trim() !== '');
+      //encode hosts
+      // hostNames = hostNames.map(host => encodeName(host, DECODE_KEY));
+      const dayOfWeek = document.getElementById('dayOfWeek').value;
+      const startTime = document.getElementById('startTime').value;
+      const durationMinutes = parseInt(document.getElementById('durationMinutes').value, 10);
+      const instagram = document.getElementById('instagram').value;
+      let spotify = []
+      if (document.getElementById('spotify').value !== "") {
+        spotify = ["DISPLAYNAME", document.getElementById('spotify').value];
+      }
+      
+      const twitter = document.getElementById('twitter').value;
+      const otherSocials = Array.from(document.querySelectorAll('.otherSocials'))
+        .map(input => input.value)
+        .filter(value => value.trim() !== '');
+      const showBlurb = document.getElementById('showBlurb').value;
+      const image = document.getElementById('imgBox').value;
+      const standardShow = document.getElementById('standardShow').checked;
+      const previousPlaylists = Array.from(document.querySelectorAll('.playlist-pair'))
+        .map(pair => {
+          const date = pair.querySelector('.playlist-date').value;
+          const url = pair.querySelector('.playlist-url').value;
+          return [date, url];
+        })
+        .filter(([date, url]) => date.trim() !== '' && url.trim() !== '');
+        //custom formatting
+        //EX: {"css":"#showBlurb {\ncolor:2C983A;\n\n}","html":""}
+        /*
+    "customFormatting":{
+      "css":"#showBlurb {\ncolor:2C983A;\n\n}",
+      "html":""
+    }
+
+        */
+      const customFormatting = "";
+        if(document.getElementById('customFormat').value !== ""){
+          customFormatting = JSON.parse(document.getElementById('customFormat').value);
+        }
+        
+
+      const json = {
+          name,
+          showName,
+          hostNames,
+          broadcastTime: {
+            dayOfWeek,
+            startTime,
+            durationMinutes
+          },
+          socials: {
+            instagram,
+            spotify,
+            twitter,
+            otherSocials
+          },
+          showBlurb,
+          standardShow,
+          image,
+          previousPlaylists,
+          customFormatting
+      };
+
+      const jsonString = JSON.stringify(json, null, 2);
+      if (output) document.getElementById('jsonOutput').value = jsonString;
+      console.log(json);
+      return json;
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      //Fetch data
+      fetch('./src/showDB_Obscured_encoded.json')
+        .then((response) => response.json())
+        .then((json) => {
+          console.log(json);
+          DJ_JSON = json;
+          addDropdown();
+        })
+
+        console.log("adding event listeners");
+        const inputs = document.getElementsByTagName("input");
+        // returns HTMLCollection
+        //so we cant use forEach
+        for (let i = 0; i < inputs.length; i++) {
+          inputs[i].addEventListener("change", () => {
+            //only save to local storage if the show is new
+            // if(document.getElementById("dynamicOption").textContent === "New Show"){
+            //   localSaveNewShow();
+            // }
+            if(document.getElementById("showSelecter").selectedIndex === 0){
+              localSaveNewShow();
+            }
+            
+          });
+        }
+        // inputs.forEach(input => {
+        //   input.addEventListener("change", () => {
+        //     localSaveNewShow();
+        //   });
+        // });
+        const textareas = document.getElementsByTagName("textarea");
+        for (let i = 0; i < textareas.length; i++) {
+          textareas[i].addEventListener("change", () => {
+            //if dynamicOption is selected
+            if(document.getElementById("showSelecter").selectedIndex === 0){
+              localSaveNewShow();
+            }
+            // if(document.getElementById("dynamicOption").textContent === "New Show"){
+            //   localSaveNewShow();
+            // }
+          });
+        }
+        // document.getElementsByTagName("textarea").forEach(input => {
+        //   input.addEventListener("change", () => {
+        //     localSaveNewShow();
+        //   });
+        // });
+        document.getElementById("showName").addEventListener("change", () => {
+          if(document.getElementById("showSelecter").selectedIndex === 0){
+            document.getElementById("dynamicOption").textContent = document.getElementById("showName").value + " (WIP)";
+          }
+          
+        });
+
+    });
+
+
+
+    function addDropdown(){
+      const showSelecter = document.getElementById('showSelecter');
+      const showNames = DJ_JSON.filter(show => show.standardShow === true).map(show => show.showName);
+      var show = "New Show";
+      //push element at front of array
+      showNames.unshift(show);
+      var iterForTrackingIndex = -1;
+      showNames.forEach(namer => {
+        console.log(namer, "namer elem");
+        const option = document.createElement('option');
+        if(namer === "New Show"){
+          option.id = "dynamicOption";
+        }
+        option.value = namer;
+        option.textContent = namer;
+        //custom attributes?
+        option.setAttribute('arrayIndex', iterForTrackingIndex);
+        iterForTrackingIndex++;
+        console.log(option.textContent, "   ", showName);
+        if (option.textContent === "Ebbs %26 Flows") {
+          console.log("jenny handler");
+          option.textContent = "Ebb & Flow";
+        }
+        else if (option.textContent === "Ranting %26 Raving") {
+          console.log("jenny handler");
+          option.textContent = "Ranting & Raving";
+        }
+
+
+        if (namer === showName) {
+          console.log(namer, "   ", show);
+          option.selected = true; // Set the default selected show
+        }
+        
+          console.log(show.standardShow);
+          showSelecter.appendChild(option);
+      });
+      //if specialty show, skip adding to the selecter
+     
+      
+      showSelecter.addEventListener('change', (event) => {
+        console.log(event.target.value);
+        //get attribute of selected option
+        const selectedIndex = event.target.options[event.target.selectedIndex].getAttribute('arrayIndex');
+        console.log(selectedIndex);
+        modifyShowInfo(selectedIndex, event.target.value);
+        // const selectedShowName = event.target.value;
+        // //get url and split after "baseDJPage.html"
+        // const url = window.location.href;
+        // const urlParts = url.split("baseDJPage.html");
+        // const newUrl = urlParts[0] + `baseDJPage.html?showName=${encodeURIComponent(selectedShowName)}`;
+        
+        // window.location.href = newUrl; // Redirect to the new URL
+      });
+    }
+  </script>
+
+
+</html>
