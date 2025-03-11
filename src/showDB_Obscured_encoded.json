@@ -258,7 +258,7 @@
       "twitter": "",
       "otherSocials": []
     },
-    "showBlurb": "I talk about sports! Tune in to learn my about sports teams and my completely biased opinions",
+    "showBlurb": "I talk about sports but not in an annoying hyper masculine where I am condescending about it. Tune in to learn my about sports teams and my completely biased opinions",
     "standardShow": true,
     "image": "./imgs/dj-profile/Playoff_Thoughts-logo.jpeg",
     "previousPlaylists": [],
@@ -466,7 +466,7 @@
   },
   {
     "name": "ECk2LDcxOWkfYg==",
-    "showName": "Subsonic",
+    "showName": "subsonic",
     "hostNames": [
       "ECk2LDcxOWkfYg=="
     ],
@@ -476,12 +476,12 @@
       "durationMinutes": 60
     },
     "socials": {
-      "instagram": "",
+      "instagram": "@subsonic_wmbc",
       "spotify": [],
       "twitter": "",
       "otherSocials": []
     },
-    "showBlurb": "",
+    "showBlurb": "play different genres of music each show!",
     "standardShow": true,
     "image": "",
     "previousPlaylists": []
@@ -520,7 +520,7 @@
       "durationMinutes": 60
     },
     "socials": {
-      "instagram": "",
+      "instagram": "@g0ne.tomorrow",
       "spotify": [],
       "twitter": "",
       "otherSocials": []
@@ -554,7 +554,7 @@
   },
   {
     "name": "CzosNTwxLmkCYg==",
-    "showName": "The Britney Show",
+    "showName": "The Britney Hour",
     "hostNames": [
       "CzosNTwxLmkCYg=="
     ],
@@ -576,7 +576,7 @@
   },
   {
     "name": "HiEpLTs1OmkfYg==",
-    "showName": "The 5 PM Variety Experience",
+    "showName": "The Tuesday Variety Experience",
     "hostNames": [
       "HiEpLTs1OmkfYg=="
     ],
@@ -684,12 +684,12 @@
       "durationMinutes": 60
     },
     "socials": {
-      "instagram": "",
+      "instagram": "@film_freaks_wmbc",
       "spotify": [],
       "twitter": "",
       "otherSocials": []
     },
-    "showBlurb": "watch movies of all genres and yap about those! Also maybe put in some music here and there if we find it relevant to our show?",
+    "showBlurb": "watch movies of all genres and yap about those!",
     "standardShow": true,
     "image": "",
     "previousPlaylists": []
@@ -711,9 +711,9 @@
       "twitter": "",
       "otherSocials": []
     },
-    "showBlurb": "Internet and pop culture based shows with advice segments and themed music sections (80s only, my top 10 of the week, etc.). I\u2019d like to have submissions for listeners whether it\u2019s stories, advice, song requests and messages. I\u2019d also wanna read online stories and talk about drama.",
+    "showBlurb": "Internet and pop culture based show with advice segments and themed music sections. Submit stories, song requests, messages, or ask for advice!",
     "standardShow": true,
-    "image": "./imgs/dj-profile/Ranting_%26_Raving-logo.jpeg",
+    "image": "./imgs/dj-profile/Ranting_%2526_Raving-logo.jpeg",
     "previousPlaylists": []
   },
   {
@@ -729,7 +729,7 @@
       "durationMinutes": 60
     },
     "socials": {
-      "instagram": "",
+      "instagram": "@mamasorchard.wmbc",
       "spotify": [],
       "twitter": "",
       "otherSocials": []
@@ -757,7 +757,7 @@
       "twitter": "",
       "otherSocials": []
     },
-    "showBlurb": "topics would mostly consist of movies we\u2019ve watched or any soccer matches that had happened recently as well we would likely have short intervals of music because at least I personally always love listening to music so I would love to share some music I like or had recently learned.",
+    "showBlurb": "We’re mostly covering movies and soccer matches we saw recently with some short intervals of music",
     "standardShow": true,
     "image": "",
     "previousPlaylists": []
@@ -774,7 +774,7 @@
       "durationMinutes": 60
     },
     "socials": {
-      "instagram": "",
+      "instagram": "@cactuscountryradio",
       "spotify": [],
       "twitter": "",
       "otherSocials": []
@@ -809,7 +809,7 @@
   },
   {
     "name": "Cy0rYR96",
-    "showName": "BCG\u2019s New Music Friday",
+    "showName": "BCG\u2019s Radio",
     "hostNames": [
       "Cy0rYR96"
     ],
@@ -841,12 +841,12 @@
       "durationMinutes": 60
     },
     "socials": {
-      "instagram": "",
+      "instagram": "@cherish.wmbc",
       "spotify": [],
       "twitter": "",
       "otherSocials": []
     },
-    "showBlurb": "",
+    "showBlurb": "Switching it up weekly with a variety of emo music!",
     "standardShow": true,
     "image": "",
     "previousPlaylists": []
@@ -915,6 +915,29 @@
       "otherSocials": []
     },
     "showBlurb": "it's a mess. tune in!",
+    "standardShow": true,
+    "image": "",
+    "previousPlaylists": [],
+    "customFormatting": ""
+  },
+  {
+    "name": "Gyk8ODM6",
+    "showName": "The Rayyan Hour",
+    "hostNames": [
+      "Gyk8ODM6"
+    ],
+    "broadcastTime": {
+      "dayOfWeek": "Tuesday",
+      "startTime": "21:00",
+      "durationMinutes": 60
+    },
+    "socials": {
+      "instagram": "",
+      "spotify": [],
+      "twitter": "",
+      "otherSocials": []
+    },
+    "showBlurb": "Talking to guests and discussing their new and old tastes in music!",
     "standardShow": true,
     "image": "",
     "previousPlaylists": [],
