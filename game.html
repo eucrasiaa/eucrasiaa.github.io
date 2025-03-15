@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy WMBC</title>
+    <style>
+        canvas {
+            display: block;
+            margin: 0 auto;
+            background: #70c5ce;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas" width="320" height="480"></canvas>
+    <script>
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+
+        const catImages = [];
+        const totalCats = 12;
+        let currentCat = 1;
+
+        for (let i = 1; i <= totalCats; i++) {
+            const img = new Image();
+            img.src = `imgs/transparent white/Cats-Sliced_${i.toString().padStart(2, '0')}.png`;
+            catImages.push(img);
+        }
+        let gameScore = 0;
+
+        const cat = {
+            x: 50,
+            y: 150,
+            width: 34,
+            height: 24,
+            gravity: 0.3,
+            lift: -7,
+            velocity: 0
+        };
+
+        const pipeWidth = 50;
+        const pipeGap = 150;
+        const pipeSpeed = 2;
+        const pipes = [];
+
+        function createPipe() {
+            const pipeHeight = Math.floor(Math.random() * (canvas.height - pipeGap));
+            pipes.push({
+                x: canvas.width,
+                topHeight: pipeHeight,
+                bottomHeight: canvas.height - pipeHeight - pipeGap
+            });
+        }
+
+        function drawPipes() {
+            ctx.fillStyle = '#000';
+            pipes.forEach(pipe => {
+                ctx.fillRect(pipe.x, 0, pipeWidth, pipe.topHeight);
+                ctx.fillRect(pipe.x, canvas.height - pipe.bottomHeight, pipeWidth, pipe.bottomHeight);
+            });
+        }
+
+        function updatePipes() {
+            pipes.forEach(pipe => {
+                pipe.x -= pipeSpeed;
+            });
+
+            if (pipes.length && pipes[0].x + pipeWidth < 0) {
+                pipes.shift();
+                gameScore++;
+                currentCat = (currentCat + 1) % totalCats; // Change cat image
+            }
+
+            if (pipes.length === 0 || pipes[pipes.length - 1].x < canvas.width - 300) {
+                createPipe();
+            }
+        }
+
+        function drawCat() {
+            ctx.drawImage(catImages[currentCat], cat.x, cat.y, cat.width, cat.height);
+        }
+
+        function updateCat() {
+            cat.velocity += cat.gravity;
+            cat.y += cat.velocity;
+
+            if (cat.y + cat.height > canvas.height) {
+                cat.y = canvas.height - cat.height;
+                cat.velocity = 0;
+            }
+
+            if (cat.y < 0) {
+                cat.y = 0;
+                cat.velocity = 0;
+            }
+        }
+
+        function drawBoundingBox() {
+            ctx.strokeStyle = 'red';
+            ctx.strokeRect(cat.x + 2, cat.y + 2, 30, 20);
+        }
+
+        function checkCollision() {
+            const catBox = {
+                x: cat.x + 2,
+                y: cat.y + 2,
+                width: 30,
+                height: 20
+            };
+
+            for (let pipe of pipes) {
+                if (
+                    catBox.x < pipe.x + pipeWidth &&
+                    catBox.x + catBox.width > pipe.x &&
+                    (catBox.y < pipe.topHeight || catBox.y + catBox.height > canvas.height - pipe.bottomHeight)
+                ) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        function endGame() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = '#fff';
+            ctx.font = '30px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText('Game Over', canvas.width / 2, canvas.height / 2 - 20);
+            ctx.font = '20px Arial';
+            ctx.fillText('Click to Restart', canvas.width / 2, canvas.height / 2 + 20);
+
+            canvas.addEventListener('click', () => {
+            document.location.reload();
+            }, { once: true });
+        }
+        function drawScore(){
+            ctx.fillStyle = '#000';
+            ctx.font = '20px Arial';
+            ctx.fillText('Score: ' + gameScore, 10, 25);
+        }
+
+        function gameLoop() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            updateCat();
+            updatePipes();
+            drawCat();
+            drawPipes();
+            // drawBoundingBox();
+
+            if (checkCollision()) {
+                endGame();
+                return;
+            }
+            drawScore();
+
+            requestAnimationFrame(gameLoop);
+        }
+
+        canvas.addEventListener('click', () => {
+            cat.velocity = cat.lift;
+            // currentCat = (currentCat + 1) % totalCats;
+        });
+        canvas.addEventListener('touchstart', () => {
+            cat.velocity = cat.lift;
+            // currentCat = (currentCat + 1) % totalCats;
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.code === 'Space') {
+                cat.velocity = cat.lift;
+                // currentCat = (currentCat + 1) % totalCats;
+            }
+        });
+
+        gameLoop();
+    </script>
+</body>
+</html>
