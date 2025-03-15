@@ -158,18 +158,20 @@
             requestAnimationFrame(gameLoop);
         }
 
-        canvas.addEventListener('click', () => {
+        if (!('ontouchstart' in window)) {
+            canvas.addEventListener('click', () => {
             cat.velocity = cat.lift;
             // currentCat = (currentCat + 1) % totalCats;
-        });
+            });
+        }
         canvas.addEventListener('touchstart', () => {
             cat.velocity = cat.lift;
             // currentCat = (currentCat + 1) % totalCats;
         });
         document.addEventListener('keydown', (e) => {
             if (e.code === 'Space') {
-                cat.velocity = cat.lift;
-                // currentCat = (currentCat + 1) % totalCats;
+            cat.velocity = cat.lift;
+            // currentCat = (currentCat + 1) % totalCats;
             }
         });
 
