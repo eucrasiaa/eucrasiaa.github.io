@@ -280,6 +280,27 @@ def encode_name(name, key):
     return base64.b64encode(encoded_bytes).decode('utf-8')
     */
 
+    function exportDecode(){
+      const DECODE_KEY = "IHEARTWILLTOLEDO!!!!";
+      fetch('/showDB_Obscured_encoded.json')
+        .then(response => response.json())
+        .then(json => {
+          const DECODE_KEY = "IHEARTWILLTOLEDO!!!!";
+          json.forEach(show => {
+            show.name = decodeName(show.name, DECODE_KEY);
+            show.hostNames = show.hostNames.map(hostName => decodeName(hostName, DECODE_KEY));
+          });
+          const jsonString = JSON.stringify(json, null, 2);
+          const blob = new Blob([jsonString], { type: 'application/json' });
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = 'showDB_Decoded.json';
+          a.click();
+        })
+        .catch(error => console.error('Error:', error));
+    }
+
     function downloadFullExport(){
       //if new show is selected, append to the json, and download it called "showDB_Obscured_encoded.json"
       //if a show is selected, replace the json elem at its index with the new json elem
@@ -595,7 +616,7 @@ def encode_name(name, key):
 
     document.addEventListener("DOMContentLoaded", function () {
       //Fetch data
-      fetch('./src/showDB_Obscured_encoded.json')
+      fetch('src/showDB_Obscured_encoded.json')
         .then((response) => response.json())
         .then((json) => {
           console.log(json);
