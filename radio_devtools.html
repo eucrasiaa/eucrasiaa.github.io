@@ -4,7 +4,7 @@
   <!-- YOOO -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="src/showDB_Obscured_encoded.json" type="application/json"></script>
+  <script src="/src/showDB_Obscured_encoded.json" type="application/json"></script>
   <title>devtools</title>
   <link rel="icon" type="image/x-icon" href="/src/logo_225x255.png">
   <style>
@@ -279,6 +279,27 @@ def encode_name(name, key):
     encoded_bytes = bytes([name_bytes[i] ^ key_bytes[i % len(key_bytes)] for i in range(len(name_bytes))])
     return base64.b64encode(encoded_bytes).decode('utf-8')
     */
+
+    function exportDecode(){
+      const DECODE_KEY = "IHEARTWILLTOLEDO!!!!";
+      fetch('/src/showDB_Obscured_encoded.json')
+        .then(response => response.json())
+        .then(json => {
+          const DECODE_KEY = "IHEARTWILLTOLEDO!!!!";
+          json.forEach(show => {
+            show.name = decodeName(show.name, DECODE_KEY);
+            show.hostNames = show.hostNames.map(hostName => decodeName(hostName, DECODE_KEY));
+          });
+          const jsonString = JSON.stringify(json, null, 2);
+          const blob = new Blob([jsonString], { type: 'application/json' });
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = 'showDB_Decoded.json';
+          a.click();
+        })
+        .catch(error => console.error('Error:', error));
+    }
 
     function downloadFullExport(){
       //if new show is selected, append to the json, and download it called "showDB_Obscured_encoded.json"
@@ -595,7 +616,7 @@ def encode_name(name, key):
 
     document.addEventListener("DOMContentLoaded", function () {
       //Fetch data
-      fetch('./src/showDB_Obscured_encoded.json')
+      fetch('/src/showDB_Obscured_encoded.json')
         .then((response) => response.json())
         .then((json) => {
           console.log(json);
