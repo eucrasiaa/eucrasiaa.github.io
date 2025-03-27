@@ -4,9 +4,9 @@
   <!-- YOOO -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="src/showDB_Obscured_encoded.json" type="application/json"></script>
+  <script src="/src/showDB_Obscured_encoded.json" type="application/json"></script>
   <title>devtools</title>
-  <link rel="icon" type="image/x-icon" href="/src/logo_225x255.png">
+  <link rel="icon" type="image/x-icon" href="/imgs/wmbc/logo-text-225x255.png">
   <style>
     .tool-container {
       width: 33.33%;
@@ -282,7 +282,7 @@ def encode_name(name, key):
 
     function exportDecode(){
       const DECODE_KEY = "IHEARTWILLTOLEDO!!!!";
-      fetch('/showDB_Obscured_encoded.json')
+      fetch('/src/showDB_Obscured_encoded.json')
         .then(response => response.json())
         .then(json => {
           const DECODE_KEY = "IHEARTWILLTOLEDO!!!!";
@@ -616,7 +616,7 @@ def encode_name(name, key):
 
     document.addEventListener("DOMContentLoaded", function () {
       //Fetch data
-      fetch('src/showDB_Obscured_encoded.json')
+      fetch('/src/showDB_Obscured_encoded.json')
         .then((response) => response.json())
         .then((json) => {
           console.log(json);
