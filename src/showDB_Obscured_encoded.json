@@ -932,5 +932,52 @@
     "image": "",
     "previousPlaylists": [],
     "customFormatting": ""
+  },
+  {
+    "name": "Ayc2KSc1dwguIDFiDyQ2O0RT",
+    "showName": "The Rock Tumbler",
+    "hostNames": [
+      "Ayc2KXIVeQ=="
+    ],
+    "broadcastTime": {
+      "dayOfWeek": "Friday",
+      "startTime": "20:00",
+      "durationMinutes": 60
+    },
+    "socials": {
+      "instagram": "@ablecdesigns",
+      "spotify": [],
+      "twitter": "",
+      "otherSocials": []
+    },
+    "showBlurb": "A show that explores a different genre/subgenre of music each episode a mix of new and classic artists.",
+    "standardShow": true,
+    "image": "",
+    "previousPlaylists": [],
+    "customFormatting": ""
+  },
+  {
+    "name": "CCw3KDM6dwhibHJvASQ2LE4BZQ8=",
+    "showName": "am i mutted?",
+    "hostNames": [
+      "CCw3KDM6dwhibA==",
+      "BCk3Ij10E2c="
+    ],
+    "broadcastTime": {
+      "dayOfWeek": "Friday",
+      "startTime": "19:00",
+      "durationMinutes": 60
+    },
+    "socials": {
+      "instagram": "",
+      "spotify": [],
+      "twitter": "",
+      "otherSocials": []
+    },
+    "showBlurb": "Playing any music that interests us and discussing anything that crosses our minds",
+    "standardShow": true,
+    "image": "",
+    "previousPlaylists": [],
+    "customFormatting": ""
   }
 ]
