@@ -191,6 +191,8 @@
   footer {
     position: static;
     padding: 10px;
+    padding-left:0px;
+    padding-right:0px;
   }
 
 }
