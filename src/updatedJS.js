@@ -242,11 +242,94 @@ function animateDJCycle() {
   });
 }
 
+  document.addEventListener("DOMContentLoaded", function () {
+      if (window.innerWidth < 600) {
+        let player = document.querySelector(".radioplayer");
+        let playButton = document.querySelector(".radioco-playButton");
+        let image = document.querySelector(".radioco-image");
 
+        if (player && playButton && image) {
+            // Create a wrapper div for the image and play button
+            let headerDiv = document.createElement("div");
+            headerDiv.classList.add("radioco-header");
+
+            // Append the image and play button to the new div
+            headerDiv.appendChild(image);
+            headerDiv.appendChild(playButton);
+            let spacer = document.createElement("div");
+            //make an invible spacer that is the exact same size as the image
+            spacer.style.width = "60px";
+            spacer.style.height = "60px";
+            //no padding or margin
+            spacer.style.margin = "0px -10px 0px 0px";
+            spacer.style.padding = "0px";
+            headerDiv.appendChild(spacer);
+            // Insert the header div at the top of the radio player
+            player.prepend(headerDiv);
+        }
+      }
+      
+  });
 
 
 document.addEventListener("DOMContentLoaded", function () {
   console.log("DOM loaded");
+
+  if (window.innerWidth < 768) {
+
+    //move around player elements 
+    // all children of the radioplayer div class. move them such that the play button is inside a div with the image
+    // <div class="radioco-information"><span class="radioco-nowPlaying">Title</span>
+    // <input type="range" class="radioco-volume" value="50" min="0" max="100">
+    // <span class="radioco-elapsedTime">00:00:00</span></div>
+    // <img class="radioco-image" src="">
+    // <img class="radioco-bg" src="">
+    // const radioPlayerDiv = document.querySelector(".radioplayer");
+    // if (radioPlayerDiv) {
+    if(false){
+      // const playButton = document.querySelector(".radioco-playButton");
+      // const radioImage = document.querySelector(".radioco-image");
+
+      // if (playButton && radioImage) {
+      //   // Create a new div to hold the play button and image
+      //   const playImageContainer = document.createElement("div");
+      //   playImageContainer.className = "play-image-container";
+
+      //   // Move the image and play button into the new container
+      //   playImageContainer.appendChild(radioImage);
+      //   playImageContainer.appendChild(playButton);
+
+      //   // Append the new container to the radioplayer div
+      //   radioPlayerDiv.appendChild(playImageContainer);
+      // }
+      // //now move the radioco-information div to the end of the radioplayer div
+      // const infoDiv = document.querySelector(".radioco-information");
+      // if (infoDiv) {
+      //   radioPlayerDiv.appendChild(infoDiv);
+      // }
+
+      const radioImage = document.querySelector(".radioco-image");
+
+      if (playButton && radioImage) {
+        // Create a new div to hold the play button and image
+        const playImageContainer = document.createElement("div");
+        playImageContainer.className = "play-image-container";
+
+        // Move the image and play button into the new container
+        playImageContainer.appendChild(radioImage);
+        playImageContainer.appendChild(playButton);
+
+        // Append the new container to the radioplayer div
+        radioPlayerDiv.appendChild(playImageContainer);
+      }
+      //now move the radioco-information div to the end of the radioplayer div
+      const infoDiv = document.querySelector(".radioco-information");
+      if (infoDiv) {
+        radioPlayerDiv.appendChild(infoDiv);
+      }
+      
+    }
+  }
   //from socialIcons
   // document.getElementById("instagram").innerHTML = socialIcons.instagram;
   // document.getElementById("facebook").innerHTML = socialIcons.facebook;
@@ -254,7 +337,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const selectedShowName = event.target.value;
   //get url and split after "baseDJPage.html"
   const url = window.location.href;
-  const urlParts = url.split("aquarium_layout.html");
+  var urlParts = "";
+  // url.split("radio_listener.html");
+  if (url.includes("radio_listener.html")) {
+    urlParts = url.split("radio_listener.html");
+  } else {
+    urlParts = url.split("baseDJPage.html");
+  }
   console.log(urlParts);
   //if it is ?=clock, use the time class and append header 
   //with a clock that updates every minute
@@ -1007,10 +1096,10 @@ const highlightCurrentHour = () => {
   // }
 };
 function loadHostNamesa(hostNames, DECODE_KEY) {
-  //console.log("decrypting....");
+  console.log("decrypting....");
   var outputNames = [];
   hostNames.forEach(name => {
-    //console.log(name);
+    console.log(name);
     if (name) {
       //console.log(name, "todo");
       var crackedName = decodeName(name, DECODE_KEY);
@@ -1363,7 +1452,7 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log(json);
       DJ_JSON = json;
       //load the schedule
-      generatePage();
+      // generatePage();
     })
 
 });
@@ -1385,6 +1474,7 @@ function decodeName(encodedName, key) {
 
 var firstGen = true;
 function generatePage() {
+  console.log("!!(U#!*#*!(@#&*@&!#&*( &*(@RAN");
   //prevent multiple runs for some reason
   if (document.getElementById("showName").innerText === showName) {
     console.log("already generated this page, skipping...");
@@ -1402,7 +1492,10 @@ function generatePage() {
   // showName = decodeURI(showName);
   //Get the show name from the URL);
   console.log(showName);
-
+  if (showName.includes("%") && !(showName === "100% Electronic")) {
+    console.log("showName is encoded, decoding...");
+    showName = decodeURI(showName);
+  }
   //make a const array of all showNames
   //only append if standardShow = true
   const showNames = DJ_JSON.filter(show => show.standardShow === true).map(show => show.showName);
@@ -1411,8 +1504,9 @@ function generatePage() {
   console.log(showName + " is the show name 1");
   //Find the show in the JSON
   const show = DJ_JSON.find(show => show.showName === showName);
+  console.log(show);
 
-  console.log(show.showName + " is the show name 2");
+  // console.log(show.showName + " is the show name 2");
   //populate it!!! RAAAHHH
   console.log(show.showName + " is the show name");
   if (show.showName === "Ebbs %26 Flows") {
@@ -1582,6 +1676,9 @@ function generatePage() {
       //if its on mobile, make it smaller
       if (window.innerWidth < 768) {
         iframe.width = "80%";
+
+        
+
       } else {
         iframe.width = "100%";
       }
@@ -1614,11 +1711,11 @@ function genLite() {
   }
   console.log(showName);
   
-  //check if showName is encoded
-  // if (showName.includes("%")) {
-  //   console.log("showName is encoded, decoding...");
-  //   showName = decodeURI(showName);
-  // }
+  // check if showName is encoded
+  if (showName.includes("%") && !(showName === "100% Electronic")) {
+    console.log("showName is encoded, decoding...");
+    showName = decodeURI(showName);
+  }
   //Get the show name from the URL);
   console.log(showName);
 
@@ -1631,7 +1728,7 @@ function genLite() {
   //Find the show in the JSON
   const show = DJ_JSON.find(show => show.showName === showName);
 
-  console.log(show.showName + " is the show name 2");
+  // console.log(show.showName + " is the show name 2");
   //populate it!!! RAAAHHH
   console.log(show.showName + " is the show name");
   if (show.showName === "Ebbs %26 Flows") {
@@ -1937,9 +2034,24 @@ function loadShowinfoPage() {
 
 function addClock() {
   if (window.location.href.includes("?=clock")) {
-    window.location.href = "aquarium_layout.html";
+    //will apply to radio_listener.html if on that page, or aquarium_layout.html too
+    if (window.location.href.includes("radio_listener.html")) {
+      window.location.href = "radio_listener.html";
+      document.getElementById("clock").remove();
+    }
+    if( window.location.href.includes("aquarium_layout.html")) {
+      window.location.href = "aquarium_layout.html";
+    }
+
+    
   }
   else{
-  window.location.href = "aquarium_layout.html?=clock";
+    if(window.location.href.includes("radio_listener.html")) {
+      window.location.href = "radio_listener.html?=clock";
+    }
+    if(window.location.href.includes("aquarium_layout.html")) {
+      window.location.href = "aquarium_layout.html?=clock";
+    }
+  // window.location.href = "radio_listener.html?=clock";
   }
 }

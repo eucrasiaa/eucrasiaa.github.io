@@ -85,7 +85,7 @@
   .radioco-volume {
     margin-top: 0px !important;
     margin-bottom: 10px !important;
-
+    /* display: none !important; */
   }
 
   .player iframe {
@@ -781,6 +781,24 @@ header h1 {
 
 
 #thirdRecord {
+  animation: unlift 0.2s ease-out forwards;
+}
+
+#fourthRecord:hover {
+  animation-delay: 0s, 0.2s;
+  animation-name: lift, spinCircleSVGs;
+  animation-duration: 0.2s, 5s;
+  animation-timing-function: ease-in, linear;
+  animation-iteration-count: 1, infinite;
+  animation-fill-mode: forwards;
+
+  /* animation: lift 0.5s ease-in forwards, spinCircleSVGs 5s linear infinite; */
+
+  transform-origin: 114% 115%;
+}
+
+
+#fourthRecord {
   animation: unlift 0.2s ease-out forwards;
 }
 /* var(--current-translate, 0%) */
