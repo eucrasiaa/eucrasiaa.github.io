@@ -85,7 +85,7 @@
   .radioco-volume {
     margin-top: 0px !important;
     margin-bottom: 10px !important;
-    /* display: none !important; */
+    display: none !important;
   }
 
   .player iframe {

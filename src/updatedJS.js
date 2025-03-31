@@ -1319,7 +1319,7 @@ function handleRecordAnims() {
 
 
 
-var CURRENT_SHOW_PAGE = "Perfect%20Sound%20Forever"
+var CURRENT_SHOW_PAGE = "Perfect Sound Forever"
 
 var socials = {
   instagram: "",
