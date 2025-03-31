@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="src/somecss.css">
+
+  <title>Temp Unofficial WMBC</title>
+  <link rel="icon" type="image/x-icon" href="/imgs/wmbc/logo-text-225x255.png">
+
+
+
+  <style>
+    
+    @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+    [class*="fontawesome-"]:before {
+      font-family: 'FontAwesome', sans-serif;
+    }
+    
+
+    :root {
+      --Black: #000000;
+      /* CMYK: 0, 0, 0, 100 | RGB: 0, 0, 0 */
+      --Gold: #fdb515;
+      /* CMYK: 0, 32, 100, 0 | RGB: 253, 181, 21 */
+      --Red: #da2128;
+      /* CMYK: 10, 100, 100, 0 | RGB: 218, 33, 40 */
+      --Light-Gray: #c7c8ca;
+      /* CMYK: 0, 0, 0, 25 | RGB: 199, 200, 202 */
+      --AOK-Teal: #007176;
+      /* CMYK: 100, 35, 50, 20 | RGB: 0, 113, 118 */
+      --Retriever-Brown: #a67a05;
+      /* CMYK: 0, 30, 100, 40 | RGB: 166, 122, 5 */
+      --Dark-Gray: #636466;
+      /* CMYK: 0, 0, 0, 75 | RGB: 99, 100, 102 */
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+      }
+      .radioco-information{
+        padding:0px !important;
+        float:none;
+      }
+      .logo-circle {
+        width: 60px;
+        height: 60px;
+      }
+
+      header h1 {
+        font-size: 20px;
+      }
+
+      .radioco-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+      }
+
+      .container {
+        margin: 10px;
+        padding: 15px;
+      }
+
+
+      .radioco-elapsedTime{
+        margin-top:0px !important;
+      }
+      .radioco-volume{
+        margin-top: 0px !important; 
+        margin-bottom: 10px !important;
+
+      }
+
+      .player iframe {
+        height: 120px;
+      }
+
+
+
+      .track-list h2 {
+        font-size: 18px;
+      }
+
+      .track-list li {
+        padding: 6px 0;
+        font-size: 14px;
+      }
+
+
+      .radioplayer {
+        width: 80%;
+        height: 30%;
+        padding: 15px;
+        margin: 10px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding-top:5px !important;
+      }
+
+      .player iframe {
+        height: 120px;
+      }
+
+      .track-list {
+        padding: 10px;
+      }
+
+      .track-list h2 {
+        font-size: 18px;
+      }
+
+      .track-list li {
+        padding: 6px 0;
+        font-size: 14px;
+      }
+
+
+      .radioco-playButton {
+        font-size: 40px;
+        /* margin-bottom: 10px; */
+        /* margin-top: -10px; */
+      }
+
+      .radioco-information {
+        width: 100%;
+        text-align: center;
+      }
+
+      .radioco-information span.radioco-nowPlaying {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+
+      .radioco-information input[type="range"] {
+        width: 80%;
+        margin: 10px auto;
+      }
+
+      .radioco-image {
+        width: 60px !important;
+        height: 60px !important;
+        margin: 0px !important;
+        margin-left:-10px !important;
+        /* display: none; */
+      }
+
+      .radioco-bg {
+        display: none;
+      }
+
+      .radioco-elapsedTime {
+        display: block;
+        font-size: 12px;
+        opacity: 0.7;
+        margin-top: 10px;
+      }
+      .radioco-playButton {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px !important;
+    float: right;
+
+  }
+
+      footer {
+        position: static;
+        padding: 10px;
+      }
+
+    }
+
+    body {
+      background-color: var(--Light-Gray);
+      color: var(--Black);
+    }
+
+    header {
+      background-color: var(--AOK-Teal);
+      color: var(--Gold);
+    }
+
+    .track-list {
+      background-color: var(--Dark-Gray);
+      color: white;
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    .track-list h2 {
+      color: var(--Gold);
+    }
+
+    footer {
+      background-color: var(--AOK-Teal);
+      color: var(--Gold);
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: var(--Black);
+      color: var(--Gold);
+      padding: 20px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .logo-circle {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      overflow: hidden;
+      background-color: var(--Light-Gray);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid var(--Gold);
+    }
+
+    .logo-circle img {
+      width: 100%;
+      height: auto;
+    }
+
+    .radioco-image{
+      float:left;
+    }
+
+    
+    .radioco-information{
+      float:left;
+      padding-right:20%;
+
+      
+    }
+    .radioco-bg{
+      visibility: hidden;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+      color: var(--Gold);
+    }
+
+    .container {
+      max-width: 800px;
+      background-color: #ffffff;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .player {
+      margin-bottom: 20px;
+    }
+
+    .player iframe {
+      width: 100%;
+      height: 150px;
+      border: none;
+      border-radius: 8px;
+    }
+
+
+
+    .track-list h2 {
+      margin-top: 0;
+    }
+
+    .track-list ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .track-list img {
+      box-shadow: #000000 2px 4px 2px 0px;
+    }
+    .track-list li {
+      padding: 8px 0;
+    }
+
+    .track-list li:last-child {
+      border-bottom: none;
+    }
+
+    .radioplayer {
+      background: var(--Dark-Gray);
+      padding: 20px;
+      height: 130px;
+      box-shadow: #ccc 0px 1px 50px;
+      border-radius: 4px;
+      margin: 20px auto;
+      overflow: hidden;
+      color: white;
+      background-position: center center !important;
+      background-repeat: no-repeat !important;
+      background-size: cover !important;
+      overflow: hidden;
+
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .radioco-image {
+      vertical-align: middle;
+      margin-left: -10px;
+      margin-top: -10px;
+      position: relative;
+      box-shadow: #000000 2px 4px 4px 0px;
+      z-index: 1;
+      width: 150px;
+      height: 150px;
+    }
+
+    .radioco-playButton {
+      color: var(--Gold);
+    }
+
+    .radioco-information {
+      display: block;
+      position: relative;
+      width: 340px;
+      color: #fff;
+      z-index: 1;
+      float: right;
+      top: 13px;
+      font-family: 'Open Sans', sans-serif;
+
+
+    }
+
+    .radioco-information input[type="range"] {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    .radioco-information input[type=range]::-webkit-slider-thumb {
+      background: var(--Gold);
+    }
+    
+    .radioco-information input[type="range"] {
+      background: rgba(255, 255, 255, 0.3);
+      width: 100px;
+      display: block;
+      height: 4px;
+      -webkit-appearance: none;
+      -webkit-border-radius: 8px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      cursor: -webkit-grab;
+      outline: 0;
+    }
+
+    .radioco-information{
+      margin-top: -20px;
+      font-size: 20px;
+      font-weight: bold;
+    } 
+    .radioco-playButton {
+      font-size: 40px;
+      /* why does this add a margin to the parent? 
+      /* fix this  */
+      margin-top:45px;
+
+      float: right;
+
+    }
+
+    .radioco-playButton-playing:before {
+      font-family: 'FontAwesome', sans-serif;
+      display: block;
+      float: right;
+      content: "\f04b";
+
+    }
+
+    .radioco-playButton-paused:before {
+      font-family: 'FontAwesome', sans-serif;
+      display: block;
+      float: right;
+      content: "\f04c";
+    }
+
+    .radioco-information input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      border: none;
+      width: 15px;
+      height: 15px;
+      border-radius: 10px;
+      background: #ffffff;
+      -webkit-transition: box-shadow 0.2s;
+
+    }
+
+    .radioco-information input[type=range]::-webkit-slider-thumb:hover {
+      box-shadow: #fff 1px 1px 20px;
+    }
+
+    .radioco-information input[type=range]:active,
+    .information input[type=range]:focus {
+      outline: 0;
+    }
+    .radioco-information{
+      max-width:100%;
+    }
+    .radioco-elapsedTime {
+      opacity: 0.4;
+      font-size: 14px;
+    }
+
+    .custom-elapsed-time {
+      opacity: 0.4;
+      font-size: 14px;
+    }
+
+    #startTimerButton {
+      all: unset;
+      cursor: pointer;
+      font: inherit;
+      color: inherit;
+      display: inline;
+      vertical-align: baseline;
+      padding: 0;
+      margin: 0;
+    }
+
+    #startTimerButton:hover {
+      text-decoration: underline;
+    }
+
+    #switchToDebug {
+      all: unset;
+      cursor: pointer;
+      font: inherit;
+      color: inherit;
+      display: inline;
+      vertical-align: baseline;
+      padding: 0;
+      margin: 0;
+    }
+    #addClock {
+      all: unset;
+      cursor: pointer;
+      font: inherit;
+      color: inherit;
+      display: inline;
+      vertical-align: baseline;
+      padding: 0;
+      margin: 0;
+    }
+
+    #addClock:hover {
+      text-decoration: underline;
+    }
+    .current-DJ {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background-color: var(--Dark-Gray);
+      padding: 10px;
+      margin: 0px 40px;
+      border-radius: 8px;
+      color: white;
+    }
+
+    /* children of current-DJ */
+    .current-DJ p, .current-DJ a {
+      padding:0px 20px;
+    }
+
+    .current-DJ span {
+      font-size: 20px;
+      font-weight: bold;
+      color: var(--Gold);
+    }
+
+    #showPageLink {
+      color: var(--Gold);
+      background-color: var(--AOK-Teal);
+      padding: 4px 8px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    #showPageLink:hover {
+      background-color: var(--Red);
+    }
+  </style>
+  <script> const STATION_ID = "s7a5fb9da6"; </script>
+  <script>
+    
+    function decodeName(encodedName, key) {
+      // Decode the Base64 string
+      const encodedBytes = Uint8Array.from(atob(encodedName), c => c.charCodeAt(0));
+      
+      // Convert key to byte array
+      const keyBytes = new TextEncoder().encode(key);
+      
+      // XOR each byte of the encoded name with the corresponding byte of the key
+      const decodedBytes = encodedBytes.map((byte, i) => byte ^ keyBytes[i % keyBytes.length]);
+      
+      // Convert the byte array back to a string
+      return new TextDecoder().decode(decodedBytes);
+    }
+    
+
+    document.addEventListener("DOMContentLoaded", function ()  {
+      console.log("DOM loaded");
+        const selectedShowName = event.target.value;
+        //get url and split after "baseDJPage.html"
+        const url = window.location.href;
+        const urlParts = url.split("radio_listener.html");
+        console.log(urlParts);
+        //if it is ?=clock, use the time class and append header 
+        //with a clock that updates every minute
+        if (urlParts[1] === "?=clock") {
+          //replace the header with a clock
+          document.querySelector("header").innerHTML += "<h1 id='clock' style='font-size:3w0px'></h1>";
+          //update the clock every minute
+          var now = new Date();
+          document.getElementById("clock").textContent = now.toLocaleTimeString();
+          setInterval(() => {
+            now = new Date();
+            document.getElementById("clock").textContent = now.toLocaleTimeString();
+            
+          }, 1000);
+          return;
+        }
+        if(urlParts[1] === "?=yass"){
+          //add button and a text area uneditable, 
+          //click button and the number adds 1 to current counter in text area
+          //save to local storage
+          //also load from local storage if exists
+          //if it does not exist, set to 0
+          
+          //button
+          var button = document.createElement("button");
+          button.textContent = "Hit the Yass button!";
+          button.style.fontSize = "20px";
+          button.style.padding = "10px";
+          button.style.margin = "10px";
+          button.style.borderRadius = "10px";
+          button.style.backgroundColor = "var(--Gold)";
+
+          //text area
+          var textArea = document.createElement("textarea");
+          textArea.style.width = "20%";
+          textArea.style.height = "100px";
+          textArea.style.fontSize = "20px";
+          textArea.style.padding = "10px";
+          textArea.style.margin = "10px";
+          textArea.style.borderRadius = "10px";
+          textArea.style.backgroundColor = "var(--Gold)";
+          textArea.readOnly = true;
+
+          //add button and text area to the body
+          document.querySelector("header").appendChild(button);
+          document.querySelector("header").appendChild(textArea);
+
+          //load from local storage
+          var yassCount = localStorage.getItem("yassCount");
+          if (yassCount === null) {
+            yassCount = 0;
+          }
+          textArea.textContent = yassCount;
+          //add event listener to button
+          button.addEventListener("click", function () {
+            yassCount++;
+            textArea.textContent = yassCount;
+            localStorage.setItem("yassCount", yassCount);
+          });
+          return;
+
+
+
+          
+        }
+      });
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+      if (window.innerWidth < 600) {
+        let player = document.querySelector(".radioplayer");
+        let playButton = document.querySelector(".radioco-playButton");
+        let image = document.querySelector(".radioco-image");
+
+        if (player && playButton && image) {
+            // Create a wrapper div for the image and play button
+            let headerDiv = document.createElement("div");
+            headerDiv.classList.add("radioco-header");
+
+            // Append the image and play button to the new div
+            headerDiv.appendChild(image);
+            headerDiv.appendChild(playButton);
+            let spacer = document.createElement("div");
+            //make an invible spacer that is the exact same size as the image
+            spacer.style.width = "60px";
+            spacer.style.height = "60px";
+            //no padding or margin
+            spacer.style.margin = "0px -10px 0px 0px";
+            spacer.style.padding = "0px";
+            headerDiv.appendChild(spacer);
+            // Insert the header div at the top of the radio player
+            player.prepend(headerDiv);
+        }
+      }
+      
+  });
+    function fetchAndDisplayTracks() {
+      const url = "https://public.radio.co/stations/s7a5fb9da6/history";
+      fetch(url)
+        .then((response) => response.json())
+        .then((data) => {
+          const tracks = data.tracks;
+          const trackList = document.querySelector(".track-list ul");
+          trackList.innerHTML = "";
+          
+          var addedSongs = []; //prevent duplicates for 
+
+          tracks.forEach((track) => {
+            if (addedSongs.includes(track.title)) {
+              //SKIP to next iteration if song is already added
+              return;
+            }
+            //SKIP IF CURRENTLY PLAYING
+            // if (track.title === document.querySelector(".radioco-nowPlaying").textContent) {
+            //   return;
+            // }
+            addedSongs.push(track.title);
+            const li = document.createElement("li");
+            li.innerHTML = `
+          <img src="${track.artwork_url}" alt="${track.title}" width="50" height="50">
+          <span>${track.title}</span>
+          <span class="time">${new Date(track.start_time).toLocaleTimeString()}</span>
+        `;
+            trackList.appendChild(li);
+          });
+        })
+        .catch((error) => {
+          console.error("Error fetching track history:", error);
+        });
+        console.log("maybe??");
+        
+    }
+
+
+    function checkNowPlayingUpdate() {
+      const nowPlayingElement = document.querySelector(".radioco-nowPlaying");
+      let lastTrack = nowPlayingElement ? nowPlayingElement.textContent : null;
+
+      setInterval(() => {
+        if (nowPlayingElement && nowPlayingElement.textContent !== lastTrack) {
+          lastTrack = nowPlayingElement.textContent;
+          fetchAndDisplayTracks();
+        }
+      }, 50000); // Check every 50 seconds
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      fetchAndDisplayTracks();
+      checkNowPlayingUpdate();
+      //addlistener to  input #addClock that runs addClock() 
+      document.getElementById("addClock").addEventListener("click", addClock);
+      document.getElementById("switchToDebug").addEventListener("click", switchToDebug);
+      
+    });
+
+
+
+    async function updateTrackTitle() {
+//set track to the website title
+      const nowPlayingElement = document.querySelector(".radioco-nowPlaying");
+      if (nowPlayingElement) {
+        document.title = nowPlayingElement.textContent + " | WMBC Radio";
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const nowPlayingElement = document.querySelector(".radioco-nowPlaying");
+
+      if (nowPlayingElement) {
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+        if (mutation.type === "childList" || mutation.type === "characterData") {
+          updateTrackTitle();
+        }
+        });
+      });
+
+      observer.observe(nowPlayingElement, {
+        childList: true,
+        characterData: true,
+        subtree: true,
+      });
+
+      // Initial call to set the title on page load
+      updateTrackTitle();
+      }
+    });
+
+    const now = new Date();
+    const nextHour = new Date(now.getFullYear(), now.getMonth(), now.getDate(), now.getHours() + 1, 0, 0, 0);
+    const timeUntilNextHour = nextHour - now;
+
+    // Set a timeout to run the function at the start of the next hour
+    setTimeout(() => {
+        console.log("Starting DJ check");
+        getDJ();
+        // Set an interval to run the function every hour after that
+        setInterval(getDJ, 60 * 60 * 1000);
+    }, timeUntilNextHour);
+
+ 
+    //run a getDJ 10 seconds after the page loads just in case the page loads at the start of a show
+    setTimeout(() => {
+      getDJ();
+    }, 10000);
+    class TrackTimer {
+      constructor() {
+        this.currentTrack = null;
+        this.timerInterval = null;
+        this.elapsedTimeElement = null;
+        this.nowPlayingElement = document.querySelector(".radioco-nowPlaying");
+        this.startButton = document.getElementById("startTimerButton");
+      }
+
+      async fetchTrackStatus() {
+        const url = "https://public.radio.co/stations/s7a5fb9da6/status";
+        try {
+          const response = await fetch(url);
+          const data = await response.json();
+          return data.current_track;
+        } catch (error) {
+          console.error("Error fetching track status:", error);
+          return null;
+        }
+      }
+      //lowkey did not write any of this i cannot stand js formatting shit
+      calculateElapsedTime(startTime) {
+        const start = new Date(startTime).getTime();
+        const now = new Date().getTime();
+        const elapsedSeconds = Math.floor((now - start) / 1000);
+        return this.formatTime(elapsedSeconds);
+      }
+      formatTime(seconds) {
+        const hours = Math.floor(seconds / 3600);
+        const minutes = Math.floor((seconds % 3600) / 60);
+        const secs = seconds % 60;
+        return `${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
+      }
+      updateElapsedTime(startTime) {
+        if (!this.elapsedTimeElement) return;
+        this.stopTimer();
+        this.timerInterval = setInterval(() => {
+          const elapsedTime = this.calculateElapsedTime(startTime);
+          this.elapsedTimeElement.textContent = elapsedTime;
+        }, 1000);
+      }
+
+      stopTimer() {
+        if (this.timerInterval) {
+          clearInterval(this.timerInterval);
+          this.timerInterval = null;
+        }
+      }
+      async init() {
+        const track = await this.fetchTrackStatus();
+        if (!track) return;
+        this.updateElapsedTime(track.start_time);
+        console.log(track);
+        console.log("DO IT");
+        //set track to the website title
+        document.title = track.title;
+      }
+      watchNowPlaying() {
+        if (!this.nowPlayingElement) return;
+        //only update on song name change so i dont get banned from calling the api LMFAOO this shit is so ass :sob:
+        const observer = new MutationObserver((mutations) => {
+          mutations.forEach((mutation) => {
+            if (mutation.type === "childList" || mutation.type === "characterData") {
+              this.init();
+            }
+          });
+        });
+
+        observer.observe(this.nowPlayingElement, {
+          childList: true,
+          characterData: true,
+          subtree: true,
+        });
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const trackTimer = new TrackTimer();
+      const startButton = trackTimer.startButton;
+      if (startButton) {
+        startButton.style.display = "block";
+        startButton.addEventListener("click", () => {
+          var durationPlayed = document.querySelector(".radioco-elapsedTime");
+          durationPlayed.remove();
+          if (!trackTimer.elapsedTimeElement) {
+            trackTimer.elapsedTimeElement = document.createElement("span");
+            trackTimer.elapsedTimeElement.className = "custom-elapsed-time";
+            trackTimer.elapsedTimeElement.textContent = "00:00:00";
+            document.querySelector(".radioco-information").appendChild(trackTimer.elapsedTimeElement);
+          }
+          trackTimer.init();
+          trackTimer.watchNowPlaying();
+          //startButton.style.display = "none";
+        });
+      }
+    });
+
+
+    function addClock() {
+      window.location.href = "radio_listener.html?=clock";
+    }
+    function switchToDebug()
+    {
+      window.location.href = "aquarium_layout.html";
+    }
+
+    var DJ_JSON;
+    document.addEventListener("DOMContentLoaded", function () {
+      //Fetch data
+      fetch('./src/showDB_Obscured_encoded.json')
+        .then((response) => response.json())
+        .then((json) => {
+          console.log(json);
+          DJ_JSON = json;
+          getDJ();
+        })
+    });
+
+    function getDJ(demoDate="BAH") {
+
+      const DECODE_KEY = "IHEARTWILLTOLEDO!!!!";
+      var now = new Date();
+      var day = now.getDay();
+      var hour = now.getHours();
+      var minute = now.getMinutes();
+      console.log(demoDate);
+      if (demoDate !== "BAH") {
+        console.log("demo date");
+        now = new Date(demoDate);
+        day = now.getDay();
+        hour = now.getHours();
+        minute = now.getMinutes();
+      }
+      //example demodate for 12:30 on a monday
+      //new Date("2025-02-21T12:30:00");
+      //DATE NEW DATE EXMAPLE DATE
+      var time = hour + ":" + minute;
+      var dayString = "";
+      switch (day) {
+        case 0:
+          dayString = "Sunday";
+          break;
+        case 1:
+          dayString = "Monday";
+          break;
+        case 2:
+          dayString = "Tuesday";
+          break;
+        case 3:
+          dayString = "Wednesday";
+          break;
+        case 4:
+          dayString = "Thursday";
+          break;
+        case 5:
+          dayString = "Friday";
+          break;
+        case 6:
+          dayString = "Saturday";
+          break;
+      }
+      //iterate through the json and load all shows with broadcastTime.dayOfWeek == dayString
+      var showsToday = [];
+      for (var i = 0; i < DJ_JSON.length; i++) {
+        if (DJ_JSON[i].broadcastTime.dayOfWeek == dayString) {
+          showsToday.push(DJ_JSON[i]);
+        }
+      }
+      // Iterate through the shows and find the one that is currently playing
+      for (let show of showsToday) {
+        const runHour = parseInt(show.broadcastTime.startTime.split(":")[0]);
+        const runMinutes = parseInt(show.broadcastTime.startTime.split(":")[1]);
+        const runDuration = show.broadcastTime.durationMinutes;
+
+        const endHour = (runHour + Math.floor(runDuration / 60)) % 24;
+        const endMinutes = (runMinutes + runDuration % 60) % 60;
+
+        if (hour >= runHour && hour < endHour) {
+          if (hour === endHour && minute > endMinutes) {
+        continue;
+          }
+          console.log("there is a live DJ!");
+          // merge all hostNames into one string, decode too
+          var hostNames = "";
+          var currShowName = show.showName;
+            for (let i = 0; i < show.hostNames.length; i++) {
+            hostNames += decodeName(show.hostNames[i], DECODE_KEY);
+            if (i === show.hostNames.length - 2) {
+              hostNames += ", and ";
+            } else if (i < show.hostNames.length - 2) {
+              hostNames += ", ";
+            }
+            }
+
+            //replace the headerlogo with the live gif
+            // document.querySelector(".logo-circle img").src = "media/1200w/Artboard   .gif"
+            
+          document.getElementById("currDJSpan").textContent = hostNames;
+          //set current-DJ display: not none
+          document.querySelector(".current-DJ").style.display = "flex";
+          // add link to show page. which is baseDJPage?showName=show.showName
+          console.log("currShowName: " + currShowName);
+          //check if the link already exists
+          if (document.getElementById("showPageLink")) {
+            document.getElementById("showPageLink").remove();
+          }
+          var newLinkElem = document.createElement("a");
+          newLinkElem.id = "showPageLink";
+          newLinkElem.textContent = "More Info!";
+          //encode the show name
+          currShowName = encodeURI(currShowName);
+          newLinkElem.href = "baseDJPage.html?showName=" + currShowName;
+          document.getElementsByClassName("current-DJ")[0].appendChild(newLinkElem);
+
+            
+          //document.getElementById("currDJSpan").href = "baseDJPage?showName=" + show.showName;
+          return true;
+        }
+        console.log("no live DJ");
+
+        // if no show is currently playing, hide the current DJ
+        document.querySelector(".current-DJ").style.display = "none";
+        //replace the headerlogo with the live gif
+      }
+
+      // if no show is currently playing, hide the current DJ
+      document.querySelector(".current-DJ").style.display = "none";
+
+      /*
+        "broadcastTime": {
+          "dayOfWeek": "Monday",
+          "startTime": "17:00",
+          "durationMinutes": 60
+        },
+      */
+      
+
+
+    }
+    
+
+  </script>
+</head>
+
+<body>
+
+  
+  <header>
+    <div class="logo-circle">
+    
+      <img
+        src="imgs/wmbc/logo-text-225x255.png"
+        alt="University Radio Station Logo">
+
+    </div>
+    <h1>WMBC: Web Player</h1>
+  </header>
+
+  
+  <nav class="tabs">
+    <ul>
+      <li><a href="radio_listener.html">Listen!</a></li>
+      <li><a href="schedulePage.html">Schedule</a></li>
+      <li><a href="baseDJPage.html">Explore our shows!</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <div class="player">
+      <!-- player here -->
+      <div class="radioplayer" data-src="http://streams.radio.co/s7a5fb9da6/listen" data-autoplay="false"
+        data-playbutton="true" data-volumeslider="true" data-elapsedtime="true" data-nowplaying="true"
+        data-showplayer="true" data-volume="100">
+      </div>
+    </div>
+    <div class="current-DJ">
+      <!-- get current DJ via the DB schedule if exists, and then link their page  -->
+      <p>Current DJ(s): <span id ="currDJSpan"></span></p>
+    </div>
+      
+    <div class="track-list">
+      <h2 style="text-align: center">Previously Played Tracks</h2>
+      <ul>
+        <li>Track 1 - Artist 1</li>
+        <li>Track 2 - Artist 2</li>
+        <li>Track 3 - Artist 3</li>
+        <!-- Add more tracks dynamically later -->
+      </ul>
+    </div>
+  </div>
+  <footer class="footer">
+    <!-- /href="aquarium_layout.html" -->
+    <p><input id="startTimerButton" type="button" value="WMBC's Web Player," style="display: none;"> <input id="addClock" type="button" value=" made by will"> <input id="switchToDebug" type="button" value=" :3">  </p>
+  </footer>
+</body>
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://public.radio.co/playerapi/jquery.radiocoplayer.min.js"></script>
+<script>
+  $('.radioplayer').radiocoPlayer();
+</script>
+
+</html>
