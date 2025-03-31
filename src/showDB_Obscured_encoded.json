@@ -1,983 +1,1321 @@
 [
-  {
-    "name": "HiEpLTs1OmkPYg==",
-    "showName": "Perfect Sound Forever",
-    "hostNames": [
-      "HiEpLXIXeQ=="
-    ],
-    "broadcastTime": {
-      "dayOfWeek": "Wednesday",
-      "startTime": "12:00",
-      "durationMinutes": 60
+    {
+        "name": "HiEpLTs1OmkPYg==",
+        "showName": "Perfect Sound Forever",
+        "hostNames": [
+            "HiEpLXIXeQ=="
+        ],
+        "broadcastTime": {
+            "dayOfWeek": "Wednesday",
+            "startTime": "12:00",
+            "durationMinutes": 60
+        },
+        "socials": {
+            "instagram": "",
+            "spotify": [],
+            "twitter": "",
+            "otherSocials": []
+        },
+        "showBlurb": "fun jovial mix of energetic emo, metal, punk, indie, and other assorted miscellany",
+        "image": "",
+        "previousPlaylists": [
+            [
+                "3/26/2025",
+                "https://open.spotify.com/playlist/1FHqKjS2t8VvMnsgjrchn3"
+            ],
+            [
+                "3/12",
+                "https://open.spotify.com/playlist/3EPQE4TXeoKyP64m2nqNfx?si=4dd80e580b354c1d"
+            ],
+            [
+                "3/5",
+                "https://open.spotify.com/playlist/6Q5fJP7HU9TwannzccJyj8?si=3e389facecc94e14"
+            ],
+            [
+                "2/26",
+                "https://open.spotify.com/playlist/69W9BYH5Pf9dmnOQfdTaWh?si=fb3681e89bed4a54"
+            ],
+            [
+                "2/19",
+                "https://open.spotify.com/playlist/6D2AsyZDUpw2qVuHwQ0Mtf?si=35d872318481466d"
+            ],
+            [
+                "2/17",
+                "https://open.spotify.com/playlist/1tYzk1rwMqzTNkMWVsb1mD?si=a0c0c0c7a5894bbe"
+            ]
+        ],
+        "standardShow": true
     },
-    "socials": {
-      "instagram": "",
-      "spotify": [],
-      "twitter": "",
-      "otherSocials": []
+    {
+        "name": "CDosIA==",
+        "showName": "Sounds of Silence",
+        "hostNames": [
+            "CDosIA=="
+        ],
+        "broadcastTime": {
+            "dayOfWeek": "Wednesday",
+            "startTime": "17:00",
+            "durationMinutes": 60
+        },
+        "socials": {
+            "instagram": "@s0unds.of.silenc3",
+            "spotify": [
+                "Aria :p",
+                "https://open.spotify.com/user/h4nhy99ducxgyqsseqbkyjsrw/"
+            ],
+            "twitter": "",
+            "otherSocials": []
+        },
+        "showBlurb": "dreamy & weird & whimsical! Covering genres from ambient to shoegaze to IDM to dream pop to electronica!",
+        "standardShow": true,
+        "image": "",
+        "previousPlaylists": [
+            [
+                "12/18",
+                "https://open.spotify.com/playlist/15onDaLt1tsgOAbw4Kapul"
+            ],
+            [
+                "12/13",
+                "https://open.spotify.com/playlist/10M1qRgvxEZKSyICnTitMz"
+            ],
+            [
+                "12/6",
+                "https://open.spotify.com/playlist/78s7TReqGHJfKFL7C4T4bS"
+            ]
+        ]
     },
-    "showBlurb": "fun jovial mix of energetic emo, metal, punk, indie, and other assorted miscellany",
-    "image": "",
-    "previousPlaylists": [
-      [
-        "3/12",
-        "https://open.spotify.com/playlist/3EPQE4TXeoKyP64m2nqNfx?si=4dd80e580b354c1d"
-      ],
-      [
-        "3/5",
-        "https://open.spotify.com/playlist/6Q5fJP7HU9TwannzccJyj8?si=3e389facecc94e14"
+    {
+        "name": "BCEmKTc4OyxsBXo=",
+        "showName": "Reverie",
+        "hostNames": [
+            "DQJlDDc7ICokKTgjKQ=="
+        ],
+        "broadcastTime": {
+            "dayOfWeek": "Monday",
+            "startTime": "17:00",
+            "durationMinutes": 60
+        },
+        "socials": {
+            "instagram": "@reverie.wmbc",
+            "spotify": [
+                "hotvampirebabe",
+                "https://open.spotify.com/user/31v7sg7qo7xxynubyeujpoxsdcom/"
+            ],
+            "twitter": "",
+            "otherSocials": [
+                "linktree: https://linktr.ee/reveriewmbc"
+            ]
+        },
+        "showBlurb": "gothic tunes! goth rock, deathrock, ethereal wave 🕷️. tune in for hauntingly good music 🖤",
+        "standardShow": true,
+        "image": "./imgs/dj-profile/Reverie-logo.jpeg",
+        "previousPlaylists": [
+            [
+                "3/24/2025",
+                "https://open.spotify.com/playlist/4O5rVNUYft6XUANnPEfEVw"
+            ],
+            [
+                "2/24/2025",
+                "https://open.spotify.com/playlist/4safrhqwrpmVmGUXlHGf5V"
+            ],
+            [
+                "2/17",
+                "https://open.spotify.com/playlist/6nv7NuRg7Fi6PWIWHOzwaZ?si=cdfdad6ee61041fb"
+            ],
+            [
+                "12/18",
+                "https://open.spotify.com/playlist/5v1N0su1k3tzZRTsthTdKM"
+            ],
+            [
+                "12/16",
+                "https://open.spotify.com/playlist/1SOhFnnxAvQYKTUXmoFfgX"
+            ],
+            [
+                "12/13",
+                "https://open.spotify.com/playlist/5MIdgZFACAt6RWi4CmszvC"
+            ]
+        ]
+    },
+    {
+        "name": "BCEkLzt0HGc=",
+        "showName": "Mangetsu Radio",
+        "hostNames": [
+            "BCEkLzt0HGc="
+        ],
+        "broadcastTime": {
+            "dayOfWeek": "Monday",
+            "startTime": "19:00",
+            "durationMinutes": 60
+        },
+        "socials": {
+            "instagram": "@mangetsu.radio",
+            "spotify": [
+                "m",
+                "https://open.spotify.com/user/t2u6n3nuqoaeq0e7ybxjwfk27/"
+            ],
+            "twitter": "",
+            "otherSocials": []
+        },
+        "showBlurb": "Full Moon Radio 🌕📻 full moon, full beats.\njrock hour\njapanese-centric music, mostly rock\ngame ost spotlight during the week of a full moon\npersona 3. hatsune miku",
+        "standardShow": true,
+        "image": "./imgs/dj-profile/Mangetsu_Radio-logo.jpeg",
+        "previousPlaylists": [
+            [
+                "3/24/2025",
+                "https://open.spotify.com/playlist/4L520hsOyp38msTMlA2NTy"
+            ],
+            [
+                "2/17",
+                "https://open.spotify.com/playlist/4ZAkPBWn38PZEACjdv163P"
+            ],
+            [
+                "12/6",
+                "https://open.spotify.com/playlist/3m9etg13mj6YcS9a95UJ8A"
+            ]
+        ],
+        "customFormatting": {
+            "css": "body{\n  /* animation: colorRotate 6s linear 0s infinite !important; */\ncolor:#f67fed;\n background-image: url(\"https://preview.redd.it/9lr4ak9gr9vz.jpg?width=640&crop=smart&auto=webp&s=48355d5a40ad439db9482300de0cf5cb27f8772f\");\nbackground-repeat: repeat;\nbackground-size: 33.33% 100%;\nfont-family: \"Comic Sans MS\", \"Comic Sans\", cursive !important;\n}\n\n#socialsList a{\nanimation: colorRotate 6s linear 0s infinite \n}\n\n@keyframes colorRotate {\n  from {\n    color: #6666ff;\n  }\n  10% {\n    color: #0099ff;\n  }\n  50% {\n    color: #00ff00;\n  }\n  75% {\n    color: #ff3399;\n  }\n  100% {\n    color: #6666ff;\n  }\n}",
+            "html": "<img src=\"/src/fire text.png\"><img>\n\n    <div id=\"showBlurbDiv\">\n      <h2 id=\"showBlurbHeader\"> </h2>\n      <p id=\"showBlurb\"> full moon radio 🌕📻 full moon, full beats. japanese-centric music, mostly rock. game ost spotlight during the week of a full moon. persona 3. hatsune miku.\n\n</p>\n    </div>"
+        }
+    },
+    {
+        "name": "AycrIDp0BGc=",
+        "showName": "CRUSHED",
+        "hostNames": [
+            "AycrIDp0BGc="
+        ],
+        "broadcastTime": {
+            "dayOfWeek": "Tuesday",
+            "startTime": "19:00",
+            "durationMinutes": 60
+        },
+        "socials": {
+            "instagram": "@crushed.wmbc",
+            "spotify": [],
+            "twitter": "",
+            "otherSocials": []
+        },
+        "showBlurb": "Evil noisy hard crushing music. Anything and everything chaotic, noisy, heavy, and angry. From low and slow groovy doom riffage, to frantic and grating screamo and powerviolence, to harsh noise, and everything in between.",
+        "standardShow": true,
+        "image": "",
+        "previousPlaylists": [
+            [
+                "3/4/2025",
+                "https://open.spotify.com/playlist/0oKzlUOLoXgcKhUDUT72Ia"
+            ]
+        ]
+    },
+    {
+        "name": "DSkrKDc4Ng==",
+        "showName": "Luna Roja Radio",
+        "hostNames": [
+            "DSkrKDc4Ng=="
+        ],
+        "broadcastTime": {
+            "dayOfWeek": "Monday",
+            "startTime": "15:00",
+            "durationMinutes": 60
+        },
+        "socials": {
+            "instagram": "@lunarr.wmbc",
+            "spotify": [],
+            "twitter": "",
+            "otherSocials": []
+        },
+        "showBlurb": "WMBC's Alternative Latine Music Show. Highlighting the colorful Latin American diaspora by sharing music communities and genres weekly. Spotlighting an organization or artist that resembles the true values of this show weekly.",
+        "standardShow": true,
+        "image": "./imgs/dj-profile/Luna_Roja_Radio-logo.jpeg",
+        "previousPlaylists": [
+            [
+                "3/24/2025",
+                "https://open.spotify.com/playlist/45A51PIsQQfujv05spmrca"
+            ]
+        ]
+    },
+    {
+        "name": "GyksODM1OWkYYnRpbAErIU5XQE9pDms=",
+        "showName": "Monday Night Metal",
+        "hostNames": [
+            "GyksODM1OWkYYg==",
+            "DScrLiQ1OWkKYg=="
+        ],
+        "broadcastTime": {
+            "dayOfWeek": "Monday",
+            "startTime": "20:00",
+            "durationMinutes": 60
+        },
+        "socials": {
+            "instagram": "@wmbc.mondaynightmetal",
+            "spotify": [],
+            "twitter": "",
+            "otherSocials": []
+        },
+        "showBlurb": "The late night heavy metal/metalcore show. Covering all things metal and heavy. Stay a while....",
+        "standardShow": true,
+        "image": "./imgs/dj-profile/Monday_Night_Metal-logo.jpeg",
+        "previousPlaylists": [
+            [
+                "3/24/2025",
+                "https://open.spotify.com/playlist/6u9hpoCXCntfcfllR7wJ0p"
+            ]
+        ]
+    },
+    {
+        "name": "BykxID49MmkBYg==",
+        "showName": "Twin Beats",
+        "hostNames": [
+            "BykxID49MmkBYg=="
+        ],
+        "broadcastTime": {
+            "dayOfWeek": "Thursday",
+            "startTime": "15:00",
+            "durationMinutes": 60
+        },
+        "socials": {
+            "instagram": "@twinbeats_wmbc",
+            "spotify": [],
+            "twitter": "",
+            "otherSocials": [
+                "letterboxd: doinitright"
+            ]
+        },
+        "showBlurb": "A mix of commentary + music, creating a playlist of songs that I feel fit the movie in some way!",
+        "standardShow": true,
+        "image": "./imgs/dj-profile/Twin_Beats-logo.jpeg",
+        "previousPlaylists": []
+    },
+    {
+        "name": "BT0mKDc6dwFi",
+        "showName": "Playoff Thoughts",
+        "hostNames": [
+            "BT0mKDc6dwFi"
+        ],
+        "broadcastTime": {
+            "dayOfWeek": "Thursday",
+            "startTime": "17:00",
+            "durationMinutes": 60
+        },
+        "socials": {
+            "instagram": "@playoffthoughts",
+            "spotify": [],
+            "twitter": "",
+            "otherSocials": []
+        },
+        "showBlurb": "I talk about sports but not in an annoying hyper masculine where I am condescending about it. Tune in to learn my about sports teams and my completely biased opinions",
+        "standardShow": true,
+        "image": "./imgs/dj-profile/Playoff_Thoughts-logo.jpeg",
+        "previousPlaylists": [],
+        "customFormatting": {
+            "css": "body{\nbackground-color:#00000045;\n}",
+            "html": ""
+        }
+    },
+    {
+        "name": "Ay0rLyt0B2c=",
+        "showName": "Ebbs & Flows",
+        "hostNames": [
+            "Ay0rLyt0B2c="
+        ],
+        "broadcastTime": {
+            "dayOfWeek": "Thursday",
+            "startTime": "21:00",
+            "durationMinutes": 60
+        },
+        "socials": {
+            "instagram": "@ebbsandflows_wmbc",
+            "spotify": [],
+            "twitter": "",
+            "otherSocials": []
+        },
+        "showBlurb": "Music and fish facts! Featuring an aquatic organism every show, with a fun fact. maybe.",
+        "standardShow": true,
+        "image": "./imgs/dj-profile/Ebbs_&_Flows-logo.jpeg",
+        "previousPlaylists": [
+            [
+                "3/27/2025",
+                "https://open.spotify.com/playlist/0nvCL8Fr5nM1kWW7VbhlTm"
+            ]
+        ]
+    },
+    {
+        "name": "Gi0kL3IAeWVsBzUjKSdkCA8BRFVpKSlv",
+        "showName": "Fast Minute",
+        "hostNames": [
+            "Gi0kL3IAeQ==",
+            "GS0xJCB0FGc=",
+            "DS0kL3IYeQ==",
+            "AikpJDB0EGc="
+        ],
+        "broadcastTime": {
+            "dayOfWeek": "Friday",
+            "startTime": "15:00",
+            "durationMinutes": 60
+        },
+        "socials": {
+            "instagram": "@wmbc.fastminute",
+            "spotify": [],
+            "twitter": "",
+            "otherSocials": []
+        },
+        "showBlurb": "A talk show where we do rankings, lists, brackets, and generally just argue about our opinions\n\n",
+        "standardShow": true,
+        "image": "./imgs/dj-profile/Fast_Minute-logo.jpeg",
+        "previousPlaylists": [
+            [
+                "3/28/2025",
+                "https://open.spotify.com/playlist/0X2cViDdDhJuGMGgeJ4X9y"
+            ],
+            [
+                "12/2/2005",
+                "https://open.spotify.com/playlist/73pP6MGxgAjvn7nstJW3VE"
+            ]
+        ]
+    },
+    {
+        "name": "CCUkODN0GWc=",
+        "showName": "Moose Tracks",
+        "hostNames": [
+            "CCUkODN0GWc="
+        ],
+        "broadcastTime": {
+            "dayOfWeek": "Thursday",
+            "startTime": "12:00",
+            "durationMinutes": 60
+        },
+        "socials": {
+            "instagram": "@moosetracks.wmbc",
+            "spotify": [
+                "Amaya ⭒",
+                "https://open.spotify.com/user/98gu9khjw2c02280awggsz3o2"
+            ],
+            "twitter": "",
+            "otherSocials": [
+                "linktree: https://linktr.ee/moosetracks.wmbc"
+            ]
+        },
+        "showBlurb": "feel-good folk, soft rock, boogie, and more from mainly around the 70's!",
+        "standardShow": true,
+        "image": "./imgs/dj-profile/Moose_Tracks-logo.jpeg",
+        "previousPlaylists": [
+            [
+                "3/27/2025",
+                "https://open.spotify.com/playlist/1Xu43GZ6Bpt5IirP63xIyq"
+            ],
+            [
+                "12/13",
+                "https://open.spotify.com/playlist/42GCpV4h2CEkYSJGixcmLV"
+            ],
+            [
+                "12/6",
+                "https://open.spotify.com/playlist/2gTbMU5pWV0UvLYJDxewtU"
+            ],
+            [
+                "11/22",
+                "https://open.spotify.com/playlist/7KRk8eQPBRfdsyNW2MBL5c"
+            ]
+        ]
+    },
+    {
+        "name": "HiEpYRZ6",
+        "showName": "thirdeye",
+        "hostNames": [
+            "JCEhJTc/OA=="
+        ],
+        "broadcastTime": {
+            "dayOfWeek": "Thursday",
+            "startTime": "19:00",
+            "durationMinutes": 60
+        },
+        "socials": {
+            "instagram": "@thirdeye.wmbc",
+            "spotify": [
+                "middeko",
+                "https://open.spotify.com/artist/6eRXVe0pLepek07oUikflN"
+            ],
+            "twitter": "",
+            "otherSocials": []
+        },
+        "showBlurb": "playing hyperpop, trap, experimental",
+        "standardShow": true,
+        "image": "./imgs/dj-profile/thirdeye-logo.jpeg",
+        "previousPlaylists": [
+            [
+                "3/27/2025",
+                "https://open.spotify.com/playlist/1yx0nrEECODYQ72V4oeWx8"
+            ],
+            [
+                "2/27",
+                "https://open.spotify.com/playlist/4hBVRnGEOgy1AX6LNJymfd"
+            ],
+            [
+                "2/20",
+                "https://open.spotify.com/playlist/4NxwH7XbxAGRUsL1Z2XGDW"
+            ]
+        ],
+        "customFormatting": {
+            "css": "#showBlurb{border-bottom: 0px; }*/",
+            "html": "<h2 id='showBlurbHeader'></h2><p id='showBlurb'></p><iframe style='border-radius:12px' src='https://open.spotify.com/embed/artist/6eRXVe0pLepek07oUikflN?utm_source=generator' width='100%' height='352' frameBorder='0' allowfullscreen='' allow=' clipboard-write; encrypted-media; fullscreen; picture-in-picture' loading='lazy'></iframe>"
+        }
+    },
+    {
+        "name": "BCkhJT0sdwhi",
+        "showName": "MP3",
+        "hostNames": [
+            "BCkhJT0sdwhi"
+        ],
+        "broadcastTime": {
+            "dayOfWeek": "Monday",
+            "startTime": "16:00",
+            "durationMinutes": 60
+        },
+        "socials": {
+            "instagram": "@mp3radio_wmbc",
+            "spotify": [],
+            "twitter": "",
+            "otherSocials": [
+                "bandcamp: https://bathaddicts.bandcamp.com/"
+            ]
+        },
+        "showBlurb": "oh yeah playing music i like and also music i dont like as much but still playing it because its my show and i can play what i want except for the stuff thats banned listen to my show its really cool 4pm mondays every week except if i die or something then there prolly wont be a show unless im ahead of schedule that would be cool also i have a band listen to us bath addicts we make the best music of all time but i cant play it i dont think or maybe i can i havent actually checked yet i should that would be cool to play on air also join bright eyes club we meet around 2 every other friday and listen to bright eyes ok thats pretty much it i lovr you for reading this youre really cool and also listen to my show and tell everyone youve ever met about it including your nemesis maybe you will make up and fall in love and it will all be because of me im a miracle worker this is what will happen when you listen to mp3radio ok bye <3 :3 🛁",
+        "standardShow": true,
+        "image": "./imgs/dj-profile/MP3-logo.jpeg",
+        "previousPlaylists": [
+            [
+                "3/24/2025",
+                "https://open.spotify.com/playlist/7Ctbfvs0UYnCnU0G1RZ0Nf"
+            ]
+        ],
+        "customFormatting": {
+            "css": "body{\n  animation: colorRotate 6s linear 0s infinite !important;\n background-image: url(\"https://media1.tenor.com/m/G3JqUDChNkoAAAAC/uuuh-concerned.gif\");\nfont-family: \"Comic Sans MS\", \"Comic Sans\", cursive !important;\n}\n\n#socialsList a{\nanimation: colorRotate 6s linear 0s infinite \n}\n\n@keyframes colorRotate {\n  from {\n    color: #6666ff;\n  }\n  10% {\n    color: #0099ff;\n  }\n  50% {\n    color: #00ff00;\n  }\n  75% {\n    color: #ff3399;\n  }\n  100% {\n    color: #6666ff;\n  }\n}",
+            "html": ""
+        }
+    },
+    {
+        "name": "BiQsNzcmdxli",
+        "showName": "Novel Radio",
+        "hostNames": [
+            "BiQsNzcmdxli"
+        ],
+        "broadcastTime": {
+            "dayOfWeek": "Wednesday",
+            "startTime": "18:00",
+            "durationMinutes": 60
+        },
+        "socials": {
+            "instagram": "@novelradio.wmbc",
+            "spotify": [],
+            "twitter": "",
+            "otherSocials": []
+        },
+        "showBlurb": "Your home on the dial for stories on air. Novel Radio specializes in turning books and stories into playlists for your enjoyment. WMBC W 6pm",
+        "standardShow": true,
+        "image": "./imgs/dj-profile/Novel_Radio-logo.jpeg",
+        "previousPlaylists": []
+    },
+    {
+        "name": "GjggLzExJWkbYg==",
+        "showName": "Those Who Show",
+        "hostNames": [
+            "GjggLzExJWkbYg=="
+        ],
+        "broadcastTime": {
+            "dayOfWeek": "Thursday",
+            "startTime": "20:00",
+            "durationMinutes": 60
+        },
+        "socials": {
+            "instagram": "",
+            "spotify": [],
+            "twitter": "",
+            "otherSocials": []
+        },
+        "showBlurb": "indie rock, slowcore, alternative rock, art pop, dream pop i guess with\ncoloring pages to fit the theme of each show from artists and some wonderful commentary from me",
+        "standardShow": true,
+        "image": "./imgs/dj-profile/Those_Who_Show-logo.jpeg",
+        "previousPlaylists": [
+            [
+                "3/27/2025",
+                "https://open.spotify.com/playlist/34nbUvExLBr9DqZg4RFvU4"
+            ]
+        ]
+    },
+    {
+        "name": "ECk2LDcxOWkfYg==",
+        "showName": "subsonic",
+        "hostNames": [
+            "ECk2LDcxOWkfYg=="
+        ],
+        "broadcastTime": {
+            "dayOfWeek": "Monday",
+            "startTime": "12:00",
+            "durationMinutes": 60
+        },
+        "socials": {
+            "instagram": "@subsonic_wmbc",
+            "spotify": [],
+            "twitter": "",
+            "otherSocials": []
+        },
+        "showBlurb": "play different genres of music each show!",
+        "standardShow": true,
+        "image": "",
+        "previousPlaylists": [
+            [
+                "3/24/2025",
+                "https://open.spotify.com/playlist/09H6qlOS4bbOrh8jVs4g9N"
+            ]
+        ]
+    },
+    {
+        "name": "DiknMzsxO2kIYg==",
+        "showName": "Soul Society",
+        "hostNames": [
+            "DiknMzsxO2kIYg=="
+        ],
+        "broadcastTime": {
+            "dayOfWeek": "Wednesday",
+            "startTime": "20:00",
+            "durationMinutes": 60
+        },
+        "socials": {
+            "instagram": "@soulsociety.wmbc",
+            "spotify": [],
+            "twitter": "",
+            "otherSocials": []
+        },
+        "showBlurb": "play neo soul music",
+        "standardShow": true,
+        "image": "./imgs/dj-profile/Soul_Society-logo.jpeg",
+        "previousPlaylists": [
+            [
+                "3/26/2025",
+                "https://open.spotify.com/playlist/3RoKoT1UHQeeg5KcFjCU2O"
+            ]
+        ]
+    },
+    {
+        "name": "CicpKDx0B2c=",
+        "showName": "Gone Tomorrow Sound",
+        "hostNames": [
+            "CicpKDx0B2c="
+        ],
+        "broadcastTime": {
+            "dayOfWeek": "Friday",
+            "startTime": "18:00",
+            "durationMinutes": 60
+        },
+        "socials": {
+            "instagram": "@g0ne.tomorrow",
+            "spotify": [],
+            "twitter": "",
+            "otherSocials": []
+        },
+        "showBlurb": "mixed up selection of whatever i feel like but mostly electronic/hip hop with other cool stuff if i feel like it",
+        "standardShow": true,
+        "image": "",
+        "previousPlaylists": [
+            [
+                "8/11/2006",
+                "https://open.spotify.com/playlist/6drdfsIrlzNG8ZH7W2ewCM"
+            ]
+        ]
+    },
+    {
+        "name": "Gj0oLDcmdwFi",
+        "showName": "Retro Hour",
+        "hostNames": [
+            "Gj0oLDcmdwFi"
+        ],
+        "broadcastTime": {
+            "dayOfWeek": "Friday",
+            "startTime": "16:00",
+            "durationMinutes": 60
+        },
+        "socials": {
+            "instagram": "@retro_hour_wmbc",
+            "spotify": [],
+            "twitter": "",
+            "otherSocials": []
+        },
+        "showBlurb": "This show will be playing all kinds of music from the 20th century with a new theme/era each week!",
+        "standardShow": true,
+        "image": "./imgs/dj-profile/Retro_Hour-logo.jpeg",
+        "previousPlaylists": [
+            [
+                "3/28/2025",
+                "https://open.spotify.com/playlist/1ydPxZObaKwmTWFWCS4xTL"
+            ]
+        ]
+    },
+    {
+        "name": "CzosNTwxLmkCYg==",
+        "showName": "The Britney Hour",
+        "hostNames": [
+            "CzosNTwxLmkCYg=="
+        ],
+        "broadcastTime": {
+            "dayOfWeek": "Friday",
+            "startTime": "13:00",
+            "durationMinutes": 60
+        },
+        "socials": {
+            "instagram": "",
+            "spotify": [],
+            "twitter": "",
+            "otherSocials": []
+        },
+        "showBlurb": "Play a different variety of music and share some personal opinions.",
+        "standardShow": true,
+        "image": "",
+        "previousPlaylists": [
+            [
+                "3/28/2025",
+                "https://open.spotify.com/playlist/3f4sr0Bs8EEJvfIw3RHEsc"
+            ]
+        ]
+    },
+    {
+        "name": "HiEpLTs1OmkfYg==",
+        "showName": "The Tuesday Variety Experience",
+        "hostNames": [
+            "HiEpLTs1OmkfYg=="
+        ],
+        "broadcastTime": {
+            "dayOfWeek": "Tuesday",
+            "startTime": "17:00",
+            "durationMinutes": 60
+        },
+        "socials": {
+            "instagram": "",
+            "spotify": [],
+            "twitter": "",
+            "otherSocials": []
+        },
+        "showBlurb": "kind of variety show where I play from a selected genre or genres",
+        "standardShow": true,
+        "image": "",
+        "previousPlaylists": [
+            [
+                "3/25/2025",
+                "https://open.spotify.com/playlist/1EgY0VKrPjYOdxyKvro4ZQ"
+            ]
+        ]
+    },
+    {
+        "name": "DS0kL3IYeQ==",
+        "showName": "Dean Me Up",
+        "hostNames": [
+            "DS0kL3IYeQ=="
+        ],
+        "broadcastTime": {
+            "dayOfWeek": "Monday",
+            "startTime": "18:00",
+            "durationMinutes": 60
+        },
+        "socials": {
+            "instagram": "",
+            "spotify": [],
+            "twitter": "",
+            "otherSocials": []
+        },
+        "showBlurb": "Playing different genres every week",
+        "standardShow": true,
+        "image": "",
+        "previousPlaylists": [
+            [
+                "2/17",
+                "https://open.spotify.com/playlist/0W1g4I5L5O3k4HewRqsN9D?si=_82pZSRSQY2IsmLmpj1NLA&pi=-XZ8jehaQJqii"
+            ]
+        ]
+    },
+    {
+        "name": "AikpJDB0EGc=",
+        "showName": "BBLNation",
+        "hostNames": [
+            "DQJlAxAY"
+        ],
+        "broadcastTime": {
+            "dayOfWeek": "Wednesday",
+            "startTime": "21:00",
+            "durationMinutes": 60
+        },
+        "socials": {
+            "instagram": "",
+            "spotify": [],
+            "twitter": "",
+            "otherSocials": []
+        },
+        "showBlurb": "music",
+        "standardShow": true,
+        "image": "",
+        "previousPlaylists": [],
+        "customFormatting": {
+            "css": "#showBlurbDiv{\n    display: flex;\n    justify-content: center;\n    padding-top:10px;\n}",
+            "html": "<iframe id='yuh' width='560' height='315' src='https://www.youtube.com/embed/videoseries?si=0uaAnmO78ap9v_au&amp;list=PLzmo2DLZLtLqG1wmcuDCTAeGJnO8mwuTf' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>"
+        }
+    },
+    {
+        "name": "CDEqLDswMmkNYg==",
+        "showName": "100% Electronic",
+        "hostNames": [
+            "CDEqLDswMmkNYg=="
+        ],
+        "broadcastTime": {
+            "dayOfWeek": "Wednesday",
+            "startTime": "15:00",
+            "durationMinutes": 60
+        },
+        "socials": {
+            "instagram": "",
+            "spotify": [],
+            "twitter": "",
+            "otherSocials": []
+        },
+        "showBlurb": "a selection of electronic and music inspired by electronic",
+        "standardShow": true,
+        "image": "",
+        "previousPlaylists": [
+            [
+                "3/5/2025",
+                "https://open.spotify.com/playlist/49SDGRPIyGI7Xzvas0UMWV"
+            ]
+        ]
+    },
+    {
+        "name": "CDosIHIHeWlqbBAqLStkAw8=",
+        "showName": "Film Freaks",
+        "hostNames": [
+            "CDosIHIHeQ==",
+            "DS0kL3IYeQ=="
+        ],
+        "broadcastTime": {
+            "dayOfWeek": "Thursday",
+            "startTime": "16:00",
+            "durationMinutes": 60
+        },
+        "socials": {
+            "instagram": "@film_freaks_wmbc",
+            "spotify": [],
+            "twitter": "",
+            "otherSocials": []
+        },
+        "showBlurb": "watch movies of all genres and yap about those!",
+        "standardShow": true,
+        "image": "",
+        "previousPlaylists": []
+    },
+    {
+        "name": "CCYiJD4xJGkLYg==",
+        "showName": "Ranting & Raving",
+        "hostNames": [
+            "CCYiJD4xJGkLYg=="
+        ],
+        "broadcastTime": {
+            "dayOfWeek": "Tuesday",
+            "startTime": "12:00",
+            "durationMinutes": 60
+        },
+        "socials": {
+            "instagram": "@rantingraving.wmbc",
+            "spotify": [],
+            "twitter": "",
+            "otherSocials": []
+        },
+        "showBlurb": "Internet and pop culture based show with advice segments and themed music sections. Submit stories, song requests, messages, or ask for advice!",
+        "standardShow": true,
+        "image": "./imgs/dj-profile/Ranting_&_Raving-logo.jpeg",
+        "previousPlaylists": []
+    },
+    {
+        "name": "BCEmKTc4OyxsBXpvamUXLk9AAW9n",
+        "showName": "Mama's Orchard",
+        "hostNames": [
+            "BCEmKTc4OyxsBXo=",
+            "GikrIHIaeQ=="
+        ],
+        "broadcastTime": {
+            "dayOfWeek": "Friday",
+            "startTime": "17:00",
+            "durationMinutes": 60
+        },
+        "socials": {
+            "instagram": "@mamasorchard.wmbc",
+            "spotify": [],
+            "twitter": "",
+            "otherSocials": []
+        },
+        "showBlurb": "Welcome to Mama's Orchard, where we pick the juiciest weirdest fruits of the internet and our minds to talk about each episode. come walk through our orchard with us!",
+        "standardShow": true,
+        "image": "/imgs/dj-profile/Mama-s Orchard.jpg",
+        "previousPlaylists": []
+    },
+    {
+        "name": "CCwkLHIbeWlqbBcuICAmb3IP",
+        "showName": "Kabobcast",
+        "hostNames": [
+            "CCwkLHIbeQ==",
+            "CikpJDB0BGc="
+        ],
+        "broadcastTime": {
+            "dayOfWeek": "Friday",
+            "startTime": "14:00",
+            "durationMinutes": 60
+        },
+        "socials": {
+            "instagram": "",
+            "spotify": [],
+            "twitter": "",
+            "otherSocials": []
+        },
+        "showBlurb": "We’re mostly covering movies and soccer matches we saw recently with some short intervals of music",
+        "standardShow": true,
+        "image": "",
+        "previousPlaylists": [
+            [
+                "3/28/2025",
+                "https://open.spotify.com/playlist/2nC7O0HMQjcGx9yB1ST25x"
+            ],
+            [
+                "2/28/2025",
+                "https://open.spotify.com/playlist/2pzZNOJ2kzU9NyNFIbIvvh"
+            ],
+            [
+                "2/21/2025",
+                "https://open.spotify.com/playlist/4DhhqZPpruAdhBscaVmE7Z"
+            ]
+        ]
+    },
+    {
+        "name": "Az0pKDN0BGc=",
+        "showName": "Cactus Country",
+        "hostNames": [
+            "Az0pKDN0BGc="
+        ],
+        "broadcastTime": {
+            "dayOfWeek": "Wednesday",
+            "startTime": "16:00",
+            "durationMinutes": 60
+        },
+        "socials": {
+            "instagram": "@cactuscountryradio",
+            "spotify": [],
+            "twitter": "",
+            "otherSocials": []
+        },
+        "showBlurb": "each set focuses on a different movement in folk/soul/country music",
+        "standardShow": true,
+        "image": "",
+        "previousPlaylists": [
+            [
+                "3/26/2025",
+                "https://open.spotify.com/playlist/5Fs6Ct5ESlj5hiSv7hkU0M"
+            ]
+        ]
+    },
+    {
+        "name": "Cy0rYR96",
+        "showName": "BCG’s Radio",
+        "hostNames": [
+            "Cy0rYR96"
+        ],
+        "broadcastTime": {
+            "dayOfWeek": "Friday",
+            "startTime": "12:00",
+            "durationMinutes": 60
+        },
+        "socials": {
+            "instagram": "@dj_bowlcutgamer",
+            "spotify": [],
+            "twitter": "",
+            "otherSocials": []
+        },
+        "showBlurb": "virtuous, voluptuous, and vindictive variety",
+        "standardShow": true,
+        "image": "",
+        "previousPlaylists": [
+            [
+                "3/14/2025",
+                "https://open.spotify.com/playlist/5uxTJqF4XE8VUNEjxGawWG"
+            ]
+        ]
+    },
+    {
+        "name": "ByEmKnIGeQ==",
+        "showName": "Cherish",
+        "hostNames": [
+            "ByEmKnIGeQ=="
+        ],
+        "broadcastTime": {
+            "dayOfWeek": "Wednesday",
+            "startTime": "13:00",
+            "durationMinutes": 60
+        },
+        "socials": {
+            "instagram": "@cherish.wmbc",
+            "spotify": [],
+            "twitter": "",
+            "otherSocials": []
+        },
+        "showBlurb": "Switching it up weekly with a variety of emo music!",
+        "standardShow": true,
+        "image": "",
+        "previousPlaylists": []
+    },
+    {
+        "name": "GTokIjo9dxpi",
+        "showName": "Canticulum (Medieval Mix)",
+        "hostNames": [
+            "GTokIjo9dxpi"
+        ],
+        "broadcastTime": {
+            "dayOfWeek": "Monday",
+            "startTime": "21:00",
+            "durationMinutes": 60
+        },
+        "socials": {
+            "instagram": "@canticulum.wmbc",
+            "spotify": [],
+            "twitter": "",
+            "otherSocials": []
+        },
+        "showBlurb": "a jaunty mix of medieval inspired tunes paired with historical fun facts",
+        "standardShow": true,
+        "image": "./imgs/dj-profile/Canticulum.png",
+        "previousPlaylists": [
+            [
+                "3/24/2025",
+                "https://open.spotify.com/playlist/1SQjlvuUybPx9uKRXSPfO8"
+            ]
+        ],
+        "customFormatting": ""
+    },
+    {
+        "name": "DD4kYRR6",
+        "showName": "Monkey Business 🍌",
+        "hostNames": [
+            "DQJlMTw/Mj8p"
+        ],
+        "broadcastTime": {
+            "dayOfWeek": "Tuesday",
+            "startTime": "16:00",
+            "durationMinutes": 60
+        },
+        "socials": {
+            "instagram": "@monkeybiz.wmbc",
+            "spotify": [],
+            "twitter": "",
+            "otherSocials": []
+        },
+        "showBlurb": "we like to have a very silly and deeply unserious time on and off the air. the theme for music is whatever dj pnkeve decides that week, with some anecdotes along the way. i hope you’ll join us weekly on tuesdays at 4pm for some goofs, giggles and tunes!",
+        "standardShow": true,
+        "image": "./imgs/dj-profile/MonkeyBusiness-logo.jpg",
+        "previousPlaylists": [
+            [
+                "3/25/2025",
+                "https://open.spotify.com/playlist/55eRE4pNtnXIVCIOS6gWzH"
+            ],
+            [
+                "3/11/2025",
+                "https://open.spotify.com/playlist/0NrQXlFxpotJc9RiWivrdp"
+            ],
+            [
+                "3/4/2025",
+                "https://open.spotify.com/playlist/4WXcZsg8c0VOfbG9xz70TW"
+            ]
+        ],
+        "customFormatting": ""
+    },
+    {
+        "name": "Bi4jKDExJWkEIyE9",
+        "showName": "Officer Hour",
+        "hostNames": [
+            "HgUHAnUndwYqKj0sKTc3"
+        ],
+        "broadcastTime": {
+            "dayOfWeek": "Tuesday",
+            "startTime": "20:00",
+            "durationMinutes": 60
+        },
+        "socials": {
+            "instagram": "",
+            "spotify": [],
+            "twitter": "",
+            "otherSocials": []
+        },
+        "showBlurb": "it's a mess. tune in!",
+        "standardShow": true,
+        "image": "",
+        "previousPlaylists": [],
+        "customFormatting": ""
+    },
+    {
+        "name": "Gyk8ODM6dwxi",
+        "showName": "The Rayyan Hour",
+        "hostNames": [
+            "Gyk8ODM6dwxi"
+        ],
+        "broadcastTime": {
+            "dayOfWeek": "Tuesday",
+            "startTime": "21:00",
+            "durationMinutes": 60
+        },
+        "socials": {
+            "instagram": "@if.you.give.a.mouse.mic",
+            "spotify": [],
+            "twitter": "",
+            "otherSocials": []
+        },
+        "showBlurb": "Talking to guests and discussing their new and old tastes in music!",
+        "standardShow": true,
+        "image": "",
+        "previousPlaylists": [
+            [
+                "3/25/2025",
+                "https://open.spotify.com/playlist/3ZGZeM2zUUZEd3XTh3iHOp"
+            ]
+        ],
+        "customFormatting": ""
+    },
+    {
+        "name": "Ayc2KSc1dwguIDFiDyQ2O0RT",
+        "showName": "The Rock Tumbler",
+        "hostNames": [
+            "Ayc2KXIVeQ=="
+        ],
+        "broadcastTime": {
+            "dayOfWeek": "Friday",
+            "startTime": "20:00",
+            "durationMinutes": 60
+        },
+        "socials": {
+            "instagram": "@ablecdesigns",
+            "spotify": [],
+            "twitter": "",
+            "otherSocials": []
+        },
+        "showBlurb": "A show that explores a different genre/subgenre of music each episode a mix of new and classic artists.",
+        "standardShow": true,
+        "image": "",
+        "previousPlaylists": [
+            [
+                "3/28/2025",
+                "https://open.spotify.com/playlist/3XMDAbjYGgD4TZQRBI1qEj"
+            ]
+        ],
+        "customFormatting": ""
+    },
+    {
+        "name": "CCw3KDM6dwhibHJvASQ2LE4BZQ8=",
+        "showName": "am i mutted?",
+        "hostNames": [
+            "CCw3KDM6dwhi",
+            "aQUkMzE7dw1i"
+        ],
+        "broadcastTime": {
+            "dayOfWeek": "Friday",
+            "startTime": "19:00",
+            "durationMinutes": 60
+        },
+        "socials": {
+            "instagram": "",
+            "spotify": [],
+            "twitter": "",
+            "otherSocials": []
+        },
+        "showBlurb": "Playing any music that interests us and discussing anything that crosses our minds",
+        "standardShow": true,
+        "image": "",
+        "previousPlaylists": [
+            [
+                "3/28/2025",
+                "https://open.spotify.com/playlist/0A6ZLNw5RVRsg1013acBvl"
+            ]
+        ],
+        "customFormatting": ""
+    },
+    {
+        "name": "BSE8NHIWeQ==",
+        "showName": "Liyu LAL",
+        "hostNames": [
+            "BSE8NHIWeQ=="
+        ],
+        "broadcastTime": {
+            "dayOfWeek": "Thursday",
+            "startTime": "14:00",
+            "durationMinutes": 60
+        },
+        "socials": {
+            "instagram": "@lolaughsalotwmbc",
+            "spotify": [],
+            "twitter": "",
+            "otherSocials": []
+        },
+        "showBlurb": "A talkshow where Liyu has opinions on unnecessary subjects, rankings of shows, and just talks about whatever comes to mind.",
+        "standardShow": true,
+        "image": "",
+        "previousPlaylists": [],
+        "customFormatting": ""
+    },
+    {
+        "name": "Cik3Lj49OSw=",
+        "showName": "K-Time",
+        "hostNames": [
+          "Cik3Lj49OSw="
+        ],
+        "broadcastTime": {
+          "dayOfWeek": "Monday",
+          "startTime": "14:00",
+          "durationMinutes": 60
+        },
+        "socials": {
+          "instagram": "@ktime.wmbc",
+          "spotify": [],
+          "twitter": "",
+          "otherSocials": []
+        },
+        "showBlurb": "Highlighting Korean pop music!",
+        "standardShow": true,
+        "image": "./imgs/dj-profile/K-Time-logo.jpg",
+        "previousPlaylists": [],
+        "customFormatting": ""
+      },
+      {
+        "name": "CikxID49OShsAXo=",
+        "showName": "Catalina Hour",
+        "hostNames": [
+          "CikxID49OShsAXo="
+        ],
+        "broadcastTime": {
+          "dayOfWeek": "Tuesday",
+          "startTime": "15:00",
+          "durationMinutes": 60
+        },
+        "socials": {
+          "instagram": "",
+          "spotify": [],
+          "twitter": "",
+          "otherSocials": []
+        },
+        "showBlurb": "Kpop hour!!!",
+        "standardShow": true,
+        "image": "",
+        "previousPlaylists": [],
+        "customFormatting": ""
+      },
+      {
+        "name": "ADskKDM8dw1i",
+        "showName": "The Omonti Hour with Omontizay",
+        "hostNames": [
+          "BiUqLyY9LSg1"
+        ],
+        "broadcastTime": {
+          "dayOfWeek": "Wednesday",
+          "startTime": "14:00",
+          "durationMinutes": 60
+        },
+        "socials": {
+          "instagram": "",
+          "spotify": [],
+          "twitter": "",
+          "otherSocials": []
+        },
+        "showBlurb": "Omontizay spins different vibes week to week DJ’ing live curated music for an hour",
+        "standardShow": true,
+        "image": "",
+        "previousPlaylists": [],
+        "customFormatting": ""
+      },
+      {
+        "name": "AyE3JDp0HGc=",
+        "showName": "DJ BLEEDFAST",
+        "hostNames": [
+          "AyE3JDp0HGc="
+        ],
+        "broadcastTime": {
+          "dayOfWeek": "Wednesday",
+          "startTime": "19:00",
+          "durationMinutes": 60
+        },
+        "socials": {
+          "instagram": "",
+          "spotify": [],
+          "twitter": "",
+          "otherSocials": []
+        },
+        "showBlurb": "nothing will be bleeding fast except your ears maybe",
+        "standardShow": true,
+        "image": "",
+        "previousPlaylists": [],
+        "customFormatting": ""
+      },
+      {
+        "name": "GjwgMToxOWkYYg==",
+        "showName": "Early Seventies with Steve",
+        "hostNames": [
+          "DQJlEiYxISw="
+        ],
+        "broadcastTime": {
+          "dayOfWeek": "Monday",
+          "startTime": "13:00",
+          "durationMinutes": 60
+        },
+        "socials": {
+          "instagram": "",
+          "spotify": [],
+          "twitter": "",
+          "otherSocials": []
+        },
+        "showBlurb": "We will Explore the early 70s with an emphasis on blues rock and proto-punk",
+        "standardShow": true,
+        "image": "",
+        "previousPlaylists": [],
+        "customFormatting": ""
+      },
+      {
+        "name": "CDstYR96",
+        "showName": "iRiE Corner",
+        "hostNames": [
+          "DQJlKAA9Eg=="
+        ],
+        "broadcastTime": {
+          "dayOfWeek": "Tuesday",
+          "startTime": "14:00",
+          "durationMinutes": 60
+        },
+        "socials": {
+          "instagram": "@iriecorner.wmbc",
+          "spotify": [],
+          "twitter": "",
+          "otherSocials": []
+        },
+        "showBlurb": "Hey guys! It's DJ iRiE, but on these streets (hilltop circle) they call me Ash. While this show is centered around authentic Caribbean music, I also want to highlight marginalized voices that reflect my identity. But don't worry. I'm not gonna make this all about me. I will help the WMBC fans by putting yall on some stuff you've never heard before or just straight up forgot about. With that being said, I hope you guys are ready to tune in on Tuesdays @ 2 PM for the journey down the rabbit hole of my mind.",
+        "standardShow": true,
+        "image": "./imgs/dj-profile/iRiE-Corner-logo.jpg",
+        "previousPlaylists": [],
+        "customFormatting": ""
+      },
+      {
+        "name": "Ci0pKDwxdwdi",
+        "showName": "sonidos de cel",
+        "hostNames": [
+          "Ci0pKDwxdwdi"
+        ],
+        "broadcastTime": {
+          "dayOfWeek": "Thursday",
+          "startTime": "18:00",
+          "durationMinutes": 60
+        },
+        "socials": {
+          "instagram": "",
+          "spotify": [],
+          "twitter": "",
+          "otherSocials": []
+        },
+        "showBlurb": "I like to listen to big basses, deep sounds, or just sounds and songs that really tickle my brain; whether it’s music to wake me up or ease my mind. I’m excited to spin and share my love of music with everyone :)",
+        "standardShow": true,
+        "image": "",
+        "previousPlaylists": [],
+        "customFormatting": ""
+      }
 
-      ],
-      [
-        "2/26",
-        "https://open.spotify.com/playlist/69W9BYH5Pf9dmnOQfdTaWh?si=fb3681e89bed4a54"
-      ],
-      [
-        "2/19",
-        "https://open.spotify.com/playlist/6D2AsyZDUpw2qVuHwQ0Mtf?si=35d872318481466d"
-      ],
-      [
-        "2/17",
-        "https://open.spotify.com/playlist/1tYzk1rwMqzTNkMWVsb1mD?si=a0c0c0c7a5894bbe"
-      ]
-    ],
-    "standardShow": true
-  },
-  {
-    "name": "CDosIA==",
-    "showName": "Sounds of Silence",
-    "hostNames": [
-      "CDosIA=="
-    ],
-    "broadcastTime": {
-      "dayOfWeek": "Wednesday",
-      "startTime": "17:00",
-      "durationMinutes": 60
-    },
-    "socials": {
-      "instagram": "@s0unds.of.silenc3",
-      "spotify": [
-        "Aria :p",
-        "https://open.spotify.com/user/h4nhy99ducxgyqsseqbkyjsrw/"
-      ],
-      "twitter": "",
-      "otherSocials": []
-    },
-    "showBlurb": "dreamy & weird & whimsical! Covering genres from ambient to shoegaze to IDM to dream pop to electronica!",
-    "standardShow": true,
-    "image": "",
-    "previousPlaylists": [
-      [
-        "12/18",
-        "https://open.spotify.com/playlist/15onDaLt1tsgOAbw4Kapul"
-      ],
-      [
-        "12/13",
-        "https://open.spotify.com/playlist/10M1qRgvxEZKSyICnTitMz"
-      ],
-      [
-        "12/6",
-        "https://open.spotify.com/playlist/78s7TReqGHJfKFL7C4T4bS"
-      ]
-    ]
-  },
-  {
-    "name": "BCEmKTc4OyxsBXo=",
-    "showName": "Reverie",
-    "hostNames": [
-      "DQJlDDc7ICokKTgjKQ=="
-    ],
-    "broadcastTime": {
-      "dayOfWeek": "Monday",
-      "startTime": "17:00",
-      "durationMinutes": 60
-    },
-    "socials": {
-      "instagram": "@reverie.wmbc",
-      "spotify": [
-        "hotvampirebabe",
-        "https://open.spotify.com/user/31v7sg7qo7xxynubyeujpoxsdcom/"
-      ],
-      "twitter": "",
-      "otherSocials": [
-        "linktree: https://linktr.ee/reveriewmbc"
-      ]
-    },
-    "showBlurb": "gothic tunes! goth rock, deathrock, ethereal wave \ud83d\udd77\ufe0f. tune in for hauntingly good music \ud83d\udda4",
-    "standardShow": true,
-    "image": "./imgs/dj-profile/Reverie-logo.jpeg",
-    "previousPlaylists": [
-      [
-        "2/17",
-        "https://open.spotify.com/playlist/6nv7NuRg7Fi6PWIWHOzwaZ?si=cdfdad6ee61041fb"
-      ],
-      [
-        "12/18",
-        "https://open.spotify.com/playlist/5v1N0su1k3tzZRTsthTdKM"
-      ],
-      [
-        "12/16",
-        "https://open.spotify.com/playlist/1SOhFnnxAvQYKTUXmoFfgX"
-      ],
-      [
-        "12/13",
-        "https://open.spotify.com/playlist/5MIdgZFACAt6RWi4CmszvC"
-      ]
-    ]
-  },
-  {
-    "name": "BCEkLzt0HGc=",
-    "showName": "Mangetsu Radio",
-    "hostNames": [
-      "BCEkLzt0HGc="
-    ],
-    "broadcastTime": {
-      "dayOfWeek": "Monday",
-      "startTime": "19:00",
-      "durationMinutes": 60
-    },
-    "socials": {
-      "instagram": "@mangetsu.radio",
-      "spotify": [
-        "m",
-        "https://open.spotify.com/user/t2u6n3nuqoaeq0e7ybxjwfk27/"
-      ],
-      "twitter": "",
-      "otherSocials": []
-    },
-    "showBlurb": "Full Moon Radio \ud83c\udf15\ud83d\udcfb full moon, full beats.\njrock hour\njapanese-centric music, mostly rock\ngame ost spotlight during the week of a full moon\npersona 3. hatsune miku",
-    "standardShow": true,
-    "image": "./imgs/dj-profile/Mangetsu_Radio-logo.jpeg",
-    "previousPlaylists": [
-      [
-        "2/17",
-        "https://open.spotify.com/playlist/4ZAkPBWn38PZEACjdv163P"
-      ],
-      [
-        "12/6",
-        "https://open.spotify.com/playlist/3m9etg13mj6YcS9a95UJ8A"
-      ]
-    ],
-    "customFormatting": {
-      "css": "body{\n  /* animation: colorRotate 6s linear 0s infinite !important; */\ncolor:#f67fed;\n background-image: url(\"https://preview.redd.it/9lr4ak9gr9vz.jpg?width=640&crop=smart&auto=webp&s=48355d5a40ad439db9482300de0cf5cb27f8772f\");\nbackground-repeat: repeat;\nbackground-size: 33.33% 100%;\nfont-family: \"Comic Sans MS\", \"Comic Sans\", cursive !important;\n}\n\n#socialsList a{\nanimation: colorRotate 6s linear 0s infinite \n}\n\n@keyframes colorRotate {\n  from {\n    color: #6666ff;\n  }\n  10% {\n    color: #0099ff;\n  }\n  50% {\n    color: #00ff00;\n  }\n  75% {\n    color: #ff3399;\n  }\n  100% {\n    color: #6666ff;\n  }\n}",
-      "html": "<img src=\"/src/fire text.png\"><img>\n\n    <div id=\"showBlurbDiv\">\n      <h2 id=\"showBlurbHeader\"> </h2>\n      <p id=\"showBlurb\"> full moon radio \ud83c\udf15\ud83d\udcfb full moon, full beats. japanese-centric music, mostly rock. game ost spotlight during the week of a full moon. persona 3. hatsune miku.\n\n</p>\n    </div>"
-    }
-  },
-  {
-    "name": "AycrIDp0BGc=",
-    "showName": "CRUSHED",
-    "hostNames": [
-      "AycrIDp0BGc="
-    ],
-    "broadcastTime": {
-      "dayOfWeek": "Tuesday",
-      "startTime": "19:00",
-      "durationMinutes": 60
-    },
-    "socials": {
-      "instagram": "@crushed.wmbc",
-      "spotify": [],
-      "twitter": "",
-      "otherSocials": []
-    },
-    "showBlurb": "Evil noisy hard crushing music. Anything and everything chaotic, noisy, heavy, and angry. From low and slow groovy doom riffage, to frantic and grating screamo and powerviolence, to harsh noise, and everything in between.",
-    "standardShow": true,
-    "image": "",
-    "previousPlaylists": []
-  },
-  {
-    "name": "DSkrKDc4Ng==",
-    "showName": "Luna Roja Radio",
-    "hostNames": [
-      "DSkrKDc4Ng=="
-    ],
-    "broadcastTime": {
-      "dayOfWeek": "Monday",
-      "startTime": "15:00",
-      "durationMinutes": 60
-    },
-    "socials": {
-      "instagram": "@lunarr.wmbc",
-      "spotify": [],
-      "twitter": "",
-      "otherSocials": []
-    },
-    "showBlurb": "WMBC's Alternative Latine Music Show. Highlighting the colorful Latin American diaspora by sharing music communities and genres weekly. Spotlighting an organization or artist that resembles the true values of this show weekly.",
-    "standardShow": true,
-    "image": "./imgs/dj-profile/Luna_Roja_Radio-logo.jpeg",
-    "previousPlaylists": []
-  },
-  {
-    "name": "GyksODM1OWkYYnRpbAErIU5XQE9pDms=",
-    "showName": "Monday Night Metal",
-    "hostNames": [
-      "GyksODM1OWkYYg==",
-      "DScrLiQ1OWkKYg=="
-    ],
-    "broadcastTime": {
-      "dayOfWeek": "Monday",
-      "startTime": "20:00",
-      "durationMinutes": 60
-    },
-    "socials": {
-      "instagram": "@wmbc.mondaynightmetal",
-      "spotify": [],
-      "twitter": "",
-      "otherSocials": []
-    },
-    "showBlurb": "The late night heavy metal/metalcore show. Covering all things metal and heavy. Stay a while....",
-    "standardShow": true,
-    "image": "./imgs/dj-profile/Monday_Night_Metal-logo.jpeg",
-    "previousPlaylists": []
-  },
-  {
-    "name": "BykxID49MmkBYg==",
-    "showName": "Twin Beats",
-    "hostNames": [
-      "BykxID49MmkBYg=="
-    ],
-    "broadcastTime": {
-      "dayOfWeek": "Thursday",
-      "startTime": "15:00",
-      "durationMinutes": 60
-    },
-    "socials": {
-      "instagram": "@twinbeats_wmbc",
-      "spotify": [],
-      "twitter": "",
-      "otherSocials": [
-        "letterboxd: doinitright"
-      ]
-    },
-    "showBlurb": "A mix of commentary + music, creating a playlist of songs that I feel fit the movie in some way!",
-    "standardShow": true,
-    "image": "./imgs/dj-profile/Twin_Beats-logo.jpeg",
-    "previousPlaylists": []
-  },
-  {
-    "name": "BT0mKDc6dwFi",
-    "showName": "Playoff Thoughts",
-    "hostNames": [
-      "BT0mKDc6dwFi"
-    ],
-    "broadcastTime": {
-      "dayOfWeek": "Thursday",
-      "startTime": "17:00",
-      "durationMinutes": 60
-    },
-    "socials": {
-      "instagram": "@playoffthoughts",
-      "spotify": [],
-      "twitter": "",
-      "otherSocials": []
-    },
-    "showBlurb": "I talk about sports but not in an annoying hyper masculine where I am condescending about it. Tune in to learn my about sports teams and my completely biased opinions",
-    "standardShow": true,
-    "image": "./imgs/dj-profile/Playoff_Thoughts-logo.jpeg",
-    "previousPlaylists": [],
-    "customFormatting": {
-      "css": "body{\nbackground-color:#00000045;\n}",
-      "html": ""
-    }
-  },
-  {
-    "name": "Ay0rLyt0B2c=",
-    "showName": "Ebbs %26 Flows",
-    "hostNames": [
-      "Ay0rLyt0B2c="
-    ],
-    "broadcastTime": {
-      "dayOfWeek": "Thursday",
-      "startTime": "21:00",
-      "durationMinutes": 60
-    },
-    "socials": {
-      "instagram": "@ebbsandflows_wmbc",
-      "spotify": [],
-      "twitter": "",
-      "otherSocials": []
-    },
-    "showBlurb": "Music and fish facts! Featuring an aquatic organism every show, with a fun fact. maybe.",
-    "standardShow": true,
-    "image": "./imgs/dj-profile/Ebbs_%26_Flows-logo.jpeg",
-    "previousPlaylists": []
-  },
-  {
-    "name": "Gi0kL3IAeWVsBzUjKSdkCA8BRFVpKSlv",
-    "showName": "Fast Minute",
-    "hostNames": [
-      "Gi0kL3IAeQ==",
-      "GS0xJCB0FGc=",
-      "DS0kL3IYeQ==",
-      "AikpJDB0EGc="
-    ],
-    "broadcastTime": {
-      "dayOfWeek": "Friday",
-      "startTime": "15:00",
-      "durationMinutes": 60
-    },
-    "socials": {
-      "instagram": "@wmbc.fastminute",
-      "spotify": [],
-      "twitter": "",
-      "otherSocials": []
-    },
-    "showBlurb": "A talk show where we do rankings, lists, brackets, and generally just argue about our opinions\n\n",
-    "standardShow": true,
-    "image": "./imgs/dj-profile/Fast_Minute-logo.jpeg",
-    "previousPlaylists": []
-  },
-  {
-    "name": "CCUkODN0GWc=",
-    "showName": "Moose Tracks",
-    "hostNames": [
-      "CCUkODN0GWc="
-    ],
-    "broadcastTime": {
-      "dayOfWeek": "Thursday",
-      "startTime": "12:00",
-      "durationMinutes": 60
-    },
-    "socials": {
-      "instagram": "@moosetracks.wmbc",
-      "spotify": [
-        "Amaya \u2b52",
-        "https://open.spotify.com/user/98gu9khjw2c02280awggsz3o2"
-      ],
-      "twitter": "",
-      "otherSocials": [
-        "linktree: https://linktr.ee/moosetracks.wmbc"
-      ]
-    },
-    "showBlurb": "feel-good folk, soft rock, boogie, and more from mainly around the 70's!",
-    "standardShow": true,
-    "image": "./imgs/dj-profile/Moose_Tracks-logo.jpeg",
-    "previousPlaylists": [
-      [
-        "12/13",
-        "https://open.spotify.com/playlist/42GCpV4h2CEkYSJGixcmLV"
-      ],
-      [
-        "12/6",
-        "https://open.spotify.com/playlist/2gTbMU5pWV0UvLYJDxewtU"
-      ],
-      [
-        "11/22",
-        "https://open.spotify.com/playlist/7KRk8eQPBRfdsyNW2MBL5c"
-      ]
-    ]
-  },
-  {
-    "name": "HiEpYRZ6",
-    "showName": "thirdeye",
-    "hostNames": [
-      "JCEhJTc/OA=="
-    ],
-    "broadcastTime": {
-      "dayOfWeek": "Thursday",
-      "startTime": "19:00",
-      "durationMinutes": 60
-    },
-    "socials": {
-      "instagram": "@thirdeye.wmbc",
-      "spotify": [
-        "middeko",
-        "https://open.spotify.com/artist/6eRXVe0pLepek07oUikflN"
-      ],
-      "twitter": "",
-      "otherSocials": []
-    },
-    "showBlurb": "playing hyperpop, trap, experimental",
-    "standardShow": true,
-    "image": "./imgs/dj-profile/thirdeye-logo.jpeg",
-    "previousPlaylists": [
-      [
-        "2/27",
-        "https://open.spotify.com/playlist/4hBVRnGEOgy1AX6LNJymfd"
-      ],
-      [
-        "2/20",
-        "https://open.spotify.com/playlist/4NxwH7XbxAGRUsL1Z2XGDW"
-      ]
-    ],
-    "customFormatting": {
-      "css": "#showBlurb{border-bottom: 0px; }*/",
-      "html": "<h2 id='showBlurbHeader'></h2><p id='showBlurb'></p><iframe style='border-radius:12px' src='https://open.spotify.com/embed/artist/6eRXVe0pLepek07oUikflN?utm_source=generator' width='100%' height='352' frameBorder='0' allowfullscreen='' allow=' clipboard-write; encrypted-media; fullscreen; picture-in-picture' loading='lazy'></iframe>"
-    }
-  },
-  {
-    "name": "BCkhJT0sdwhi",
-    "showName": "MP3",
-    "hostNames": [
-      "BCkhJT0sdwhi"
-    ],
-    "broadcastTime": {
-      "dayOfWeek": "Monday",
-      "startTime": "16:00",
-      "durationMinutes": 60
-    },
-    "socials": {
-      "instagram": "@mp3radio_wmbc",
-      "spotify": [],
-      "twitter": "",
-      "otherSocials": [
-        "bandcamp: https://bathaddicts.bandcamp.com/"
-      ]
-    },
-    "showBlurb": "oh yeah playing music i like and also music i dont like as much but still playing it because its my show and i can play what i want except for the stuff thats banned listen to my show its really cool 4pm mondays every week except if i die or something then there prolly wont be a show unless im ahead of schedule that would be cool also i have a band listen to us bath addicts we make the best music of all time but i cant play it i dont think or maybe i can i havent actually checked yet i should that would be cool to play on air also join bright eyes club we meet around 2 every other friday and listen to bright eyes ok thats pretty much it i lovr you for reading this youre really cool and also listen to my show and tell everyone youve ever met about it including your nemesis maybe you will make up and fall in love and it will all be because of me im a miracle worker this is what will happen when you listen to mp3radio ok bye <3 :3 \ud83d\udec1",
-    "standardShow": true,
-    "image": "./imgs/dj-profile/MP3-logo.jpeg",
-    "previousPlaylists": [],
-    "customFormatting": {
-      "css": "body{\n  animation: colorRotate 6s linear 0s infinite !important;\n background-image: url(\"https://media1.tenor.com/m/G3JqUDChNkoAAAAC/uuuh-concerned.gif\");\nfont-family: \"Comic Sans MS\", \"Comic Sans\", cursive !important;\n}\n\n#socialsList a{\nanimation: colorRotate 6s linear 0s infinite \n}\n\n@keyframes colorRotate {\n  from {\n    color: #6666ff;\n  }\n  10% {\n    color: #0099ff;\n  }\n  50% {\n    color: #00ff00;\n  }\n  75% {\n    color: #ff3399;\n  }\n  100% {\n    color: #6666ff;\n  }\n}",
-      "html": ""
-    }
-  },
-  {
-    "name": "BiQsNzcmdxli",
-    "showName": "Novel Radio",
-    "hostNames": [
-      "BiQsNzcmdxli"
-    ],
-    "broadcastTime": {
-      "dayOfWeek": "Wednesday",
-      "startTime": "18:00",
-      "durationMinutes": 60
-    },
-    "socials": {
-      "instagram": "@novelradio.wmbc",
-      "spotify": [],
-      "twitter": "",
-      "otherSocials": []
-    },
-    "showBlurb": "Your home on the dial for stories on air. Novel Radio specializes in turning books and stories into playlists for your enjoyment. WMBC W 6pm",
-    "standardShow": true,
-    "image": "./imgs/dj-profile/Novel_Radio-logo.jpeg",
-    "previousPlaylists": []
-  },
-  {
-    "name": "GjggLzExJWkbYg==",
-    "showName": "Those Who Show",
-    "hostNames": [
-      "GjggLzExJWkbYg=="
-    ],
-    "broadcastTime": {
-      "dayOfWeek": "Thursday",
-      "startTime": "20:00",
-      "durationMinutes": 60
-    },
-    "socials": {
-      "instagram": "",
-      "spotify": [],
-      "twitter": "",
-      "otherSocials": []
-    },
-    "showBlurb": "indie rock, slowcore, alternative rock, art pop, dream pop i guess with\ncoloring pages to fit the theme of each show from artists and some wonderful commentary from me",
-    "standardShow": true,
-    "image": "./imgs/dj-profile/Those_Who_Show-logo.jpeg",
-    "previousPlaylists": []
-  },
-  {
-    "name": "ECk2LDcxOWkfYg==",
-    "showName": "subsonic",
-    "hostNames": [
-      "ECk2LDcxOWkfYg=="
-    ],
-    "broadcastTime": {
-      "dayOfWeek": "Monday",
-      "startTime": "12:00",
-      "durationMinutes": 60
-    },
-    "socials": {
-      "instagram": "@subsonic_wmbc",
-      "spotify": [],
-      "twitter": "",
-      "otherSocials": []
-    },
-    "showBlurb": "play different genres of music each show!",
-    "standardShow": true,
-    "image": "",
-    "previousPlaylists": []
-  },
-  {
-    "name": "DiknMzsxO2kIYg==",
-    "showName": "Soul Society",
-    "hostNames": [
-      "DiknMzsxO2kIYg=="
-    ],
-    "broadcastTime": {
-      "dayOfWeek": "Wednesday",
-      "startTime": "20:00",
-      "durationMinutes": 60
-    },
-    "socials": {
-      "instagram": "@soulsociety.wmbc",
-      "spotify": [],
-      "twitter": "",
-      "otherSocials": []
-    },
-    "showBlurb": "play neo soul music",
-    "standardShow": true,
-    "image": "./imgs/dj-profile/Soul_Society-logo.jpeg",
-    "previousPlaylists": []
-  },
-  {
-    "name": "CicpKDx0B2c=",
-    "showName": "Gone Tomorrow Sound",
-    "hostNames": [
-      "CicpKDx0B2c="
-    ],
-    "broadcastTime": {
-      "dayOfWeek": "Friday",
-      "startTime": "18:00",
-      "durationMinutes": 60
-    },
-    "socials": {
-      "instagram": "@g0ne.tomorrow",
-      "spotify": [],
-      "twitter": "",
-      "otherSocials": []
-    },
-    "showBlurb": "mixed up selection of whatever i feel like but mostly electronic/hip hop with other cool stuff if i feel like it",
-    "standardShow": true,
-    "image": "",
-    "previousPlaylists": []
-  },
-  {
-    "name": "Gj0oLDcmdwFi",
-    "showName": "Retro Hour",
-    "hostNames": [
-      "Gj0oLDcmdwFi"
-    ],
-    "broadcastTime": {
-      "dayOfWeek": "Friday",
-      "startTime": "16:00",
-      "durationMinutes": 60
-    },
-    "socials": {
-      "instagram": "@retro_hour_wmbc",
-      "spotify": [],
-      "twitter": "",
-      "otherSocials": []
-    },
-    "showBlurb": "This show will be playing all kinds of music from the 20th century with a new theme/era each week!",
-    "standardShow": true,
-    "image": "./imgs/dj-profile/Retro_Hour-logo.jpeg",
-    "previousPlaylists": []
-  },
-  {
-    "name": "CzosNTwxLmkCYg==",
-    "showName": "The Britney Hour",
-    "hostNames": [
-      "CzosNTwxLmkCYg=="
-    ],
-    "broadcastTime": {
-      "dayOfWeek": "Friday",
-      "startTime": "13:00",
-      "durationMinutes": 60
-    },
-    "socials": {
-      "instagram": "",
-      "spotify": [],
-      "twitter": "",
-      "otherSocials": []
-    },
-    "showBlurb": "Play a different variety of music and share some personal opinions.",
-    "standardShow": true,
-    "image": "",
-    "previousPlaylists": []
-  },
-  {
-    "name": "HiEpLTs1OmkfYg==",
-    "showName": "The Tuesday Variety Experience",
-    "hostNames": [
-      "HiEpLTs1OmkfYg=="
-    ],
-    "broadcastTime": {
-      "dayOfWeek": "Tuesday",
-      "startTime": "17:00",
-      "durationMinutes": 60
-    },
-    "socials": {
-      "instagram": "",
-      "spotify": [],
-      "twitter": "",
-      "otherSocials": []
-    },
-    "showBlurb": "kind of variety show where I play from a selected genre or genres",
-    "standardShow": true,
-    "image": "",
-    "previousPlaylists": []
-  },
-  {
-    "name": "DS0kL3IYeQ==",
-    "showName": "Dean Me Up",
-    "hostNames": [
-      "DS0kL3IYeQ=="
-    ],
-    "broadcastTime": {
-      "dayOfWeek": "Monday",
-      "startTime": "18:00",
-      "durationMinutes": 60
-    },
-    "socials": {
-      "instagram": "",
-      "spotify": [],
-      "twitter": "",
-      "otherSocials": []
-    },
-    "showBlurb": "Playing different genres every week",
-    "standardShow": true,
-    "image": "",
-    "previousPlaylists": [
-      [
-        "2/17",
-        "https://open.spotify.com/playlist/0W1g4I5L5O3k4HewRqsN9D?si=_82pZSRSQY2IsmLmpj1NLA&pi=-XZ8jehaQJqii"
-      ]
-    ]
-  },
-  {
-    "name": "AikpJDB0EGc=",
-    "showName": "BBLNation",
-    "hostNames": [
-      "DQJlAxAY"
-    ],
-    "broadcastTime": {
-      "dayOfWeek": "Wednesday",
-      "startTime": "21:00",
-      "durationMinutes": 60
-    },
-    "socials": {
-      "instagram": "",
-      "spotify": [],
-      "twitter": "",
-      "otherSocials": []
-    },
-    "showBlurb": "music",
-    "standardShow": true,
-    "image": "",
-    "previousPlaylists": [],
-    "customFormatting": {
-      "css": "#showBlurbDiv{\n    display: flex;\n    justify-content: center;\n    padding-top:10px;\n}",
-      "html": "<iframe id='yuh' width='560' height='315' src='https://www.youtube.com/embed/videoseries?si=0uaAnmO78ap9v_au&amp;list=PLzmo2DLZLtLqG1wmcuDCTAeGJnO8mwuTf' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>"
-    }
-  },
-  {
-    "name": "CDEqLDswMmkNYg==",
-    "showName": "100% Electronic",
-    "hostNames": [
-      "CDEqLDswMmkNYg=="
-    ],
-    "broadcastTime": {
-      "dayOfWeek": "Wednesday",
-      "startTime": "15:00",
-      "durationMinutes": 60
-    },
-    "socials": {
-      "instagram": "",
-      "spotify": [],
-      "twitter": "",
-      "otherSocials": []
-    },
-    "showBlurb": "a selection of electronic and music inspired by electronic",
-    "standardShow": true,
-    "image": "",
-    "previousPlaylists": []
-  },
-  {
-    "name": "CDosIHIHeWlqbBAqLStkAw8=",
-    "showName": "Film Freaks",
-    "hostNames": [
-      "CDosIHIHeQ==",
-      "DS0kL3IYeQ=="
-    ],
-    "broadcastTime": {
-      "dayOfWeek": "Thursday",
-      "startTime": "16:00",
-      "durationMinutes": 60
-    },
-    "socials": {
-      "instagram": "@film_freaks_wmbc",
-      "spotify": [],
-      "twitter": "",
-      "otherSocials": []
-    },
-    "showBlurb": "watch movies of all genres and yap about those!",
-    "standardShow": true,
-    "image": "",
-    "previousPlaylists": []
-  },
-  {
-    "name": "CCYiJD4xJGkLYg==",
-    "showName": "Ranting %26 Raving",
-    "hostNames": [
-      "CCYiJD4xJGkLYg=="
-    ],
-    "broadcastTime": {
-      "dayOfWeek": "Tuesday",
-      "startTime": "12:00",
-      "durationMinutes": 60
-    },
-    "socials": {
-      "instagram": "@rantingraving.wmbc",
-      "spotify": [],
-      "twitter": "",
-      "otherSocials": []
-    },
-    "showBlurb": "Internet and pop culture based show with advice segments and themed music sections. Submit stories, song requests, messages, or ask for advice!",
-    "standardShow": true,
-    "image": "./imgs/dj-profile/Ranting_%2526_Raving-logo.jpeg",
-    "previousPlaylists": []
-  },
-  {
-    "name": "BCEmKTc4OyxsBXpvamUXLk9AAW9n",
-    "showName": "Mama's Orchard",
-    "hostNames": [
-      "BCEmKTc4OyxsBXo=",
-      "GikrIHIaeQ=="
-    ],
-    "broadcastTime": {
-      "dayOfWeek": "Friday",
-      "startTime": "17:00",
-      "durationMinutes": 60
-    },
-    "socials": {
-      "instagram": "@mamasorchard.wmbc",
-      "spotify": [],
-      "twitter": "",
-      "otherSocials": []
-    },
-    "showBlurb": "Welcome to Mama's Orchard, where we pick the juiciest weirdest fruits of the internet and our minds to talk about each episode. come walk through our orchard with us!",
-    "standardShow": true,
-    "image": "/imgs/dj-profile/Mama-s Orchard.jpg",
-    "previousPlaylists": []
-  },
-  {
-    "name": "CCwkLHIbeWlqbBcuICAmb3IP",
-    "showName": "Kabobcast",
-    "hostNames": [
-      "CCwkLHIbeQ==",
-      "CikpJDB0BGc="
-    ],
-    "broadcastTime": {
-      "dayOfWeek": "Friday",
-      "startTime": "14:00",
-      "durationMinutes": 60
-    },
-    "socials": {
-      "instagram": "",
-      "spotify": [],
-      "twitter": "",
-      "otherSocials": []
-    },
-    "showBlurb": "We’re mostly covering movies and soccer matches we saw recently with some short intervals of music",
-    "standardShow": true,
-    "image": "",
-    "previousPlaylists": []
-  },
-  {
-    "name": "Az0pKDN0BGc=",
-    "showName": "Cactus Country",
-    "hostNames": [
-      "Az0pKDN0BGc="
-    ],
-    "broadcastTime": {
-      "dayOfWeek": "Wednesday",
-      "startTime": "16:00",
-      "durationMinutes": 60
-    },
-    "socials": {
-      "instagram": "@cactuscountryradio",
-      "spotify": [],
-      "twitter": "",
-      "otherSocials": []
-    },
-    "showBlurb": "each set focuses on a different movement in folk/soul/country music",
-    "standardShow": true,
-    "image": "",
-    "previousPlaylists": []
-  },
-  {
-    "name": "Cy0rYR96",
-    "showName": "BCG\u2019s Radio",
-    "hostNames": [
-      "Cy0rYR96"
-    ],
-    "broadcastTime": {
-      "dayOfWeek": "Friday",
-      "startTime": "12:00",
-      "durationMinutes": 60
-    },
-    "socials": {
-      "instagram": "@dj_bowlcutgamer",
-      "spotify": [],
-      "twitter": "",
-      "otherSocials": []
-    },
-    "showBlurb": "virtuous, voluptuous, and vindictive variety",
-    "standardShow": true,
-    "image": "",
-    "previousPlaylists": []
-  },
-  {
-    "name": "ByEmKnIGeQ==",
-    "showName": "Cherish",
-    "hostNames": [
-      "ByEmKnIGeQ=="
-    ],
-    "broadcastTime": {
-      "dayOfWeek": "Wednesday",
-      "startTime": "13:00",
-      "durationMinutes": 60
-    },
-    "socials": {
-      "instagram": "@cherish.wmbc",
-      "spotify": [],
-      "twitter": "",
-      "otherSocials": []
-    },
-    "showBlurb": "Switching it up weekly with a variety of emo music!",
-    "standardShow": true,
-    "image": "",
-    "previousPlaylists": []
-  },
-  {
-    "name": "GTokIjo9dxpi",
-    "showName": "Canticulum (Medieval Mix)",
-    "hostNames": [
-      "GTokIjo9dxpi"
-    ],
-    "broadcastTime": {
-      "dayOfWeek": "Monday",
-      "startTime": "21:00",
-      "durationMinutes": 60
-    },
-    "socials": {
-      "instagram": "@canticulum.wmbc",
-      "spotify": [],
-      "twitter": "",
-      "otherSocials": []
-    },
-    "showBlurb": "a jaunty mix of medieval inspired tunes paired with historical fun facts",
-    "standardShow": true,
-    "image": "./imgs/dj-profile/Canticulum.png",
-    "previousPlaylists": [],
-    "customFormatting": ""
-  },
-  {
-    "name": "DD4kYRR6",
-    "showName": "Monkey Business \ud83c\udf4c",
-    "hostNames": [
-      "DQJlMTw/Mj8p"
-    ],
-    "broadcastTime": {
-      "dayOfWeek": "Tuesday",
-      "startTime": "16:00",
-      "durationMinutes": 60
-    },
-    "socials": {
-      "instagram": "@monkeybiz.wmbc",
-      "spotify": [],
-      "twitter": "",
-      "otherSocials": []
-    },
-    "showBlurb": "we like to have a very silly and deeply unserious time on and off the air. the theme for music is whatever dj pnkeve decides that week, with some anecdotes along the way. i hope you\u2019ll join us weekly on tuesdays at 4pm for some goofs, giggles and tunes!",
-    "standardShow": true,
-    "image": "./imgs/dj-profile/MonkeyBusiness-logo.jpg",
-    "previousPlaylists": [],
-    "customFormatting": ""
-  },
-  {
-    "name": "Bi4jKDExJWkEIyE9",
-    "showName": "Officer Hour",
-    "hostNames": [
-      "HgUHAnUndwYqKj0sKTc3"
-    ],
-    "broadcastTime": {
-      "dayOfWeek": "Tuesday",
-      "startTime": "20:00",
-      "durationMinutes": 60
-    },
-    "socials": {
-      "instagram": "",
-      "spotify": [],
-      "twitter": "",
-      "otherSocials": []
-    },
-    "showBlurb": "it's a mess. tune in!",
-    "standardShow": true,
-    "image": "",
-    "previousPlaylists": [],
-    "customFormatting": ""
-  },
-  {
-    "name": "Gyk8ODM6",
-    "showName": "The Rayyan Hour",
-    "hostNames": [
-      "Gyk8ODM6"
-    ],
-    "broadcastTime": {
-      "dayOfWeek": "Tuesday",
-      "startTime": "21:00",
-      "durationMinutes": 60
-    },
-    "socials": {
-      "instagram": "",
-      "spotify": [],
-      "twitter": "",
-      "otherSocials": []
-    },
-    "showBlurb": "Talking to guests and discussing their new and old tastes in music!",
-    "standardShow": true,
-    "image": "",
-    "previousPlaylists": [],
-    "customFormatting": ""
-  },
-  {
-    "name": "Ayc2KSc1dwguIDFiDyQ2O0RT",
-    "showName": "The Rock Tumbler",
-    "hostNames": [
-      "Ayc2KXIVeQ=="
-    ],
-    "broadcastTime": {
-      "dayOfWeek": "Friday",
-      "startTime": "20:00",
-      "durationMinutes": 60
-    },
-    "socials": {
-      "instagram": "@ablecdesigns",
-      "spotify": [],
-      "twitter": "",
-      "otherSocials": []
-    },
-    "showBlurb": "A show that explores a different genre/subgenre of music each episode a mix of new and classic artists.",
-    "standardShow": true,
-    "image": "",
-    "previousPlaylists": [],
-    "customFormatting": ""
-  },
-  {
-    "name": "CCw3KDM6dwhibHJvASQ2LE4BZQ8=",
-    "showName": "am i mutted?",
-    "hostNames": [
-      "CCw3KDM6dwhi",
-      "aQUkMzE7dw1i"
-    ],
-    "broadcastTime": {
-      "dayOfWeek": "Friday",
-      "startTime": "19:00",
-      "durationMinutes": 60
-    },
-    "socials": {
-      "instagram": "",
-      "spotify": [],
-      "twitter": "",
-      "otherSocials": []
-    },
-    "showBlurb": "Playing any music that interests us and discussing anything that crosses our minds",
-    "standardShow": true,
-    "image": "",
-    "previousPlaylists": [],
-    "customFormatting": ""
-  }
 ]

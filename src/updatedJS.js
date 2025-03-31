@@ -1,3 +1,9 @@
+// var env = "production"; // Set to "production" or "development" based on your environment
+var env = "development";
+if (env === 'production') {
+  console.log = function () {};
+}
+
 const socialIcons = {
   instagram: `<svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 512"><path fill-rule="nonzero" d="M170.663 256.157c-.083-47.121 38.055-85.4 85.167-85.482 47.121-.092 85.407 38.029 85.499 85.159.091 47.13-38.047 85.4-85.176 85.492-47.112.09-85.399-38.039-85.49-85.169zm-46.108.092c.141 72.602 59.106 131.327 131.69 131.185 72.592-.14 131.35-59.089 131.209-131.691-.141-72.577-59.114-131.336-131.715-131.194-72.585.141-131.325 59.114-131.184 131.7zm237.104-137.092c.033 16.954 13.817 30.682 30.772 30.649 16.961-.034 30.689-13.811 30.664-30.765-.033-16.954-13.818-30.69-30.78-30.656-16.962.033-30.689 13.818-30.656 30.772zm-208.696 345.4c-24.958-1.086-38.511-5.234-47.543-8.709-11.961-4.628-20.496-10.177-29.479-19.093-8.966-8.951-14.532-17.461-19.202-29.397-3.508-9.033-7.73-22.569-8.9-47.527-1.269-26.983-1.559-35.078-1.683-103.433-.133-68.338.116-76.434 1.294-103.441 1.069-24.941 5.242-38.512 8.709-47.536 4.628-11.977 10.161-20.496 19.094-29.478 8.949-8.983 17.459-14.532 29.403-19.202 9.025-3.526 22.561-7.715 47.511-8.9 26.998-1.278 35.085-1.551 103.423-1.684 68.353-.133 76.448.108 103.456 1.294 24.94 1.086 38.51 5.217 47.527 8.709 11.968 4.628 20.503 10.145 29.478 19.094 8.974 8.95 14.54 17.443 19.21 29.413 3.524 8.999 7.714 22.552 8.892 47.494 1.285 26.998 1.576 35.094 1.7 103.432.132 68.355-.117 76.451-1.302 103.442-1.087 24.957-5.226 38.52-8.709 47.56-4.629 11.953-10.161 20.488-19.103 29.471-8.941 8.949-17.451 14.531-29.403 19.201-9.009 3.517-22.561 7.714-47.494 8.9-26.998 1.269-35.086 1.56-103.448 1.684-68.338.133-76.424-.124-103.431-1.294zM149.977 1.773c-27.239 1.286-45.843 5.648-62.101 12.019-16.829 6.561-31.095 15.353-45.286 29.603C28.381 57.653 19.655 71.944 13.144 88.79c-6.303 16.299-10.575 34.912-11.778 62.168C.172 178.264-.102 186.973.031 256.489c.133 69.508.439 78.234 1.741 105.548 1.302 27.231 5.649 45.827 12.019 62.092 6.569 16.83 15.353 31.089 29.611 45.289 14.25 14.2 28.55 22.918 45.404 29.438 16.282 6.294 34.902 10.583 62.15 11.777 27.305 1.203 36.022 1.468 105.521 1.336 69.532-.133 78.25-.44 105.555-1.734 27.239-1.302 45.826-5.664 62.1-12.019 16.829-6.585 31.095-15.353 45.288-29.611 14.191-14.251 22.917-28.55 29.428-45.404 6.304-16.282 10.592-34.904 11.777-62.134 1.195-27.323 1.478-36.049 1.344-105.557-.133-69.516-.447-78.225-1.741-105.522-1.294-27.256-5.657-45.844-12.019-62.118-6.577-16.829-15.352-31.08-29.602-45.288-14.25-14.192-28.55-22.935-45.404-29.429-16.29-6.304-34.903-10.6-62.15-11.778C333.747.164 325.03-.101 255.506.031c-69.507.133-78.224.431-105.529 1.742z"/></svg>`,
   twitter: `<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 640 640"><path d="M579.999 0H60C27 0 0 27 0 60v520c0 33 27 60 60 60h519.999c33 0 60-27 60-60V60c0-33-27-60-60-60zm-59.942 195.935a161.34 161.34 0 0 1-47.079 12.85c16.914-10.086 29.894-26.22 36.095-45.413-15.862 9.39-33.473 16.287-52.087 19.96-15.048-15.92-36.343-25.83-59.942-25.83-45.331 0-82.04 36.685-82.04 82.016 0 6.355.685 12.626 2.09 18.674-68.186-3.484-128.647-36.13-169.148-85.785a82.08 82.08 0 0 0-11.126 41.245c0 28.465 14.457 53.623 36.485 68.257-13.465-.39-26.068-4.11-37.206-10.205v1.04c0 39.756 28.3 72.969 65.86 80.48a82.817 82.817 0 0 1-21.627 2.883c-5.291 0-10.405-.52-15.472-1.477 10.453 32.587 40.713 56.351 76.642 57-28.134 22.04-63.473 35.163-101.954 35.163-6.65 0-13.134-.39-19.606-1.146 36.39 23.362 79.524 36.85 125.872 36.85 150.935 0 233.507-125.056 233.507-233.494 0-3.603-.06-7.122-.236-10.654 16.027-11.457 29.965-25.937 40.925-42.378l.048-.036z"/></svg>`,
@@ -186,6 +192,7 @@ function demoDJs(whichDJ = -1) {
   // getDJ(new Date("2025-03-03T21:00:00"));  //dj with pfp
   // getDJ(new Date("2025-03-03T12:30:00"));  //dj with no pfp
   // getDJ(new Date("2025-03-07T15:30:00"));  //fast minute (long dj list)
+  // getDJ(new Date("2025-03-27T21:00:00"));  //jenny (ampersand title!)
   if (whichDJ === -1) {
     CurrDJDemo++;
     if (CurrDJDemo > 4) {
@@ -221,13 +228,18 @@ function demoDJs(whichDJ = -1) {
 function animateDJCycle() {
   //cycle them on loop
   let demoIndex = 2;
-  setInterval(() => {
+  const demoInterval = setInterval(() => {
     demoDJs(demoIndex);
     demoIndex++;
     if (demoIndex > 4) {
       demoIndex = 2;
     }
   }, 5000);
+  
+  // Cleanup interval to prevent memory leaks
+  window.addEventListener("beforeunload", () => {
+    clearInterval(demoInterval);
+  });
 }
 
 
@@ -264,6 +276,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 1800000);
     return;
   }
+
+  
   if (urlParts[1] === "?=yass") {
     //add button and a text area uneditable, 
     //click button and the number adds 1 to current counter in text area
@@ -326,11 +340,18 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       document.querySelector(".over").classList.remove("moveItMoveIt");
     }
+    // Cleanup to prevent memory leaks
+    window.addEventListener("beforeunload", () => {
+      playButton.removeEventListener("click", toggleMoveItMoveIt);
+    });
   });
 });
 
 
 function fetchAndDisplayTracks() {
+
+
+  
   const url = "https://public.radio.co/stations/s7a5fb9da6/history";
   fetch(url)
     .then((response) => response.json())
@@ -340,7 +361,7 @@ function fetchAndDisplayTracks() {
       trackList.innerHTML = "";
 
       var addedSongs = []; //prevent duplicates for 
-
+      
       tracks.forEach((track) => {
         if (addedSongs.includes(track.title)) {
           //SKIP to next iteration if song is already added
@@ -368,6 +389,15 @@ function fetchAndDisplayTracks() {
       console.error("Error fetching track history:", error);
     });
   console.log("maybe??");
+
+  // remove old tracks (anything more than 15)
+  const trackList = document.querySelector(".track-list ul");
+  const trackItems = trackList.querySelectorAll("li");
+  if (trackItems.length > 20) {
+    for (let i = 0; i < trackItems.length - 20; i++) {
+      trackList.removeChild(trackItems[i]);
+    }
+  }
 
 }
 
@@ -1068,14 +1098,14 @@ function populateSchedule(eventInfoJson = { eventTitle: "!NOEVENT", eventDescrip
     //console.log(endTime);
     let showName = show.showName;
     //console.log(showName);
-    if (showName === "Ebbs %26 Flows") {
-      showName = "Ebbs & Flows";
-      console.log("jenny handled");
-    }
-    else if (showName === "Ranting %26 Raving") {
-      showName = "Ranting & Raving";
-      console.log("other person handled");
-    }
+    // if (showName === "Ebbs %26 Flows") {
+    //   showName = "Ebbs & Flows";
+    //   console.log("jenny handled");
+    // }
+    // else if (showName === "Ranting %26 Raving") {
+    //   showName = "Ranting & Raving";
+    //   console.log("other person handled");
+    // }
     const encryptedHostNames = show.hostNames;
     //console.log(encryptedHostNames);
     const standardShow = show.standardShow;
@@ -1112,6 +1142,7 @@ function populateSchedule(eventInfoJson = { eventTitle: "!NOEVENT", eventDescrip
 
     // showname encode for url  
     showNameE = encodeURIComponent(showName);
+    console.log(showName + "~~~~~~~~~");
     showElement.classList.add("show");
     //make each element clickable and bring you to
     //the show's page, which will be
@@ -1206,10 +1237,23 @@ var socials = {
   twitter: "",
   youtube: "",
   linktree: "",
+  spotify: [],
   other: []
 };
 
 function populateSocials(dj_socials) {
+  //clear the list of socials
+  socials.instagram = "";
+  socials.twitter = "";
+  socials.youtube = "";
+  socials.linktree = "";
+  socials.spotify = [];
+  socials.other = [];
+  socials.bandcamp = "";
+  socials.letterboxd = "";
+
+
+
   /*
   DJ_JSON[0].socials: =
     {
@@ -1221,6 +1265,10 @@ function populateSocials(dj_socials) {
     */
   // handle others, which will be a list of "social: handle".
   // populate youtube and linktree correctly, put rest in other
+  // if (document.getElementById("socialsList").innerHTML !== "") {
+  //   console.log("list is not empty, clearing...");
+  //   document.getElementById("socialsList").innerHTML = "";
+  // }
   console.log(dj_socials);
   if (dj_socials.instagram) {
     socials.instagram = dj_socials.instagram;
@@ -1231,6 +1279,9 @@ function populateSocials(dj_socials) {
   if (dj_socials.spotify.length > 0) {
     socials.spotify = [dj_socials.spotify[0], dj_socials.spotify[1]];
     console.log(dj_socials.spotify[0])
+  }
+  else{
+    socials.spotify = ["", ""];
   }
   if (dj_socials.otherSocials) {
     dj_socials.otherSocials.forEach(social => {
@@ -1275,7 +1326,9 @@ function loadSocialImgs() {
       else if (platform === "spotify") {
         console.log("TOOOO")
         console.log(handle)
-        li.innerHTML = `${socialIcons[platform]} <a href="${handle[1]}" target="_blank">${handle[0]}</a>`;
+        if(handle[0] !== "") {
+          li.innerHTML = `${socialIcons[platform]} <a href="${handle[1]}" target="_blank">${handle[0]}</a>`;
+        }
       }
       else if (platform === "bandcamp") {
         //just get the bandcamp name
@@ -1309,6 +1362,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .then((json) => {
       console.log(json);
       DJ_JSON = json;
+      //load the schedule
       generatePage();
     })
 
@@ -1331,6 +1385,11 @@ function decodeName(encodedName, key) {
 
 var firstGen = true;
 function generatePage() {
+  //prevent multiple runs for some reason
+  if (document.getElementById("showName").innerText === showName) {
+    console.log("already generated this page, skipping...");
+    return;
+  }
   const DECODE_KEY = "IHEARTWILLTOLEDO!!!!";
   const urlParams = window.location.href;
   var showName = CURRENT_SHOW_PAGE;
@@ -1340,7 +1399,7 @@ function generatePage() {
 
   }
   console.log(showName);
-  showName = decodeURI(showName);
+  // showName = decodeURI(showName);
   //Get the show name from the URL);
   console.log(showName);
 
@@ -1364,11 +1423,22 @@ function generatePage() {
   }
   document.getElementById("showName").innerText = show.showName;
 
+  
   // let showBlurbWithBreaks = show.showBlurb;
   // showBlurbWithBreaks = showBlurbWithBreaks.replace(/\n/g, "<br>"); // Assign the result back to the variable
   // console.log(showBlurbWithBreaks);
   // document.getElementById("showBlurb").innerHTML = showBlurbWithBreaks;
-  document.getElementById("showBlurb").innerText = show.showBlurb;;
+  document.getElementById("showBlurb").innerText = show.showBlurb;
+  let b = document.getElementById("socialsList");
+  console.log("==-===-=-= -=-=--=-=--=-=--=-=--=-=--=-=--=-=--=-=");
+  console.log(b.children);
+  for (let i = b.children.length - 1; i >= 0; i--) {
+    b.removeChild(b.children[i]);
+  }
+  console.log(b.children);
+  console.log("cleared socials list");
+  console.log(show.socials);
+  console.log(" ~~ running socials on " + show.showName);
   populateSocials(show.socials);
   loadHostNames(show.hostNames, DECODE_KEY);
 
@@ -1428,13 +1498,18 @@ function generatePage() {
   //if specialty show, skip adding to the selecter
 
 
+  //remove all current listener if it exists
+  
+  console.log("adding event listeners");
+  // console.log(getEventListeners(showSelecter));
   showSelecter.addEventListener('change', (event) => {
+    console.log("!!! Triggered Show Selection Change");
     const selectedShowName = event.target.value;
     CURRENT_SHOW_PAGE = selectedShowName;
     console.log(selectedShowName);
     //set current html to blank so it can be reloaded
       
-  removeCustomCss();
+    removeCustomCss();
     document.getElementById("showBlurb").innerText = "";
     document.getElementById("timeSlot").innerText = "";
     document.getElementById("showName").innerText = "";
@@ -1442,8 +1517,17 @@ function generatePage() {
     document.getElementById("hostNamesList").innerText = "";
 
     //clear all socials
-    document.getElementById("socialsList").innerHTML = "";
-    //clear all past broadcasts
+    // document.getElementById("socialsList").innerHTML = "";
+    console.log("~~~~~~~~Clearing Socials")
+    // var gg = document.getElementById("socialsList").innerHTML;
+    // let b = document.getElementById("socialsList");
+    // for (let i = b.children.length-1; i >= 0; i--) {
+    //   b.children[0].remove();
+    // }
+    // if (gg !== "") {
+    //   console.log("FAILED TO CLEAR!!");
+    // }
+    // //clear all past broadcasts
     document.getElementById("pastBroadcastsDiv").innerHTML = "";
     //clear all custom css
 
@@ -1514,6 +1598,12 @@ function generatePage() {
 
 
 function genLite() {
+  console.log("!!! Called by " + genLite.caller.caller.name); 
+  console.log("!!!lite gen called");
+  if (document.getElementById("showName").innerText === showName) {
+    console.log("already generated this page, skipping...");
+    return;
+  }
   const DECODE_KEY = "IHEARTWILLTOLEDO!!!!";
   // const urlParams = window.location.href;
   var showName = CURRENT_SHOW_PAGE;
@@ -1523,7 +1613,12 @@ function genLite() {
 
   }
   console.log(showName);
-  showName = decodeURI(showName);
+  
+  //check if showName is encoded
+  // if (showName.includes("%")) {
+  //   console.log("showName is encoded, decoding...");
+  //   showName = decodeURI(showName);
+  // }
   //Get the show name from the URL);
   console.log(showName);
 
@@ -1576,37 +1671,55 @@ function genLite() {
 
   //if specialty show, skip adding to the selecter
 
-
-  showSelecter.addEventListener('change', (event) => {
-    //get url and split after "baseDJPage.html"
-    const selectedShowName = event.target.value;
-    CURRENT_SHOW_PAGE = selectedShowName;
-    console.log(selectedShowName);
-    //set current html to blank so it can be reloaded
-      
-  removeCustomCss();
-  //if showBlurb exists, set to ""
-  if (document.getElementById("showBlurb")) {
-    document.getElementById("showBlurb").innerText = "";
+  //remove current event listener if it exists
+  const oldListener = showSelecter.getAttribute('data-listener');
+  if (oldListener) {
+    console.log("~~~removing old listener");
+    showSelecter.removeEventListener('change', oldListener);
   }
+  //add new event listener
+
+  //only add new event listener for change if it doesn't exist
+  
+  // showSelecter.addEventListener('change', (event) => {
+
+  //   // why does this exponentially increase the time it takes to load the page?
+  //   console.log("!!! Triggered Show Selection Change");
+  //   //get url and split after "baseDJPage.html"
+  //   const selectedShowName = event.target.value;
+  //   CURRENT_SHOW_PAGE = selectedShowName;
+  //   console.log(selectedShowName);
+  //   //set current html to blank so it can be reloaded
+      
+  //   removeCustomCss();
+  //   //if showBlurb exists, set to ""
+  //   if (document.getElementById("showBlurb")) {
+  //     document.getElementById("showBlurb").innerText = "";
+  //   }
     
-    document.getElementById("timeSlot").innerText = "";
-    document.getElementById("showName").innerText = "";
-    //clear hostNames
-    document.getElementById("hostNamesList").innerText = "";
+  //   document.getElementById("timeSlot").innerText = "";
+  //   document.getElementById("showName").innerText = "";
+  //   //clear hostNames
+  //   document.getElementById("hostNamesList").innerText = "";
 
-    //clear all socials
-    document.getElementById("socialsList").innerHTML = "";
-    //clear all past broadcasts
-    document.getElementById("pastBroadcastsDiv").innerHTML = "";
-    //clear all custom css
+  //   //clear all socials
+  //   document.getElementById("socialsList").innerHTML = "";
+  //   //clear all past broadcasts
+  //   document.getElementById("pastBroadcastsDiv").innerHTML = "";
+  //   //clear all custom css
 
-    //clear all custom html
+  //   //clear all custom html
 
-    generatePage();
-  });
+  //   generatePage();
+  // });
 
 
+  console.log("did generation break somehow?");
+  if (document.getElementById("showName").innerText === showName) {
+    console.log("show name is the same, skipping...");
+    return;
+  }
+  console.log("show name is different, generating...");
 
 }
 function removeCustomCss() {
@@ -1634,6 +1747,7 @@ function removeCustomCss() {
         fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
         anim id est laborum</p>
     </div>`;
+    console.log("calling genLite from removeCustomCss()");
     genLite();
 
 
@@ -1643,6 +1757,7 @@ function loadHTML(savedHtml) {
   if (savedHtml) {
     document.getElementById("showBlurbDiv").innerHTML = savedHtml;
   }
+  console.log("calling genLite from loadHTML()");
 
   genLite();
 
@@ -1683,6 +1798,8 @@ function applyCustomCss(css) {
 }
 
 function changeToShowPage(showName) {
+  //uri decode the show name
+  showName = decodeURIComponent(showName);
   //sets var, runs loadShowinfoPage()
   CURRENT_SHOW_PAGE = showName;
   console.log("changing to show page: " + showName);
@@ -1694,14 +1811,14 @@ function changeToShowPage(showName) {
   document.getElementById("hostNamesList").innerText = "";
 
   //clear all socials
-  document.getElementById("socialsList").innerHTML = "";
+  // document.getElementById("socialsList").innerHTML = "";
   //clear all past broadcasts
   document.getElementById("pastBroadcastsDiv").innerHTML = "";
   //clear all custom css
   //select the current show in the dropdown
   //decode the show name
-  var eShowName = decodeURIComponent(showName);
-  document.getElementById("showSelecter").value = eShowName;
+  // var eShowName = decodeURIComponent(showName);
+  document.getElementById("showSelecter").value = showName;
   removeCustomCss();
     //set current html to blank so it can be reloaded
   document.getElementById("showBlurb").innerText = "";
@@ -1711,14 +1828,14 @@ function changeToShowPage(showName) {
   document.getElementById("hostNamesList").innerText = "";
 
   //clear all socials
-  document.getElementById("socialsList").innerHTML = "";
+  // document.getElementById("socialsList").innerHTML = "";
   //clear all past broadcasts
   document.getElementById("pastBroadcastsDiv").innerHTML = "";
   //clear all custom css
 
 
-  
-  generatePage();
+  console.log("!calling generatePage from changeToShowPage()");
+  // generatePage();
   loadShowinfoPage();
 }
 /* 
@@ -1764,7 +1881,7 @@ function loadSchedule() {
   document.getElementById("hostNamesList").innerText = "";
 
   //clear all socials
-  document.getElementById("socialsList").innerHTML = "";
+  // document.getElementById("socialsList").innerHTML = "";
   //clear all past broadcasts
   document.getElementById("pastBroadcastsDiv").innerHTML = "";
   //clear all custom css
@@ -1791,7 +1908,7 @@ function loadMainPlayer() {
   document.getElementById("hostNamesList").innerText = "";
 
   //clear all socials
-  document.getElementById("socialsList").innerHTML = "";
+  // document.getElementById("socialsList").innerHTML = "";
   //clear all past broadcasts
   document.getElementById("pastBroadcastsDiv").innerHTML = "";
   //clear all custom css
@@ -1811,6 +1928,9 @@ function loadShowinfoPage() {
 
   //add flex-direction: column; to #lowerHalf
   document.getElementById("lowerHalf").style.flexDirection = "column";
+
+  generatePage();
+  
 }
 
 
