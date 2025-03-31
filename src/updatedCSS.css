@@ -1112,6 +1112,7 @@ header h1 {
     align-items: center;
     justify-content: center;
     margin: auto;
+    max-width:50% !important;
     
   }
 
@@ -1126,7 +1127,7 @@ header h1 {
     justify-content: center;
     border: 3px solid var(--Gold);
     /* align vertically and horizantally center */
-    margin: auto;
+    /* margin: auto; */
   }
 
   .showTitleImg img {
