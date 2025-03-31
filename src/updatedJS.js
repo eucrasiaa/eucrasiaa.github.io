@@ -1,5 +1,5 @@
 // var env = "production"; // Set to "production" or "development" based on your environment
-var env = "development";
+var env = "production";
 if (env === 'production') {
   console.log = function () {};
 }
