@@ -714,6 +714,7 @@ function addCurrentDJInfo(show, onDeck=false){
     document.querySelector("#Current-OnDeck").classList.add("upNextText");
   }
   else{
+
     document.getElementById("Current-OnDeck").innerHTML = 'Current DJ(s): <span id="currDJSpan"></span>';
     document.getElementById("currDJSpan").textContent = hostNames;
     //remove .upNextText class

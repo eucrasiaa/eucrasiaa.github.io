@@ -487,7 +487,7 @@ header h1 {
 }
 
 .radioco-playButton {
-  font-size: 65px;
+  font-size: 55px;
   /* why does this add a margin to the parent? 
       /* fix this  */
   margin-top: 45px;
