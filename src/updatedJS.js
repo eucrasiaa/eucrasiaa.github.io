@@ -2,6 +2,7 @@
 var env = "production";
 if (env === 'production') {
   console.log = function () {};
+  //override new Date() to just return new Date("2025-04-09T22:15:00");
 }
 
 const socialIcons = {
@@ -552,7 +553,7 @@ setTimeout(() => {
 //run a getDJ 10 seconds after the page loads just in case the page loads at the start of a show
 setTimeout(() => {
   getDJ();
-}, 10000);
+}, 3000); //ON START 10 seconds load getDJ
 class TrackTimer {
   constructor() {
     this.currentTrack = null;
@@ -662,11 +663,13 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log(json);
       DJ_JSON = json;
       getDJ();
+
     })
 });
 
 
 function addCurrentDJInfo(show, onDeck=false){
+  // alert(show.showName);
 
   //Current-OnDeck inner text
   //if onDeck is true, set to "Up Next at (HOUR): (show name)"
@@ -737,12 +740,16 @@ function addCurrentDJInfo(show, onDeck=false){
   currShowName = encodeURI(currShowName);
   // set it to changeToShowPage(currShowName) on click
   // newLinkElem.onclick = "changeToShowPage(" + currShowName + ")";
+  // alert("show na aaa me: " + currShowName);
   if(!EVENT_FLAG){
-  document.getElementsByClassName("current-DJ")[0].appendChild(newLinkElem);
+    document.getElementsByClassName("current-DJ")[0].appendChild(newLinkElem);
+    document.getElementById("showPageLink").addEventListener("click", function() {
+      changeToShowPage(currShowName);
+    });
   }
-  document.getElementById("showPageLink").addEventListener("click", function() {
-    changeToShowPage(currShowName);
-  });
+
+
+  // alert("test test test");
   // if we have a dj, replace the info with the live dj info
   // <div id="showInfoBox">
   // <h2 id="titleShowInfoBox"></h2>
@@ -750,14 +757,21 @@ function addCurrentDJInfo(show, onDeck=false){
 
 
   //hide this if onDeck is true
+  
   if (onDeck) {
     document.querySelector(".Show-Info-up-next").style.display = "none";
-    document.querySelector("#showPageLink").style.display = "none";
+    if(EVENT_FLAG === false){
+      document.querySelector("#showPageLink").style.display = "none";
+    }
   }
   else{
     document.querySelector(".Show-Info-up-next").style.display = "";
-    document.querySelector("#showPageLink").style.display = "";
+    if(EVENT_FLAG === false){
+      document.querySelector("#showPageLink").style.display = "";
+    }
+    
   }
+  
   document.getElementById("titleShowInfoBox").textContent = show.showName;
   document.getElementById("descShowInfoBox").textContent = show.showBlurb;
   if (show.image === "") {
@@ -858,12 +872,20 @@ function getSpecialEventDJ(demoDate = "BAH") {
       console.log("upcoming show");
       console.log(show);
       return addCurrentDJInfo(show, true);
+      
     }
     if (hour >= runHour && hour < endHour) {
       if (hour === endHour && minute > endMinutes) {
         continue;
       }
-      return addCurrentDJInfo(show);
+      if(EVENT_FLAG === true){
+        if(show.standardShow === false){
+          return addCurrentDJInfo(show);
+        }
+      }
+      else{
+        return addCurrentDJInfo(show);
+      }
     }
   }
 
