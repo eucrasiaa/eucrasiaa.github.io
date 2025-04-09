@@ -1,0 +1,144 @@
+[
+    {
+        "eventTitle": "Retro Radio!",
+        "eventDescription": "Join us for a day of special shows, featuring a different decade every hour!",
+        "runTimeStr": "Wednesday 12-6pm",
+        "runTime": {
+          "dayOfWeek": "Wednesday",
+          "startTime": "12:00",
+          "durationMinutes": 360
+        } 
+    },
+    {
+        "name": "Will",
+        "showName": "Will - 70's!",
+        "hostNames": [
+          "Will"
+        ],
+        "broadcastTime": {
+          "dayOfWeek": "Wednesday",
+          "startTime": "12:00",
+          "durationMinutes": 60
+        },
+        "socials": {
+          "instagram": "",
+          "spotify": [],
+          "twitter": "",
+          "otherSocials": []
+        },
+        "showBlurb": "",
+        "standardShow": false,
+        "image": "",
+        "previousPlaylists": []
+      },
+      {
+        "name": "Aria",
+        "showName": "Aria - 80's!",
+        "hostNames": [
+          "Aria"
+        ],
+        "broadcastTime": {
+          "dayOfWeek": "Wednesday",
+          "startTime": "13:00",
+          "durationMinutes": 60
+        },
+        "socials": {
+          "instagram": "",
+          "spotify": [],
+          "twitter": "",
+          "otherSocials": []
+        },
+        "showBlurb": "",
+        "standardShow": false,
+        "image": "",
+        "previousPlaylists": []
+      },
+      {
+        "name": "Isaiah",
+        "showName": "Isaiah - 90's!",
+        "hostNames": [
+          "Isaiah"
+        ],
+        "broadcastTime": {
+          "dayOfWeek": "Wednesday",
+          "startTime": "14:00",
+          "durationMinutes": 60
+        },
+        "socials": {
+          "instagram": "",
+          "spotify": [],
+          "twitter": "",
+          "otherSocials": []
+        },
+        "showBlurb": "",
+        "standardShow": false,
+        "image": "",
+        "previousPlaylists": []
+      },
+      {
+        "name": "Eva",
+        "showName": "Eva - 2000s!",
+        "hostNames": [
+          "Eva"
+        ],
+        "broadcastTime": {
+          "dayOfWeek": "Wednesday",
+          "startTime": "15:00",
+          "durationMinutes": 60
+        },
+        "socials": {
+          "instagram": "",
+          "spotify": [],
+          "twitter": "",
+          "otherSocials": []
+        },
+        "showBlurb": "",
+        "standardShow": false,
+        "image": "",
+        "previousPlaylists": []
+      },
+        {
+            "name": "Spencer",
+            "showName": "Spencer - 2010s!",
+            "hostNames": [
+            "Spencer"
+            ],
+            "broadcastTime": {
+            "dayOfWeek": "Wednesday",
+            "startTime": "16:00",
+            "durationMinutes": 60
+            },
+            "socials": {
+            "instagram": "",
+            "spotify": [],
+            "twitter": "",
+            "otherSocials": []
+            },
+            "showBlurb": "",
+            "standardShow": false,
+            "image": "",
+            "previousPlaylists": []
+        },
+        {
+            "name": "Dean",
+            "showName": "Dean - 2020s!",
+            "hostNames": [
+            "Dean"
+            ],
+            "broadcastTime": {
+            "dayOfWeek": "Wednesday",
+            "startTime": "17:00",
+            "durationMinutes": 60
+            },
+            "socials": {
+            "instagram": "",
+            "spotify": [],
+            "twitter": "",
+            "otherSocials": []
+            },
+            "showBlurb": "",
+            "standardShow": false,
+            "image": "",
+            "previousPlaylists": []
+        }
+     ]

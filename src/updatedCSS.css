@@ -460,6 +460,26 @@ header h1 {
   outline: 0;
 }
 
+.special-event h3 {
+  text-align: center;
+  font-size: 1.5em;
+  color: white;
+  background-color: var(--AOK-Teal);
+  padding: 10px;
+  border-radius: 10px;
+  /* animation: festive 10s infinite alternate; */
+}
+
+@keyframes festive {
+  0% {
+    background-color: var(--AOK-Teal);
+  }
+
+  100% {
+    background-color: var(--Gold);
+  }
+}
+
 .radioco-information {
   margin-top: -20px;
   font-size: 20px;
@@ -467,7 +487,7 @@ header h1 {
 }
 
 .radioco-playButton {
-  font-size: 40px;
+  font-size: 65px;
   /* why does this add a margin to the parent? 
       /* fix this  */
   margin-top: 45px;
