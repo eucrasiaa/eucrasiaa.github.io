@@ -513,33 +513,6 @@
         "previousPlaylists": []
     },
     {
-        "name": "GjggLzExJWkbYg==",
-        "showName": "Those Who Show",
-        "hostNames": [
-            "GjggLzExJWkbYg=="
-        ],
-        "broadcastTime": {
-            "dayOfWeek": "Thursday",
-            "startTime": "20:00",
-            "durationMinutes": 60
-        },
-        "socials": {
-            "instagram": "",
-            "spotify": [],
-            "twitter": "",
-            "otherSocials": []
-        },
-        "showBlurb": "indie rock, slowcore, alternative rock, art pop, dream pop i guess with\ncoloring pages to fit the theme of each show from artists and some wonderful commentary from me",
-        "standardShow": true,
-        "image": "./imgs/dj-profile/Those_Who_Show-logo.jpeg",
-        "previousPlaylists": [
-            [
-                "3/27/2025",
-                "https://open.spotify.com/playlist/34nbUvExLBr9DqZg4RFvU4"
-            ]
-        ]
-    },
-    {
         "name": "ECk2LDcxOWkfYg==",
         "showName": "subsonic",
         "hostNames": [
