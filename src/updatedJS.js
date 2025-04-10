@@ -1,5 +1,6 @@
 // var env = "production"; // Set to "production" or "development" based on your environment
 var env = "production";
+// var env = "development";
 if (env === 'production') {
   console.log = function () {};
   //override new Date() to just return new Date("2025-04-09T22:15:00");
@@ -655,17 +656,43 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 var DJ_JSON;
-document.addEventListener("DOMContentLoaded", function () {
-  //Fetch data
-  fetch('./src/showDB_Obscured_encoded.json')
-    .then((response) => response.json())
-    .then((json) => {
-      console.log(json);
-      DJ_JSON = json;
-      getDJ();
+// document.addEventListener("DOMContentLoaded", function () {
+//   //Fetch data
+//   fetch('./src/showDB_Obscured_encoded.json')
+//     .then((response) => response.json())
+//     .then((json) => {
+//       console.log(json);
+//       DJ_JSON = json;
+//       loadSpecialtyShows();
+//       getDJ();
 
-    })
-});
+//     })
+// });
+
+fetch('./src/showDB_Obscured_encoded.json')
+  .then((response) => response.json())
+  .then((json) => {
+    console.log(json);
+    DJ_JSON = json;
+
+    fullInitSync();
+    loadSpecialtyShows();
+    getDJ();
+  })
+  .catch((error) => {
+    console.error("Error fetching JSON:", error);
+  });
+
+
+async function fullInitSync() {
+
+  await loadSpecialtyShows();
+  await getDJ();
+
+
+
+}
+
 
 
 function addCurrentDJInfo(show, onDeck=false){
@@ -900,7 +927,7 @@ function getSpecialEventDJ(demoDate = "BAH") {
 //in the format of new Date("2025-02-21T12:30:00");
 // write the date for wednesday at 12:30 PM
 //new Date("2025-02-21T12:30:00");
-function getDJ(demoDate = "BAH") {
+async function getDJ(demoDate = "BAH") {
   if(EVENT_FLAG) {
     getSpecialEventDJ(demoDate);
     return;
@@ -1085,21 +1112,21 @@ function decodeName(encodedName, key) {
   return new TextDecoder().decode(decodedBytes);
 }
 
-var DJ_JSON;
-document.addEventListener("DOMContentLoaded", function () {
-  //Fetch data
-  fetch('./src/showDB_Obscured_encoded.json')
-    .then((response) => response.json())
-    .then((json) => {
-      console.log(json);
-      DJ_JSON = json;
-      loadSpecialtyShows();
-    })
-});
+// var DJ_JSON;
+// document.addEventListener("DOMContentLoaded", function () {
+//   //Fetch data
+//   fetch('./src/showDB_Obscured_encoded.json')
+//     .then((response) => response.json())
+//     .then((json) => {
+//       console.log(json);
+//       DJ_JSON = json;
+//       loadSpecialtyShows();
+//     })
+// });
 
 
-
-function loadSpecialtyShows() {
+//is always run so 
+async function loadSpecialtyShows() {
   const bkup_DJ = DJ_JSON;
   fetch('./src/specialEvents.json')
     .then((response) => response.json())
@@ -1107,17 +1134,41 @@ function loadSpecialtyShows() {
       console.log(json);
       //append to existing array of shows
       //remove the first element, which is the header
+      const now = new Date();
       if (json.length === 0) {
         console.log("no special events");
         populateSchedule();
+        return false; 
+      }
+      
+      json[0].runTime.dayOfWeek = json[0].runTime.dayOfWeek.charAt(0).toUpperCase() + json[0].runTime.dayOfWeek.slice(1);
+      console.log(json[0].runTime.dayOfWeek);
+      if (json[0].runTime.dayOfWeek !== Object.keys(dayToIndex)[now.getDay()]) {
+        console.log("not the same day, not loading specialty shows");
+        console.log(json[0].runTime.dayOfWeek);
+        console.log(Object.keys(dayToIndex)[now.getDay()]);
+        populateSchedule();
         return;
       }
+      //check if same date as today, otherwise dont load
+      
+      
+      // json[0].runTime.dayOfWeek = json[0].runTime.dayOfWeek.charAt(0).toUpperCase() + json[0].runTime.dayOfWeek.slice(1);
+      // console.log(json[0].runTime.dayOfWeek);
+      // console.log(now.getDay());
+      // if (json[0].runTime.dayOfWeek !== Object.keys(dayToIndex)[now.getDay()]) {
+      //   console.log("not the same day, not loading specialty shows");
+      //   console.log(json[0].runTime.dayOfWeek);
+      //   console.log(Object.keys(dayToIndex)[now.getDay()]);
+      //   populateSchedule();
+      //   return;
+      // }
       EVENT_FLAG = true;
       if (!json[0].hasOwnProperty("eventTitle") || !json[0].hasOwnProperty("eventDescription") || !json[0].hasOwnProperty("runTime")) {
         console.log("incorrectly formatted specialty show list!");
         DJ_JSON = bkup_DJ;
         populateSchedule();
-        return;
+        return false;
       }
 
       const eventInfoJson = json.shift();
@@ -1126,7 +1177,7 @@ function loadSpecialtyShows() {
       console.log(eventInfoJson)
       console.log("passing event title to populate schedule");
       populateSchedule(eventInfoJson)
-      return;
+      return true;
     }).catch(error => {
       console.log(error);
       console.log("SHOULD ONLY HIT ON FAILURE");
@@ -1134,7 +1185,7 @@ function loadSpecialtyShows() {
 
       DJ_JSON = bkup_DJ;
       populateSchedule();
-      return;
+      return false;
     });
 
 
@@ -1553,19 +1604,19 @@ function loadHostNames(hostNames, DECODE_KEY) {
     }
   });
 }
-var DJ_JSON;
-document.addEventListener("DOMContentLoaded", function () {
-  //Fetch data
-  fetch('./src/showDB_Obscured_encoded.json')
-    .then((response) => response.json())
-    .then((json) => {
-      console.log(json);
-      DJ_JSON = json;
-      //load the schedule
-      // generatePage();
-    })
+// var DJ_JSON;
+// document.addEventListener("DOMContentLoaded", function () {
+//   //Fetch data
+//   fetch('./src/showDB_Obscured_encoded.json')
+//     .then((response) => response.json())
+//     .then((json) => {
+//       console.log(json);
+//       DJ_JSON = json;
+//       //load the schedule
+//       // generatePage();
+//     })
 
-});
+// });
 
 function decodeName(encodedName, key) {
   // Decode the Base64 string
