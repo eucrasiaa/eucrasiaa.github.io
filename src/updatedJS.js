@@ -242,8 +242,12 @@ function animateDJCycle() {
   window.addEventListener("beforeunload", () => {
     clearInterval(demoInterval);
   });
+} 
+let  imageElementaaa = document.querySelector(".radioco-image");
+if (imageElementaaa) {
+  const trackTitle = document.getElementsByClassName("radioco-nowPlaying")[0].textContent;
+  imageElementaaa.setAttribute("alt", "album art for the playing track: " + trackTitle);
 }
-
   document.addEventListener("DOMContentLoaded", function () {
       if (window.innerWidth < 600) {
         let player = document.querySelector(".radioplayer");
@@ -276,7 +280,22 @@ function animateDJCycle() {
 
 document.addEventListener("DOMContentLoaded", function () {
   console.log("DOM loaded");
+const infoDiv = document.querySelector(".radioco-information");
+if (infoDiv) {
+  const linkDiv = document.createElement("div");
+  linkDiv.className = "linkToSite";
+  linkDiv.style.textAlign = "center";
+  linkDiv.style.marginTop = "10px";
 
+  const link = document.createElement("a");
+  link.href = "https://sites.google.com/umbc.edu/wmbc";
+  link.target = "_blank";
+  link.className = "listen-link";
+  link.textContent = "--> Listen Here <--";
+
+  linkDiv.appendChild(link);
+  infoDiv.appendChild(linkDiv);
+}
   if (window.innerWidth < 768) {
     if(false){
       const radioImage = document.querySelector(".radioco-image");
@@ -516,6 +535,8 @@ async function updateTrackTitle() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  let volumeSlider = document.querySelector(".radioco-volume");
+  volumeSlider.setAttribute("aria-label", "Volume Slider");
   const nowPlayingElement = document.querySelector(".radioco-nowPlaying");
 
   if (nowPlayingElement) {
@@ -523,6 +544,11 @@ document.addEventListener("DOMContentLoaded", () => {
       mutations.forEach((mutation) => {
         if (mutation.type === "childList" || mutation.type === "characterData") {
           updateTrackTitle();
+        }
+        // add alt text to the radioco-image element
+        if (imageElementaaa) {
+          const trackTitle = document.getElementsByClassName("radioco-nowPlaying")[0].textContent;
+          imageElementaaa.setAttribute("alt", "album art for the playing track: " + trackTitle);
         }
       });
     });
@@ -1081,7 +1107,8 @@ const dayToIndex = {
 document.addEventListener("DOMContentLoaded", function () {
   const dayTitles = document.querySelectorAll(".calendar thead th");
   const dayCells = document.querySelectorAll(".calendar tbody tr td");
-  if (window.innerWidth < 600) {
+  // if (window.innerWidth < 600) {
+  if(true){
     dayTitles.forEach((title, i) => {
       if (title.textContent !== "Time") {
         title.textContent = title.textContent.slice(0, 3);
@@ -1399,10 +1426,10 @@ function populateSchedule(eventInfoJson = { eventTitle: "!NOEVENT", eventDescrip
     // URLbaseDJPage.html?showName=${encodeURIComponent(selectedShowName)}
     showElement.innerHTML = `
     
-    <a onclick=changeToShowPage("${showNameE}")>
+    <a role="button" onclick=changeToShowPage("${showNameE}")>
     <div class="showElemDiv">
-      <h3 class="showElem">${showName}</h3>
-      <p>${hostNamesa.join(", ")}</p>
+      <p class="showElem sh_nm">${showName}</p>
+      <p class="othTxt">${hostNamesa.join(", ")}</p>
     </div>
     </a>
     `;
@@ -1996,7 +2023,7 @@ function removeCustomCss() {
   if (link.includes("<link")) {
     document.head.innerHTML = head.slice(0, i + 1);
   }
-
+//changed this from innerHTML to full remove!! FIXME IF SOMETHING ELSE BREAKS
   document.getElementById("showBlurbDiv").innerHTML = `    <div id="showBlurbDiv">
       <h2 id="showBlurbHeader"> About {showName}:</h2>
       <p id="showBlurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -2113,7 +2140,7 @@ function loadSchedule() {
   document.getElementById("theShowsInfoPageDropdown").style.display = "none";
   //show #theSchedule
   document.getElementById("theSchedule").style.display = "block";
-  if (window.innerWidth < 600 && doCull) {
+  if (doCull){//(window.innerWidth < 600 && doCull) {
     doCull = false;
     const rows = document.querySelectorAll(".calendar tbody tr");
     rows.forEach(row => {

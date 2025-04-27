@@ -33,10 +33,28 @@
   --rec-r-2: 50%;
 
 }
+.linkToSite {
+  margin-top: 20px;
+  }
+
+  .listen-link {
+  text-decoration: none;
+  font-size: 1.5em;
+  color: #fdb515;
+  background-color: #636466;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
 
 @media (max-width: 768px) {
   #lowerHalf {
     flex-direction: column-reverse;
+  }
+  .listen-link {
+    text-decoration: none;
+    font-size: 1em;
   }
   .container{
     width:auto;
@@ -536,7 +554,8 @@ header h1 {
 }
 
 .radioco-elapsedTime {
-  opacity: 0.4;
+  color: #ffffff;
+
   font-size: 14px;
 }
 
@@ -936,13 +955,17 @@ header h1 {
     width: 100%;
   }
 
-  .showElemDiv h3 {
+  .sh_nm {
     font-size: 0.9em !important;
   }
 
-  .showElemDiv p {
+  .showElemDiv .othTxt {
     font-size: 0.6em !important;
   }
+  .calendar td {
+    font-size: 15px !important;
+  }
+  
 }
 
 .calendar th,
@@ -950,6 +973,7 @@ header h1 {
   border: 1px solid var(--Light-Gray);
   padding: 8px;
   text-align: center;
+  font-size: 25px;
 }
 
 .calendar th {
@@ -981,8 +1005,8 @@ header h1 {
   color: black !important;
 }
 
-.calendar td.current-hour h3 {
-  color: var(--Red) !important;
+.calendar td.current-hour .sh_nm {
+  color: #0000ff !important;/*var(--Red) !important;*/
 }
 
 
@@ -1039,21 +1063,30 @@ header h1 {
   justify-content: center;
   font-size: 12px;
 }
-
-.showElemDiv h3 {
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  font-size: 1em;
-  color: var(--Gold);
+.sh_nm {
+  display: block;
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  unicode-bidi: isolate;
 }
-
-.showElemDiv p {
+.showElemDiv .othTxt{
   margin: 0;
   padding: 0;
   text-align: center;
   font-size: 0.8em;
   color: white;
+}
+
+.sh_nm {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 14pt; /*1.4em;*/
+  color: var(--Gold);
 }
 
 .specialEvent {
