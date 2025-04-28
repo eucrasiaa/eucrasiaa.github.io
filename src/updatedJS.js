@@ -291,7 +291,7 @@ if (infoDiv) {
   link.href = "https://sites.google.com/umbc.edu/wmbc";
   link.target = "_blank";
   link.className = "listen-link";
-  link.textContent = "--> Listen Here <--";
+  link.textContent = "--> Listen On Official Site Here <--";
 
   linkDiv.appendChild(link);
   infoDiv.appendChild(linkDiv);
