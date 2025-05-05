@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MP3 Recorder Download</title>
+    <style>
+        /* Basic styling */
+        body { font-family: sans-serif; margin: 20px; }
+        #rec_files_container { margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+    <h1>Select a Show</h1>
+
+    <div>
+        <label for="show_name">Choose a Show:</label>
+        <select id="show_name">
+                            <option value="Perfect Sound Forever">Perfect Sound Forever</option>
+                            <option value="Sounds of Silence">Sounds of Silence</option>
+                            <option value="Reverie">Reverie</option>
+                            <option value="Mangetsu Radio">Mangetsu Radio</option>
+                            <option value="CRUSHED">CRUSHED</option>
+                            <option value="Luna Roja Radio">Luna Roja Radio</option>
+                            <option value="Monday Night Metal">Monday Night Metal</option>
+                            <option value="Twin Beats">Twin Beats</option>
+                            <option value="Playoff Thoughts">Playoff Thoughts</option>
+                            <option value="Ebbs &amp; Flows">Ebbs &amp; Flows</option>
+                            <option value="Fast Minute">Fast Minute</option>
+                            <option value="Moose Tracks">Moose Tracks</option>
+                            <option value="thirdeye">thirdeye</option>
+                            <option value="MP3">MP3</option>
+                            <option value="Novel Radio">Novel Radio</option>
+                            <option value="subsonic">subsonic</option>
+                            <option value="Soul Society">Soul Society</option>
+                            <option value="Gone Tomorrow Sound">Gone Tomorrow Sound</option>
+                            <option value="Retro Hour">Retro Hour</option>
+                            <option value="The Britney Hour">The Britney Hour</option>
+                            <option value="The Tuesday Variety Experience">The Tuesday Variety Experience</option>
+                            <option value="Dean Me Up">Dean Me Up</option>
+                            <option value="BBLNation">BBLNation</option>
+                            <option value="100% Electronic">100% Electronic</option>
+                            <option value="Film Freaks">Film Freaks</option>
+                            <option value="Ranting &amp; Raving">Ranting &amp; Raving</option>
+                            <option value="Mama-s Orchard">Mama-s Orchard</option>
+                            <option value="Kabobcast">Kabobcast</option>
+                            <option value="Cactus Country">Cactus Country</option>
+                            <option value="BCG-s Radio">BCG-s Radio</option>
+                            <option value="Cherish">Cherish</option>
+                            <option value="Canticulum">Canticulum</option>
+                            <option value="Monkey Business">Monkey Business</option>
+                            <option value="Officer Hour">Officer Hour</option>
+                            <option value="If You Give a Mouse a Mic">If You Give a Mouse a Mic</option>
+                            <option value="The Rock Tumbler">The Rock Tumbler</option>
+                            <option value="am i mutted?">am i mutted?</option>
+                            <option value="Liyu LAL">Liyu LAL</option>
+                            <option value="K-Time">K-Time</option>
+                            <option value="Catalina Hour">Catalina Hour</option>
+                            <option value="The Omonti Hour with Omontizay">The Omonti Hour with Omontizay</option>
+                            <option value="BLEEDFAST">BLEEDFAST</option>
+                            <option value="Early Seventies with Steve">Early Seventies with Steve</option>
+                            <option value="iRiE Corner">iRiE Corner</option>
+                            <option value="sonidos de cel">sonidos de cel</option>
+                    </select>
+        <button id="search_button">Find Recordings</button>
+    </div>
+
+    <div id="rec_files_container">
+        </div>
+
+    <script>
+    document.getElementById('search_button').addEventListener('click', function() {
+    const selectedShow = "Perfect Sound Forever"
+    const recFilesContainer = document.getElementById('rec_files_container');
+
+    // --- Replace with your actual ngrok URL ---
+    const ngrokBaseUrl = 'https://5bd6-2620-0-5301-2101-4ea8-e4f5-b0b7-32ef.ngrok-free.app'; // e.g. https://abcdef123456.ngrok-free.app
+    const searchScriptUrl = `${ngrokBaseUrl}/search_recs.php`;
+    const downloadScriptUrl = `${ngrokBaseUrl}/download_rec.php`; // Also define for the download part
+
+    // Clear previous results
+    recFilesContainer.innerHTML = '<p>Searching...</p>';
+
+    // Use Fetch API to send the selected show name to search_recs.php
+    fetch(searchScriptUrl, { // <-- Use the full ngrok URL
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'ngrok-skip-browser-warning': '69420' // <-- Add the custom header
+        },
+        body: 'show_name=' + encodeURIComponent(selectedShow)
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+        }
+        return response.text(); // We expect HTML back
+    })
+    .then(html => {
+        recFilesContainer.innerHTML = html; // Insert the generated HTML
+        // Add event listener to the new dropdown IF it was added
+        const recFilesSelect = document.getElementById('rec_files_select');
+        if (recFilesSelect) {
+            recFilesSelect.addEventListener('change', function() {
+                const selectedFilePath = this.value;
+                if (selectedFilePath) {
+                    // Trigger download by redirecting the browser
+                    // Use the full ngrok URL for the download script too
+                    window.location.href = `${downloadScriptUrl}?filepath=` + encodeURIComponent(selectedFilePath);
+                }
+            });
+        }
+    })
+    .catch(error => {
+        recFilesContainer.innerHTML = '<p style="color: red;">Error searching for files: ' + error.message + '</p>';
+        console.error('Fetch error:', error);
+    });
+});
+    </script>
+
+</body>
+</html>
+
