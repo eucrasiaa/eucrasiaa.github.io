@@ -69,24 +69,24 @@
         </div>
 
     <script>
-   document.getElementById('search_button').addEventListener('click', function() {
-    const selectedShow = document.getElementById('show_name').value;
+    document.getElementById('search_button').addEventListener('click', function() {
+    const selectedShow = "Perfect Sound Forever"
     const recFilesContainer = document.getElementById('rec_files_container');
 
     // --- Replace with your actual ngrok URL ---
     const ngrokBaseUrl = 'https://5bd6-2620-0-5301-2101-4ea8-e4f5-b0b7-32ef.ngrok-free.app'; // e.g. https://abcdef123456.ngrok-free.app
     const searchScriptUrl = `${ngrokBaseUrl}/search_recs.php`;
-    const downloadScriptUrl = `${ngrokBaseUrl}/download_rec.php`;
+    const downloadScriptUrl = `${ngrokBaseUrl}/download_rec.php`; // Also define for the download part
 
     // Clear previous results
     recFilesContainer.innerHTML = '<p>Searching...</p>';
 
     // Use Fetch API to send the selected show name to search_recs.php
-    fetch(searchScriptUrl, { // <-- Use the full ngrok URL for search
+    fetch(searchScriptUrl, { // <-- Use the full ngrok URL
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
-            'ngrok-skip-browser-warning': '69420' // <-- Add the custom header for search
+            'ngrok-skip-browser-warning': '69420' // <-- Add the custom header
         },
         body: 'show_name=' + encodeURIComponent(selectedShow)
     })
@@ -104,64 +104,105 @@
             recFilesSelect.addEventListener('change', function() {
                 const selectedFilePath = this.value;
                 if (selectedFilePath) {
-                    // --- Download using Fetch API ---
-                    fetch(`<span class="math-inline">\{downloadScriptUrl\}?filepath\=</span>{encodeURIComponent(selectedFilePath)}`, { // <-- Use the full ngrok URL for download GET request
-                        method: 'GET', // File downloads typically use GET
-                        headers: {
-                            'ngrok-skip-browser-warning': '69420' // <-- Add the custom header for download fetch
-                            // Content-Type is not typically needed for GET downloads
-                        }
-                    })
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error('Download failed: ' + response.statusText);
-                        }
-                        // Try to get the filename from the Content-Disposition header
-                        const contentDisposition = response.headers.get('Content-Disposition');
-                        let filename = 'downloaded-file'; // Default filename
-                        if (contentDisposition) {
-                            // Extract filename from header, e.g., attachment; filename="myfile.txt"
-                            const filenameMatch = contentDisposition.match(/filename="(.+)"/);
-                            if (filenameMatch && filenameMatch.length > 1) {
-                                filename = filenameMatch[1];
-                            } else {
-                                // Handle cases where filename isn't quoted or is in a different format
-                                const basicFilenameMatch = contentDisposition.match(/filename=(.+)/);
-                                 if (basicFilenameMatch && basicFilenameMatch.length > 1) {
-                                    filename = basicFilenameMatch[1];
-                                 }
-                            }
-                        } else {
-                            // Fallback if Content-Disposition header is missing - try extracting from original file path
-                            const parts = selectedFilePath.split(/[\\/]/); // Split by / or \
-                            filename = parts.pop() || filename; // Take the last part as filename
-                        }
+                    // Trigger download by redirecting the browser
+                    // Use the full ngrok URL for the download script too
+                    window.location.href = `${downloadScriptUrl}?filepath=` + encodeURIComponent(selectedFilePath);
+                }
+            });
+        }
+    })
+    .catch(error => {
+        recFilesContainer.innerHTML = '<p style="color: red;">Error searching for files: ' + error.message + '</p>';
+        console.error('Fetch error:', error);
+    });
+});
 
+document.getElementById('search_button').addEventListener('click', function() {
+    const selectedShow = "Perfect Sound Forever"
+    const recFilesContainer = document.getElementById('rec_files_container');
 
-                        return response.blob().then(blob => ({ blob, filename })); // Get response as Blob and pass filename
-                    })
-                    .then(({ blob, filename }) => {
-                        // Create a temporary link element to trigger download
-                        const url = window.URL.createObjectURL(blob);
-                        const a = document.createElement('a');
-                        a.style.display = 'none';
-                        a.href = url;
-                        a.download = filename; // Set the filename for the download
+    // --- Replace with your actual ngrok URL ---
+    const ngrokBaseUrl = 'https://5bd6-2620-0-5301-2101-4ea8-e4f5-b0b7-32ef.ngrok-free.app'; // e.g. https://abcdef123456.ngrok-free.app
+    const searchScriptUrl = `${ngrokBaseUrl}/search_recs.php`;
+    const downloadScriptUrl = `${ngrokBaseUrl}/download_rec.php`; // Also define for the download part
 
-                        document.body.appendChild(a);
-                        a.click(); // Programmatically click the link
+    // Clear previous results
+    recFilesContainer.innerHTML = '<p>Searching...</p>';
 
-                        // Clean up the temporary URL and element
-                        window.URL.revokeObjectURL(url);
-                        document.body.removeChild(a);
+    // Use Fetch API to send the selected show name to search_recs.php
+    fetch(searchScriptUrl, { // <-- Use the full ngrok URL
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'ngrok-skip-browser-warning': '69420' // <-- Add the custom header
+        },
+        body: 'show_name=' + encodeURIComponent(selectedShow)
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+        }
+        return response.text(); // We expect HTML back
+    })
+    .then(html => {
+        recFilesContainer.innerHTML = html; // Insert the generated HTML
+        // Add event listener to the new dropdown IF it was added
+        const recFilesSelect = document.getElementById('rec_files_select');
+        if (recFilesSelect) {
+            recFilesSelect.addEventListener('change', function() {
+                const selectedFilePath = this.value;
+                if (selectedFilePath) {
+                    // Trigger download by redirecting the browser
+                    // Use the full ngrok URL for the download script too
+                    window.location.href = `${downloadScriptUrl}?filepath=` + encodeURIComponent(selectedFilePath);
+                }
+            });
+        }
+    })
+    .catch(error => {
+        recFilesContainer.innerHTML = '<p style="color: red;">Error searching for files: ' + error.message + '</p>';
+        console.error('Fetch error:', error);
+    });
+});
 
-                        console.log('Download initiated successfully.');
-                    })
-                    .catch(error => {
-                        console.error('Download error:', error);
-                        alert('Failed to download file: ' + error.message);
-                    });
-                    // --- End Download using Fetch API ---
+document.getElementById('search_button').addEventListener('click', function() {
+    const selectedShow = "Perfect Sound Forever"
+    const recFilesContainer = document.getElementById('rec_files_container');
+
+    // --- Replace with your actual ngrok URL ---
+    const ngrokBaseUrl = 'https://5bd6-2620-0-5301-2101-4ea8-e4f5-b0b7-32ef.ngrok-free.app'; // e.g. https://abcdef123456.ngrok-free.app
+    const searchScriptUrl = `${ngrokBaseUrl}/search_recs.php`;
+    const downloadScriptUrl = `${ngrokBaseUrl}/download_rec.php`; // Also define for the download part
+
+    // Clear previous results
+    recFilesContainer.innerHTML = '<p>Searching...</p>';
+
+    // Use Fetch API to send the selected show name to search_recs.php
+    fetch(searchScriptUrl, { // <-- Use the full ngrok URL
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'ngrok-skip-browser-warning': '69420' // <-- Add the custom header
+        },
+        body: 'show_name=' + encodeURIComponent(selectedShow)
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+        }
+        return response.text(); // We expect HTML back
+    })
+    .then(html => {
+        recFilesContainer.innerHTML = html; // Insert the generated HTML
+        // Add event listener to the new dropdown IF it was added
+        const recFilesSelect = document.getElementById('rec_files_select');
+        if (recFilesSelect) {
+            recFilesSelect.addEventListener('change', function() {
+                const selectedFilePath = this.value;
+                if (selectedFilePath) {
+                    // Trigger download by redirecting the browser
+                    // Use the full ngrok URL for the download script too
+                    window.location.href = `${downloadScriptUrl}?filepath=` + encodeURIComponent(selectedFilePath);
                 }
             });
         }
