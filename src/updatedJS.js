@@ -1,5 +1,5 @@
 // var env = "production"; // Set to "production" or "development" based on your environment
-var env = "production";
+var env = "development";
 // var env = "development";
 if (env === 'production') {
   console.log = function () {};
@@ -287,13 +287,13 @@ if (infoDiv) {
   linkDiv.style.textAlign = "center";
   linkDiv.style.marginTop = "10px";
 
-  const link = document.createElement("a");
-  link.href = "https://sites.google.com/umbc.edu/wmbc";
-  link.target = "_blank";
-  link.className = "listen-link";
-  link.textContent = "--> Listen On Official Site Here <--";
+  // const link = document.createElement("a");
+  // link.href = "https://sites.google.com/umbc.edu/wmbc";
+  // link.target = "_blank";
+  // link.className = "listen-link";
+  // link.textContent = "--> Listen On Official Site Here <--";
 
-  linkDiv.appendChild(link);
+  // linkDiv.appendChild(link);
   infoDiv.appendChild(linkDiv);
 }
   if (window.innerWidth < 768) {
@@ -1126,6 +1126,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 function decodeName(encodedName, key) {
+  return encodedName;
   // Decode the Base64 string
   const encodedBytes = Uint8Array.from(atob(encodedName), c => c.charCodeAt(0));
 
@@ -1546,20 +1547,25 @@ function populateSocials(dj_socials) {
   //   console.log("list is not empty, clearing...");
   //   document.getElementById("socialsList").innerHTML = "";
   // }
-  console.log(dj_socials);
+  if (!dj_socials) {
+    console.log("no socials provided, skipping...");
+    loadSocialImgs();
+    return;
+  }
   if (dj_socials.instagram) {
     socials.instagram = dj_socials.instagram;
   }
   if (dj_socials.twitter != '') {
     socials.twitter = dj_socials.twitter;
   }
-  if (dj_socials.spotify.length > 0) {
-    socials.spotify = [dj_socials.spotify[0], dj_socials.spotify[1]];
-    console.log(dj_socials.spotify[0])
+  if(dj_socials.spotify){
+    if (dj_socials.spotify.length > 0) {
+      socials.spotify = [dj_socials.spotify[0], dj_socials.spotify[1]];
+      console.log(dj_socials.spotify[0])
+    }
   }
-  else{
-    socials.spotify = ["", ""];
-  }
+ 
+  
   if (dj_socials.otherSocials) {
     dj_socials.otherSocials.forEach(social => {
       const [platform, handle] = social.split(": ");
@@ -1587,15 +1593,16 @@ function populateSocials(dj_socials) {
 function loadSocialImgs() {
   const socialsList = document.getElementById("socialsList");
   Object.entries(socials).forEach(([platform, handle]) => {
+    console.log(platform, handle + "!!!!!!!!!!");
     //if other is [], skip it
-    if (handle && !(platform === "other" && handle.length === 0)) {
+    if (handle && !(platform === "other" && Array.isArray(handle) && handle.length === 0) && (!Array.isArray(handle) || handle.length > 0)) {
 
       const li = document.createElement("li");
       if (platform === "linktree") {
         li.innerHTML = `${socialIcons[platform]} <a href="${handle}" target="_blank">${handle}</a>`;
       }
       else if (platform === "instagram") {
-        li.innerHTML = `${socialIcons[platform]} <a href="https://${platform}.com/${handle.split("@")[1]}" target="_blank">${handle}</a>`;
+        li.innerHTML = `${socialIcons[platform]} <a href="https://${platform}.com/${handle}" target="_blank">${handle}</a>`;
       }
       else if (platform === "letterboxd") {
         li.innerHTML = `${socialIcons[platform]} <a href="https://letterboxd.com/${handle}" target="_blank">${handle}</a>`;
@@ -1646,6 +1653,7 @@ function loadHostNames(hostNames, DECODE_KEY) {
 // });
 
 function decodeName(encodedName, key) {
+  return encodedName;
   // Decode the Base64 string
   const encodedBytes = Uint8Array.from(atob(encodedName), c => c.charCodeAt(0));
 
