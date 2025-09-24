@@ -452,6 +452,23 @@
         },
         "previousPlaylists": []
     },
+        {
+        "name": "Henry C.",
+        "image": "",
+        "socials": null,
+        "showName": "Henry's Jukebox",
+        "hostNames": [
+            "Henry C."
+        ],
+        "showBlurb": "Playing my favorite songs from the 60s, 70s, and 80s, and giving some fun facts about them.",
+        "standardShow": true,
+        "broadcastTime": {
+            "dayOfWeek": "Wednesday",
+            "startTime": "14:00",
+            "durationMinutes": 60
+        },
+        "previousPlaylists": []
+    },
     {
         "name": "Prachi S.",
         "image": "",
