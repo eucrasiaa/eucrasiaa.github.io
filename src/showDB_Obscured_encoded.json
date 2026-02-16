@@ -1,747 +1,989 @@
 [
-    {
-        "name": "Parvata K., Josslyn K.",
-        "image": "",
-        "socials": {
-            "instagram": "altered"
-        },
-        "showName": "Escriba!",
-        "hostNames": [
-            "Parvata K.",
-            "Josslyn K."
-        ],
-        "showBlurb": "A political talk show combining music and anti-imperialist perspectives to challenge mainstream media.",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Monday",
-            "startTime": "11:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Isaiah D.",
-        "image": "",
-        "socials": {
-            "instagram": "omontizay"
-        },
-        "showName": "The Omonti Hour w/ Omontizay",
-        "hostNames": [
-            "Omontizay"
-        ],
-        "showBlurb": "Omontizay spins curated mixes for an hour with a focus on electronic, hip-hop, and rnb music",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Monday",
-            "startTime": "12:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Spencer W.",
-        "image": "",
-        "socials": {
-            "instagram": "thosewhoshow"
-        },
-        "showName": "Those Who Show",
-        "hostNames": [
-            "Spencer"
-        ],
-        "showBlurb": "we do coloring pages sometimes with music that sometimes goes with",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Monday",
-            "startTime": "14:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Ayomide A.",
-        "image": "",
-        "socials": {
-            "instagram": "100percentelectronic"
-        },
-        "showName": "100% Electronic",
-        "hostNames": [
-            "Ayomide A."
-        ],
-        "showBlurb": "100% electronic, 100% of the time",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Monday",
-            "startTime": "15:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "William C.",
-        "image": "",
-        "socials": null,
-        "showName": "Perfect Sound Forever",
-        "hostNames": [
-            "Will C."
-        ],
-        "showBlurb": "fun jovial mix of energetic emo, metal, punk, indie, and other assorted miscellany",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Monday",
-            "startTime": "16:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-        {
-        "name": "Cameron S.",
-        "image": "",
-        "socials": {
-            "carrd": "firstsound.carrd.co",
-            "instagram": "firstsoundradio"
-        },
-        "showName": "FIRSTSOUND: Vocaloid Radio",
-        "hostNames": [
-            "Cameron S."
-        ],
-        "showBlurb": "Named after the legendary Hatsune Miku, whose name means \"first sound of the future\", FIRSTSOUND showcases music using VOCALOID and other vocal synthesizer software such as UTAU, Synthesizer V, CeVIO, and more! From the scene-defining classics to the obscure and forgotten producers to the hottest modern trends, FIRSTSOUND covers everything that Vocaloid has to offer.",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Monday",
-            "startTime": "17:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Sahithya S.",
-        "image": "",
-        "socials": {
-            "instagram": "sahis_semantics"
-        },
-        "showName": "Sahi's Semantics",
-        "hostNames": [
-            "Sahithya S."
-        ],
-        "showBlurb": "What's good, what's bad, and the ethics behind headlines, film, and media! Have you ever thought about how the things we consume on the world wide web (music, movies, news) effect our views? Look no further, where argue at the semantics of it all.",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Monday",
-            "startTime": "18:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Miani F.",
-        "image": "",
-        "socials": {
-            "instagram": "mangetsu.radio"
-        },
-        "showName": "Mangetsu Radio",
-        "hostNames": [
-            "miani"
-        ],
-        "showBlurb": "JROCK",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Monday",
-            "startTime": "19:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Raiyaan T., Donovan F.",
-        "image": "",
-        "socials": {
-            "instagram": "wmbc.mondaynightmetal"
-        },
-        "showName": "Monday Night Metal",
-        "hostNames": [
-            "Raiyaan T.",
-            "Donovan F."
-        ],
-        "showBlurb": "The late night heavy metal/metalcore show. Covering all things metal and heavy. Stay a while....",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Monday",
-            "startTime": "20:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Colin P.",
-        "image": "",
-        "socials": {
-            "instagram": "g0ne.tomorrow"
-        },
-        "showName": "gone tomorow sound",
-        "hostNames": [
-            "Colin P."
-        ],
-        "showBlurb": "one mixed hour of whatever i feel like but mostly random hip hop and electronic stuff i mess with",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Monday",
-            "startTime": "21:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Mara A.",
-        "image": "",
-        "socials": {
-            "instagram": "badnewsmara"
-        },
-        "showName": "Bad News Mara",
-        "hostNames": [
-            "Mara"
-        ],
-        "showBlurb": "Bad News Mara is a talk and music broadcast which dedicates each show to a wide range of topics. Dissecting and immersing in each dedicated subject, listeners will leave the hour entirely enlightened now possessing new factoids.<3",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Tuesday",
-            "startTime": "11:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Yasmeen S.",
-        "image": "",
-        "socials": {
-            "instagram": "subsonic.wmbc"
-        },
-        "showName": "Subsonic",
-        "hostNames": [
-            "Yasmeen S."
-        ],
-        "showBlurb": "Curating playlists dedicated to a new genre each week with a sprinkle of little facts or rants in between!",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Tuesday",
-            "startTime": "12:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Angeles G.",
-        "image": "",
-        "socials": {
-            "instagram": "rantingraving.wmbc"
-        },
-        "showName": "Ranting & Raving",
-        "hostNames": [
-            "angeles"
-        ],
-        "showBlurb": "ranting & raving serves up the soundtrack of the week, sprinkled with internet chaos, wild stories, and whatever listeners throw into the mix.",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Tuesday",
-            "startTime": "13:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Alexander M.",
-        "image": "",
-        "socials": null,
-        "showName": "DJ Mon",
-        "hostNames": [
-            "Alexander M."
-        ],
-        "showBlurb": "I play all kinds of music from the 60s!",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Tuesday",
-            "startTime": "14:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Jireh K.",
-        "image": "",
-        "socials": {
-            "instagram": "djbleedfast"
-        },
-        "showName": "BLEEDFAST",
-        "hostNames": [
-            "DJ BLEEDFAST"
-        ],
-        "showBlurb": "nothing will be bleeding fast except your ears maybe..",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Tuesday",
-            "startTime": "15:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Gabriel D.",
-        "image": "",
-        "socials": {
-            "instagram": "soulsociety.wmbc"
-        },
-        "showName": "Soul Society",
-        "hostNames": [
-            "Gabriel D."
-        ],
-        "showBlurb": "Soul Society is a radio show that features a mix of neosoul and chill hiphop music.",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Tuesday",
-            "startTime": "16:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Danny N.",
-        "image": "",
-        "socials": null,
-        "showName": "Cozy Hour",
-        "hostNames": [
-            "Danny"
-        ],
-        "showBlurb": "1 hour of (mostly) instrumental jazz, classical, film score and video game music perfect for getting cozy. Whether your studying or winding down, this is the perfect playlist to start your evening.",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Tuesday",
-            "startTime": "17:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Ben M.",
-        "image": "",
-        "socials": {
-            "instagram": "dj_bowlcutgamer"
-        },
-        "showName": "BCG's New Pop Radio",
-        "hostNames": [
-            "Ben M."
-        ],
-        "showBlurb": "Discussing new releases and popular music news",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Tuesday",
-            "startTime": "18:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Wil D.",
-        "image": "",
-        "socials": {
-            "instagram": "thirdeye.wmbc"
-        },
-        "showName": "thirdeye",
-        "hostNames": [
-            "middeko"
-        ],
-        "showBlurb": "hyperpop, trap, experimental",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Tuesday",
-            "startTime": "19:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Michelle I., Sana N.",
-        "image": "",
-        "socials": {
-            "instagram": "mamasorchard.wmbc"
-        },
-        "showName": "Mama's Orchard",
-        "hostNames": [
-            "Michelle I.",
-            "Sana N."
-        ],
-        "showBlurb": "Welcome to Mama's Orchard, where we pick the juiciest, weirdest fruits of the internet and our minds to talk about each episode. Come walk through our orchard with us!",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Tuesday",
-            "startTime": "20:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
+{
+  "name": "Aaliyah K.",
+  "showName": "Ms. Aaliyah",
+  "hostNames": [
+    "Aaliyah K."
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Monday",
+    "startTime": "11:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "A show where students can anonymously discuss mental health topics with psych student hosts and a guest clinical professor/counselor that open the discussion from a psychological perspective. Students can call in or email about mental health struggles/experiences that they've had that they feel they can't express in other spaces. The goal is to educate students about their own mental health as well as their peers in an effort to reduce the stigma/taboo that may arise around mental health within the UMBC community.",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
 
-    {
-        "name": "Kaleb G.",
-        "image": "",
-        "socials": {
-            "instagram": "dj.bblnation"
-        },
-        "showName": "BBL Nation",
-        "hostNames": [
-            "DJ BBL"
-        ],
-        "showBlurb": "weekly DJ Mix contents; sorta freestyle, sorta not",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Tuesday",
-            "startTime": "21:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Arianna E.",
-        "image": "",
-        "socials": null,
-        "showName": "Ace's Altar",
-        "hostNames": [
-            "Arianna E."
-        ],
-        "showBlurb": "Introduce listeners to both well-known and lesser-known bands within the metal, grunge, punk, & emo genres to provide a variety of heavy and alternative sounds while shedding light on local bands.",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Wednesday",
-            "startTime": "11:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Julia S.",
-        "image": "",
-        "socials": {
-            "instagram": "cactuscountryradio"
-        },
-        "showName": "Cactus Country",
-        "hostNames": [
-            "Julia S."
-        ],
-        "showBlurb": "Country/Folk/Soul Music",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Wednesday",
-            "startTime": "12:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Daniela S.",
-        "image": "",
-        "socials": {
-            "instagram": "lunarr.wmbc"
-        },
-        "showName": "Luna Roja Radio",
-        "hostNames": [
-            "Daniela S."
-        ],
-        "showBlurb": "Highlighting Latin America's colorful music scenes transnationally one week at a time. Para lxs rockerxs <3",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Wednesday",
-            "startTime": "13:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-        {
-        "name": "Henry C.",
-        "image": "",
-        "socials": null,
-        "showName": "Henry's Jukebox",
-        "hostNames": [
-            "Henry C."
-        ],
-        "showBlurb": "Playing my favorite songs from the 60s, 70s, and 80s, and giving some fun facts about them.",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Wednesday",
-            "startTime": "14:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Prachi S.",
-        "image": "",
-        "socials": null,
-        "showName": "DJ PJ",
-        "hostNames": [
-            "Prachi S."
-        ],
-        "showBlurb": "Every Wednesday at 3 pm I'll be playing Bollywood/Filmi/Desi hits from the classics, to the 2000s, to today! I'll also try to be highlighting South Asian fronted bands and music genres!!",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Wednesday",
-            "startTime": "15:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Amaya N.",
-        "image": "",
-        "socials": {
-            "instagram": "moosetracks.wmbc"
-        },
-        "showName": "Moose Tracks",
-        "hostNames": [
-            "Amaya N."
-        ],
-        "showBlurb": "Exploring the eras of my life through the music that soundtracked it!",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Wednesday",
-            "startTime": "16:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Meagan W.",
-        "image": "",
-        "socials": null,
-        "showName": "Cuddlecore",
-        "hostNames": [
-            "Meagan W."
-        ],
-        "showBlurb": "Music to cuddle to",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Wednesday",
-            "startTime": "17:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Sean S.",
-        "image": "",
-        "socials": {
-            "instagram": "linernotes.wmbc"
-        },
-        "showName": "Liner Notes",
-        "hostNames": [
-            "Sean Stultz"
-        ],
-        "showBlurb": "Liner Notes is a weekly music history show that explores a genre each week! Some this semester include folk, jazz, emo, and more!",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Wednesday",
-            "startTime": "18:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Justin P., Gio A., Jalen B.",
-        "image": "",
-        "socials": null,
-        "showName": "Sample the Feels",
-        "hostNames": [
-            "Justin P.",
-            "Gio A.",
-            "Jalen B."
-        ],
-        "showBlurb": "Playing Hip Hop, RnB, Soul to cure you. Lay your problems on the radio, let the vibes flow through you. Music not only moves, it can re-move, you dig?",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Wednesday",
-            "startTime": "19:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Michelle Ibino",
-        "image": "",
-        "socials": {
-            "instagram": "reverie.wmbc"
-        },
-        "showName": "Reverie",
-        "hostNames": [
-            "dj meowchelle"
-        ],
-        "showBlurb": "goth music, on-air interviews, and horror books",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Wednesday",
-            "startTime": "20:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Wil D.",
-        "image": "",
-        "socials": null,
-        "showName": "fisheye",
-        "hostNames": [
-            "Wil D.",
-            "Jenny P."
-        ],
-        "showBlurb": "Philosophical yap",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Wednesday",
-            "startTime": "21:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Steve T.",
-        "image": "",
-        "socials": {
-            "instagram": "steveradio_umbc"
-        },
-        "showName": "Steve Radio",
-        "hostNames": [
-            "Steve T."
-        ],
-        "showBlurb": "Steve Radio will explore different themes and subgenres each week, but expect a heavy dose of bluesy and punky.",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Thursday",
-            "startTime": "11:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "William S.",
-        "image": "",
-        "socials": null,
-        "showName": "The Noon Variety Experience",
-        "hostNames": [
-            "William S."
-        ],
-        "showBlurb": "A variety show with a certain vibe/genre for each broadcast.",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Thursday",
-            "startTime": "12:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Sasha B.",
-        "image": "",
-        "socials": null,
-        "showName": "Subcutaneous",
-        "hostNames": [
-            "Sasha"
-        ],
-        "showBlurb": "Subcutaneous highlights queer + trans electronic and alternative music. Tune in Thursdays at 1pm!",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Thursday",
-            "startTime": "13:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Ash M.",
-        "image": "",
-        "socials": {
-            "instagram": "iriecorner.wmbc"
-        },
-        "showName": "iRiE Corner",
-        "hostNames": [
-            "dj iRiE"
-        ],
-        "showBlurb": "iRiE corner is all about introducing listeners to songs they probably haven't heard before or reintroducing them to songs they most definitely forgot about all while uplifting marginalized groups and voices.",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Thursday",
-            "startTime": "14:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Grace R.",
-        "image": "",
-        "socials": null,
-        "showName": "Funk Formula",
-        "hostNames": [
-            "Grace"
-        ],
-        "showBlurb": "Funk Formula brings one campus under a groove by exploring funk's various sounds, sub-genres, and fusions.",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Thursday",
-            "startTime": "15:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Eva F.",
-        "image": "",
-        "socials": {
-            "instagram": "monkeybiz.wmbc"
-        },
-        "showName": "Monkey Business",
-        "hostNames": [
-            "dj pnkeve"
-        ],
-        "showBlurb": "join dj pnkeve and her occasional guests for an hour of tunes, giggles, and lots of monkey business.",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Thursday",
-            "startTime": "16:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Jean K.",
-        "image": "",
-        "socials": null,
-        "showName": "Sori Soul",
-        "hostNames": [
-            "Jean K."
-        ],
-        "showBlurb": "This show will highlight different genres of Korean music from the 60s to today, including folk, electronic, ballads, rock, K-pop, and highlights different artists from the korean diaspora!",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Thursday",
-            "startTime": "17:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Liyu B.",
-        "image": "",
-        "socials": {
-            "instagram": "djlbk_"
-        },
-        "showName": "LBK Sounds",
-        "hostNames": [
-            "Liyu B."
-        ],
-        "showBlurb": "Djing, talking, and laughing, all that is in this podcast. Just listen and enjoy.",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Thursday",
-            "startTime": "18:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
+{
+  "name": "Angeles G.",
+  "showName": "Ranting & Raving",
+  "hostNames": [
+    "Angeles G."
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Monday",
+    "startTime": "13:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "Ranting & Raving with Angeles plays fun tracks sometimes related to a theme or compilation! There’s new stories, guests, and possibly even call-ins!",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+
+
+{
+  "name": "Tobiloba P.",
+  "showName": "DJ Tobi",
+  "hostNames": [
+    "Tobiloba P."
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Monday",
+    "startTime": "14:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "Playing live DJ mixes, and general discourse about soccer and basketball.",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+
+
+
+{
+  "name": "Robert B.",
+  "showName": "Things That Perk My Ears",
+  "hostNames": [
+    "Robert B."
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Monday",
+    "startTime": "15:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "Bringing on guests from around campus and songs from my Spotify playlist “Songs that Perk My Ears”.",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+
+
+
+
+{
+  "name": "DJ PJ",
+  "showName": "DJ PJ",
+  "hostNames": [
+    "DJ PJ"
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Monday",
+    "startTime": "16:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "Playing beautiful songs true to my heart every week!",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+
+{
+  "name": "Blake W.",
+  "showName": "Crash Box",
+  "hostNames": [
+    "Blake W."
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Monday",
+    "startTime": "17:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "A HipHop, Jazz, and R&B show with minimal talking. An intro to different sub-genres of hip hop and R&B from Miles Davis and Sam Cooke to JPEGMAFIA and The Internet.",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+
+{
+  "name": "Miani F.",
+  "showName": "Mangetsu Radio",
+  "hostNames": [
+    "Miani F."
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Monday",
+    "startTime": "18:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "Full moon, full beats. Weekly Japanese rock! ",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+
+{
+  "name": "Maxwell C.",
+  "showName": "First Listen",
+  "hostNames": [
+    "DJ Max"
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Monday",
+    "startTime": "19:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "First Listen is a show where we listen to my mom's old CDs and talk about our thoughts on each track! We aren't bound by genre and simply listen to whatever is in her collection. Tune in!",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+
+
+{
+  "name": "Raiyaan T.",
+  "showName": "Monday Night Metal",
+  "hostNames": [
+    "Raiyaan T.",
+    "Donovan F."
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Monday",
+    "startTime": "20:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "Your favorite metal show where we talk and listen to pots and pans...just kidding! Not that kind of metal! I'm talking HEAVY metal, EXTREME metal, FUNKY metal, THRASH metal, and more! Join us EVERY MONDAY!",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+
+
+
+
+{
+  "name": "Colin P.",
+  "showName": "Gone Tomorrow Sound",
+  "hostNames": [
+    "Colin P."
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Monday",
+    "startTime": "21:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "One hour of dope tracks mixed by yours truly.",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+{
+  "name": "Isaiah D.",
+  "showName": "Omonti’s Opus with DJ Omontizay!",
+  "hostNames": [
+    "DJ Omontizay"
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Thursday",
+    "startTime": "12:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "Omonti’s Opus is a weekly composition by the DJ Omontizay, taking listeners through their life week to week with music as the vehicle! Omontizay spins many a genre depending on the week, but a good time will always be had!",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+
+
+{
+  "name": "Ash M.",
+  "showName": "iRiE Corner Revivied",
+  "hostNames": [
+    "dj irie"
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Thursday",
+    "startTime": "13:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "iRiE Corner Revived is a rebranding, and it is now dedicated to sharing the importance of music as a form of self expression across different cultures. The vibes are still going to be silly and goofy, so tune and enjoy the ride!",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+
+{
+  "name": "Dean and Nat",
+  "showName": "wmbcgate",
+  "hostNames": [
+    "DJ Nat",
+    "Dean L."
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Thursday",
+    "startTime": "15:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "Looking at weird conspiracy theories the internet has to offer, focusing on debunking/analyzing them rather than supporting them.",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+{
+  "name": "William S.",
+  "showName": "The Variety Experience",
+  "hostNames": [
+    "William S."
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Thursday",
+    "startTime": "16:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "Playlists with a different vibe/genre each week.",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+
+{
+  "name": "Gabriel D.",
+  "showName": "Soul Society",
+  "hostNames": [
+    "Gabriel D."
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Thursday",
+    "startTime": "17:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "Soul Society is a show that features a mix of neosoul and chill hip hop music.",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+
+
+{
+  "name": "Joey M.",
+  "showName": "Kouyata",
+  "hostNames": [
+    "Joey M."
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Thursday",
+    "startTime": "18:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "Listening to some representation of the self.",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+
+{
+  "name": "Celine N.",
+  "showName": "MIX(CEL)ANEOUS RADIO",
+  "hostNames": [
+    "¡ceL!"
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Thursday",
+    "startTime": "19:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "This is MIX(¡ceL!)ANEOUS RADIO, a DJ broadcast recognizing the foundations of club music brought to you by a young DJ student themself, ¡ceL! Be prepared to hear remixes of different genres of music, as well as the main roux (as Zack Fox likes to put it) of club music, including Baltimore Club, Detroit Tech, Jersey Club, House, and more! And most importantly, be prepared to DANCE!! ",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+
+
+{
+  "name": "Kennedy and Allene",
+  "showName": "Music And Whatnot",
+  "hostNames": [
+    "Kennedy R.",
+    "Allene L."
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Thursday",
+    "startTime": "20:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "We each play some fire songs and chat about them!",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+
+
+
+
+{
+  "name": "Sahithya S. ",
+  "showName": "Sahi's Semantics",
+  "hostNames": [
+    "Sahi S."
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Thursday",
+    "startTime": "21:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "A talk show on how the things we consume matter! ",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+
+{
+  "name": "Jireh K.",
+  "showName": "BLEEDFAST",
+  "hostNames": [
+    "DJ BLEEDFAST"
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Friday",
+    "startTime": "11:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "nothing will be bleeding fast except your ears maybe...",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+
+{
+  "name": "Tiffany W. and Josslyn V.",
+  "showName": "Escriba!",
+  "hostNames": [
+    "DJ Tiff",
+    "DJ Jo"
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Friday",
+    "startTime": "12:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "An hour for you and me and all the big things we see!",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+
+
+{
+  "name": "Michael M.",
+  "showName": "Mike's Iron Crypt",
+  "hostNames": [
+    "Mike M."
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Friday",
+    "startTime": "13:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "A dark journey through the timeless classics of 1970s and 80s heavy metal, and the bands keeping the style...undead.",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+
+
+{
+  "name": "Amarrah Z.",
+  "showName": "marzi",
+  "hostNames": [
+    "rainydaze"
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Friday",
+    "startTime": "14:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "music that feels like walking in the rain.",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+
+
+{
+  "name": "New Music Friday",
+  "showName": "New Music Friday",
+  "hostNames": [
+    "WMBC Staff!"
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Friday",
+    "startTime": "15:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "New Music Friday! Tune in for some recently released hits~!",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+
+
+
+{
+  "name": "Ishan G.",
+  "showName": "Immersive Introductions",
+  "hostNames": [
+    "Ish"
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Friday",
+    "startTime": "16:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "A talk show on how the intersection of amusement and enlightenment is whatever the heck this is.",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+
+
+{
+  "name": "Cameron S.",
+  "showName": "FIRSTSOUND: Vocaloid Radio",
+  "hostNames": [
+    "Cameron"
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Friday",
+    "startTime": "17:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "Named after the legendary Hatsune Miku, whose name means \"first sound of the future\", FIRSTSOUND showcases music using VOCALOID and other vocal synthesizer software such as UTAU, Synthesizer V, CeVIO, and more! From the scene-defining classics to the obscure and forgotten producers to the hottest modern trends, FIRSTSOUND covers everything that Vocaloid has to offer.",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+
+
+{
+  "name": "Jalen B.",
+  "showName": "blk.radio",
+  "hostNames": [
+    "dj blk.kamii"
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Friday",
+    "startTime": "18:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "spinnin' hiphop, rnb, soul, and anything else within that range",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+
+
+{
+  "name": "Joshua A.",
+  "showName": "The Rock Tumbler",
+  "hostNames": [
+    "Joshua A."
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Friday",
+    "startTime": "19:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "A rock variety show, occasionally featuring interviews of local musicians.",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+
+
+{
+  "name": "Liyu B.",
+  "showName": "LBK Sounds",
+  "hostNames": [
+    "DJ LBK"
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Friday",
+    "startTime": "20:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "Welcome to DJ LBK, where Liyu spins some tunes like techno, edm, hyper pop, etc etc. Tune in and dance!",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+
+
+{
+  "name": "Sasha B.",
+  "showName": "SUBQTANEOUS",
+  "hostNames": [
+    "Sasha"
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Friday",
+    "startTime": "21:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "SUBQTANEOUS, hosted by Sasha, is perhaps the silliest show on the 'net. Expect hyperpop, EDM, DnB, and more, primarily from queer + trans artists!",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+
+
+
+{
+  "name": "Amaya N.",
+  "showName": "Moose Tracks",
+  "hostNames": [
+    "Amaya N."
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Tuesday",
+    "startTime": "11:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "moose tracks like music tracks but also ice cream but also moose in the sense that",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+
+
+
+{
+  "name": "Stephen T.",
+  "showName": "Steve Radio",
+  "hostNames": [
+    "Steve T."
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Tuesday",
+    "startTime": "12:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "Spinning seven decades worth of blues.",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+
+
+
+{
+  "name": "Daniela S.",
+  "showName": "Luna Roja",
+  "hostNames": [
+    "Daniela S."
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Tuesday",
+    "startTime": "13:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "LATAM tunes para cualquier rocker @ debajo de esta luna.",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+
+
+
+{
+  "name": "Grace R.",
+  "showName": "Funk Formula",
+  "hostNames": [
+    "Grace R."
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Tuesday",
+    "startTime": "14:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "Doing the funky worm!",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+
+
+
+{
+  "name": "Alexander M.",
+  "showName": "By The Decade",
+  "hostNames": [
+    "Alexander M."
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Tuesday",
+    "startTime": "15:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "I play music from a different decade each week!",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+
+
+
+{
+  "name": "Danny N.",
+  "showName": "The Cozy Hour",
+  "hostNames": [
+    "Danny N."
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Tuesday",
+    "startTime": "16:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "The Cozy Hour is a time for stress-free music. I'll play a mix of classical, folk, jazz, film score, and video game music to help you escape your stressful life for an hour. The only rule is to stay cozy!",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+
+
+
+{
+  "name": "Chan K.",
+  "showName": "Rubber Seoul",
+  "hostNames": [
+    "Chan K."
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Tuesday",
+    "startTime": "17:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "Introducing some Korean indie music/sometimes K-pop classics.",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+
+
+
+{
+  "name": "Summer H.",
+  "showName": "Retro Hour",
+  "hostNames": [
+    "Summer H."
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Tuesday",
+    "startTime": "18:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "Retro Hour: New genres, eras, and themes every week! All types of music before the year 2000!",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+
+
+
+{
+  "name": "Rose M.",
+  "showName": "The Creative Variable",
+  "hostNames": [
+    "Rose M."
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Tuesday",
+    "startTime": "19:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "Exploring the creative minds of members of the STEM field, and enjoying amazing tunes along the way.",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+
+
+
+ {
         "name": "Aria S.",
         "image": "",
         "socials": {
@@ -754,258 +996,398 @@
         "showBlurb": "Less silence & more sound; exploring the fun that is weird, wild, and whimsical music!",
         "standardShow": true,
         "broadcastTime": {
-            "dayOfWeek": "Thursday",
-            "startTime": "19:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Nick K., Charlie R.",
-        "image": "",
-        "socials": null,
-        "showName": "The Unfathomable Joy",
-        "hostNames": [
-            "Nick K.",
-            "Charlie R."
-        ],
-        "showBlurb": "Chill jams and talk radio to put the punks to sleep",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Thursday",
+            "dayOfWeek": "Tuesday",
             "startTime": "20:00",
             "durationMinutes": 60
         },
         "previousPlaylists": []
     },
-    {
-        "name": "Kaleb,Dean,Sean,Peter",
-        "image": "",
-        "socials": {
-            "instagram": "fast.minute"
-        },
-        "showName": "Fast Minute",
-        "hostNames": [
-            "DJ BBL",
-            "Dean",
-            "Sean",
-            "Peter"
-        ],
-        "showBlurb": "We talk about pop culture and media, such as movies, shows, and food! We do rankings, lists, hot takes, and rants.",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Thursday",
-            "startTime": "21:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Raiyaan T., Dean L, ",
-        "image": "",
-        "socials": {
-            "instagram": "wmbc_radio"
-        },
-        "showName": "New Music Friday",
-        "hostNames": [
-            "Raiyaan T.",
-            "Dean L.",
-            "Ben M."
-        ],
-        "showBlurb": "New Music Friday Show with a focus on local & up coming artists!",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Friday",
-            "startTime": "11:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Jenny P.",
-        "image": "",
-        "socials": {
-            "instagram": "ebbsandflows_wmbc"
-        },
-        "showName": "ebbs and flows",
-        "hostNames": [
-            "Jenny P."
-        ],
-        "showBlurb": "Dive into the deep blue with EBBS AND FLOWS... where every week, a different aquatic creature shifts the currents of sound somewhere new. Throughout the hour, we will fully immerse ourselves into the surprising ways these organisms thrive in water.",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Friday",
-            "startTime": "12:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Britney N.",
-        "image": "",
-        "socials": null,
-        "showName": "The Britney Hour",
-        "hostNames": [
-            "Britney N."
-        ],
-        "showBlurb": "It's where i play some music and speak my truth.",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Friday",
-            "startTime": "13:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Ann T., Arpa S.",
-        "image": "",
-        "socials": null,
-        "showName": "AA Batteries",
-        "hostNames": [
-            "Ann T.",
-            "Arpa S."
-        ],
-        "showBlurb": "Two girls, two generations, one mind that shares the same music taste.",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Friday",
-            "startTime": "14:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Summer H.",
-        "image": "",
-        "socials": {
-            "instagram": "retro_hour_wmbc"
-        },
-        "showName": "Retro Hour",
-        "hostNames": [
-            "Summer H."
-        ],
-        "showBlurb": "Retro Hour is a show playing only music from before the year 2000! There is a different theme each week with a variety of genres and eras!",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Friday",
-            "startTime": "15:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Natalie M.",
-        "image": "",
-        "socials": {
-            "instagram": "twinbeats_wmbc"
-        },
-        "showName": "Twin Beats",
-        "hostNames": [
-            "Natalie M."
-        ],
-        "showBlurb": "creating my own personal soundtrack for a different movie every week!",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Friday",
-            "startTime": "16:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Marcus R., Uzochukwu I., Divine A., Wil D.",
-        "image": "",
-        "socials": {
-            "instagram": "Black.ology101"
-        },
-        "showName": "Blackology 101",
-        "hostNames": [
-            "Marcus R.",
-            "Uzochukwu I.",
-            "Divine A.",
-            "Wil D."
-        ],
-        "showBlurb": "We have a talk show talking about black related issues/topics/politics/everything.",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Friday",
-            "startTime": "17:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Nick R., Jonah S.",
-        "image": "",
-        "socials": {
-            "instagram": "nebulousyou.wmbc"
-        },
-        "showName": "Nebulous You",
-        "hostNames": [
-            "Nick R.",
-            "Jonah S."
-        ],
-        "showBlurb": "A spacey evening music show featuring variety drone music, primarily highlighting genres which have taken on the \"drone\"\" character. Leaning toward featuring full albums over playlists.\"",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Friday",
-            "startTime": "18:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Arman R.",
-        "image": "",
-        "socials": null,
-        "showName": "The Arman Hour",
-        "hostNames": [
-            "Arman R."
-        ],
-        "showBlurb": "Using music as a way to reflect whats happening in our world. By blending genres, eras, and perspectives, the show will create a space where listeners can come together, no matter what's going on around us.",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Friday",
-            "startTime": "19:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Leo H.",
-        "image": "",
-        "socials": null,
-        "showName": "UMBC Jazz Hour",
-        "hostNames": [
-            "Leo H."
-        ],
-        "showBlurb": "This radio show aims to share and provoke an interest in jazz and some of its fundamentals with a wider audience, challenging the modern-day stigma surrounding the genre!",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Friday",
-            "startTime": "20:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    },
-    {
-        "name": "Joshua A.",
-        "image": "",
-        "socials": {
-            "instagram": "ablecdesigns"
-        },
-        "showName": "The Rock Tumbler",
-        "hostNames": [
-            "Joshua A."
-        ],
-        "showBlurb": "The Rock Tumbler is a rock variety show exploring different artists from the genre from local artists to the well established.",
-        "standardShow": true,
-        "broadcastTime": {
-            "dayOfWeek": "Friday",
-            "startTime": "21:00",
-            "durationMinutes": 60
-        },
-        "previousPlaylists": []
-    }
+
+
+
+
+
+{
+  "name": "Wil D.",
+  "showName": "thirdeye",
+  "hostNames": [
+    "middeko"
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Tuesday",
+    "startTime": "21:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "open your third eye this is a simulation",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+
+
+{
+  "name": "Spencer W.",
+  "showName": "Those Who Show",
+  "hostNames": [
+    "Spencer W."
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Wednesday",
+    "startTime": "11:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "Coloring pages or drawing or something that inspires a playlist",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+{
+  "name": "Bridgette S.",
+  "showName": "UFO",
+  "hostNames": [
+    "Bridgette S."
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Wednesday",
+    "startTime": "12:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "This show highlights new and interesting hyper-pop tracks that push genre boundaries and heavily encourage dancing. Featured tracks will evoke a sense of being transported to the future, blending pop with synth and reimagined Y2K elements. Finding an audience that might not be accustomed to EDM, but wants to branch out from traditional pop. While the show will draw heavily from pop music, futuristic Hip-Hop/RnB/Rock/Alt will also be played.\"",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+{
+  "name": "Arianna E.",
+  "showName": "Ace's Altar",
+  "hostNames": [
+    "Arianna E."
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Wednesday",
+    "startTime": "14:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "Punk, shoegaze, metal, emo, anything in the heavy realm. Last semester I played a good mix of these genres, but I may put more focus on shoegaze and emo this semester. I will still shed light on local bands and my personal favorite picks. ",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+{
+  "name": "Castiel R.",
+  "showName": "bewitched",
+  "hostNames": [
+    "Castiel R."
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Wednesday",
+    "startTime": "15:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "When synths shroud in darkness. This radio is my personal collections of hidden darker electronic microgenres. Featuring wave (kilmeks, øfdream, portwave), witchhouse (SALEM, White Ring, Sidewalks and Skeletons), electrocrash (akiaura, LONOWN, crystal castles), phonkhouse (LXST CXNTURY, my!lane, consumane), and whatever is in between.",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+{
+  "name": "Leo H.",
+  "showName": "Jazz Hour",
+  "hostNames": [
+    "Leo H."
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Wednesday",
+    "startTime": "16:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "Continuation of the UMBC jazz hour!",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+{
+  "name": "Ava F.",
+  "showName": "Arcadia",
+  "hostNames": [
+    "DJ Ava"
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Wednesday",
+    "startTime": "17:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "A midwest emo music show sprinkled with commentary on the album/artists played!",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+{
+  "name": "Will C. and Lucien H.",
+  "showName": "Bye Sisters",
+  "hostNames": [
+    "Will C.",
+    "Lucien H."
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Wednesday",
+    "startTime": "18:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "Talk and possibly sometimes music show but mostly talk show about sports, books (classic lit), and more.",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+{
+  "name": "Jack E.",
+  "showName": "Metalworks",
+  "hostNames": [
+    "Jack E."
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Wednesday",
+    "startTime": "19:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "Metalworks is the one stop shop for true metal jams. Ears will bleed and fists will pump upon entrance to Metalworks!",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+{
+  "name": "Henry C.",
+  "showName": "Henry's Jukebox",
+  "hostNames": [
+    "Henry C."
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Wednesday",
+    "startTime": "20:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "A show where I play my favorite songs from the 60s through the 90s where I include some fun facts about the music.",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+{
+  "name": "Michelle I. and Sana N.",
+  "showName": "mama's orchard",
+  "hostNames": [
+    "Michelle I.",
+    "Sana N."
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Wednesday",
+    "startTime": "21:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "Mama's Orchard is back for round 3 with a twist! We'll still be covering pop culture and internet topics, but now with some journalism!",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+
+
+{
+  "name": "MorningShow_Monday",
+  "showName": "Morning Show",
+  "hostNames": [
+    "WMBC Morning Show Team"
+
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Monday",
+    "startTime": "10:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "Tune into the Morning Show! fun content :)",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+  {
+  "name": "MorningShow_Tuesday",
+  "showName": "Morning Show",
+  "hostNames": [
+    "WMBC Morning Show Team"
+
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Tuesday",
+    "startTime": "10:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "Tune into the Morning Show! fun content :)",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+
+  {
+  "name": "MorningShow_Wednesday",
+  "showName": "Morning Show",
+  "hostNames": [
+    "WMBC Morning Show Team"
+
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Wednesday",
+    "startTime": "10:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "Tune into the Morning Show! fun content :)",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+
+{
+  "name": "MorningShow_Thursday",
+  "showName": "Morning Show",
+  "hostNames": [
+    "WMBC Morning Show Team"
+
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Thursday",
+    "startTime": "10:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "Tune into the Morning Show! fun content :)",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+},
+
+{
+  "name": "MorningShow_Monday",
+  "showName": "Morning Show",
+  "hostNames": [
+    "WMBC Morning Show Team"
+
+  ],
+  "broadcastTime": {
+    "dayOfWeek": "Friday",
+    "startTime": "10:00",
+    "durationMinutes": 60
+  },
+  "socials": {
+    "instagram": "",
+    "spotify": [],
+    "twitter": "",
+    "otherSocials": []
+  },
+  "showBlurb": "Tune into the Morning Show! fun content :)",
+  "standardShow": true,
+  "image": "",
+  "previousPlaylists": [],
+  "customFormatting": ""
+}
+
 ]
